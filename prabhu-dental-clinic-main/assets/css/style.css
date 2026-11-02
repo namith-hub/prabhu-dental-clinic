@@ -807,11 +807,7 @@ html[lang="kn"] .nav-link {
    HERO SECTION
    ========================================================================== */
 
-.hero-section {
-  position: relative;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 50%, #FFF0F3 100%);
-  padding-top: 32px;
-  padding-bottom: 40px;
+.hero-section {\n  position: relative;\n  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 50%, #FFF0F3 100%);\n  padding-top: 32px;\n  padding-bottom: 90px;
   overflow: hidden;
   border-bottom: 1px solid var(--sand-200);
 }
@@ -3780,10 +3776,7 @@ textarea.form-control {
 }
 
 /* 3D Perspective Visual Stage */
-.hero-visual-stage {
-  perspective: 1200px;
-  position: relative;
-  padding-bottom: 24px;
+.hero-visual-stage {\n  perspective: 1200px;\n  position: relative;\n  padding-bottom: 50px;
 }
 
 .hero-image-card {
@@ -7122,3 +7115,4 @@ textarea.form-control {
 }
 
 .doctor-avatar-circle img { object-fit: cover; object-position: center top; width: 100%; height: 100%; background: #ffffff; }
+\n/* Ensure hero timing badge cards are completely visible without clipping */\n.hero-section { overflow: visible !important; }\n.hero-visual { overflow: visible !important; }\n.hero-visual-stage { overflow: visible !important; }\n
