@@ -65,7 +65,7 @@ const translations = {
     "about.title": "Continuing a Legacy of Dental Care Since 2012",
     "about.subtitle": "Dedicated patient care, ethical practice, and continuous clinical betterment in Saraswathipuram, Mysore.",
     "about.flow_title": "Clinical Lineage & Evolution Path",
-    "about.quote": '"Clinic is owned by husband and wife duo <strong>Dr. Mahesh H.V. M.D.S. (Periodontist &amp; Implantologist)</strong> and <strong>Dr. Ramya K.S. M.D.S. (Orthodontist and dentofacial orthopaedist)</strong>. With the blessings of <strong>Dr. M.G. Prabhu</strong>, Dr. Mahesh and Dr. Ramya have taken over the clinic from him in the year <strong>2012</strong> and are while continuing the same good work aiming for further betterment and upgradation of the clinic in all ways for the benefit of the patients."',
+    "about.quote": '"Clinic is owned by husband and wife duo <strong>Dr. Mahesh H.V. M.D.S. (Periodontist &amp; Implantologist)</strong> and <strong>Dr. Ramya K.S. M.D.S. (Orthodontist and dentofacial orthopaedist)</strong>. With the blessings of <strong>Dr. M.G. Prabhu</strong>, Dr. Mahesh and Dr. Ramya have taken over the clinic from him in the year <strong>2012</strong> and are continuing the same good work while aiming for further betterment and upgradation of the clinic in all ways for the benefit of the patients."',
     "about.pillar1_title": "Dr. Mahesh H.V. &amp; Dr. Ramya K.S.",
     "about.pillar1_desc": "Husband and wife specialist duo owning and leading the clinic with specialized postgraduate expertise.",
     "about.pillar2_title": "Blessings of Dr. M.G. Prabhu",

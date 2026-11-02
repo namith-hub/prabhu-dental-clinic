@@ -1082,6 +1082,20 @@ html[lang="kn"] .nav-link {
   box-sizing: border-box;
 }
 
+.floating-badge-timing-sunday {
+  bottom: -122px;
+  left: 24px;
+  right: auto;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+}
+
+.floating-badge-timing-sunday .floating-badge-content h4,
+.floating-badge-timing-sunday .floating-badge-content p {
+  white-space: nowrap;
+}
+
 .floating-badge-timing .floating-badge-content h4,
 .floating-badge-timing .floating-badge-content p {
   white-space: nowrap;
