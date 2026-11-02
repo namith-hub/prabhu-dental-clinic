@@ -1073,29 +1073,41 @@ html[lang="kn"] .nav-link {
   z-index: 3;
 }
 
-.floating-badge-timing {
+.hero-timing-badges-row {
+  position: absolute;
   bottom: -42px;
   left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 3;
+}
+
+.hero-timing-badges-row .floating-badge {
+  position: relative;
+  bottom: auto;
+  left: auto;
   right: auto;
+  top: auto;
+  margin: 0;
+  flex: 1;
+}
+
+.floating-badge-timing {
   width: max-content;
-  max-width: calc(100% - 32px);
+  max-width: 100%;
   box-sizing: border-box;
 }
 
 .floating-badge-timing-sunday {
-  bottom: -122px;
-  left: 24px;
-  right: auto;
   width: max-content;
-  max-width: calc(100% - 32px);
+  max-width: 100%;
   box-sizing: border-box;
 }
 
 .floating-badge-timing-sunday .floating-badge-content h4,
-.floating-badge-timing-sunday .floating-badge-content p {
-  white-space: nowrap;
-}
-
+.floating-badge-timing-sunday .floating-badge-content p,
 .floating-badge-timing .floating-badge-content h4,
 .floating-badge-timing .floating-badge-content p {
   white-space: nowrap;
@@ -1143,6 +1155,16 @@ html[lang="kn"] .nav-link {
     gap: 48px;
   }
 
+  .hero-timing-badges-row {
+    position: static;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
   .floating-badge {
     position: static;
     margin-top: 14px;
@@ -1150,14 +1172,23 @@ html[lang="kn"] .nav-link {
     max-width: 100%;
   }
 
-  .floating-badge-timing {
+  .hero-timing-badges-row .floating-badge {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .floating-badge-timing,
+  .floating-badge-timing-sunday {
     width: auto;
     max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .floating-badge-timing .floating-badge-content p {
+  .hero-timing-badges-row .floating-badge-content h4,
+  .hero-timing-badges-row .floating-badge-content p,
+  .floating-badge-timing .floating-badge-content p,
+  .floating-badge-timing-sunday .floating-badge-content p {
     white-space: normal;
   }
 }
