@@ -3054,11 +3054,8 @@ textarea.form-control {
    - Icons are tuned to be a little bit lighter (opacity: 0.65, soft depth)
    - Slow, independent, silky-smooth micro-animations (4px-7px float, 1.5deg tilt)
    -------------------------------------------------------------------------- */
-.hero-section,
-.section-padding {
-  position: relative !important;
-  overflow: hidden !important;
-}
+.hero-section { position: relative !important; overflow: visible !important; }
+.section-padding { position: relative !important; overflow: hidden !important; }
 
 /* Dedicated framing gutter so text & content NEVER touch or overlap edge teeth */
 .hero-section > .container,
@@ -3742,10 +3739,7 @@ textarea.form-control {
 /* --------------------------------------------------------------------------
    5. HERO SECTION ANIMATION UPGRADE
    -------------------------------------------------------------------------- */
-.hero-section {
-  position: relative;
-  overflow: hidden;
-}
+.hero-section { position: relative; overflow: visible; }
 
 .hero-pill {
   animation: floatGentle 8s ease-in-out infinite;
@@ -7178,4 +7172,69 @@ textarea.form-control {
   .hero-timing-badges-row .floating-badge {
     width: 100% !important;
   }
+}
+
+/* ==========================================================================
+   HERO BADGES MAXIMUM VISIBILITY GUARANTEE & EXPANDED PAGE HEIGHT
+   ========================================================================== */
+.hero-section {
+  padding-top: 56px !important;
+  padding-bottom: 96px !important;
+  overflow: visible !important;
+}
+
+.hero-visual-stage {
+  padding-top: 36px !important;
+  padding-bottom: 24px !important;
+  overflow: visible !important;
+}
+
+.hero-decor-badge-sparkle {
+  top: 10px !important;
+  left: -8px !important;
+  z-index: 12 !important;
+  box-shadow: 0 8px 20px rgba(200, 35, 51, 0.15) !important;
+}
+
+.floating-badge-location {
+  top: 6px !important;
+  right: -8px !important;
+  z-index: 12 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.hero-timing-badges-row {
+  position: relative !important;
+  margin-top: 24px !important;
+  margin-bottom: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 14px !important;
+  width: 100% !important;
+  z-index: 12 !important;
+}
+
+.hero-timing-badges-row .floating-badge {
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  margin: 0 !important;
+  flex: 1 1 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #FEE2E2 !important;
+  box-shadow: 0 10px 24px rgba(200, 35, 51, 0.1) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 14px 18px !important;
+  animation: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
