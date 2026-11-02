@@ -1,0 +1,19 @@
+{
+  "name": "prabhu-dental-clinic",
+  "version": "1.0.0",
+  "description": "Official website for Prabhu Dental Clinic, Saraswathipuram, Mysore",
+  "scripts": {
+    "dev": "npx -y serve -l 3001 .",
+    "start": "npx -y serve -l 3001 ."
+  },
+  "keywords": [
+    "dental",
+    "clinic",
+    "mysore",
+    "saraswathipuram",
+    "orthodontics",
+    "periodontistry"
+  ],
+  "author": "Prabhu Dental Clinic",
+  "license": "ISC"
+}

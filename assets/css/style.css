@@ -1,0 +1,6755 @@
+/* ==========================================================================
+   PRABHU DENTAL CLINIC - OFFICIAL DESIGN SYSTEM & STYLESHEET
+   Location: Saraswathipuram, Mysore
+   Palette derived from clinic signboard: Crimson Red, Soft Rose, Warm Sandstone, Crisp White
+   ========================================================================== */
+
+:root {
+  /* Clinic Identity Palette: Signboard Crimson Red on Elegant Light Pink */
+  --primary: #C82333;           /* Signboard crimson red */
+  --primary-hover: #A71D2A;
+  --primary-dark: #7F141F;
+  --primary-light: #FFF0F3;     /* Elegant light pink whisper */
+  --primary-soft: #FDE8EC;      /* Soft rose petal container */
+  --primary-border: #F8B4BF;    /* Delicate pink border */
+  --primary-glow: rgba(200, 35, 51, 0.12);
+
+  /* Classy, Elegant Light Pink Porcelain Theme */
+  --theme-pink-bg: #FFF8F9;      /* Ultra soft porcelain light pink */
+  --theme-pink-surface: #FFF1F4; /* Creamy light pink blush */
+  --theme-pink-card: #FFFFFF;    /* Pure white card on pink canvas */
+  --theme-pink-border: rgba(200, 35, 51, 0.12);
+  --theme-pink-gradient: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 60%, #FFF0F3 100%);
+
+  /* Replaced yellowish sand palette with luxurious light pink blush */
+  --sand-50: #FFF5F7;           /* Delicate soft pink */
+  --sand-100: #FFF0F3;          /* Light petal pink */
+  --sand-200: #FCE8EC;          /* Soft rose-pink */
+  --sand-300: #F8D5DC;
+
+  /* Clean Neutrals with Soft Warmth */
+  --neutral-white: #FFFFFF;
+  --neutral-50: #FFF9FA;        /* Softest pink porcelain */
+  --neutral-100: #FDF2F4;       /* Soft pink tint */
+  --neutral-200: #F5E6E8;
+  --neutral-300: #EAD2D6;
+  --neutral-400: #9E8B8F;
+  --neutral-500: #736468;
+  --neutral-600: #4F4346;
+  --neutral-700: #382E31;
+  --neutral-800: #231C1E;
+  --neutral-900: #140E10;;
+
+  /* Warm Sandstone & Exterior Accents (reflecting the real clinic facade) */
+  --sand-50: #FCFBF9;
+  --sand-100: #F7F5F0;
+  --sand-200: #EFECE4;
+  --sand-300: #DDD8CD;
+
+  /* Neutrals & Medical Slates */
+  --neutral-white: #FFFFFF;
+  --neutral-50: #F8FAFC;
+  --neutral-100: #F1F5F9;
+  --neutral-200: #E2E8F0;
+  --neutral-300: #CBD5E1;
+  --neutral-400: #94A3B8;
+  --neutral-500: #64748B;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1E293B;
+  --neutral-900: #0F172A;
+
+  /* Functional Colors */
+  --status-open: #15803D;
+  --status-open-bg: #DCFCE7;
+  --status-closed: #991B1B;
+  --status-closed-bg: #FEE2E2;
+
+  /* Typography */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-kannada: 'Noto Sans Kannada', 'Tunga', 'Segoe UI', sans-serif;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 14px 30px rgba(15, 23, 42, 0.10);
+  --shadow-xl: 0 22px 48px -12px rgba(200, 35, 51, 0.14);
+  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.05);
+  --shadow-card-hover: 0 12px 32px rgba(200, 35, 51, 0.12);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --container-max: 1560px;
+  --nav-height: 80px;
+  --topbar-height: 40px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   CSS RESET & BASE STYLES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--neutral-700);
+  background-color: var(--theme-pink-bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ==========================================================================
+   LAYOUT UTILITIES
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 2.5vw, 36px);
+  padding-right: clamp(16px, 2.5vw, 36px);
+}
+
+.section-padding {
+  position: relative;
+  overflow: hidden;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 30px auto;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+  border: 1px solid var(--primary-border);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--neutral-600);
+  line-height: 1.7;
+}
+
+/* Section Background Variations */
+.bg-white {
+  background-color: var(--neutral-white);
+}
+
+.bg-sand {
+  background-color: #FFF2F5; /* Classy light pink blush */
+}
+
+.bg-pink-soft {
+  background-color: #FFF6F8;
+}
+
+.bg-soft {
+  background-color: var(--theme-pink-bg);
+}
+
+/* ==========================================================================
+   BUTTONS & CTA
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--neutral-white);
+  box-shadow: 0 4px 14px rgba(200, 35, 51, 0.35);
+  border: 1.5px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 35, 51, 0.45);
+}
+
+.btn-secondary {
+  background-color: var(--neutral-white);
+  color: var(--neutral-800);
+  border: 1.5px solid var(--neutral-300);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover {
+  background-color: var(--theme-pink-bg);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: var(--neutral-white);
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 13.5px;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   TOP ANNOUNCEMENT / STATUS BAR
+   ========================================================================== */
+
+.top-bar {
+  background-color: var(--neutral-900);
+  color: var(--neutral-300);
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 50;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  gap: 16px;
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar-item svg {
+  width: 14px;
+  height: 14px;
+  color: #F87171;
+}
+
+.top-bar-item strong {
+  color: var(--neutral-white);
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.open {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ADE80;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.status-badge.closed {
+  background-color: rgba(248, 113, 113, 0.2);
+  color: #FCA5A5;
+  border: 1px solid rgba(248, 113, 113, 0.4);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: currentColor;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@media (max-width: 860px) {
+  .top-bar-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+    padding: 6px 0;
+  }
+}
+
+/* ==========================================================================
+   STICKY NAVBAR
+   ========================================================================== */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--neutral-200);
+  z-index: 100;
+  transition: all var(--transition-normal);
+}
+
+.main-header .container {
+  max-width: 1560px;
+  width: 100%;
+  padding-left: clamp(16px, 2.5vw, 36px);
+  padding-right: clamp(16px, 2.5vw, 36px);
+}
+
+.main-header.scrolled {
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+  border-bottom-color: transparent;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  gap: clamp(10px, 1.5vw, 20px);
+  width: 100%;
+}
+
+/* Brand Logo with generous breathing room */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: clamp(12px, 1.8vw, 32px); /* Clear visible separation from Home */
+}
+
+.brand-emblem-wrap {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--neutral-white);
+  border: 1.5px solid var(--primary-soft);
+  box-shadow: 0 2px 6px rgba(200, 35, 51, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+.brand-text {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.25vw, 1.25rem);
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.4px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Nav Links - Oval Pill Shape with Active Highlight */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(2px, 0.4vw, 5px);
+  flex-shrink: 1;
+}
+
+.nav-link {
+  font-size: clamp(12px, 0.85vw, 13.2px);
+  font-weight: 600;
+  color: var(--neutral-700);
+  padding: 6px clamp(8px, 0.8vw, 12px);
+  border-radius: var(--radius-full); /* Oval Shape */
+  border: 1px solid transparent;
+  white-space: nowrap;
+  position: relative;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background-color: #FFF1F2; /* Soft warm pinkish-red oval highlight on hover */
+}
+
+/* Which option is clicked/active: Oval shape highlighted with rich color */
+.nav-link.active {
+  background-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  box-shadow: 0 3px 12px rgba(200, 35, 51, 0.35);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* On desktop, hide redundant 'Appointment' oval link because the Book Appointment CTA is right next to it */
+@media (min-width: 1241px) {
+  .nav-menu .nav-link-appointment {
+    display: none !important;
+  }
+}
+
+.nav-cta-wrapper {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1vw, 12px);
+  flex-shrink: 0;
+}
+
+.btn-header-cta {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  padding: 7px clamp(12px, 1.2vw, 18px) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(200, 35, 51, 0.25);
+}
+
+/* Bilingual Language Switcher Component with Interactive Animations */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 2px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(200, 35, 51, 0.06);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lang-switch:hover {
+  border-color: rgba(200, 35, 51, 0.35);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 14px rgba(200, 35, 51, 0.14);
+}
+
+.lang-switch.is-switching {
+  animation: langSwitchSpring 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes langSwitchSpring {
+  0%   { transform: scale(0.95); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.lang-pill {
+  border: none;
+  background: transparent;
+  padding: 5px 13px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--neutral-600);
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+}
+
+.lang-pill[data-lang="kn"] {
+  font-family: var(--font-kannada), var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.lang-pill:hover:not(.active) {
+  color: var(--primary);
+  background-color: rgba(200, 35, 51, 0.08);
+  transform: translateY(-1px);
+}
+
+.lang-pill.active {
+  background: linear-gradient(135deg, var(--primary) 0%, #A81B28 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 3px 10px rgba(200, 35, 51, 0.35);
+  animation: langActiveGlow 3s ease-in-out infinite;
+}
+
+@keyframes langActiveGlow {
+  0%, 100% {
+    box-shadow: 0 3px 10px rgba(200, 35, 51, 0.35);
+  }
+  50% {
+    box-shadow: 0 4px 14px rgba(200, 35, 51, 0.55), 0 0 6px rgba(248, 113, 113, 0.4);
+  }
+}
+
+/* Mobile language switcher wrapper inside drawer */
+.mobile-lang-wrap {
+  display: none;
+  width: 100%;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.mobile-lang-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--neutral-400);
+  margin-bottom: 8px;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--neutral-800);
+  border-radius: 4px;
+  transition: all var(--transition-normal);
+}
+
+.hamburger.is-active span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+  background-color: var(--primary);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+  background-color: var(--primary);
+}
+
+/* Responsive Navbar Adjustments */
+@media (max-width: 1420px) and (min-width: 1241px) {
+  .nav-container {
+    gap: 8px;
+  }
+  .brand-link {
+    margin-right: clamp(8px, 1vw, 14px);
+    gap: 8px;
+  }
+  .brand-name {
+    font-size: 1.08rem;
+  }
+  .nav-menu {
+    gap: 2px;
+  }
+  .nav-link {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+  .nav-cta-wrapper {
+    gap: 8px;
+  }
+  .btn-header-cta {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Mobile Nav Drawer (active at <= 1240px to ensure zero clipping on tablets/small laptops) */
+@media (max-width: 1240px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background-color: var(--neutral-white);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 85px 24px 40px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+    gap: 8px;
+    z-index: 105;
+    overflow-y: auto;
+    transform: translateX(100%);
+  }
+
+  .nav-menu:not(.is-open) {
+    display: none !important;
+  }
+
+  .nav-menu.is-open {
+    display: flex !important;
+    transform: translateX(0);
+    animation: drawerSlideIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes drawerSlideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+
+  .mobile-lang-wrap {
+    display: block;
+  }
+
+  .nav-link {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: var(--radius-full);
+    border-bottom: none;
+    justify-content: flex-start;
+  }
+
+  .nav-menu .nav-link-appointment {
+    display: flex !important;
+  }
+
+  .nav-link.active {
+    background-color: var(--primary) !important;
+    color: #FFFFFF !important;
+  }
+
+  .nav-cta-wrapper .btn-header-cta {
+    display: none !important;
+  }
+
+  .nav-menu .mobile-only-cta {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: 1241px) {
+  .mobile-only-cta {
+    display: none !important;
+  }
+}
+
+/* Kannada Language Typography Refinements */
+html[lang="kn"] body {
+  font-family: var(--font-kannada), var(--font-sans);
+}
+
+html[lang="kn"] .brand-name {
+  font-family: var(--font-kannada), var(--font-sans);
+  font-size: 1.15rem;
+  letter-spacing: normal;
+}
+
+html[lang="kn"] .hero-title {
+  font-family: var(--font-kannada), var(--font-sans);
+}
+
+html[lang="kn"] .section-title {
+  font-family: var(--font-kannada), var(--font-sans);
+  letter-spacing: normal;
+}
+
+html[lang="kn"] .nav-link {
+  font-family: var(--font-kannada), var(--font-sans);
+  font-size: 12.5px;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 50%, #FFF0F3 100%);
+  padding-top: 32px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--sand-200);
+}
+
+/* Subtle background graphic mesh */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(200, 35, 51, 0.05) 0%, rgba(200, 35, 51, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Content */
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.hero-pill-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.hero-kannada-title {
+  font-family: var(--font-kannada);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4.6vw, 3.8rem);
+  font-weight: 800;
+  color: var(--neutral-900);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.hero-title .brand-red {
+  color: var(--primary);
+}
+
+.hero-specialty {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: var(--neutral-800);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-specialty svg {
+  color: var(--primary);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--neutral-600);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* Hero Key Highlights */
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.hero-highlight-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-highlight-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.hero-highlight-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--neutral-600);
+  line-height: 1.35;
+  margin-top: 4px;
+}
+
+/* Hero Visual / Clinic Card */
+.hero-visual {
+  position: relative;
+}
+
+.hero-image-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: var(--neutral-white);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  border: 4px solid var(--neutral-white);
+}
+
+.hero-image-wrap {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 796;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--neutral-200);
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.hero-image-card:hover .hero-image-wrap img {
+  transform: scale(1.03);
+}
+
+.hero-card-caption {
+  padding: 16px 20px;
+  background-color: var(--neutral-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--neutral-100);
+  gap: 12px;
+}
+
+.hero-caption-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-caption-logo-wrap {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--neutral-white);
+  border: 1.5px solid var(--primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  box-shadow: 0 2px 5px rgba(200, 35, 51, 0.08);
+}
+
+.hero-caption-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-caption-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.hero-caption-sub {
+  font-size: 12.5px;
+  color: var(--neutral-500);
+}
+
+.hero-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--status-open);
+  background-color: var(--status-open-bg);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.hero-verified-badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Floating Badges on Hero Image */
+.floating-badge {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+}
+
+.floating-badge-timing {
+  bottom: -42px;
+  left: 24px;
+  right: auto;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+}
+
+.floating-badge-timing .floating-badge-content h4,
+.floating-badge-timing .floating-badge-content p {
+  white-space: nowrap;
+}
+
+.floating-badge-location {
+  top: -24px;
+  right: -15px;
+}
+
+.floating-badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-badge-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.floating-badge-content h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.2;
+}
+
+.floating-badge-content p {
+  font-size: 12px;
+  color: var(--neutral-600);
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .floating-badge {
+    position: static;
+    margin-top: 14px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .floating-badge-timing {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-badge-timing .floating-badge-content p {
+    white-space: normal;
+  }
+}
+
+/* ==========================================================================
+   ABOUT & LEGACY SECTION
+   ========================================================================== */
+
+.about-narrative-card {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  padding: 36px 36px 32px 36px;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 0;
+}
+
+.about-headline-lead {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.about-quote-box {
+  background-color: var(--sand-50);
+  border-left: 4px solid var(--primary);
+  padding: 24px 28px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 28px;
+  font-size: 1.05rem;
+  font-style: normal;
+  color: var(--neutral-800);
+  line-height: 1.8;
+}
+
+.about-quote-box strong {
+  color: var(--neutral-900);
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.about-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  background-color: var(--theme-pink-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-200);
+}
+
+.about-pillar-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-pillar-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.about-pillar-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 4px;
+}
+
+.about-pillar-text {
+  font-size: 13.5px;
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+/* TIMELINE SECTION */
+.legacy-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 24px auto 0 auto;
+  padding: 10px 0;
+}
+
+.legacy-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(180deg, #FCA5A5 0%, var(--primary) 50%, #C82333 100%);
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 22px;
+  width: 50%;
+}
+
+.timeline-step:nth-child(odd) {
+  left: 0;
+  padding-right: 48px;
+  text-align: right;
+}
+
+.timeline-step:nth-child(even) {
+  left: 50%;
+  padding-left: 48px;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--neutral-white);
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-soft);
+  z-index: 2;
+}
+
+.timeline-step:nth-child(odd) .timeline-dot {
+  right: -11px;
+}
+
+.timeline-step:nth-child(even) .timeline-dot {
+  left: -11px;
+}
+
+.timeline-card {
+  background-color: var(--neutral-white);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.timeline-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-border);
+}
+
+.timeline-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 6px;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .legacy-timeline::before {
+    left: 20px;
+  }
+
+  .timeline-step {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 54px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .timeline-step .timeline-dot {
+    left: 9px !important;
+    right: auto !important;
+  }
+
+  .about-narrative-card {
+    padding: 28px;
+  }
+}
+
+/* ==========================================================================
+   DOCTORS SECTION
+   ========================================================================== */
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.doctor-card {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--primary-border);
+}
+
+.doctor-header-accent {
+  height: 8px;
+  background: linear-gradient(90deg, var(--primary) 0%, #E03131 100%);
+}
+
+.doctor-card-body {
+  padding: 36px 32px 32px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.doctor-avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-soft) 0%, #FFF0F1 100%);
+  border: 2.5px solid var(--primary-border);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.doctor-avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-avatar-circle svg {
+  width: 38px;
+  height: 38px;
+}
+
+.doctor-meta-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-role-pill {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  background-color: var(--sand-100);
+  color: var(--neutral-700);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+  border: 1px solid var(--sand-200);
+}
+
+.doctor-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.2;
+}
+
+.doctor-qualification {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 3px;
+}
+
+.doctor-specialty-badge {
+  background-color: var(--primary-light);
+  border: 1px solid var(--primary-soft);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+
+.doctor-specialty-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.doctor-specialty-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.doctor-details-list {
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.doctor-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--neutral-600);
+}
+
+.doctor-detail-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.doctor-card-footer {
+  padding-top: 20px;
+  border-top: 1px solid var(--neutral-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.doctor-timing-snippet {
+  font-size: 12.5px;
+  color: var(--neutral-500);
+}
+
+.doctor-timing-snippet strong {
+  color: var(--neutral-800);
+  display: block;
+}
+
+/* ==========================================================================
+   ASSOCIATE SURGEON & SPECIALIST TEAM
+   ========================================================================== */
+
+.team-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.associate-card {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.associate-avatar-block {
+  text-align: center;
+}
+
+.associate-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--sand-100) 0%, var(--sand-200) 100%);
+  border: 3px solid var(--primary-border);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.associate-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.associate-avatar svg {
+  width: 52px;
+  height: 52px;
+}
+
+.associate-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 4px;
+}
+
+.associate-deg {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.associate-title {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral-600);
+  background-color: var(--neutral-100);
+  padding: 3px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+}
+
+.associate-bio {
+  font-size: 15px;
+  color: var(--neutral-700);
+  line-height: 1.7;
+  background-color: var(--sand-50);
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+  .associate-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .associate-bio {
+    text-align: left;
+  }
+}
+
+/* Specialist Panel Box */
+.specialist-panel-box {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF9F9 100%);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  border: 1px solid var(--primary-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.specialist-panel-header {
+  max-width: 780px;
+  margin-bottom: 32px;
+}
+
+.specialist-panel-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 12px;
+}
+
+.specialist-panel-header p {
+  font-size: 15px;
+  color: var(--neutral-700);
+  line-height: 1.7;
+}
+
+.specialist-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.specialist-card-item {
+  background-color: var(--neutral-white);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-fast);
+}
+
+.specialist-card-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.specialist-card-item .icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.specialist-card-item .icon-circle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.specialist-card-item h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 6px;
+}
+
+.specialist-card-item p {
+  font-size: 13.5px;
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+/* EMERGENCY CARE BANNER */
+.emergency-care-banner {
+  margin-top: 36px;
+  background-color: #FEF2F2;
+  border: 1.5px solid #FECACA;
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.emergency-banner-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #EF4444;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emergency-banner-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.emergency-banner-text h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #991B1B;
+  margin-bottom: 4px;
+}
+
+.emergency-banner-text p {
+  font-size: 14.5px;
+  color: #7F1D1D;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .emergency-care-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/* ==========================================================================
+   DENTAL SPECIALITIES SECTION
+   ========================================================================== */
+
+.specialities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 28px;
+}
+
+.speciality-card {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.speciality-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.speciality-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-lg);
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.speciality-icon-box svg {
+  width: 28px;
+  height: 28px;
+}
+
+.speciality-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 12px;
+}
+
+.speciality-card p {
+  font-size: 14.5px;
+  color: var(--neutral-600);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.speciality-card .specialist-lead-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 6px 12px;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   WHY CHOOSE US SECTION
+   ========================================================================== */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 24px;
+}
+
+.why-card {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.why-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.why-check-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.why-check-circle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.why-content h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 4px;
+}
+
+.why-content p {
+  font-size: 13.5px;
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   CLINIC TIMINGS & ESSENTIAL INFORMATION CARD
+   ========================================================================== */
+
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.info-card {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-card);
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.info-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.info-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.timing-day-box {
+  background-color: var(--sand-50);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid var(--sand-200);
+}
+
+.timing-day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--neutral-300);
+}
+
+.timing-day-label {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--neutral-900);
+}
+
+.timing-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timing-slot-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14.5px;
+}
+
+.timing-slot-name {
+  color: var(--neutral-600);
+}
+
+.timing-slot-time {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.timing-sunday-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.timing-sunday-row span:first-child {
+  font-weight: 700;
+  color: var(--neutral-800);
+}
+
+.timing-sunday-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--status-closed);
+  background-color: var(--status-closed-bg);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* ==========================================================================
+   GALLERY SECTION
+   ========================================================================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 28px;
+}
+
+.gallery-card {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.gallery-image-box {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--neutral-100);
+}
+
+.gallery-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-image-box img {
+  transform: scale(1.04);
+}
+
+/* Placeholder styling for future photos */
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  color: var(--neutral-500);
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.gallery-placeholder svg {
+  width: 44px;
+  height: 44px;
+  color: var(--neutral-400);
+  margin-bottom: 10px;
+}
+
+.gallery-placeholder-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--neutral-600);
+  background-color: var(--neutral-200);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+.gallery-content {
+  padding: 20px 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery-item-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.gallery-item-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 6px;
+}
+
+.gallery-item-desc {
+  font-size: 13px;
+  color: var(--neutral-600);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   LOCATION & INTERACTIVE MAP SECTION
+   ========================================================================== */
+
+.map-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 36px;
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-card);
+}
+
+.map-details-pane {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.map-details-pane h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 16px;
+}
+
+.location-address-box {
+  background-color: var(--sand-50);
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary);
+  margin-bottom: 24px;
+}
+
+.location-address-line {
+  font-size: 15px;
+  color: var(--neutral-800);
+  line-height: 1.6;
+}
+
+.location-address-line strong {
+  color: var(--neutral-900);
+  font-size: 16px;
+}
+
+.location-points {
+  margin-bottom: 32px;
+}
+
+.location-point-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--neutral-700);
+}
+
+.location-point-row svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.map-frame-pane {
+  position: relative;
+  min-height: 380px;
+  background-color: var(--neutral-200);
+}
+
+.map-frame-pane iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .map-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-details-pane {
+    padding: 32px 24px;
+  }
+
+  .map-frame-pane {
+    min-height: 300px;
+  }
+}
+
+/* ==========================================================================
+   BOOK APPOINTMENT SECTION
+   ========================================================================== */
+
+.appointment-wrapper {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F8 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--primary-border);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  padding: 48px;
+}
+
+.appointment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 48px;
+}
+
+.appointment-info-col h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.appointment-info-col p {
+  font-size: 15px;
+  color: var(--neutral-600);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.appointment-benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appointment-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--neutral-700);
+}
+
+.appointment-benefit-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Form Styling */
+.appointment-form {
+  background-color: var(--neutral-white);
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--neutral-800);
+  margin-bottom: 6px;
+}
+
+.form-group label span.required {
+  color: var(--primary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--neutral-300);
+  background-color: var(--theme-pink-bg);
+  color: var(--neutral-900);
+  font-size: 14.5px;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-control:focus {
+  background-color: var(--neutral-white);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--neutral-500);
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* Success Confirmation State */
+.appointment-success-box {
+  display: none;
+  background-color: #ECFDF5;
+  border: 1.5px solid #A7F3D0;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  text-align: center;
+}
+
+.appointment-success-box.is-visible {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #10B981;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+}
+
+.success-icon-wrap svg {
+  width: 32px;
+  height: 32px;
+}
+
+.appointment-success-box h4 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #065F46;
+  margin-bottom: 8px;
+}
+
+.appointment-success-box p {
+  font-size: 15px;
+  color: #047857;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .appointment-wrapper {
+    padding: 32px 20px;
+  }
+
+  .appointment-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .appointment-form {
+    padding: 24px;
+  }
+}
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.contact-card-box {
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.contact-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-card-box h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 10px;
+}
+
+.contact-card-box p {
+  font-size: 14.5px;
+  color: var(--neutral-600);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.contact-placeholder-pill {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neutral-600);
+  background-color: var(--neutral-100);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer {
+  background-color: #0B111E;
+  color: #94A3B8;
+  padding-top: 28px;
+  padding-bottom: 14px;
+  border-top: 3px solid var(--primary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.footer-logo-wrap {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-brand h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--neutral-white);
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+.footer-kannada {
+  font-family: var(--font-kannada);
+  font-size: 12px;
+  font-weight: 700;
+  color: #F87171;
+  margin-bottom: 4px;
+}
+
+.footer-brand p {
+  font-size: 12px;
+  color: #94A3B8;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--neutral-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: #94A3B8;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links a:hover {
+  color: var(--neutral-white);
+  transform: translateX(4px);
+}
+
+.footer-schedule-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-schedule-row span:first-child {
+  color: #CBD5E1;
+}
+
+.footer-schedule-row span:last-child {
+  color: #FCA5A5;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748B;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   IMAGE LIGHTBOX MODAL
+   ========================================================================== */
+
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.94);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox-modal.is-active {
+  display: flex;
+}
+
+.lightbox-modal-content {
+  max-width: 900px;
+  width: 100%;
+  background-color: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-image-wrap {
+  width: 100%;
+  max-height: 75vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.lightbox-image-wrap img {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.lightbox-modal-caption {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--neutral-white);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(15, 23, 42, 0.7);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--transition-fast);
+  z-index: 5;
+}
+
+.lightbox-close-btn:hover {
+  background-color: var(--primary);
+}
+
+/* ==========================================================================
+   MOBILE BOTTOM QUICK ACTIONS BAR
+   ========================================================================== */
+
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--neutral-200);
+  padding: 10px 16px;
+  z-index: 99;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-bottom-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mobile-bottom-bar .btn {
+  padding: 10px 14px;
+  font-size: 13.5px;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: block;
+  }
+  body {
+    padding-bottom: 64px;
+  }
+  .brand-emblem-wrap {
+    width: 38px;
+    height: 38px;
+    padding: 3px;
+  }
+  .hero-pill-logo {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ==========================================================================
+   MODERN DENTAL ANIMATION SYSTEM (PRABHU DENTAL CLINIC)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. KEYFRAMES
+   -------------------------------------------------------------------------- */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes floatDrift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(6px, -10px) rotate(2deg);
+  }
+  66% {
+    transform: translate(-5px, -5px) rotate(-1.5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    transform: scale(0.85);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(200, 35, 51, 0.45));
+  }
+}
+
+@keyframes pulseGlowRing {
+  0% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(200, 35, 51, 0.35);
+  }
+  70% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 16px rgba(200, 35, 51, 0);
+  }
+  100% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(200, 35, 51, 0);
+  }
+}
+
+@keyframes sonarWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+@keyframes clockTickSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes modalPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes toothSpinCheck {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.15) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pathDrawFlow {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. SITE PRELOADER (PROFESSIONAL & NON-BLOCKING)
+   -------------------------------------------------------------------------- */
+.site-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #FFFFFF 0%, #FFF5F5 60%, #FEE2E2 100%);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.55s ease,
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.site-preloader.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.03);
+  pointer-events: none;
+}
+
+.preloader-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px;
+  position: relative;
+}
+
+.preloader-emblem-wrap {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.preloader-glow-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px dashed rgba(200, 35, 51, 0.3);
+  animation: clockTickSlow 18s linear infinite;
+}
+
+.preloader-pulse-circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid var(--primary-border);
+  box-shadow: 0 10px 28px rgba(200, 35, 51, 0.16);
+  animation: pulseGlowRing 2.4s ease-in-out infinite;
+}
+
+.preloader-logo-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 4px 10px rgba(200, 35, 51, 0.2));
+}
+
+.preloader-sparkle {
+  position: absolute;
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 1;
+  animation: sparkleTwinkle 1.8s ease-in-out infinite;
+}
+
+.preloader-sparkle-1 {
+  top: -8px;
+  right: -8px;
+  animation-delay: 0.2s;
+}
+
+.preloader-sparkle-2 {
+  bottom: 0px;
+  left: -8px;
+  animation-delay: 0.8s;
+}
+
+.preloader-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.preloader-brand-sub {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--neutral-600);
+  margin-bottom: 24px;
+  letter-spacing: 0.4px;
+}
+
+.preloader-progress-track {
+  width: 170px;
+  height: 4px;
+  background-color: rgba(200, 35, 51, 0.12);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-progress-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #F87171 0%, var(--primary) 50%, #9E1B28 100%);
+  border-radius: var(--radius-full);
+  transform-origin: left center;
+  animation: shimmerSweep 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   3. INTENTIONAL DENTAL FRAMING SYSTEM (OUTER EDGES ONLY - ALL PAGES & SECTIONS)
+   - Follows balanced edge-framing composition (no bunching, clean center)
+   - Left side & Right side outer perimeter placement in EVERY section
+   - Guaranteed ZERO overlap on text, pills, headings & cards across all screen widths
+   - Icons are tuned to be a little bit lighter (opacity: 0.65, soft depth)
+   - Slow, independent, silky-smooth micro-animations (4px-7px float, 1.5deg tilt)
+   -------------------------------------------------------------------------- */
+.hero-section,
+.section-padding {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Dedicated framing gutter so text & content NEVER touch or overlap edge teeth */
+.hero-section > .container,
+.section-padding > .container {
+  position: relative !important;
+  z-index: 2 !important;
+  padding-left: clamp(32px, 6vw, 92px) !important;
+  padding-right: clamp(32px, 6vw, 92px) !important;
+}
+
+.section-dental-decor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1; /* Sits below container cards (which have z-index: 2) */
+}
+
+/* ==========================================================================
+   CLASSY DENTAL WATERMARK MOTIF (Matches Clinic Logo Emblem)
+   Subtle, non-corner watermark motif integrated gracefully across the website
+   ========================================================================== */
+.section-watermark-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.section-watermark-svg {
+  width: clamp(300px, 34vw, 480px);
+  height: clamp(300px, 34vw, 480px);
+  pointer-events: none;
+  opacity: 0.042; /* Elegant, faint watermark visibility */
+  transform: rotate(-6deg);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 4px 12px rgba(200, 35, 51, 0.08));
+}
+
+.section-padding:hover .section-watermark-svg {
+  transform: rotate(-3deg) scale(1.02);
+}
+
+/* Subtle continuous watermark pattern overlay */
+.dental-watermark-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpath d='M80 32 C68 18 44 20 36 38 C28 60 44 84 54 98 C62 110 72 124 80 132 C88 124 98 110 106 98 C116 84 132 60 124 38 C116 20 92 18 80 32 Z' fill='none' stroke='%23C82333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' opacity='0.035'/%3E%3Cpath d='M80 50 L80 66 M72 58 L88 58' stroke='%23C82333' stroke-width='1.5' stroke-linecap='round' opacity='0.035'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 160px 160px;
+}
+
+/* ==========================================================================
+   EDGE POSITIONING (INTENTIONAL FRAMING — HUGGED TIGHTLY TO OUTER SCREEN BORDERS)
+   ========================================================================== */
+.pos-edge-top-left {
+  top: clamp(14px, 6%, 42px);
+  left: clamp(8px, 1.4vw, 20px);
+  bottom: auto;
+  right: auto;
+}
+
+.pos-edge-bottom-left {
+  bottom: clamp(14px, 6%, 42px);
+  left: clamp(8px, 1.4vw, 20px);
+  top: auto;
+  right: auto;
+}
+
+.pos-edge-top-right {
+  top: clamp(14px, 6%, 42px);
+  right: clamp(8px, 1.4vw, 20px);
+  bottom: auto;
+  left: auto;
+}
+
+.pos-edge-bottom-right {
+  bottom: clamp(14px, 6%, 42px);
+  right: clamp(8px, 1.4vw, 20px);
+  top: auto;
+  left: auto;
+}
+
+/* Top & Bottom subtle center accents in Hero */
+.dental-edge-sparkle {
+  position: absolute;
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0.20;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+}
+
+.pos-edge-top-center {
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: dentalTwinkleSlow 4s ease-in-out infinite;
+}
+
+.pos-edge-bottom-center {
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: dentalTwinkleSlow 4.5s ease-in-out infinite 2s;
+}
+
+@keyframes dentalTwinkleSlow {
+  0%, 100% { opacity: 0.12; transform: translateX(-50%) scale(1); }
+  50%       { opacity: 0.30; transform: translateX(-50%) scale(1.25); }
+}
+
+/* ==========================================================================
+   HIGH-VISIBILITY, DYNAMIC DENTAL CLINIC ANIMATIONS (EACH SECTION 100% DISTINCT!)
+   Speed tuned to 2.4s - 3.4s so the animations are IMMEDIATELY LIVELY & VISIBLE!
+   ========================================================================== */
+
+/* 1. HOME / HERO SECTION: Joyful Waving Star Tooth (Friendly Greeting) */
+@keyframes heroToothWavingA {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    filter: drop-shadow(0 8px 18px rgba(200, 35, 51, 0.18));
+  }
+  20% {
+    transform: translateY(-14px) rotate(8deg) scale(1.06);
+    filter: drop-shadow(0 14px 26px rgba(200, 35, 51, 0.28)) brightness(1.05);
+  }
+  40% {
+    transform: translateY(-8px) rotate(-6deg) scale(1.03);
+  }
+  60% {
+    transform: translateY(-16px) rotate(10deg) scale(1.07);
+    filter: drop-shadow(0 16px 28px rgba(200, 35, 51, 0.3)) brightness(1.08);
+  }
+  80% {
+    transform: translateY(-4px) rotate(-3deg) scale(1.01);
+  }
+}
+
+@keyframes heroToothWavingB {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    filter: drop-shadow(0 8px 18px rgba(200, 35, 51, 0.18));
+  }
+  25% {
+    transform: translateY(-12px) rotate(-8deg) scale(1.05);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0deg) scale(1.02);
+  }
+  75% {
+    transform: translateY(-15px) rotate(8deg) scale(1.06);
+    filter: drop-shadow(0 16px 28px rgba(200, 35, 51, 0.28)) brightness(1.07);
+  }
+}
+
+.anim-home-1 { animation: heroToothWavingA 2.8s ease-in-out infinite; }
+.anim-home-2 { animation: heroToothWavingB 3.2s ease-in-out infinite; animation-delay: -1.2s; }
+.anim-home-3 { animation: heroToothWavingA 3.0s ease-in-out infinite; animation-delay: -1.8s; }
+.anim-home-4 { animation: heroToothWavingB 3.4s ease-in-out infinite; animation-delay: -0.8s; }
+
+/* 2. ABOUT SECTION: Active Toothbrush Scrub Motion (Dental Cleaning Sweep) */
+@keyframes aboutBrushScrubA {
+  0%, 100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-14px) translateY(-6px) rotate(-8deg);
+  }
+  40% {
+    transform: translateX(14px) translateY(-10px) rotate(8deg);
+  }
+  60% {
+    transform: translateX(-12px) translateY(-4px) rotate(-6deg);
+  }
+  80% {
+    transform: translateX(10px) translateY(-8px) rotate(6deg);
+  }
+}
+
+@keyframes aboutBrushScrubB {
+  0%, 100% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(14px) translateY(-8px) rotate(8deg);
+  }
+  50% {
+    transform: translateX(-12px) translateY(-5px) rotate(-6deg);
+  }
+  75% {
+    transform: translateX(10px) translateY(-10px) rotate(6deg);
+  }
+}
+
+.anim-about-1 { animation: aboutBrushScrubA 2.6s ease-in-out infinite; }
+.anim-about-2 { animation: aboutBrushScrubB 2.9s ease-in-out infinite; animation-delay: -1.3s; }
+
+/* 3. OUR DOCTORS SECTION: Stethoscope Heartbeat Pulse (Pronounced Cardiac Thump & Medical Red Glow) */
+@keyframes doctorHeartbeatThumpA {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 6px 14px rgba(200, 35, 51, 0.15));
+  }
+  14% {
+    transform: scale(1.18) translateY(-6px);
+    filter: drop-shadow(0 0 16px rgba(200, 35, 51, 0.65)) brightness(1.1);
+  }
+  24% {
+    transform: scale(1.04) translateY(-2px);
+    filter: drop-shadow(0 6px 14px rgba(200, 35, 51, 0.2));
+  }
+  38% {
+    transform: scale(1.22) translateY(-8px);
+    filter: drop-shadow(0 0 20px rgba(200, 35, 51, 0.75)) brightness(1.14);
+  }
+  54% {
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 6px 14px rgba(200, 35, 51, 0.15));
+  }
+  78% {
+    transform: scale(1.05) translateY(-4px);
+  }
+}
+
+@keyframes doctorHeartbeatThumpB {
+  0%, 100% {
+    transform: scale(1) translateY(0) rotate(0deg);
+    filter: drop-shadow(0 6px 14px rgba(200, 35, 51, 0.15));
+  }
+  16% {
+    transform: scale(1.17) translateY(-5px) rotate(-4deg);
+    filter: drop-shadow(0 0 16px rgba(200, 35, 51, 0.65)) brightness(1.1);
+  }
+  26% {
+    transform: scale(1.03) translateY(-1px) rotate(0deg);
+  }
+  40% {
+    transform: scale(1.23) translateY(-9px) rotate(4deg);
+    filter: drop-shadow(0 0 22px rgba(200, 35, 51, 0.75)) brightness(1.14);
+  }
+  56% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+}
+
+.anim-doctors-1 { animation: doctorHeartbeatThumpA 2.5s ease-in-out infinite; }
+.anim-doctors-2 { animation: doctorHeartbeatThumpB 2.7s ease-in-out infinite; animation-delay: -1.2s; }
+
+/* 4. SPECIALITIES SECTION: Enamel Shield Protective Barrier Glide */
+@keyframes specialityShieldProtectA {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 6px 14px rgba(16, 185, 129, 0.2));
+  }
+  25% {
+    transform: translate(-12px, -12px) rotate(-8deg) scale(1.08);
+    filter: drop-shadow(0 0 18px rgba(16, 185, 129, 0.6)) brightness(1.12);
+  }
+  50% {
+    transform: translate(0px, -16px) rotate(0deg) scale(1.04);
+  }
+  75% {
+    transform: translate(12px, -10px) rotate(8deg) scale(1.1);
+    filter: drop-shadow(0 0 18px rgba(200, 35, 51, 0.5)) brightness(1.12);
+  }
+}
+
+@keyframes specialityShieldProtectB {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  30% {
+    transform: translate(12px, -12px) rotate(8deg) scale(1.08);
+    filter: drop-shadow(0 0 18px rgba(200, 35, 51, 0.5)) brightness(1.1);
+  }
+  65% {
+    transform: translate(-12px, -14px) rotate(-8deg) scale(1.1);
+    filter: drop-shadow(0 0 18px rgba(16, 185, 129, 0.6)) brightness(1.12);
+  }
+}
+
+.anim-specialities-1 { animation: specialityShieldProtectA 3.2s ease-in-out infinite; }
+.anim-specialities-2 { animation: specialityShieldProtectB 3.5s ease-in-out infinite; animation-delay: -1.5s; }
+
+/* 5. OUR TEAM SECTION: Cheerful High-Five Companion Bounce */
+@keyframes teamHighFiveBounceA {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  18% {
+    transform: translateY(-16px) rotate(8deg) scale(1.08);
+  }
+  35% {
+    transform: translateY(-3px) rotate(0deg) scale(1.02);
+  }
+  52% {
+    transform: translateY(-18px) rotate(-8deg) scale(1.09);
+  }
+  70% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  85% {
+    transform: translateY(-6px) rotate(3deg) scale(1.03);
+  }
+}
+
+@keyframes teamHighFiveBounceB {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  22% {
+    transform: translateY(-15px) rotate(-7deg) scale(1.07);
+  }
+  40% {
+    transform: translateY(-2px) rotate(0deg) scale(1.02);
+  }
+  58% {
+    transform: translateY(-17px) rotate(7deg) scale(1.08);
+  }
+  75% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+.anim-team-1 { animation: teamHighFiveBounceA 2.5s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; }
+.anim-team-2 { animation: teamHighFiveBounceB 2.8s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; animation-delay: -1.3s; }
+
+/* 6. CLINIC LEGACY SECTION: Prominent Grandfather Clock Pendulum Sway */
+@keyframes legacyPendulumSwingA {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+    transform-origin: top center;
+  }
+  25% {
+    transform: rotate(10deg) translateY(-6px);
+    filter: drop-shadow(0 12px 22px rgba(245, 158, 11, 0.35)) brightness(1.08);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-12px);
+  }
+  75% {
+    transform: rotate(-10deg) translateY(-6px);
+    filter: drop-shadow(0 12px 22px rgba(245, 158, 11, 0.35)) brightness(1.08);
+  }
+}
+
+@keyframes legacyPendulumSwingB {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+    transform-origin: top center;
+  }
+  30% {
+    transform: rotate(-11deg) translateY(-7px);
+    filter: drop-shadow(0 12px 22px rgba(245, 158, 11, 0.35)) brightness(1.08);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-14px);
+  }
+  75% {
+    transform: rotate(11deg) translateY(-7px);
+  }
+}
+
+.anim-legacy-1 { animation: legacyPendulumSwingA 3.2s ease-in-out infinite; }
+.anim-legacy-2 { animation: legacyPendulumSwingB 3.6s ease-in-out infinite; animation-delay: -1.6s; }
+
+/* 7. GALLERY SECTION: Camera Snapshot Flash & Photographic Pan */
+@keyframes galleryCameraSnapshotA {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    filter: brightness(1) drop-shadow(0 6px 14px rgba(0,0,0,0.1));
+  }
+  25% {
+    transform: translate(14px, -10px) scale(1.06) rotate(4deg);
+    filter: brightness(1.15) drop-shadow(0 12px 24px rgba(255, 255, 255, 0.8));
+  }
+  48% {
+    transform: translate(0, -14px) scale(1.03);
+    filter: brightness(1.4) drop-shadow(0 0 24px rgba(255, 255, 255, 1)); /* Shutter flash! */
+  }
+  52% {
+    filter: brightness(1.05);
+  }
+  75% {
+    transform: translate(-14px, -8px) scale(1.07) rotate(-4deg);
+    filter: brightness(1.18) drop-shadow(0 12px 24px rgba(200, 35, 51, 0.4));
+  }
+}
+
+@keyframes galleryCameraSnapshotB {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    filter: brightness(1);
+  }
+  30% {
+    transform: translate(-12px, -12px) scale(1.07) rotate(-4deg);
+    filter: brightness(1.15);
+  }
+  50% {
+    transform: translate(0, -15px) scale(1.04);
+    filter: brightness(1.35) drop-shadow(0 0 22px rgba(255, 255, 255, 0.95)); /* Shutter flash! */
+  }
+  75% {
+    transform: translate(12px, -8px) scale(1.06) rotate(4deg);
+    filter: brightness(1.15);
+  }
+}
+
+.anim-gallery-1 { animation: galleryCameraSnapshotA 3.0s ease-in-out infinite; }
+.anim-gallery-2 { animation: galleryCameraSnapshotB 3.4s ease-in-out infinite; animation-delay: -1.5s; }
+
+/* 8. APPOINTMENT SECTION: Enthusiastic Beckoning & Booking Cheer */
+@keyframes appointmentBeckonCheerA {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translateY(-16px) rotate(9deg) scale(1.09);
+    filter: drop-shadow(0 14px 26px rgba(200, 35, 51, 0.35));
+  }
+  40% {
+    transform: translateY(-20px) rotate(-8deg) scale(1.11);
+    filter: drop-shadow(0 18px 30px rgba(200, 35, 51, 0.45));
+  }
+  60% {
+    transform: translateY(-8px) rotate(6deg) scale(1.05);
+  }
+  80% {
+    transform: translateY(-2px) rotate(0deg) scale(1.01);
+  }
+}
+
+@keyframes appointmentBeckonCheerB {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  24% {
+    transform: translateY(-17px) rotate(-8deg) scale(1.08);
+  }
+  45% {
+    transform: translateY(-22px) rotate(8deg) scale(1.1);
+  }
+  68% {
+    transform: translateY(-9px) rotate(-4deg) scale(1.04);
+  }
+}
+
+.anim-appointment-1 { animation: appointmentBeckonCheerA 2.5s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; }
+.anim-appointment-2 { animation: appointmentBeckonCheerB 2.8s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; animation-delay: -1.2s; }
+
+/* 9. LOCATION SECTION: GPS Satellite Radar Pin & Sonar Pulse */
+@keyframes locationRadarBeaconA {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 6px 14px rgba(59, 130, 246, 0.2));
+  }
+  22% {
+    transform: translateY(-15px) scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.65)) brightness(1.12);
+  }
+  48% {
+    transform: translateY(-19px) scale(1.05);
+    filter: drop-shadow(0 0 24px rgba(200, 35, 51, 0.55)) brightness(1.15);
+  }
+  72% {
+    transform: translateY(-6px) scale(1.02);
+  }
+}
+
+@keyframes locationRadarBeaconB {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-14px) scale(1.08);
+    filter: drop-shadow(0 0 18px rgba(200, 35, 51, 0.55));
+  }
+  52% {
+    transform: translateY(-18px) scale(1.05);
+    filter: drop-shadow(0 0 22px rgba(59, 130, 246, 0.6));
+  }
+}
+
+.anim-location-1 { animation: locationRadarBeaconA 2.6s ease-in-out infinite; }
+.anim-location-2 { animation: locationRadarBeaconB 2.9s ease-in-out infinite; animation-delay: -1.3s; }
+
+/* 10. CONTACT SECTION: Telephone Reception Chime Vibration */
+@keyframes contactPhoneRingA {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  10% {
+    transform: translateY(-6px) rotate(-12deg) scale(1.06);
+  }
+  20% {
+    transform: translateY(-10px) rotate(12deg) scale(1.08);
+  }
+  30% {
+    transform: translateY(-12px) rotate(-10deg) scale(1.09);
+  }
+  40% {
+    transform: translateY(-8px) rotate(8deg) scale(1.06);
+  }
+  50% {
+    transform: translateY(-3px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-9px) rotate(4deg) scale(1.03);
+  }
+}
+
+@keyframes contactPhoneRingB {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  12% {
+    transform: translateY(-8px) rotate(10deg) scale(1.06);
+  }
+  24% {
+    transform: translateY(-12px) rotate(-11deg) scale(1.08);
+  }
+  36% {
+    transform: translateY(-10px) rotate(9deg) scale(1.07);
+  }
+  48% {
+    transform: translateY(-4px) rotate(-3deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(-4deg);
+  }
+}
+
+.anim-contact-1 { animation: contactPhoneRingA 2.4s ease-in-out infinite; }
+.anim-contact-2 { animation: contactPhoneRingB 2.7s ease-in-out infinite; animation-delay: -1.2s; }
+
+/* Fallbacks */
+.anim-frame-1 { animation: heroToothWavingA 2.8s ease-in-out infinite; }
+.anim-frame-2 { animation: aboutBrushScrubA 2.6s ease-in-out infinite; }
+.anim-frame-3 { animation: doctorHeartbeatThumpA 2.5s ease-in-out infinite; }
+.anim-frame-4 { animation: teamHighFiveBounceA 2.5s cubic-bezier(0.28, 0.84, 0.42, 1) infinite; }
+
+/* Click Sparkle Particles Burst */
+.dental-cursor-sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none;
+  animation: sparkleParticleFly 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes sparkleParticleFly {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+  }
+  30% {
+    transform: translate(calc(-50% + var(--dx, 0px) * 0.4), calc(-50% + var(--dy, -30px) * 0.4)) scale(1.3) rotate(60deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, -30px))) scale(0.2) rotate(180deg);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE SCALING & SAFETY CLEARANCE (ZERO OVERLAP GUARANTEE)
+   ========================================================================== */
+@media (max-width: 1199px) {
+
+
+  .pos-edge-top-left, .pos-edge-bottom-left {
+    left: 8px;
+  }
+  .pos-edge-top-right, .pos-edge-bottom-right {
+    right: 8px;
+  }
+}
+
+@media (max-width: 991px) {
+
+
+  .hero-section > .container,
+  .section-padding > .container {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* On Mobile Screens: Keep mobile reading 100% clean and unobstructed */
+  .hero-section .pos-edge-bottom-left,
+  .hero-section .pos-edge-bottom-right,
+  .hero-section .pos-edge-top-left {
+    display: none !important;
+  }
+  .hero-section .pos-edge-top-right {
+    top: 12px;
+    right: 12px;
+  }
+
+
+  .pos-edge-top-left, .pos-edge-bottom-left {
+    left: 4px;
+  }
+  .pos-edge-top-right, .pos-edge-bottom-right {
+    right: 4px;
+  }
+}
+
+/* Subtle smile curve SVG divider */
+.section-wave-divider {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+}
+
+.section-wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. SCROLL REVEAL ENGINE
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade-left"] {
+  transform: translateX(-32px);
+}
+
+[data-reveal="fade-right"] {
+  transform: translateX(32px);
+}
+
+[data-reveal="zoom-in"] {
+  transform: scale(0.93) translateY(18px);
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger delays */
+[data-reveal-delay="100"] { transition-delay: 0.1s; }
+[data-reveal-delay="150"] { transition-delay: 0.15s; }
+[data-reveal-delay="200"] { transition-delay: 0.2s; }
+[data-reveal-delay="250"] { transition-delay: 0.25s; }
+[data-reveal-delay="300"] { transition-delay: 0.3s; }
+[data-reveal-delay="350"] { transition-delay: 0.35s; }
+[data-reveal-delay="400"] { transition-delay: 0.4s; }
+
+/* --------------------------------------------------------------------------
+   5. HERO SECTION ANIMATION UPGRADE
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-pill {
+  animation: floatGentle 8s ease-in-out infinite;
+  box-shadow: 0 4px 14px rgba(200, 35, 51, 0.08);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(200, 35, 51, 0.14);
+}
+
+.hero-title .brand-red {
+  display: inline-block;
+  position: relative;
+}
+
+.hero-title .brand-red::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, #F87171 100%);
+  border-radius: var(--radius-full);
+  opacity: 0.35;
+}
+
+/* 3D Perspective Visual Stage */
+.hero-visual-stage {
+  perspective: 1200px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.hero-image-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.hero-image-card:hover {
+  box-shadow: 0 24px 54px rgba(200, 35, 51, 0.18);
+  border-color: rgba(254, 226, 226, 0.9);
+}
+
+/* Floating interactive dental badge on hero */
+.hero-decor-badge-sparkle {
+  position: absolute;
+  top: -16px;
+  left: -18px;
+  background: var(--neutral-white);
+  border: 1.5px solid var(--primary-border);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 24px rgba(200, 35, 51, 0.14);
+  z-index: 10;
+  animation: floatGentle 7s ease-in-out infinite 0.5s;
+}
+
+.hero-decor-badge-sparkle .badge-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-decor-badge-sparkle .badge-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--neutral-800);
+  white-space: nowrap;
+}
+
+/* Floating status & location badges pulse */
+.floating-badge {
+  animation: floatReverse 8s ease-in-out infinite;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.floating-badge:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(200, 35, 51, 0.16);
+}
+
+.floating-badge-timing {
+  animation-delay: 1.2s;
+}
+
+/* Highlight items hover */
+.hero-highlight-item {
+  transition: transform var(--transition-fast);
+}
+
+.hero-highlight-item:hover {
+  transform: translateY(-2px);
+}
+
+.hero-highlight-item:hover .hero-highlight-num {
+  color: var(--primary-dark);
+}
+
+/* --------------------------------------------------------------------------
+   6. ABOUT SECTION - ANIMATED DENTAL LEGACY FLOW PATH
+   -------------------------------------------------------------------------- */
+.legacy-flow-roadmap {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.legacy-flow-title {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.legacy-flow-nodes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.legacy-node-card {
+  background: var(--neutral-white);
+  border: 1.5px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  position: relative;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.legacy-node-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 28px rgba(200, 35, 51, 0.12);
+}
+
+.legacy-node-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  border: 2px solid var(--primary-border);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.legacy-node-card:hover .legacy-node-badge {
+  transform: scale(1.12) rotate(6deg);
+  background: var(--primary);
+  color: #FFFFFF;
+}
+
+.legacy-node-year {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.legacy-node-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 6px;
+}
+
+.legacy-node-desc {
+  font-size: 12px;
+  color: var(--neutral-600);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .legacy-flow-nodes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .legacy-flow-nodes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. INTERACTIVE DOCTORS & SPECIALITIES CARDS
+   -------------------------------------------------------------------------- */
+.doctor-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 48px rgba(200, 35, 51, 0.14);
+  border-color: rgba(200, 35, 51, 0.3);
+}
+
+.doctor-card-img-wrap img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.doctor-card:hover .doctor-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.doctor-specialty-badge {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Specialisation badge stays always visible, no color change on hover */
+
+/* Speciality Cards */
+.speciality-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.speciality-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary) 0%, #F87171 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.speciality-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 42px rgba(200, 35, 51, 0.12);
+  border-color: rgba(200, 35, 51, 0.28);
+}
+
+.speciality-card:hover::before {
+  opacity: 1;
+}
+
+.speciality-icon-box {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              color 0.3s ease;
+}
+
+.speciality-card:hover .speciality-icon-box {
+  transform: scale(1.14) rotate(4deg);
+  background-color: var(--primary);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(200, 35, 51, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   8. CLINIC LEGACY TIMELINE FILL ANIMATION
+   -------------------------------------------------------------------------- */
+.legacy-timeline {
+  position: relative;
+}
+
+.timeline-line-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background-color: var(--neutral-200);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, #F87171 0%, var(--primary) 60%, #9E1B28 100%);
+  border-radius: var(--radius-full);
+  transition: height 0.6s ease;
+}
+
+.timeline-marker-tooth {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--neutral-white);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(200, 35, 51, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.timeline-item:hover .timeline-marker-tooth {
+  transform: translateX(-50%) scale(1.15);
+  background: var(--primary);
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .timeline-line-track {
+    left: 24px;
+  }
+  .timeline-marker-tooth {
+    left: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. APPOINTMENT SECTION - FORM FOCUS & CELEBRATION MODAL
+   -------------------------------------------------------------------------- */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px rgba(200, 35, 51, 0.12) !important;
+  transform: translateY(-1px);
+}
+
+/* Shimmer gleam button effect */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-150%) skewX(-20deg);
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::after {
+  animation: shimmerSweep 1s ease-in-out;
+}
+
+/* Appointment Prototype Confirmation Modal */
+.app-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.app-modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.app-modal-dialog {
+  background: var(--neutral-white);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.28);
+  border: 2px solid var(--primary-border);
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.app-modal-overlay.is-active .app-modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.app-modal-celebration-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  border: 2px solid var(--primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  position: relative;
+  animation: toothSpinCheck 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.app-modal-celebration-icon img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.app-modal-check-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #10B981;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.app-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--neutral-900);
+  margin-bottom: 10px;
+}
+
+.app-modal-text {
+  font-size: 14px;
+  color: var(--neutral-600);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   10. LOCATION RADAR PIN & CLOCK ANIMATION
+   -------------------------------------------------------------------------- */
+.location-radar-pin {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-sonar-ring {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  animation: sonarWave 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+.radar-sonar-ring-2 {
+  animation-delay: 1.1s;
+}
+
+.timings-clock-spinning {
+  display: inline-block;
+  animation: clockTickSlow 12s linear infinite;
+  transform-origin: center center;
+}
+
+
+/* --------------------------------------------------------------------------
+   SECTION-SPECIFIC THEMATIC MICRO-ANIMATIONS
+   -------------------------------------------------------------------------- */
+/* Doctors: Specialist badge — always visible, no pulse animation */
+.doctor-specialty-badge {
+  /* No animation — specialisation is always shown clearly */
+}
+
+/* Appointment: Inviting Primary Button Glow Pulse */
+.appointment-card .btn-primary {
+  animation: apptCtaPulse 3.8s ease-in-out infinite;
+}
+
+@keyframes apptCtaPulse {
+  0%, 100% { box-shadow: 0 4px 14px rgba(200, 35, 51, 0.28); }
+  50%      { box-shadow: 0 6px 22px rgba(200, 35, 51, 0.52), 0 0 10px rgba(248, 113, 113, 0.35); }
+}
+
+/* Location: Sonar Radar Wave Accent */
+.location-radar-pin .radar-sonar-ring {
+  border-color: var(--primary);
+  animation: sonarWave 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Contact: Contact Badges Chime Hover */
+.contact-item:hover .contact-icon-box {
+  animation: contactChimeWobble 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes contactChimeWobble {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(-8deg) scale(1.12); }
+  50%  { transform: rotate(8deg) scale(1.12); }
+  75%  { transform: rotate(-4deg) scale(1.08); }
+  100% { transform: rotate(0deg) scale(1.1); }
+}
+
+/* Team: Warm card elevation & floating micro-cadence */
+.team-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 44px rgba(200, 35, 51, 0.12);
+}
+
+/* Gallery: Photo Frame Aperture Flash Sweep on Hover */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.gallery-card:hover::after {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   11. ACCESSIBILITY / PREFERS REDUCED MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .ambient-dental-layer,
+  .radar-sonar-ring,
+  .preloader-glow-ring,
+  .hero-pill,
+  .floating-badge {
+    animation: none !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   ABOUT SECTION: CONTINUOUS RUNNING BACKGROUND & INTERACTIVE SLIDE CARDS
+   - Continuous Running ECG Vital Pulse & Luminous Aurora Ribbon
+   - Cards slide to the right on hover and on click with smooth standby & return
+   ========================================================================== */
+
+/* Running Background Engine */
+.about-running-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1; /* Below container content (which has z-index: 2) */
+}
+
+/* Stream 1: Continuous Running ECG Heartbeat Vital Pulse */
+.running-ecg-track {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 2400px;
+  height: 110px;
+  display: flex;
+  opacity: 0.75;
+  animation: runEcgStream 15s linear infinite;
+  will-change: transform;
+}
+
+.running-ecg-svg {
+  width: 1200px;
+  height: 100%;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(200, 35, 51, 0.4));
+}
+
+@keyframes runEcgStream {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-1200px); }
+}
+
+/* Stream 2: Luminous Medical Aurora Gradient Stream */
+.running-aurora-track {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 200%;
+  height: 320px;
+  display: flex;
+  opacity: 0.35;
+  animation: runAuroraFlow 22s ease-in-out infinite alternate;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.running-aurora-ribbon {
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(200, 35, 51, 0.28) 0%, rgba(248, 113, 113, 0.16) 45%, transparent 72%);
+  filter: blur(50px);
+}
+
+@keyframes runAuroraFlow {
+  0%   { transform: translateX(0) scaleY(0.9); }
+  50%  { transform: translateX(-25%) scaleY(1.15); }
+  100% { transform: translateX(-40%) scaleY(1); }
+}
+
+/* Stream 3: Cleansing Micro-Bubbles & Sparkles Stream running across */
+.running-bubbles-stream {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.stream-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(200, 35, 51, 0.25) 70%, transparent 100%);
+  box-shadow: 0 0 10px rgba(200, 35, 51, 0.3);
+  animation: streamBubbleRun 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.stream-bubble.b1 { width: 14px; height: 14px; top: 12%; left: -20px; animation-duration: 9s; animation-delay: 0s; }
+.stream-bubble.b2 { width: 22px; height: 22px; top: 28%; left: -30px; animation-duration: 12s; animation-delay: 2s; }
+.stream-bubble.b3 { width: 10px; height: 10px; top: 48%; left: -15px; animation-duration: 8s; animation-delay: 4.5s; }
+.stream-bubble.b4 { width: 18px; height: 18px; top: 65%; left: -25px; animation-duration: 11s; animation-delay: 1.5s; }
+.stream-bubble.b5 { width: 26px; height: 26px; top: 78%; left: -35px; animation-duration: 13s; animation-delay: 5s; }
+.stream-bubble.b6 { width: 12px; height: 12px; top: 22%; left: -15px; animation-duration: 10s; animation-delay: 7s; }
+.stream-bubble.b7 { width: 16px; height: 16px; top: 58%; left: -20px; animation-duration: 9.5s; animation-delay: 3s; }
+.stream-bubble.b8 { width: 20px; height: 20px; top: 88%; left: -25px; animation-duration: 11.5s; animation-delay: 6s; }
+
+@keyframes streamBubbleRun {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(100vw + 60px), -60px) scale(1.15);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   ABOUT CARDS: 100% FLICKER-FREE ELEVATION & GLOW SYSTEM
+   - Completely eliminated horizontal translateX which caused edge-hover flickering!
+   - Uses an expanded invisible hit buffer (::before inset: -8px) to prevent mouse dropout
+   - Smooth, stable vertical micro-lift with crimson glow border & gentle shadow
+   ========================================================================== */
+.about-pillar-item,
+.legacy-node-card {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s ease,
+              border-color 0.28s ease,
+              background-color 0.28s ease;
+  user-select: none;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Invisible Hit-Buffer: Prevents cursor from ever falling off the card edge */
+.about-pillar-item::before,
+.legacy-node-card::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  pointer-events: auto;
+  z-index: 0;
+}
+
+/* Stable In-Place Hover Elevation: 100% flicker-free */
+.about-pillar-item:hover,
+.legacy-node-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary) !important;
+  box-shadow: 0 12px 28px rgba(200, 35, 51, 0.14) !important;
+  background-color: #FFFFFF !important;
+}
+
+.about-pillar-item:hover .about-pillar-icon,
+.legacy-node-card:hover .legacy-node-badge {
+  transform: scale(1.08);
+  background: var(--primary) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 16px rgba(200, 35, 51, 0.28);
+}
+
+.about-pillar-item:active,
+.legacy-node-card:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+
+/* ==========================================================================
+   SPECIALITIES SECTION: FLOATING BUBBLE CIRCLE SHAPES BACKGROUND
+   - Replaced zigzag lines with animated translucent clinic bubble circles
+   - Smooth rotating, floating, and sliding bubble orbs matching clinic colors
+   ========================================================================== */
+
+/* Bubbles Background Container */
+.specialities-bubbles-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Base Bubble Orb Shape */
+.bubble-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.9) 0%, rgba(248, 113, 113, 0.24) 45%, rgba(200, 35, 51, 0.16) 75%, transparent 100%);
+  border: 1.5px solid rgba(200, 35, 51, 0.28);
+  box-shadow: 0 8px 24px rgba(200, 35, 51, 0.12),
+              inset -2px -2px 6px rgba(200, 35, 51, 0.16);
+  animation: bubbleFloatSlide 8s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Concentric Dashed Ring on Larger Bubbles */
+.bubble-orb-1::before,
+.bubble-orb-3::before,
+.bubble-orb-6::before,
+.bubble-orb-9::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(200, 35, 51, 0.35);
+  animation: bubbleOrbRingSpin 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes bubbleOrbRingSpin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Individual Bubble Positions, Sizes, and Animation Speeds */
+.bubble-orb-1 {
+  width: 110px;
+  height: 110px;
+  top: 8%;
+  left: 5%;
+  animation-duration: 9s;
+}
+
+.bubble-orb-2 {
+  width: 54px;
+  height: 54px;
+  top: 22%;
+  left: 20%;
+  border-color: rgba(248, 113, 113, 0.35);
+  animation-duration: 7s;
+  animation-delay: -2s;
+}
+
+.bubble-orb-3 {
+  width: 140px;
+  height: 140px;
+  top: 14%;
+  right: 6%;
+  animation-duration: 11s;
+  animation-delay: -4s;
+}
+
+.bubble-orb-4 {
+  width: 68px;
+  height: 68px;
+  top: 48%;
+  left: 3%;
+  border-color: rgba(245, 158, 11, 0.32);
+  animation-duration: 8.5s;
+  animation-delay: -1s;
+}
+
+.bubble-orb-5 {
+  width: 82px;
+  height: 82px;
+  top: 42%;
+  right: 18%;
+  animation-duration: 10s;
+  animation-delay: -3.5s;
+}
+
+.bubble-orb-6 {
+  width: 125px;
+  height: 125px;
+  bottom: 12%;
+  left: 10%;
+  animation-duration: 10.5s;
+  animation-delay: -5s;
+}
+
+.bubble-orb-7 {
+  width: 48px;
+  height: 48px;
+  bottom: 28%;
+  left: 45%;
+  border-color: rgba(248, 113, 113, 0.35);
+  animation-duration: 7.5s;
+  animation-delay: -2.5s;
+}
+
+.bubble-orb-8 {
+  width: 95px;
+  height: 95px;
+  bottom: 8%;
+  right: 8%;
+  border-color: rgba(200, 35, 51, 0.32);
+  animation-duration: 9.5s;
+  animation-delay: -1.8s;
+}
+
+.bubble-orb-9 {
+  width: 76px;
+  height: 76px;
+  top: 68%;
+  right: 32%;
+  animation-duration: 8s;
+  animation-delay: -3s;
+}
+
+.bubble-orb-10 {
+  width: 38px;
+  height: 38px;
+  top: 32%;
+  left: 38%;
+  animation-duration: 6.5s;
+  animation-delay: -4.5s;
+}
+
+.bubble-orb-11 {
+  width: 58px;
+  height: 58px;
+  bottom: 38%;
+  right: 48%;
+  animation-duration: 8.8s;
+  animation-delay: -0.5s;
+}
+
+.bubble-orb-12 {
+  width: 92px;
+  height: 92px;
+  top: 4%;
+  left: 42%;
+  border-color: rgba(245, 158, 11, 0.28);
+  animation-duration: 11.5s;
+  animation-delay: -6s;
+}
+
+/* Floating, Sliding, and Breathing Animation for Bubble Circles */
+@keyframes bubbleFloatSlide {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  35% {
+    transform: translate(22px, -24px) scale(1.08) rotate(25deg);
+  }
+  70% {
+    transform: translate(-18px, 16px) scale(0.94) rotate(-15deg);
+  }
+  100% {
+    transform: translate(14px, -10px) scale(1.04) rotate(15deg);
+  }
+}
+
+/* ==========================================================================
+   SPECIALITY CARDS: CIRCLE SHAPES ROTATING AND SLIDING ANIMATION
+   ========================================================================== */
+.speciality-card {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.38s ease,
+              border-color 0.38s ease;
+  user-select: none;
+}
+
+.speciality-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(200, 35, 51, 0.35);
+  box-shadow: 0 20px 42px rgba(200, 35, 51, 0.15);
+}
+
+/* The Circle Shape Icon Box: Perfect Circle with Rotating Outer Orbital Dash Ring */
+.speciality-icon-box {
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: 50% !important; /* Perfect circle shape */
+  background: var(--primary-soft) !important;
+  color: var(--primary) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 22px !important;
+  position: relative !important;
+  box-shadow: 0 4px 14px rgba(200, 35, 51, 0.12) !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.35s ease,
+              color 0.35s ease,
+              box-shadow 0.35s ease !important;
+  animation: circleRotateSlideAmbient 3.6s ease-in-out infinite !important;
+}
+
+/* Concentric Outer Dashed Orbit Ring around the Circle Shape */
+.speciality-icon-box::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px dashed rgba(200, 35, 51, 0.45);
+  animation: circleDashSpin 8s linear infinite;
+  pointer-events: none;
+}
+
+/* Ambient Rotating and Sliding Animation on the Circle Shape */
+@keyframes circleRotateSlideAmbient {
+  0%, 100% {
+    transform: translateX(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateX(8px) rotate(14deg) scale(1.06);
+  }
+  50% {
+    transform: translateX(-4px) rotate(-10deg) scale(0.98);
+  }
+  75% {
+    transform: translateX(6px) rotate(8deg) scale(1.04);
+  }
+}
+
+@keyframes circleDashSpin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hover: Circle slides right and spins 360 degrees */
+.speciality-card:hover .speciality-icon-box {
+  transform: translateX(12px) rotate(360deg) scale(1.18) !important;
+  background: linear-gradient(135deg, var(--primary) 0%, #9E1B28 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(200, 35, 51, 0.38) !important;
+}
+
+/* Click Animation: Rapid rotating and sliding spring */
+.speciality-card.is-circle-spinning .speciality-icon-box {
+  animation: circleClickSpinSlide 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+@keyframes circleClickSpinSlide {
+  0% {
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+  40% {
+    transform: translateX(18px) rotate(360deg) scale(1.25);
+    background: linear-gradient(135deg, var(--primary) 0%, #9E1B28 100%);
+    color: #FFFFFF;
+    box-shadow: 0 10px 28px rgba(200, 35, 51, 0.45);
+  }
+  70% {
+    transform: translateX(10px) rotate(390deg) scale(1.1);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg) scale(1);
+  }
+}
+
+
+/* ==========================================================================
+   SPECIALITIES 3D CIRCULAR / SPIRAL CAROUSEL ORBIT
+   - Continuous clockwise rotation around center
+   - Full complete cards move one after another along circular path
+   - Subtle depth scaling and opacity
+   - Hover pauses or slows rotation
+   - Perfectly preserves existing card design, content, and colors
+   ========================================================================== */
+
+.specialities-orbit-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 32px auto 0 auto;
+  user-select: none;
+}
+
+.specialities-orbit-stage {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+/* Center Clinic Core Hub */
+.orbit-center-hub {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFFFFF 0%, #FFF5F5 70%, #FEE2E2 100%);
+  border: 2px solid var(--primary-border);
+  box-shadow: 0 10px 30px rgba(200, 35, 51, 0.2), inset 0 0 15px rgba(200, 35, 51, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.hub-pulse-ring {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(200, 35, 51, 0.4);
+  animation: hubRingSpin 18s linear infinite;
+  pointer-events: none;
+}
+
+.hub-pulse-ring-2 {
+  inset: -28px;
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  animation: hubRingSpin 24s linear infinite reverse;
+}
+
+@keyframes hubRingSpin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hub-inner-core {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hub-logo-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 2px 4px rgba(200, 35, 51, 0.2));
+}
+
+.hub-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.hub-sub {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--neutral-600);
+  letter-spacing: 0.3px;
+}
+
+/* Orbit Track */
+.specialities-orbit-track {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Orbit Cards: Absolute positioned, moving along the circular path */
+.specialities-orbit-track .speciality-card {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 270px !important;
+  max-width: 82vw !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  transform-origin: center center !important;
+  background: var(--neutral-white) !important;
+  border-radius: var(--radius-xl) !important;
+  padding: 24px 22px !important;
+  border: 1.5px solid var(--neutral-200) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08) !important;
+  will-change: transform, opacity !important;
+  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              filter 0.3s ease !important;
+  margin-bottom: 0 !important;
+}
+
+/* Hover: highlights the card, lifts it slightly and keeps it 100% readable */
+.specialities-orbit-track .speciality-card:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 24px 50px rgba(200, 35, 51, 0.28) !important;
+  filter: brightness(1.02);
+  z-index: 60 !important;
+}
+
+/* Controls Bar */
+.orbit-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
+  position: relative;
+  z-index: 10;
+}
+
+.orbit-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--neutral-white);
+  border: 1.5px solid var(--neutral-300);
+  color: var(--neutral-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all var(--transition-fast);
+}
+
+.orbit-nav-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.orbit-nav-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(200, 35, 51, 0.25);
+}
+
+.orbit-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--neutral-white);
+  border: 1px solid var(--neutral-200);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.orbit-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  animation: orbitDotPulse 2s ease-in-out infinite;
+}
+
+@keyframes orbitDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.4); opacity: 0.6; }
+}
+
+.orbit-status-text {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--neutral-700);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .specialities-orbit-stage {
+    height: 600px;
+  }
+  .specialities-orbit-track .speciality-card {
+    width: 240px !important;
+    padding: 20px 18px !important;
+  }
+  .orbit-center-hub {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+@media (max-width: 768px) {
+  .specialities-orbit-stage {
+    height: 540px;
+  }
+  .specialities-orbit-track .speciality-card {
+    width: 220px !important;
+    padding: 16px 14px !important;
+  }
+  .orbit-center-hub {
+    width: 90px;
+    height: 90px;
+  }
+  .hub-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  .hub-title {
+    font-size: 9.5px;
+  }
+  .hub-sub {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .specialities-orbit-stage {
+    height: 500px;
+  }
+  .specialities-orbit-track .speciality-card {
+    width: 200px !important;
+    padding: 14px 12px !important;
+  }
+}
+
+
+/* ==========================================================================
+   OUR TEAM SECTION: RADIANT SPARKLE & GLINT CARDS ANIMATION
+   - Continuous diagonal light beam spark sweep across the cards
+   - Twinkling four-point diamond star sparks on card corners
+   - Luminous glowing border beam with golden/crimson spark reflection
+   - Interactive click burst generating dancing sparkle stars
+   ========================================================================== */
+
+.spark-card {
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.38s ease,
+              border-color 0.38s ease !important;
+}
+
+/* Traveling Diagonal Light Spark Glint across card face */
+.spark-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.45) 45%,
+    rgba(248, 113, 113, 0.35) 48%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(245, 158, 11, 0.35) 52%,
+    rgba(255, 255, 255, 0.45) 55%,
+    transparent 75%
+  );
+  transform: translateX(-160%) skewX(-20deg);
+  pointer-events: none;
+  z-index: 2;
+  animation: sparkSweepGlint 4.2s ease-in-out infinite;
+}
+
+/* Stagger spark sweeps across the specialist cards */
+.specialist-cards-grid .specialist-card-item:nth-child(1)::before {
+  animation-delay: 0.6s;
+}
+.specialist-cards-grid .specialist-card-item:nth-child(2)::before {
+  animation-delay: 1.4s;
+}
+.specialist-cards-grid .specialist-card-item:nth-child(3)::before {
+  animation-delay: 2.2s;
+}
+.emergency-care-banner::before {
+  animation-delay: 3s;
+}
+
+@keyframes sparkSweepGlint {
+  0% {
+    transform: translateX(-160%) skewX(-20deg);
+  }
+  35% {
+    transform: translateX(160%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(160%) skewX(-20deg);
+  }
+}
+
+/* Corner Twinkling Diamond Star Sparks */
+.card-sparkle-star {
+  position: absolute;
+  font-size: 16px;
+  line-height: 1;
+  color: #F59E0B;
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.9), 0 0 16px rgba(200, 35, 51, 0.6);
+  pointer-events: none;
+  z-index: 3;
+  animation: sparkleStarTwinkle 2.4s ease-in-out infinite;
+  user-select: none;
+}
+
+.card-sparkle-star.star-top-right {
+  top: 14px;
+  right: 16px;
+}
+
+.card-sparkle-star.star-bottom-left {
+  bottom: 14px;
+  left: 16px;
+  animation-delay: 1.2s;
+}
+
+.specialist-card-item:nth-child(2) .card-sparkle-star {
+  animation-delay: 0.8s;
+  color: #EF4444;
+}
+
+.specialist-card-item:nth-child(3) .card-sparkle-star {
+  animation-delay: 1.6s;
+  color: #F59E0B;
+}
+
+@keyframes sparkleStarTwinkle {
+  0%, 100% {
+    transform: scale(0.7) rotate(0deg);
+    opacity: 0.35;
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.35) rotate(45deg);
+    opacity: 1;
+    filter: brightness(1.4);
+    text-shadow: 0 0 12px rgba(245, 158, 11, 1), 0 0 22px rgba(200, 35, 51, 0.8);
+  }
+}
+
+/* Hover: Lifts card, illuminates border with warm spark aura */
+.spark-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  border-color: rgba(200, 35, 51, 0.5) !important;
+  box-shadow: 0 18px 40px rgba(200, 35, 51, 0.18),
+              0 0 20px rgba(248, 113, 113, 0.25) !important;
+}
+
+/* Avatar spark ring */
+.associate-avatar {
+  position: relative;
+}
+
+.associate-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2px dashed rgba(245, 158, 11, 0.5);
+  animation: avatarSparkSpin 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes avatarSparkSpin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Click Spark Burst Pop */
+.spark-card.is-spark-popping {
+  animation: cardSparkPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes cardSparkPop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.035) translateY(-8px); box-shadow: 0 22px 48px rgba(200, 35, 51, 0.3); }
+  100% { transform: scale(1); }
+}
+
+
+/* ==========================================================================
+   OUR TEAM SECTION: RUNNING GLOWING SPARK BG & FLICKERING SPARK ICONS
+   - Glowing spark ambient aurora sweeping in background
+   - Streaming starlight spark dust drifting across the section
+   - Flickering spark type animation on card icons with starlight corona
+   ========================================================================== */
+
+/* Running Spark Background */
+.team-spark-running-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Luminous Ambient Aurora Glows */
+.spark-ambient-aurora {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(65px);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+.spark-ambient-aurora.aurora-1 {
+  top: 5%;
+  left: -100px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(200, 35, 51, 0.12) 45%, transparent 70%);
+  animation: sparkAuroraDrift 14s ease-in-out infinite alternate;
+}
+
+.spark-ambient-aurora.aurora-2 {
+  bottom: 0%;
+  right: -100px;
+  background: radial-gradient(circle, rgba(200, 35, 51, 0.16) 0%, rgba(248, 113, 113, 0.12) 50%, transparent 70%);
+  animation: sparkAuroraDrift 16s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes sparkAuroraDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(60px, -40px) scale(1.18);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-40px, 30px) scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+/* Running Sparkling Starlight Dust Stream */
+.spark-dust-stream {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.spark-dust {
+  position: absolute;
+  font-size: 15px;
+  line-height: 1;
+  color: #F59E0B;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.9), 0 0 18px rgba(200, 35, 51, 0.6);
+  animation: sparkDustGlide 12s linear infinite;
+  user-select: none;
+  opacity: 0;
+}
+
+.spark-dust.d1 { top: 12%; animation-duration: 11s; animation-delay: 0s; font-size: 14px; }
+.spark-dust.d2 { top: 28%; animation-duration: 13s; animation-delay: 2.5s; font-size: 18px; color: #EF4444; }
+.spark-dust.d3 { top: 45%; animation-duration: 9.5s; animation-delay: 5s; font-size: 12px; }
+.spark-dust.d4 { top: 62%; animation-duration: 14s; animation-delay: 1s; font-size: 16px; color: #F59E0B; }
+.spark-dust.d5 { top: 78%; animation-duration: 10.5s; animation-delay: 4s; font-size: 15px; }
+.spark-dust.d6 { top: 20%; animation-duration: 12.5s; animation-delay: 7s; font-size: 18px; color: #EF4444; }
+.spark-dust.d7 { top: 54%; animation-duration: 11.5s; animation-delay: 3.2s; font-size: 13px; }
+.spark-dust.d8 { top: 88%; animation-duration: 13.5s; animation-delay: 6s; font-size: 16px; color: #F59E0B; }
+
+@keyframes sparkDustGlide {
+  0% {
+    transform: translate(-30px, 0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+    transform: translate(15vw, -12px) scale(1.1) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(50vw, -25px) scale(1.25) rotate(120deg);
+    text-shadow: 0 0 14px rgba(245, 158, 11, 1), 0 0 24px rgba(200, 35, 51, 0.8);
+  }
+  85% {
+    opacity: 0.85;
+    transform: translate(85vw, -15px) scale(0.95) rotate(220deg);
+  }
+  100% {
+    transform: translate(calc(100vw + 40px), -30px) scale(0.6) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   FLICKERING SPARK TYPE ANIMATION ON TEAM CARD ICONS
+   ========================================================================== */
+.specialist-card-item .icon-circle {
+  position: relative !important;
+  animation: iconSparkFlicker 2.8s ease-in-out infinite !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Stagger icon flickering across the 3 specialist cards */
+.specialist-cards-grid .specialist-card-item:nth-child(1) .icon-circle {
+  animation-delay: 0s !important;
+}
+.specialist-cards-grid .specialist-card-item:nth-child(2) .icon-circle {
+  animation-delay: 0.9s !important;
+}
+.specialist-cards-grid .specialist-card-item:nth-child(3) .icon-circle {
+  animation-delay: 1.8s !important;
+}
+
+/* Flickering Starlight Spark Corona Effect */
+.specialist-card-item .icon-circle::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(245, 158, 11, 0.45);
+  animation: iconSparkRingFlicker 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes iconSparkFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 3px rgba(200, 35, 51, 0.25));
+  }
+  12% {
+    transform: scale(1.08) rotate(5deg);
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.85)) brightness(1.22);
+  }
+  20% {
+    transform: scale(0.98) rotate(0deg);
+    filter: drop-shadow(0 0 4px rgba(200, 35, 51, 0.2));
+  }
+  32% {
+    transform: scale(1.12) rotate(-4deg);
+    filter: drop-shadow(0 0 16px rgba(248, 113, 113, 0.95)) brightness(1.3);
+  }
+  48% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.35));
+  }
+  72% {
+    transform: scale(1.06) rotate(3deg);
+    filter: drop-shadow(0 0 12px rgba(200, 35, 51, 0.65)) brightness(1.18);
+  }
+}
+
+@keyframes iconSparkRingFlicker {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.12);
+    opacity: 0.9;
+    border-color: rgba(245, 158, 11, 0.7);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+    opacity: 0.4;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.14);
+    opacity: 0.95;
+    border-color: rgba(239, 68, 68, 0.7);
+  }
+}
+
+/* Hover on card makes icon flicker with higher excitement */
+.specialist-card-item:hover .icon-circle {
+  transform: scale(1.16) rotate(10deg) !important;
+  filter: drop-shadow(0 0 18px rgba(245, 158, 11, 1)) brightness(1.35) !important;
+  background: linear-gradient(135deg, var(--primary) 0%, #9E1B28 100%) !important;
+  color: #FFFFFF !important;
+}
+
+/* Emergency banner icon flickering pulse */
+.emergency-banner-icon {
+  animation: emergencyIconFlicker 2.2s ease-in-out infinite;
+}
+
+@keyframes emergencyIconFlicker {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(200, 35, 51, 0.3));
+  }
+  15% {
+    transform: scale(1.14);
+    filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.9)) brightness(1.25);
+  }
+  26% {
+    transform: scale(1);
+  }
+  38% {
+    transform: scale(1.18);
+    filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.9)) brightness(1.35);
+  }
+}
+
+
+/* ==========================================================================
+   CLINIC LEGACY: SCROLL-DRIVEN COLOR-CHANGING CARDS & HERITAGE TREE BG
+   - Background: Artistic Heritage Lineage Tree with branching limbs & enamel leaves
+   - Scroll Tracking: Active card is dynamically highlighted in rich distinctive color
+     while other cards stay in serene resting state!
+   ========================================================================== */
+
+/* Heritage Tree Background Container */
+.legacy-tree-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.legacy-tree-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tree-branch-line {
+  animation: treeBranchBreathe 8s ease-in-out infinite alternate;
+  will-change: opacity, filter;
+}
+
+.branch-1 { animation-delay: 0s; }
+.branch-2 { animation-delay: 1.5s; }
+.branch-3 { animation-delay: 3s; }
+.branch-4 { animation-delay: 4.5s; }
+.branch-5 { animation-delay: 6s; }
+
+@keyframes treeBranchBreathe {
+  0% {
+    opacity: 0.65;
+    filter: drop-shadow(0 0 0 rgba(200, 35, 51, 0));
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(200, 35, 51, 0.35));
+  }
+}
+
+/* ==========================================================================
+   TIMELINE STEPS: DYNAMIC SCROLL COLOR HIGHLIGHTING
+   ========================================================================== */
+.timeline-card {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s ease,
+              border-color 0.45s ease,
+              background 0.45s ease !important;
+  cursor: pointer;
+}
+
+.timeline-dot {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s ease,
+              border-color 0.45s ease,
+              background-color 0.45s ease !important;
+}
+
+.timeline-badge {
+  transition: all 0.35s ease !important;
+}
+
+/* Base Active Highlight State */
+.timeline-step.is-scroll-active .timeline-card {
+  transform: translateY(-5px) scale(1.035) !important;
+}
+
+/* STEP 1: Dr. M.G. Prabhu (Origin - Warm Clinic Crimson) */
+.timeline-step:nth-child(2).is-scroll-active .timeline-card,
+.timeline-step:nth-child(2) .timeline-card:hover {
+  border-color: #C82333 !important;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F5 100%) !important;
+  box-shadow: 0 18px 42px rgba(200, 35, 51, 0.22) !important;
+}
+.timeline-step:nth-child(2).is-scroll-active .timeline-badge,
+.timeline-step:nth-child(2) .timeline-card:hover .timeline-badge {
+  background: #C82333 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(200, 35, 51, 0.4) !important;
+}
+.timeline-step:nth-child(2).is-scroll-active .timeline-dot {
+  border-color: #C82333 !important;
+  transform: scale(1.35) !important;
+  box-shadow: 0 0 0 6px rgba(200, 35, 51, 0.32) !important;
+  background-color: #FFF5F5 !important;
+}
+
+/* STEP 2: Clinic Legacy (Heritage - Rose Crimson) */
+.timeline-step:nth-child(3).is-scroll-active .timeline-card,
+.timeline-step:nth-child(3) .timeline-card:hover {
+  border-color: #E11D48 !important;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF1F2 100%) !important;
+  box-shadow: 0 18px 42px rgba(225, 29, 72, 0.22) !important;
+}
+.timeline-step:nth-child(3).is-scroll-active .timeline-badge,
+.timeline-step:nth-child(3) .timeline-card:hover .timeline-badge {
+  background: #E11D48 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4) !important;
+}
+.timeline-step:nth-child(3).is-scroll-active .timeline-dot {
+  border-color: #E11D48 !important;
+  transform: scale(1.35) !important;
+  box-shadow: 0 0 0 6px rgba(225, 29, 72, 0.32) !important;
+  background-color: #FFF1F2 !important;
+}
+
+/* STEP 3: 2012 Handover (Milestone - Golden Amber) */
+.timeline-step:nth-child(4).is-scroll-active .timeline-card,
+.timeline-step:nth-child(4) .timeline-card:hover {
+  border-color: #F59E0B !important;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 100%) !important;
+  box-shadow: 0 18px 42px rgba(245, 158, 11, 0.26) !important;
+}
+.timeline-step:nth-child(4).is-scroll-active .timeline-badge,
+.timeline-step:nth-child(4) .timeline-card:hover .timeline-badge {
+  background: #F59E0B !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.45) !important;
+}
+.timeline-step:nth-child(4).is-scroll-active .timeline-dot {
+  border-color: #F59E0B !important;
+  transform: scale(1.35) !important;
+  box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.35) !important;
+  background-color: #FFFBEB !important;
+}
+
+/* STEP 4: Leadership Duo (Leadership - Deep Royal Crimson) */
+.timeline-step:nth-child(5).is-scroll-active .timeline-card,
+.timeline-step:nth-child(5) .timeline-card:hover {
+  border-color: #991B1B !important;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FEF2F2 100%) !important;
+  box-shadow: 0 18px 42px rgba(153, 27, 27, 0.24) !important;
+}
+.timeline-step:nth-child(5).is-scroll-active .timeline-badge,
+.timeline-step:nth-child(5) .timeline-card:hover .timeline-badge {
+  background: #991B1B !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(153, 27, 27, 0.4) !important;
+}
+.timeline-step:nth-child(5).is-scroll-active .timeline-dot {
+  border-color: #991B1B !important;
+  transform: scale(1.35) !important;
+  box-shadow: 0 0 0 6px rgba(153, 27, 27, 0.32) !important;
+  background-color: #FEF2F2 !important;
+}
+
+/* STEP 5: Present & Future (Continuous Betterment - Enamel Emerald) */
+.timeline-step:nth-child(6).is-scroll-active .timeline-card,
+.timeline-step:nth-child(6) .timeline-card:hover {
+  border-color: #059669 !important;
+  background: linear-gradient(135deg, #FFFFFF 0%, #ECFDF5 100%) !important;
+  box-shadow: 0 18px 42px rgba(5, 150, 105, 0.22) !important;
+}
+.timeline-step:nth-child(6).is-scroll-active .timeline-badge,
+.timeline-step:nth-child(6) .timeline-card:hover .timeline-badge {
+  background: #059669 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4) !important;
+}
+.timeline-step:nth-child(6).is-scroll-active .timeline-dot {
+  border-color: #059669 !important;
+  transform: scale(1.35) !important;
+  box-shadow: 0 0 0 6px rgba(5, 150, 105, 0.32) !important;
+  background-color: #ECFDF5 !important;
+}
+
+/* ==========================================================================
+   15. LOCATION & CONTACT: SIMPLE ANIMATED BACKGROUNDS & CARD HIGHLIGHT
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   A. LOCATION SIMPLE BACKGROUND ENGINE
+   Navigational coordinate grid, radar sonar waves & Mysore coordinate rings
+   -------------------------------------------------------------------------- */
+.location-simple-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.location-grid-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.loc-radar-ring.ring-1 {
+  transform-origin: 300px 300px;
+  animation: locRadarSpin 24s linear infinite;
+}
+
+.loc-radar-ring.ring-2 {
+  transform-origin: 300px 300px;
+  animation: locRadarPulse 5s ease-in-out infinite;
+}
+
+.loc-radar-ring.ring-3 {
+  transform-origin: 300px 300px;
+  animation: locRadarSpinReverse 32s linear infinite;
+}
+
+.loc-radar-ring.ring-4 {
+  transform-origin: 300px 300px;
+  animation: locRadarPulse 7s ease-in-out infinite 1.5s;
+}
+
+@keyframes locRadarSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes locRadarSpinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes locRadarPulse {
+  0%, 100% {
+    opacity: 0.35;
+    stroke-width: 1.2px;
+  }
+  50% {
+    opacity: 0.85;
+    stroke-width: 2px;
+  }
+}
+
+.loc-sonar-pulse {
+  position: absolute;
+  left: 21%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(200, 35, 51, 0.25);
+  background: radial-gradient(circle, rgba(200, 35, 51, 0.08) 0%, rgba(200, 35, 51, 0) 70%);
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0;
+  pointer-events: none;
+  animation: locSonarRingExpand 5s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.loc-sonar-pulse.pulse-2 {
+  animation-delay: 2.5s;
+}
+
+@keyframes locSonarRingExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   B. CONTACT SIMPLE BACKGROUND ENGINE
+   Soft communication waves, connection arc & delicate ambient glow orbs
+   -------------------------------------------------------------------------- */
+.contact-simple-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contact-waves-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.contact-comm-ring {
+  animation: contactRingBreathe 4.5s ease-in-out infinite;
+}
+
+.contact-comm-ring.c-ring-1 {
+  transform-origin: 240px 320px;
+  animation-delay: 0s;
+}
+
+.contact-comm-ring.c-ring-2 {
+  transform-origin: 720px 320px;
+  animation-delay: 1.2s;
+}
+
+.contact-comm-ring.c-ring-3 {
+  transform-origin: 1200px 320px;
+  animation-delay: 2.4s;
+}
+
+@keyframes contactRingBreathe {
+  0%, 100% {
+    opacity: 0.35;
+    stroke-width: 1.2px;
+  }
+  50% {
+    opacity: 0.9;
+    stroke-width: 2.2px;
+  }
+}
+
+.contact-wave-arc {
+  animation: contactArcFlow 12s linear infinite;
+  stroke-dasharray: 8 6;
+}
+
+@keyframes contactArcFlow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -100; }
+}
+
+.contact-ambient-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(200, 35, 51, 0.08) 0%, rgba(248, 113, 113, 0.03) 50%, transparent 75%);
+  filter: blur(28px);
+  animation: contactGlowFloat 6s ease-in-out infinite alternate;
+}
+
+.contact-ambient-glow.glow-left {
+  left: 8%;
+  top: 35%;
+  animation-delay: 0s;
+}
+
+.contact-ambient-glow.glow-center {
+  left: 45%;
+  top: 40%;
+  animation-delay: 2s;
+}
+
+.contact-ambient-glow.glow-right {
+  left: 78%;
+  top: 35%;
+  animation-delay: 4s;
+}
+
+@keyframes contactGlowFloat {
+  0% { transform: translateY(0px) scale(0.95); opacity: 0.6; }
+  100% { transform: translateY(-15px) scale(1.1); opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   C. CONTACT CARDS INTERACTIVE CLICK-TO-HIGHLIGHT SYSTEM
+   Highlight card & icon on click with glowing crimson border, scale & pulse
+   -------------------------------------------------------------------------- */
+.contact-card-box {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              background-color 0.35s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Top Accent Highlight Strip */
+.contact-card-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  transition: background 0.35s ease, height 0.35s ease;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  z-index: 2;
+}
+
+/* Dynamic Cursor Move & Active State for Contact Cards */
+.contact-card-box:hover,
+.contact-card-box.is-card-highlighted {
+  border-color: #C82333 !important;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F7 100%) !important;
+  box-shadow: 0 20px 48px rgba(200, 35, 51, 0.20), 0 0 0 2px rgba(200, 35, 51, 0.22) !important;
+  transform: translateY(-8px) scale(1.02) !important;
+}
+
+.contact-card-box:hover::before,
+.contact-card-box.is-card-highlighted::before {
+  background: linear-gradient(90deg, #C82333 0%, #F87171 100%) !important;
+  height: 5px !important;
+}
+
+.contact-card-box:hover h4,
+.contact-card-box.is-card-highlighted h4 {
+  color: #C82333 !important;
+}
+
+.contact-card-box:hover .contact-card-icon,
+.contact-card-box.is-card-highlighted .contact-card-icon {
+  background: linear-gradient(135deg, #C82333 0%, #9E1B28 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 24px rgba(200, 35, 51, 0.42), 0 0 0 5px rgba(200, 35, 51, 0.16) !important;
+  transform: scale(1.16) rotate(5deg) !important;
+}
+
+.contact-card-box:hover .btn-outline-primary,
+.contact-card-box.is-card-highlighted .btn-outline-primary {
+  background-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 16px rgba(200, 35, 51, 0.32) !important;
+}
+
+@keyframes contactIconPulseGlow {
+  0%, 100% {
+    transform: scale(1.18) rotate(6deg);
+    box-shadow: 0 10px 24px rgba(200, 35, 51, 0.45), 0 0 0 5px rgba(200, 35, 51, 0.18);
+  }
+  50% {
+    transform: scale(1.24) rotate(-3deg);
+    box-shadow: 0 14px 30px rgba(200, 35, 51, 0.6), 0 0 0 8px rgba(200, 35, 51, 0.28);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   D. FOOTER & CONTACT CHANNELS WITH SPECIFIC ICONS
+   Address location icon, Timings clock, Contact phone, Emergency alert,
+   WhatsApp chat icon, and Email envelope icon.
+   -------------------------------------------------------------------------- */
+.footer-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #CBD5E1;
+}
+
+.footer-info-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.footer-info-row:hover .footer-info-icon {
+  transform: scale(1.15);
+}
+
+.footer-info-content {
+  flex: 1;
+}
+
+.footer-info-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1px;
+  font-size: 12px;
+}
+
+.contact-channel-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.contact-channel-icon {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  margin-top: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   16. TREATMENTS SECTION: CLASSY SEQUENTIAL MOVING CARDS & 3D FLIP CARDS
+   With Clinical Photography Thumbnails, Dynamic Cursor Highlight & Zero-Flicker Buttons
+   ========================================================================== */
+.treatments-carousel-wrap {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.treatments-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.treatments-counter-badge {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(200, 35, 51, 0.08);
+  border: 1px solid rgba(200, 35, 51, 0.22);
+  padding: 5px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(200, 35, 51, 0.08);
+}
+
+/* Middle Floating Side Navigation Arrows (Left on Left side, Right on Right side) */
+.treatment-nav-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(200, 35, 51, 0.28);
+  color: #0F172A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(200, 35, 51, 0.14);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.treatment-nav-side-prev {
+  left: -26px;
+}
+
+.treatment-nav-side-next {
+  right: -26px;
+}
+
+.treatment-nav-side:hover {
+  background: linear-gradient(135deg, #C82333 0%, #A51D2A 100%);
+  border-color: #C82333;
+  color: #FFFFFF;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 12px 30px rgba(200, 35, 51, 0.42);
+}
+
+.treatment-nav-side:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.treatments-carousel-viewport {
+  overflow: hidden;
+  position: relative;
+  padding: 22px 10px 36px;
+  margin: -22px -10px -36px;
+}
+
+.treatments-carousel-track {
+  display: flex;
+  gap: 28px;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Individual Card Container with 3D Perspective */
+.treatment-card-item {
+  flex: 0 0 calc((100% - 56px) / 3);
+  perspective: 1200px;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 24px;
+  cursor: pointer;
+  user-select: none;
+  min-height: 520px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 3D Card Inner (Rotates 180deg on Flip) */
+.treatment-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  transition: transform 0.75s cubic-bezier(0.34, 1.35, 0.64, 1);
+  transform-style: preserve-3d;
+  border-radius: 24px;
+}
+
+.treatment-card-item.is-flipped .treatment-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK FACES */
+.treatment-card-front,
+.treatment-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FRONT FACE STYLING */
+.treatment-card-front {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 16px 20px 22px;
+  z-index: 2;
+  transform: rotateY(0deg) translateZ(1px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+}
+
+/* Top Shimmer Stripe on Front */
+.treatment-card-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;
+  transition: background 0.35s ease, height 0.35s ease;
+  border-radius: 24px 24px 0 0;
+  z-index: 5;
+}
+
+/* Treatment Thumbnail Wrapper on Front */
+.treatment-card-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #F1F5F9;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.treatment-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.treatment-card-item:hover .treatment-card-thumb {
+  transform: scale(1.06);
+}
+
+/* Floating Highlighted Icon Badge on Thumbnail */
+.treatment-thumb-icon-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF1F2 100%);
+  border: 1.5px solid rgba(200, 35, 51, 0.22);
+  color: #C82333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 3;
+}
+
+.treatment-thumb-icon-badge svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.35s ease;
+}
+
+.treatment-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 4px;
+  letter-spacing: -0.2px;
+  transition: color 0.3s ease;
+}
+
+.treatment-card-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #B45309; /* Warm gold */
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.treatment-card-desc {
+  font-size: 13.5px;
+  color: #64748B;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.treatment-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(241, 245, 249, 0.9);
+  padding-top: 14px;
+}
+
+.treatment-learn-btn {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #C82333;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.treatment-learn-btn span.arrow {
+  transition: transform 0.25s ease;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.treatment-learn-btn:hover span.arrow,
+.treatment-card-item:hover .treatment-learn-btn span.arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   DYNAMIC CURSOR HIGHLIGHT:
+   When cursor moves from one card to another, the hovered card highlights immediately!
+   No constant "stuck" highlight on un-hovered cards.
+   ========================================================================== */
+.treatment-card-item:hover,
+.treatment-card-item.is-active-spotlight {
+  transform: translateY(-8px);
+}
+
+.treatment-card-item:hover .treatment-card-front,
+.treatment-card-item.is-active-spotlight .treatment-card-front {
+  border-color: #C82333;
+  box-shadow: 0 20px 48px rgba(200, 35, 51, 0.16), 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFFBFB 100%);
+}
+
+.treatment-card-item:hover .treatment-card-front::before,
+.treatment-card-item.is-active-spotlight .treatment-card-front::before {
+  background: linear-gradient(90deg, #C82333 0%, #F59E0B 100%);
+  height: 5px;
+}
+
+.treatment-card-item:hover .treatment-thumb-icon-badge,
+.treatment-card-item.is-active-spotlight .treatment-thumb-icon-badge {
+  background: linear-gradient(135deg, #C82333 0%, #9E1B28 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  transform: scale(1.12) rotate(3deg);
+  box-shadow: 0 8px 20px rgba(200, 35, 51, 0.4), 0 0 0 4px rgba(200, 35, 51, 0.16);
+}
+
+.treatment-card-item:hover .treatment-card-title,
+.treatment-card-item.is-active-spotlight .treatment-card-title {
+  color: #C82333;
+}
+
+/* When the viewport is hovered, prioritize the specifically hovered card */
+.treatments-carousel-viewport:hover .treatment-card-item.is-active-spotlight:not(:hover) {
+  transform: translateY(0);
+  border-color: rgba(226, 232, 240, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+.treatments-carousel-viewport:hover .treatment-card-item.is-active-spotlight:not(:hover) .treatment-card-front::before {
+  background: transparent;
+}
+.treatments-carousel-viewport:hover .treatment-card-item.is-active-spotlight:not(:hover) .treatment-thumb-icon-badge {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF1F2 100%);
+  color: #C82333;
+  border-color: rgba(200, 35, 51, 0.22);
+  transform: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+}
+.treatments-carousel-viewport:hover .treatment-card-item.is-active-spotlight:not(:hover) .treatment-card-title {
+  color: #0F172A;
+}
+
+/* BACK FACE STYLING (FLIPPED INFORMATION) */
+.treatment-card-back {
+  background: linear-gradient(150deg, #FFFFFF 0%, #FFFDF9 50%, #FFF9EE 100%);
+  border: 1.5px solid rgba(180, 83, 9, 0.35);
+  box-shadow: 0 18px 45px rgba(180, 83, 9, 0.16), 0 4px 16px rgba(15, 23, 42, 0.06);
+  padding: 24px 22px 20px;
+  transform: rotateY(180deg) translateZ(1px);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.treatment-card-item.is-flipped {
+  transform: translateY(-8px);
+}
+
+.treatment-back-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.treatment-back-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #B45309;
+  background: rgba(180, 83, 9, 0.1);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.treatment-back-close {
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748B;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.treatment-back-close:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.treatment-back-title {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.treatment-back-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.treatment-back-points li {
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.treatment-back-points li .back-bullet-icon {
+  color: #16A34A;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+  line-height: 1.3;
+}
+
+.treatment-back-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+
+.treatment-meta-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.treatment-meta-lbl {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+.treatment-meta-val {
+  font-size: 12.5px;
+  color: #0F172A;
+  font-weight: 700;
+}
+
+.treatment-back-action {
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   100% FLICKER-FREE BOOK APPOINTMENT BUTTON:
+   Eliminated 2D transform inside 3D context that caused the rapid jitter/flicker!
+   Uses stable brightness filter and box-shadow boost instead of translateY.
+   ========================================================================== */
+.treatment-card-book-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #C82333 0%, #A51D2A 100%);
+  color: #FFFFFF !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(200, 35, 51, 0.3);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  transform: translateZ(2px); /* Stable position above backface, NO jitter */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: background 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.treatment-card-book-btn:hover {
+  background: linear-gradient(135deg, #B91C1C 0%, #851722 100%);
+  box-shadow: 0 8px 24px rgba(200, 35, 51, 0.45);
+  filter: brightness(1.08);
+  /* DO NOT translateY here! Keeps cursor firmly planted on the button with ZERO flickering */
+  transform: translateZ(2px);
+}
+
+.treatment-card-book-btn:active {
+  filter: brightness(0.95);
+  box-shadow: 0 2px 8px rgba(200, 35, 51, 0.3);
+}
+
+/* Bottom Controls Bar: Left Arrow on Left, Pagination in Center, Right Arrow on Right */
+.treatments-bottom-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0 4px;
+  gap: 16px;
+}
+
+.treatment-bottom-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(200, 35, 51, 0.28);
+  color: #0F172A;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(200, 35, 51, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  user-select: none;
+}
+
+.treatment-bottom-arrow-btn:hover {
+  background: linear-gradient(135deg, #C82333 0%, #A51D2A 100%);
+  border-color: #C82333;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(200, 35, 51, 0.35);
+  transform: translateY(-2px);
+}
+
+.treatment-bottom-arrow-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.treatment-bottom-prev:hover svg {
+  transform: translateX(-3px);
+}
+
+.treatment-bottom-next:hover svg {
+  transform: translateX(3px);
+}
+
+.treatment-bottom-arrow-btn svg {
+  transition: transform 0.25s ease;
+}
+
+/* Pagination Dots */
+.treatments-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.treatment-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #CBD5E1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.treatment-dot.active {
+  width: 34px;
+  background: linear-gradient(90deg, #C82333 0%, #F59E0B 100%);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(200, 35, 51, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1260px) {
+  .treatment-nav-side-prev {
+    left: -12px;
+  }
+  .treatment-nav-side-next {
+    right: -12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .treatment-card-item {
+    flex: 0 0 calc((100% - 28px) / 2);
+    min-height: 530px;
+  }
+  .treatment-card-inner {
+    min-height: 530px;
+  }
+  .treatment-card-thumb-wrap {
+    height: 150px;
+  }
+  .treatment-nav-side {
+    width: 46px;
+    height: 46px;
+  }
+  .treatment-nav-side-prev {
+    left: 2px;
+  }
+  .treatment-nav-side-next {
+    right: 2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .treatment-card-item {
+    flex: 0 0 100%;
+    min-height: 540px;
+  }
+  .treatment-card-inner {
+    min-height: 540px;
+  }
+  .treatment-card-thumb-wrap {
+    height: 170px;
+  }
+  .treatment-nav-side {
+    display: none; /* Rely on bottom separated arrows and touch swipe on phones */
+  }
+  .treatment-bottom-arrow-btn span {
+    display: none; /* Keep compact icon-only circular buttons on mobile */
+  }
+  .treatment-bottom-arrow-btn {
+    padding: 10px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+  }
+}
+
+
+/* ==========================================================================
+   ADVANCED RESPONSIVE REFINEMENTS ACROSS ALL BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet & Medium Screens (768px - 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-desc {
+    max-width: 100%;
+  }
+  .appointment-wrapper {
+    padding: 36px 28px;
+  }
+}
+
+/* Mobile Screens (<= 768px) */
+@media (max-width: 768px) {
+  .top-bar-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 6px 0;
+  }
+  .top-bar-contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px !important;
+  }
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .doctor-card-body {
+    padding: 24px 20px;
+  }
+  .about-narrative-card {
+    padding: 24px 20px;
+  }
+  .about-quote-box {
+    padding: 18px 20px;
+    font-size: 0.98rem;
+  }
+}
+
+/* Small Tablets & Large Phones (<= 640px) */
+@media (max-width: 640px) {
+  .hero-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .lightbox-modal {
+    padding: 12px;
+  }
+  .lightbox-modal-caption {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+  .lightbox-modal-caption .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile Header & Brand Fit (<= 540px) */
+@media (max-width: 540px) {
+  .nav-container {
+    gap: 8px;
+  }
+  /* On small mobile, header language toggle is hidden because it is prominent in the drawer */
+  .nav-cta-wrapper > .lang-switch {
+    display: none;
+  }
+  .brand-link {
+    margin-right: 0;
+    gap: 8px;
+  }
+  .brand-name {
+    font-size: clamp(0.95rem, 4.2vw, 1.15rem);
+  }
+  .hamburger {
+    width: 44px;
+    height: 44px;
+    padding: 12px 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hamburger span {
+    height: 2.5px;
+  }
+}
+
+/* Compact Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .top-bar {
+    font-size: 11.5px;
+  }
+  .section-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .hero-title {
+    font-size: clamp(1.85rem, 7.8vw, 2.5rem);
+  }
+  .hero-specialty {
+    font-size: 1.05rem;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+  .hero-pill {
+    font-size: 11.5px;
+    padding: 5px 12px;
+    gap: 6px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.35;
+  }
+  .floating-badge {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .floating-badge-timing .floating-badge-content h4,
+  .floating-badge-timing .floating-badge-content p {
+    white-space: normal;
+    word-break: break-word;
+  }
+  .orbit-controls-bar {
+    gap: 8px;
+    padding: 0 4px;
+  }
+  .orbit-status-pill {
+    font-size: 11px;
+    padding: 5px 10px;
+    max-width: calc(100% - 84px);
+    text-align: center;
+  }
+  .orbit-status-text {
+    white-space: normal;
+    font-size: 10.5px;
+    line-height: 1.25;
+  }
+  .orbit-nav-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .specialist-panel-box {
+    padding: 24px 18px;
+  }
+  .appointment-wrapper {
+    padding: 24px 14px;
+  }
+  .appointment-form {
+    padding: 18px 14px;
+  }
+  .app-modal-dialog {
+    padding: 26px 16px;
+    max-width: 92vw;
+  }
+  .timeline-step {
+    padding-left: 44px !important;
+  }
+  .timeline-card {
+    padding: 16px;
+  }
+  .mobile-bottom-bar .btn {
+    padding: 9px 10px;
+    font-size: 12.5px;
+  }
+}
+
+/* Very Small Mobile Screens (320px - 360px) */
+@media (max-width: 360px) {
+  .brand-emblem-wrap {
+    width: 34px;
+    height: 34px;
+  }
+  .brand-name {
+    font-size: 0.92rem;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .section-tag {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .timeline-step {
+    padding-left: 38px !important;
+  }
+  .legacy-timeline::before {
+    left: 12px;
+  }
+  .timeline-step .timeline-dot {
+    left: 1px !important;
+  }
+  .mobile-bottom-bar {
+    padding: 8px 10px;
+  }
+  .mobile-bottom-actions {
+    gap: 6px;
+  }
+  .mobile-bottom-bar .btn {
+    padding: 8px 6px;
+    font-size: 11.5px;
+  }
+}
