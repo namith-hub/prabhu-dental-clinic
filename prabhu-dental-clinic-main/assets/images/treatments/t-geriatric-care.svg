@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-geriatric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="50%" stop-color="#FEF3C7" />
+      <stop offset="100%" stop-color="#FDE68A" />
+    </linearGradient>
+    <linearGradient id="heart-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+    <linearGradient id="hand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+    <filter id="soft-sh-g" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#78350F" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Background Warm Canvas -->
+  <rect width="600" height="360" fill="url(#bg-geriatric)" />
+
+  <!-- Soft Radiant Ambient Rings (Warmth & Comfort) -->
+  <circle cx="300" cy="170" r="160" fill="#FEF08A" opacity="0.45" />
+  <circle cx="300" cy="170" r="125" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6 6" opacity="0.4" />
+  <circle cx="300" cy="170" r="95" fill="none" stroke="#D97706" stroke-width="1.5" opacity="0.3" />
+
+  <!-- Caring Emblem Group (Geriatric Dental Care) -->
+  <g filter="url(#soft-sh-g)">
+    <!-- Central Protective Shield/Crest -->
+    <path d="M 300 70 C 370 70, 395 100, 395 160 C 395 220, 330 255, 300 270 C 270 255, 205 220, 205 160 C 205 100, 230 70, 300 70 Z" fill="url(#shield-grad)" stroke="#FBBF24" stroke-width="3" />
+
+    <!-- Radiant Healthy Tooth in Center of Shield -->
+    <path d="M 270 120 C 260 102, 280 95, 300 102 C 320 95, 340 102, 330 120 C 325 140, 335 175, 322 178 C 315 170, 310 148, 300 148 C 290 148, 285 170, 278 178 C 265 175, 275 140, 270 120 Z" fill="#0284C7" />
+    <path d="M 285 110 C 292 106, 308 106, 315 110" stroke="#BAE6FD" stroke-width="2" fill="none" stroke-linecap="round" />
+
+    <!-- Supporting Caring Gentle Hands Below Tooth (Elderly comfort & tenderness) -->
+    <!-- Left Hand Palm & Fingers curving up -->
+    <path d="M 240 215 C 248 190, 268 185, 285 195 C 275 208, 255 220, 240 215 Z" fill="url(#heart-grad)" />
+    <!-- Right Hand Palm & Fingers curving up -->
+    <path d="M 360 215 C 352 190, 332 185, 315 195 C 325 208, 345 220, 360 215 Z" fill="url(#heart-grad)" />
+
+    <!-- Gentle Heart at the Base -->
+    <path d="M 300 216 C 300 216, 288 202, 278 205 C 268 208, 268 220, 276 228 L 300 248 L 324 228 C 332 220, 332 208, 322 205 C 312 202, 300 216, 300 216 Z" fill="#EF4444" />
+  </g>
+
+  <!-- Warm Sparkles & Comfort Leaves -->
+  <g transform="translate(160, 110) scale(0.8)">
+    <circle cx="0" cy="0" r="8" fill="#F59E0B" opacity="0.6" />
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+  </g>
+  <g transform="translate(440, 110) scale(0.8)">
+    <circle cx="0" cy="0" r="8" fill="#F59E0B" opacity="0.6" />
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+  </g>
+  <g transform="translate(300, 50) scale(0.7)">
+    <path d="M 0 -16 Q 0 0 -16 0 Q 0 0 0 16 Q 0 0 16 0 Q 0 0 0 -16 Z" fill="#F59E0B" />
+  </g>
+
+  <!-- Bottom Badge Banner -->
+  <rect x="180" y="285" width="240" height="38" rx="19" fill="#FFFFFF" opacity="0.95" stroke="#FDE68A" stroke-width="1.5" filter="url(#soft-sh-g)" />
+  <text x="300" y="309" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle" letter-spacing="1">GERIATRIC DENTAL CARE</text>
+</svg>

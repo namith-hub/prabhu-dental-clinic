@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="m-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="m-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE7D0"/>
+      <stop offset="100%" stop-color="#F5CFA8"/>
+    </linearGradient>
+    <linearGradient id="m-hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1A10"/>
+      <stop offset="100%" stop-color="#180D06"/>
+    </linearGradient>
+    <linearGradient id="m-scrubs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <filter id="m-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Breathing / Gentle head nod animation */
+    @keyframes breathingMale {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-2.5px); }
+    }
+    /* Blinking eyes animation */
+    @keyframes blinkMale {
+      0%, 46%, 50%, 96%, 100% { transform: scaleY(1); }
+      48%, 98% { transform: scaleY(0.08); }
+    }
+    /* Subtle smile / cheek bloom animation */
+    @keyframes smileCheer {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    /* Eyebrows subtle welcoming movement */
+    @keyframes browLift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-1.2px); }
+    }
+    /* Pulsing Outer Glow Aura */
+    @keyframes auraPulse {
+      0%, 100% { r: 94px; stroke-width: 2px; opacity: 0.5; }
+      50% { r: 97px; stroke-width: 3.5px; opacity: 0.9; }
+    }
+    /* Sparkle twinkle */
+    @keyframes twinkleSparkle {
+      0%, 100% { transform: scale(0.6) rotate(0deg); opacity: 0.2; }
+      50% { transform: scale(1.2) rotate(45deg); opacity: 1; }
+    }
+
+    .doctor-anim-head {
+      animation: breathingMale 3.6s ease-in-out infinite;
+      transform-origin: 100px 140px;
+    }
+    .eyes-blink-group {
+      animation: blinkMale 4.2s infinite;
+      transform-origin: 100px 92px;
+    }
+    .eyebrows-anim {
+      animation: browLift 4.2s ease-in-out infinite;
+      transform-origin: 100px 78px;
+    }
+    .cheeks-anim {
+      animation: smileCheer 3.6s ease-in-out infinite;
+      transform-origin: 100px 106px;
+    }
+    .male-aura-ring {
+      animation: auraPulse 3s ease-in-out infinite;
+      transform-origin: 100px 100px;
+    }
+    .sparkle-male-1 {
+      animation: twinkleSparkle 2.4s ease-in-out infinite;
+      transform-origin: 40px 42px;
+    }
+    .sparkle-male-2 {
+      animation: twinkleSparkle 2.8s ease-in-out infinite 1.2s;
+      transform-origin: 165px 70px;
+    }
+  </style>
+
+  <!-- Background Base Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#m-bg)"/>
+
+  <!-- Animated Glowing Doctor Aura Ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#38BDF8" class="male-aura-ring"/>
+
+  <!-- Doctor Body / Lab Coat (Static Base) -->
+  <g filter="url(#m-shadow)">
+    <!-- White Doctor Coat -->
+    <path d="M38 200 C38 152 64 142 85 140 L115 140 C136 142 162 152 162 200 Z" fill="#FFFFFF"/>
+    <!-- Coat Shadow & Lapels -->
+    <path d="M38 200 C38 152 64 142 85 140 L100 172 L115 140 C136 142 162 152 162 200 Z" fill="#F1F5F9" opacity="0.6"/>
+
+    <!-- Professional Blue Scrub V-Neck -->
+    <path d="M85 140 L100 168 L115 140 L115 152 L100 174 L85 152 Z" fill="url(#m-scrubs)"/>
+
+    <!-- Coat Lapels -->
+    <path d="M72 143 L90 178 L78 185 L56 160 Z" fill="#E2E8F0"/>
+    <path d="M128 143 L110 178 L122 185 L144 160 Z" fill="#E2E8F0"/>
+
+    <!-- Stethoscope Around Neck -->
+    <path d="M78 142 C76 168 84 195 95 195 C102 195 106 182 106 172" fill="none" stroke="#C82333" stroke-width="4" stroke-linecap="round"/>
+    <path d="M122 142 C124 162 120 180 114 186" fill="none" stroke="#C82333" stroke-width="4" stroke-linecap="round"/>
+    <!-- Stethoscope Bell -->
+    <circle cx="95" cy="195" r="7" fill="#64748B" stroke="#C82333" stroke-width="2"/>
+    <circle cx="95" cy="195" r="3" fill="#94A3B8"/>
+  </g>
+
+  <!-- Animated Doctor Head Group (Nods & Breathes) -->
+  <g class="doctor-anim-head">
+    <!-- Neck -->
+    <path d="M88 120 L88 144 C88 148 94 152 100 152 C106 152 112 148 112 144 L112 120 Z" fill="#F5CFA8"/>
+    <path d="M88 120 C92 130 108 130 112 120 Z" fill="#E4BA91" opacity="0.6"/>
+
+    <!-- Ears -->
+    <ellipse cx="62" cy="98" rx="7" ry="11" fill="url(#m-skin)"/>
+    <ellipse cx="138" cy="98" rx="7" ry="11" fill="url(#m-skin)"/>
+    <path d="M63 94 C61 97 61 101 64 103" fill="none" stroke="#DCAE83" stroke-width="2" stroke-linecap="round"/>
+    <path d="M137 94 C139 97 139 101 136 103" fill="none" stroke="#DCAE83" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Face Oval -->
+    <path d="M66 84 C66 52 134 52 134 84 C134 116 122 132 100 132 C78 132 66 116 66 84 Z" fill="url(#m-skin)" filter="url(#m-shadow)"/>
+
+    <!-- Hair (Styled professional short haircut) -->
+    <path d="M62 82 C60 55 75 35 100 35 C125 35 140 53 138 82 C135 62 124 50 102 52 C84 54 74 65 62 82 Z" fill="url(#m-hair)"/>
+    <path d="M62 82 C64 68 76 56 94 54 C82 58 72 70 70 85 Z" fill="#3D2415"/>
+
+    <!-- Eyebrows (Animated subtle lift) -->
+    <g class="eyebrows-anim">
+      <path d="M74 78 Q84 74 92 77" fill="none" stroke="#1A0D06" stroke-width="3" stroke-linecap="round"/>
+      <path d="M108 77 Q116 74 126 78" fill="none" stroke="#1A0D06" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Modern Spectacles / Glasses -->
+    <rect x="71" y="82" width="22" height="17" rx="4" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="2.5"/>
+    <rect x="107" y="82" width="22" height="17" rx="4" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="2.5"/>
+    <path d="M93 89 L107 89" fill="none" stroke="#0F172A" stroke-width="2.5"/>
+    <path d="M64 88 L71 88" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <path d="M129 88 L136 88" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <!-- Glass Lens Reflections -->
+    <path d="M74 85 L78 85 M74 88 L76 88" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M110 85 L114 85 M110 88 L112 88" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Animated Blinking Eyes behind glasses -->
+    <g class="eyes-blink-group">
+      <!-- Left Eye -->
+      <ellipse cx="82" cy="91" rx="3.5" ry="4" fill="#1E293B"/>
+      <circle cx="83.5" cy="89.5" r="1.3" fill="#FFFFFF"/>
+      <!-- Right Eye -->
+      <ellipse cx="118" cy="91" rx="3.5" ry="4" fill="#1E293B"/>
+      <circle cx="119.5" cy="89.5" r="1.3" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Nose -->
+    <path d="M98 95 Q100 104 103 103 Q105 103 104 100" fill="none" stroke="#D59560" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- Cheerful Doctor Smile with Pearly White Teeth -->
+    <path d="M86 112 Q100 126 114 112 Z" fill="#991B1B"/>
+    <!-- Pearly Teeth -->
+    <path d="M88 113 Q100 119 112 113 Q100 116 88 113 Z" fill="#FFFFFF"/>
+    <!-- Smile outline -->
+    <path d="M84 111 Q100 127 116 111" fill="none" stroke="#1A0D06" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Rosy Welcoming Cheeks -->
+    <g class="cheeks-anim">
+      <ellipse cx="73" cy="106" rx="5.5" ry="3.5" fill="#F87171" opacity="0.4"/>
+      <ellipse cx="127" cy="106" rx="5.5" ry="3.5" fill="#F87171" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Twinkling Aesthetic Stars -->
+  <g class="sparkle-male-1">
+    <path d="M40 36 L42 40 L46 42 L42 44 L40 48 L38 44 L34 42 L38 40 Z" fill="#38BDF8"/>
+  </g>
+  <g class="sparkle-male-2">
+    <path d="M165 65 L166.5 68.5 L170 70 L166.5 71.5 L165 75 L163.5 71.5 L160 70 L163.5 68.5 Z" fill="#0284C7"/>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-prostho" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="50%" stop-color="#DBEAFE" />
+      <stop offset="100%" stop-color="#BFDBFE" />
+    </linearGradient>
+    <linearGradient id="arch-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="60%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#BE123C" />
+    </linearGradient>
+    <linearGradient id="tooth-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0.05" />
+    </linearGradient>
+    <filter id="soft-sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#1E3A8A" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="360" fill="url(#bg-prostho)" />
+
+  <!-- Geometric Abstract Soft Circular Rings -->
+  <circle cx="300" cy="180" r="160" fill="url(#glow-grad)" />
+  <circle cx="300" cy="180" r="130" fill="none" stroke="#60A5FA" stroke-width="2" stroke-dasharray="6 6" opacity="0.4" />
+  <circle cx="300" cy="180" r="105" fill="none" stroke="#3B82F6" stroke-width="1.5" opacity="0.3" />
+
+  <!-- Precision Crosshairs / Digital Dental Measurement Grid -->
+  <line x1="120" y1="180" x2="480" y2="180" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.5" />
+  <line x1="300" y1="40" x2="300" y2="320" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.5" />
+
+  <!-- Precision Prosthodontic Full Arch / Premium Denture Model -->
+  <g filter="url(#soft-sh)">
+    <!-- Base Gum Acrylic Plate (Curved ergonomic contour) -->
+    <path d="M 140 220 C 140 120, 210 90, 300 90 C 390 90, 460 120, 460 220 C 430 200, 390 190, 300 190 C 210 190, 170 200, 140 220 Z" fill="url(#arch-grad)" />
+    <!-- Inner Natural Gum Ridge Highlight -->
+    <path d="M 160 215 C 160 135, 220 108, 300 108 C 380 108, 440 135, 440 215 C 410 198, 375 190, 300 190 C 225 190, 190 198, 160 215 Z" fill="#FB7185" opacity="0.55" />
+
+    <!-- Perfectly Aligned Anatomical Denture Teeth Arch -->
+    <!-- Left Molars & Premolars -->
+    <path d="M 152 205 C 150 185, 168 178, 178 190 C 182 200, 166 215, 152 205 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 175 186 C 174 170, 192 162, 202 174 C 206 185, 190 198, 175 186 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 198 168 C 198 152, 216 144, 226 156 C 230 166, 214 178, 198 168 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+    
+    <!-- Left Canine & Lateral -->
+    <path d="M 222 150 C 224 135, 242 128, 252 140 C 255 150, 238 162, 222 150 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 248 135 C 252 120, 270 114, 278 126 C 282 136, 264 148, 248 135 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+
+    <!-- Central Incisors (Crown Jewels of the Smile) -->
+    <path d="M 276 126 C 280 110, 298 106, 300 106 C 302 106, 300 124, 298 126 C 292 134, 280 134, 276 126 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.8" />
+    <path d="M 300 106 C 302 106, 320 110, 324 126 C 320 134, 308 134, 302 126 C 300 124, 298 106, 300 106 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.8" />
+
+    <!-- Right Lateral & Canine -->
+    <path d="M 322 126 C 330 114, 348 120, 352 135 C 336 148, 318 136, 322 126 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 348 140 C 358 128, 376 135, 378 150 C 362 162, 345 150, 348 140 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+
+    <!-- Right Premolars & Molars -->
+    <path d="M 374 156 C 384 144, 402 152, 402 168 C 386 178, 370 166, 374 156 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 398 174 C 408 162, 426 170, 425 186 C 410 198, 394 185, 398 174 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 422 190 C 432 178, 450 185, 448 205 C 434 215, 418 200, 422 190 Z" fill="url(#tooth-grad)" stroke="#CBD5E1" stroke-width="1.5" />
+  </g>
+
+  <!-- Sparkle of Natural Aesthetic Brightness -->
+  <g transform="translate(296, 75) scale(0.9)">
+    <path d="M 0 -18 Q 0 0 -18 0 Q 0 0 0 18 Q 0 0 18 0 Q 0 0 0 -18 Z" fill="#38BDF8" />
+    <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+  </g>
+  <g transform="translate(185, 140) scale(0.6)">
+    <path d="M 0 -16 Q 0 0 -16 0 Q 0 0 0 16 Q 0 0 16 0 Q 0 0 0 -16 Z" fill="#60A5FA" />
+  </g>
+  <g transform="translate(415, 140) scale(0.6)">
+    <path d="M 0 -16 Q 0 0 -16 0 Q 0 0 0 16 Q 0 0 16 0 Q 0 0 0 -16 Z" fill="#60A5FA" />
+  </g>
+
+  <!-- Bottom Badge Banner -->
+  <rect x="180" y="280" width="240" height="38" rx="19" fill="#FFFFFF" opacity="0.95" stroke="#BFDBFE" stroke-width="1.5" filter="url(#soft-sh)" />
+  <text x="300" y="304" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="middle" letter-spacing="1">PROSTHODONTICS &amp; DENTURES</text>
+</svg>

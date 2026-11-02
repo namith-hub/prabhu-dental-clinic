@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="f-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF1F2"/>
+      <stop offset="100%" stop-color="#FFE4E6"/>
+    </linearGradient>
+    <linearGradient id="f-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE7D0"/>
+      <stop offset="100%" stop-color="#F5CFA8"/>
+    </linearGradient>
+    <linearGradient id="f-hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#261810"/>
+      <stop offset="100%" stop-color="#140C07"/>
+    </linearGradient>
+    <linearGradient id="f-scrubs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+    <filter id="f-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Gentle breathing / welcoming nod */
+    @keyframes breathingFemale {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-2.5px); }
+    }
+    /* Natural blinking animation */
+    @keyframes blinkFemale {
+      0%, 46%, 50%, 96%, 100% { transform: scaleY(1); }
+      48%, 98% { transform: scaleY(0.08); }
+    }
+    /* Delicate smile & cheek cheer */
+    @keyframes smileCheerFemale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    /* Earring subtle sway */
+    @keyframes earringSway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(6deg); }
+    }
+    /* Aura pulse */
+    @keyframes auraPulseFemale {
+      0%, 100% { r: 94px; stroke-width: 2px; opacity: 0.5; }
+      50% { r: 97px; stroke-width: 3.5px; opacity: 0.9; }
+    }
+    /* Sparkle twinkle */
+    @keyframes twinkleSparkleF {
+      0%, 100% { transform: scale(0.6) rotate(0deg); opacity: 0.2; }
+      50% { transform: scale(1.2) rotate(45deg); opacity: 1; }
+    }
+
+    .doctor-anim-head-f {
+      animation: breathingFemale 3.6s ease-in-out infinite 0.4s;
+      transform-origin: 100px 140px;
+    }
+    .eyes-blink-group-f {
+      animation: blinkFemale 4.5s infinite 0.6s;
+      transform-origin: 100px 90px;
+    }
+    .cheeks-anim-f {
+      animation: smileCheerFemale 3.6s ease-in-out infinite 0.4s;
+      transform-origin: 100px 105px;
+    }
+    .earring-left {
+      animation: earringSway 3.6s ease-in-out infinite 0.2s;
+      transform-origin: 63px 100px;
+    }
+    .earring-right {
+      animation: earringSway 3.6s ease-in-out infinite 0.6s;
+      transform-origin: 137px 100px;
+    }
+    .female-aura-ring {
+      animation: auraPulseFemale 3s ease-in-out infinite 0.5s;
+      transform-origin: 100px 100px;
+    }
+    .sparkle-fem-1 {
+      animation: twinkleSparkleF 2.6s ease-in-out infinite 0.3s;
+      transform-origin: 36px 44px;
+    }
+    .sparkle-fem-2 {
+      animation: twinkleSparkleF 3s ease-in-out infinite 1.4s;
+      transform-origin: 164px 72px;
+    }
+  </style>
+
+  <!-- Background Base Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#f-bg)"/>
+
+  <!-- Animated Glowing Aura Ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#FDA4AF" class="female-aura-ring"/>
+
+  <!-- Back Hair (Neat Professional Bun & Shoulder Length) -->
+  <circle cx="100" cy="38" r="17" fill="url(#f-hair)"/>
+  <path d="M48 85 C44 110 50 145 60 160 C65 142 65 110 65 85 Z" fill="url(#f-hair)"/>
+  <path d="M152 85 C156 110 150 145 140 160 C135 142 135 110 135 85 Z" fill="url(#f-hair)"/>
+
+  <!-- Body / Lab Coat (Static Base) -->
+  <g filter="url(#f-shadow)">
+    <!-- White Doctor Coat -->
+    <path d="M42 200 C42 154 66 144 86 142 L114 142 C134 144 158 154 158 200 Z" fill="#FFFFFF"/>
+    <!-- Coat Shadow & Lapels -->
+    <path d="M42 200 C42 154 66 144 86 142 L100 172 L114 142 C134 144 158 154 158 200 Z" fill="#F8FAFC" opacity="0.6"/>
+
+    <!-- Professional Teal Scrub V-Neck -->
+    <path d="M86 142 L100 170 L114 142 L114 154 L100 176 L86 154 Z" fill="url(#f-scrubs)"/>
+
+    <!-- Lapels -->
+    <path d="M74 144 L91 180 L80 186 L58 162 Z" fill="#E2E8F0"/>
+    <path d="M126 144 L109 180 L120 186 L142 162 Z" fill="#E2E8F0"/>
+
+    <!-- Teal Stethoscope -->
+    <path d="M79 144 C77 166 83 192 108 190 C116 190 120 180 120 170" fill="none" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
+    <path d="M121 144 C123 160 120 176 115 182" fill="none" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="108" cy="190" r="7" fill="#64748B" stroke="#0D9488" stroke-width="2"/>
+    <circle cx="108" cy="190" r="3" fill="#94A3B8"/>
+  </g>
+
+  <!-- Animated Doctor Head Group (Breathes & Nods) -->
+  <g class="doctor-anim-head-f">
+    <!-- Neck -->
+    <path d="M89 122 L89 145 C89 149 94 153 100 153 C106 153 111 149 111 145 L111 122 Z" fill="#F5CFA8"/>
+    <path d="M89 122 C93 131 107 131 111 122 Z" fill="#E4BA91" opacity="0.6"/>
+
+    <!-- Ears -->
+    <ellipse cx="64" cy="100" rx="6.5" ry="10" fill="url(#f-skin)"/>
+    <ellipse cx="136" cy="100" rx="6.5" ry="10" fill="url(#f-skin)"/>
+
+    <!-- Animated Pearly Earrings -->
+    <g class="earring-left">
+      <circle cx="63" cy="106" r="3" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8"/>
+    </g>
+    <g class="earring-right">
+      <circle cx="137" cy="106" r="3" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8"/>
+    </g>
+
+    <!-- Face Oval -->
+    <path d="M68 86 C68 56 132 56 132 86 C132 116 120 132 100 132 C80 132 68 116 68 86 Z" fill="url(#f-skin)" filter="url(#f-shadow)"/>
+
+    <!-- Front Hair (Elegant side-part professional finish) -->
+    <path d="M64 82 C63 48 78 34 100 34 C122 34 137 48 136 82 C132 64 120 52 100 50 C84 48 72 62 64 82 Z" fill="url(#f-hair)"/>
+    <path d="M64 80 C68 60 88 48 114 52 C94 54 76 66 70 86 Z" fill="#3D2415"/>
+    <path d="M136 80 C132 62 118 50 104 51 C116 56 128 66 132 86 Z" fill="#3D2415"/>
+
+    <!-- Bindi / Auspicious Forehead Mark -->
+    <circle cx="100" cy="72" r="2.2" fill="#C82333"/>
+
+    <!-- Eyebrows -->
+    <path d="M75 79 Q84 74 93 78" fill="none" stroke="#1A0D06" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M107 78 Q116 74 125 79" fill="none" stroke="#1A0D06" stroke-width="2.6" stroke-linecap="round"/>
+
+    <!-- Animated Blinking Eyes with Expressive Lashes -->
+    <g class="eyes-blink-group-f">
+      <!-- Left Eye -->
+      <ellipse cx="84" cy="90" rx="5.2" ry="6.8" fill="#1E293B"/>
+      <circle cx="86" cy="88" r="2.2" fill="#FFFFFF"/>
+      <circle cx="82.5" cy="92.5" r="1.1" fill="#FFFFFF"/>
+      <!-- Lashes -->
+      <path d="M77 86 Q84 80 91 85" fill="none" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M90 82 L93 80" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round"/>
+
+      <!-- Right Eye -->
+      <ellipse cx="116" cy="90" rx="5.2" ry="6.8" fill="#1E293B"/>
+      <circle cx="118" cy="88" r="2.2" fill="#FFFFFF"/>
+      <circle cx="114.5" cy="92.5" r="1.1" fill="#FFFFFF"/>
+      <!-- Lashes -->
+      <path d="M109 85 Q116 80 123 86" fill="none" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M122 80 L125 82" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Nose -->
+    <path d="M98 96 Q100 103 103 102" fill="none" stroke="#D59560" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Warm, Approachable Smile with Perfectly Aligned Teeth -->
+    <path d="M87 111 Q100 125 113 111 Z" fill="#991B1B"/>
+    <!-- Teeth -->
+    <path d="M89 112 Q100 118 111 112 Q100 115 89 112 Z" fill="#FFFFFF"/>
+    <!-- Smile line -->
+    <path d="M85 110 Q100 126 115 110" fill="none" stroke="#1A0D06" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Animated Rosy Cheeks -->
+    <g class="cheeks-anim-f">
+      <ellipse cx="74" cy="105" rx="6" ry="3.8" fill="#FB7185" opacity="0.45"/>
+      <ellipse cx="126" cy="105" rx="6" ry="3.8" fill="#FB7185" opacity="0.45"/>
+    </g>
+  </g>
+
+  <!-- Twinkling Sparkles -->
+  <g class="sparkle-fem-1">
+    <path d="M36 38 L38 42 L42 44 L38 46 L36 50 L34 46 L30 44 L34 42 Z" fill="#FDA4AF"/>
+  </g>
+  <g class="sparkle-fem-2">
+    <path d="M164 68 L165.5 71.5 L169 73 L165.5 74.5 L164 78 L162.5 74.5 L159 73 L162.5 71.5 Z" fill="#E11D48"/>
+  </g>
+</svg>

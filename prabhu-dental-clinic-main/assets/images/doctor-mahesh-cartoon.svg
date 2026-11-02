@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-m" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="skin-m" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDDEC0"/>
+      <stop offset="100%" stop-color="#F7C89D"/>
+    </linearGradient>
+    <linearGradient id="hair-m" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1A10"/>
+      <stop offset="100%" stop-color="#1A0D06"/>
+    </linearGradient>
+    <linearGradient id="scrubs-m" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bg-grad-m)"/>
+
+  <!-- Subtle glow ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#BFDBFE" stroke-width="3" opacity="0.8"/>
+
+  <!-- Body / Lab Coat -->
+  <path d="M40 200 C40 152 65 142 85 140 L115 140 C135 142 160 152 160 200 Z" fill="#FFFFFF"/>
+  <!-- Lab Coat Collar / Shadow -->
+  <path d="M40 200 C40 152 65 142 85 140 L100 170 L115 140 C135 142 160 152 160 200 Z" fill="#F1F5F9" opacity="0.5"/>
+
+  <!-- Inner Scrub Top (Blue) -->
+  <path d="M85 140 L100 168 L115 140 L115 152 L100 174 L85 152 Z" fill="url(#scrubs-m)"/>
+
+  <!-- Doctor Coat Lapels -->
+  <path d="M72 143 L90 178 L78 185 L56 160 Z" fill="#E2E8F0"/>
+  <path d="M128 143 L110 178 L122 185 L144 160 Z" fill="#E2E8F0"/>
+
+  <!-- Stethoscope around neck -->
+  <!-- Tubing -->
+  <path d="M78 142 C76 168 84 195 95 195 C102 195 106 182 106 172" fill="none" stroke="#C82333" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M122 142 C124 162 120 180 114 186" fill="none" stroke="#C82333" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Bell / Chestpiece -->
+  <circle cx="95" cy="195" r="7" fill="#64748B" stroke="#C82333" stroke-width="2.5"/>
+  <circle cx="95" cy="195" r="3" fill="#94A3B8"/>
+
+  <!-- Neck -->
+  <path d="M88 120 L88 144 C88 148 94 152 100 152 C106 152 112 148 112 144 L112 120 Z" fill="#F7C89D"/>
+  <path d="M88 120 C92 130 108 130 112 120 Z" fill="#E8B084" opacity="0.6"/>
+
+  <!-- Ears -->
+  <ellipse cx="62" cy="98" rx="7" ry="11" fill="url(#skin-m)"/>
+  <ellipse cx="138" cy="98" rx="7" ry="11" fill="url(#skin-m)"/>
+  <path d="M63 94 C61 97 61 101 64 103" fill="none" stroke="#E8B084" stroke-width="2" stroke-linecap="round"/>
+  <path d="M137 94 C139 97 139 101 136 103" fill="none" stroke="#E8B084" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Head / Face -->
+  <path d="M66 84 C66 52 134 52 134 84 C134 116 122 132 100 132 C78 132 66 116 66 84 Z" fill="url(#skin-m)"/>
+
+  <!-- Hair (Male Stylized Short Side-Part) -->
+  <path d="M62 82 C60 56 75 36 100 36 C125 36 140 54 138 82 C135 62 124 50 102 52 C84 54 74 65 62 82 Z" fill="url(#hair-m)"/>
+  <path d="M62 82 C64 68 76 56 94 54 C82 58 72 70 70 85 Z" fill="#3D2415"/>
+
+  <!-- Eyebrows -->
+  <path d="M74 79 Q84 75 92 78" fill="none" stroke="#1A0D06" stroke-width="3" stroke-linecap="round"/>
+  <path d="M108 78 Q116 75 126 79" fill="none" stroke="#1A0D06" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Glasses / Frames (Modern Doctor Look) -->
+  <rect x="71" y="83" width="22" height="16" rx="4" fill="none" stroke="#0F172A" stroke-width="2.5"/>
+  <rect x="107" y="83" width="22" height="16" rx="4" fill="none" stroke="#0F172A" stroke-width="2.5"/>
+  <path d="M93 90 L107 90" fill="none" stroke="#0F172A" stroke-width="2.5"/>
+  <path d="M64 88 L71 88" fill="none" stroke="#0F172A" stroke-width="2"/>
+  <path d="M129 88 L136 88" fill="none" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- Eyes behind glasses -->
+  <ellipse cx="82" cy="91" rx="3.5" ry="4" fill="#1E293B"/>
+  <circle cx="83.5" cy="89.5" r="1.3" fill="#FFFFFF"/>
+  <ellipse cx="118" cy="91" rx="3.5" ry="4" fill="#1E293B"/>
+  <circle cx="119.5" cy="89.5" r="1.3" fill="#FFFFFF"/>
+
+  <!-- Nose -->
+  <path d="M98 96 Q100 105 103 105 Q105 105 104 102" fill="none" stroke="#D99B6A" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- Cheerful Doctor Smile with Pearly White Teeth -->
+  <path d="M86 112 Q100 125 114 112 Z" fill="#991B1B"/>
+  <!-- Teeth -->
+  <path d="M88 113 Q100 119 112 113 Q100 116 88 113 Z" fill="#FFFFFF"/>
+  <!-- Smile shadow line -->
+  <path d="M84 111 Q100 127 116 111" fill="none" stroke="#1A0D06" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Friendly Cheeks -->
+  <ellipse cx="73" cy="106" rx="5" ry="3" fill="#F87171" opacity="0.35"/>
+  <ellipse cx="127" cy="106" rx="5" ry="3" fill="#F87171" opacity="0.35"/>
+
+  <!-- Professional Mini Headlamp / Medical Crest Badge on Lapel -->
+  <circle cx="68" cy="168" r="4" fill="#C82333"/>
+  <path d="M66 168 L70 168 M68 166 L68 170" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

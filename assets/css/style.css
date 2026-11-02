@@ -407,10 +407,10 @@ ul, ol {
 }
 
 .main-header .container {
-  max-width: 1560px;
+  max-width: 1600px;
   width: 100%;
-  padding-left: clamp(16px, 2.5vw, 36px);
-  padding-right: clamp(16px, 2.5vw, 36px);
+  padding-left: clamp(12px, 1.8vw, 28px);
+  padding-right: clamp(12px, 1.8vw, 28px);
 }
 
 .main-header.scrolled {
@@ -435,7 +435,7 @@ ul, ol {
   text-decoration: none;
   flex-shrink: 0;
   white-space: nowrap;
-  margin-right: clamp(12px, 1.8vw, 32px); /* Clear visible separation from Home */
+  margin-right: clamp(6px, 1vw, 16px); /* Clear visible separation from Home */
 }
 
 .brand-emblem-wrap {
@@ -481,15 +481,15 @@ ul, ol {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: clamp(2px, 0.4vw, 5px);
+  gap: clamp(1px, 0.25vw, 3px);
   flex-shrink: 1;
 }
 
 .nav-link {
-  font-size: clamp(12px, 0.85vw, 13.2px);
+  font-size: clamp(11.5px, 0.78vw, 12.8px);
   font-weight: 600;
   color: var(--neutral-700);
-  padding: 6px clamp(8px, 0.8vw, 12px);
+  padding: 5px clamp(6px, 0.6vw, 10px);
   border-radius: var(--radius-full); /* Oval Shape */
   border: 1px solid transparent;
   white-space: nowrap;
@@ -520,7 +520,7 @@ ul, ol {
 }
 
 /* On desktop, hide redundant 'Appointment' oval link because the Book Appointment CTA is right next to it */
-@media (min-width: 1241px) {
+@media (min-width: 1341px) {
   .nav-menu .nav-link-appointment {
     display: none !important;
   }
@@ -673,7 +673,7 @@ ul, ol {
 }
 
 /* Responsive Navbar Adjustments */
-@media (max-width: 1420px) and (min-width: 1241px) {
+@media (max-width: 1540px) and (min-width: 1341px) {
   .nav-container {
     gap: 8px;
   }
@@ -700,8 +700,8 @@ ul, ol {
   }
 }
 
-/* Mobile Nav Drawer (active at <= 1240px to ensure zero clipping on tablets/small laptops) */
-@media (max-width: 1240px) {
+/* Mobile Nav Drawer (active at <= 1340px to ensure zero clipping on tablets/small laptops) */
+@media (max-width: 1340px) {
   .hamburger {
     display: flex;
   }
@@ -772,7 +772,7 @@ ul, ol {
   }
 }
 
-@media (min-width: 1241px) {
+@media (min-width: 1341px) {
   .mobile-only-cta {
     display: none !important;
   }
@@ -1220,7 +1220,7 @@ html[lang="kn"] .nav-link {
   border-left: 4px solid var(--primary);
   padding: 24px 28px;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  margin-bottom: 28px;
+  margin-bottom: 0;
   font-size: 1.05rem;
   font-style: normal;
   color: var(--neutral-800);
@@ -5519,80 +5519,40 @@ textarea.form-control {
   background-color: #FFF5F5 !important;
 }
 
-/* STEP 2: Clinic Legacy (Heritage - Rose Crimson) */
+/* STEP 2: 2012 Handover (Milestone - Golden Amber) */
 .timeline-step:nth-child(3).is-scroll-active .timeline-card,
 .timeline-step:nth-child(3) .timeline-card:hover {
-  border-color: #E11D48 !important;
-  background: linear-gradient(135deg, #FFFFFF 0%, #FFF1F2 100%) !important;
-  box-shadow: 0 18px 42px rgba(225, 29, 72, 0.22) !important;
-}
-.timeline-step:nth-child(3).is-scroll-active .timeline-badge,
-.timeline-step:nth-child(3) .timeline-card:hover .timeline-badge {
-  background: #E11D48 !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4) !important;
-}
-.timeline-step:nth-child(3).is-scroll-active .timeline-dot {
-  border-color: #E11D48 !important;
-  transform: scale(1.35) !important;
-  box-shadow: 0 0 0 6px rgba(225, 29, 72, 0.32) !important;
-  background-color: #FFF1F2 !important;
-}
-
-/* STEP 3: 2012 Handover (Milestone - Golden Amber) */
-.timeline-step:nth-child(4).is-scroll-active .timeline-card,
-.timeline-step:nth-child(4) .timeline-card:hover {
   border-color: #F59E0B !important;
   background: linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 100%) !important;
   box-shadow: 0 18px 42px rgba(245, 158, 11, 0.26) !important;
 }
-.timeline-step:nth-child(4).is-scroll-active .timeline-badge,
-.timeline-step:nth-child(4) .timeline-card:hover .timeline-badge {
+.timeline-step:nth-child(3).is-scroll-active .timeline-badge,
+.timeline-step:nth-child(3) .timeline-card:hover .timeline-badge {
   background: #F59E0B !important;
   color: #FFFFFF !important;
   box-shadow: 0 4px 14px rgba(245, 158, 11, 0.45) !important;
 }
-.timeline-step:nth-child(4).is-scroll-active .timeline-dot {
+.timeline-step:nth-child(3).is-scroll-active .timeline-dot {
   border-color: #F59E0B !important;
   transform: scale(1.35) !important;
   box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.35) !important;
   background-color: #FFFBEB !important;
 }
 
-/* STEP 4: Leadership Duo (Leadership - Deep Royal Crimson) */
-.timeline-step:nth-child(5).is-scroll-active .timeline-card,
-.timeline-step:nth-child(5) .timeline-card:hover {
-  border-color: #991B1B !important;
-  background: linear-gradient(135deg, #FFFFFF 0%, #FEF2F2 100%) !important;
-  box-shadow: 0 18px 42px rgba(153, 27, 27, 0.24) !important;
-}
-.timeline-step:nth-child(5).is-scroll-active .timeline-badge,
-.timeline-step:nth-child(5) .timeline-card:hover .timeline-badge {
-  background: #991B1B !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 4px 14px rgba(153, 27, 27, 0.4) !important;
-}
-.timeline-step:nth-child(5).is-scroll-active .timeline-dot {
-  border-color: #991B1B !important;
-  transform: scale(1.35) !important;
-  box-shadow: 0 0 0 6px rgba(153, 27, 27, 0.32) !important;
-  background-color: #FEF2F2 !important;
-}
-
-/* STEP 5: Present & Future (Continuous Betterment - Enamel Emerald) */
-.timeline-step:nth-child(6).is-scroll-active .timeline-card,
-.timeline-step:nth-child(6) .timeline-card:hover {
+/* STEP 3: Present & Future (Continuous Betterment - Enamel Emerald) */
+.timeline-step:nth-child(4).is-scroll-active .timeline-card,
+.timeline-step:nth-child(4) .timeline-card:hover {
   border-color: #059669 !important;
   background: linear-gradient(135deg, #FFFFFF 0%, #ECFDF5 100%) !important;
   box-shadow: 0 18px 42px rgba(5, 150, 105, 0.22) !important;
 }
-.timeline-step:nth-child(6).is-scroll-active .timeline-badge,
-.timeline-step:nth-child(6) .timeline-card:hover .timeline-badge {
+.timeline-step:nth-child(4).is-scroll-active .timeline-badge,
+.timeline-step:nth-child(4) .timeline-card:hover .timeline-badge {
   background: #059669 !important;
   color: #FFFFFF !important;
   box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4) !important;
 }
-.timeline-step:nth-child(6).is-scroll-active .timeline-dot {
+.timeline-step:nth-child(4).is-scroll-active .timeline-dot {
   border-color: #059669 !important;
   transform: scale(1.35) !important;
   box-shadow: 0 0 0 6px rgba(5, 150, 105, 0.32) !important;
@@ -6798,3 +6758,367 @@ textarea.form-control {
     font-size: 11.5px;
   }
 }
+
+
+/* ==========================================================================
+   FAQ SECTION STYLING
+   ========================================================================== */
+.faq-accordion-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-accordion-item {
+  background: var(--neutral-white);
+  border: 1.5px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.faq-accordion-item:hover {
+  border-color: var(--primary-border);
+  box-shadow: 0 8px 24px rgba(200, 35, 51, 0.08);
+}
+
+.faq-accordion-item.active {
+  border-color: var(--primary);
+  box-shadow: 0 10px 28px rgba(200, 35, 51, 0.12);
+}
+
+.faq-accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: var(--neutral-900);
+  transition: background-color var(--transition-fast);
+}
+
+.faq-accordion-trigger:hover {
+  background-color: var(--sand-50);
+}
+
+.faq-question-text {
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--neutral-900);
+  transition: color var(--transition-fast);
+}
+
+.faq-accordion-item.active .faq-question-text {
+  color: var(--primary);
+}
+
+.faq-accordion-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-accordion-icon svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion-item.active .faq-accordion-icon {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  transform: rotate(180deg);
+}
+
+.faq-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-answer-inner {
+  padding: 0 24px 22px 24px;
+  font-size: 0.98rem;
+  color: var(--neutral-700);
+  line-height: 1.75;
+  border-top: 1px solid var(--neutral-100);
+  margin-top: 4px;
+  padding-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .faq-accordion-trigger {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+  .faq-question-text {
+    font-size: 0.96rem;
+  }
+  .faq-answer-inner {
+    padding: 14px 18px 18px 18px;
+    font-size: 0.92rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   KPMEA GOVERNMENT REGISTERED CLINIC BADGE
+   -------------------------------------------------------------------------- */
+.kpmea-registered-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.12);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.kpmea-registered-badge:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.kpmea-badge-shield-icon {
+  width: 15px;
+  height: 15px;
+  color: #059669;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .kpmea-registered-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+    line-height: 1.3;
+    white-space: normal;
+  }
+}
+
+/* In-House Specialist Distinction in Speciality Cards */
+.speciality-card .specialist-lead-badge.inhouse-badge {
+  background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);
+  color: #BE123C;
+  border: 1px solid #FDA4AF;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(190, 18, 60, 0.08);
+}
+
+/* About Quote KPMEA Highlighting */
+.about-kpmea-highlight {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.96rem;
+  font-weight: 500;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+  line-height: 1.5;
+}
+
+.about-kpmea-star {
+  color: #DC2626;
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.about-kpmea-highlight strong {
+  color: #047857 !important;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   DOCTOR CARD FOOTER ACTIONS & ONLINE CONSULT BUTTON
+   ========================================================================== */
+.doctor-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary-light, #f0c0c5);
+  background-color: #FFF5F6;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 35, 51, 0.25);
+}
+
+.btn-outline-secondary svg {
+  stroke: currentColor;
+}
+
+@media (max-width: 576px) {
+  .doctor-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .doctor-card-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+/* ==========================================================================
+   FAQ SECTION STYLING
+   ========================================================================== */
+.faq-accordion-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-accordion-item {
+  background: var(--neutral-white);
+  border: 1.5px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.faq-accordion-item:hover {
+  border-color: var(--primary-border);
+  box-shadow: 0 8px 24px rgba(200, 35, 51, 0.08);
+}
+
+.faq-accordion-item.active {
+  border-color: var(--primary);
+  box-shadow: 0 10px 28px rgba(200, 35, 51, 0.12);
+}
+
+.faq-accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: var(--neutral-900);
+  transition: background-color var(--transition-fast);
+}
+
+.faq-accordion-trigger:hover {
+  background-color: var(--sand-50);
+}
+
+.faq-question-text {
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--neutral-900);
+  transition: color var(--transition-fast);
+}
+
+.faq-accordion-item.active .faq-question-text {
+  color: var(--primary);
+}
+
+.faq-accordion-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-accordion-icon svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion-item.active .faq-accordion-icon {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  transform: rotate(180deg);
+}
+
+.faq-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-answer-inner {
+  padding: 0 24px 22px 24px;
+  font-size: 0.98rem;
+  color: var(--neutral-700);
+  line-height: 1.75;
+  border-top: 1px solid var(--neutral-100);
+  margin-top: 4px;
+  padding-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .faq-accordion-trigger {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+  .faq-question-text {
+    font-size: 0.96rem;
+  }
+  .faq-answer-inner {
+    padding: 14px 18px 18px 18px;
+    font-size: 0.92rem;
+  }
+}
+
+.doctor-avatar-circle img { object-fit: cover; object-position: center top; width: 100%; height: 100%; background: #ffffff; }

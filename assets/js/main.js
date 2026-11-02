@@ -30,6 +30,8 @@ const translations = {
     "nav.legacy": "Clinic Legacy",
     "nav.gallery": "Gallery",
     "nav.appointment": "Appointment",
+    "nav.faq": "FAQ",
+    "nav.faq": "FAQ",
     "nav.location": "Location",
     "nav.contact": "Contact",
     "nav.book_cta": "Book Appointment",
@@ -40,6 +42,8 @@ const translations = {
 
     // Hero Section
     "hero.pill": "Orthodontics & Periodontistry Clinic &bull; Saraswathipuram, Mysore",
+    "hero.kpmea_badge": "Registered under Karnataka Private Medical Establishments (KPMEA) Act",
+    "footer.kpmea": "Registered under Karnataka Private Medical Establishments (KPMEA) Act",
     "hero.title": 'PRABHU <span class="brand-red">DENTAL CLINIC</span>',
     "hero.specialty": "Orthodontics &amp; Periodontistry Clinic",
     "hero.desc": "Saraswathipuram, Mysore. Owned by husband and wife duo Dr. Mahesh H.V. M.D.S. (Periodontist &amp; Implantologist) and Dr. Ramya K.S. M.D.S. (Orthodontist and Dentofacial Orthopaedist). Continuing a legacy of dedicated dental care since 2012.",
@@ -65,8 +69,7 @@ const translations = {
     "about.title": "Continuing a Legacy of Dental Care Since 2012",
     "about.subtitle": "Dedicated patient care, ethical practice, and continuous clinical betterment in Saraswathipuram, Mysore.",
     "about.flow_title": "Clinical Lineage & Evolution Path",
-    "about.quote": '"Clinic is owned by husband and wife duo <strong>Dr. Mahesh H.V. M.D.S. (Periodontist &amp; Implantologist)</strong> and <strong>Dr. Ramya K.S. M.D.S. (Orthodontist and dentofacial orthopaedist)</strong>. With the blessings of <strong>Dr. M.G. Prabhu</strong>, Dr. Mahesh and Dr. Ramya have taken over the clinic from him in the year <strong>2012</strong> and are continuing the same good work while aiming for further betterment and upgradation of the clinic in all ways for the benefit of the patients."',
-    "about.pillar1_title": "Dr. Mahesh H.V. &amp; Dr. Ramya K.S.",
+    "about.quote": "\"Clinic is owned by husband and wife duo <strong>Dr. Mahesh H.V. M.D.S. (Periodontist &amp; Implantologist)</strong> and <strong>Dr. Ramya K.S. M.D.S. (Orthodontist and dentofacial orthopaedist)</strong>. With the blessings of <strong>Dr. M.G. Prabhu</strong>, Dr. Mahesh and Dr. Ramya have taken over the clinic from him in the year <strong>2012</strong> and are continuing the same good work while aiming for further betterment and upgradation of the clinic in all ways for the benefit of the patients.<br><br>Carrying forward this trusted heritage in Saraswathipuram, Mysore, the clinic combines advanced clinical expertise with a gentle, patient-centric approach. Together, they offer comprehensive specialized dental care—from intricate periodontal therapies and implant restorations to modern orthodontic smile alignment—utilizing state-of-the-art dental technology, rigorous sterilization protocols, and ethical treatment standards designed for long-term oral health.\"<br><br><span class=\"about-kpmea-highlight\"><span class=\"about-kpmea-star\">*</span> <strong>Prabhu Dental Clinic is registered under the Karnataka Private Medical Establishments (KPMEA) Act</strong>, adhering strictly to recognized clinical, hygiene, and ethical healthcare standards.</span>",
     "about.pillar1_desc": "Husband and wife specialist duo owning and leading the clinic with specialized postgraduate expertise.",
     "about.pillar2_title": "Blessings of Dr. M.G. Prabhu",
     "about.pillar2_desc": "Carrying forward the honored legacy and trust established by Dr. M.G. Prabhu in Mysore.",
@@ -86,6 +89,7 @@ const translations = {
     "doctors.consult_label": "Consultations:",
     "doctors.consult_days": "Mon – Sat &amp; Sun (Prior Appt.)",
     "doctors.btn_consult": "Request Consult",
+    "doctors.btn_online_consult": "Online Consult",
 
     // Treatments Section
     "treatments.tag": "Clinical Treatments",
@@ -135,6 +139,14 @@ const translations = {
     "treatments.t8_p2": "Laser periodontal therapy for bleeding gums & gingivitis",
     "treatments.t8_p3": "Gum grafting, pocket reduction & regenerative treatments",
     "treatments.t8_dur": "1–2 Sessions",
+    "treatments.t9_p1": "Gentle compassionate dental examinations tailored for seniors",
+    "treatments.t9_p2": "Dry mouth (xerostomia), root caries & sensitive gum management",
+    "treatments.t9_p3": "Preventive oral healthcare suited to systemic medical conditions",
+    "treatments.t9_dur": "30–45 Mins",
+    "treatments.t10_p1": "Custom precision-fit complete & partial acrylic/flexible dentures",
+    "treatments.t10_p2": "Implant-supported overdentures for maximum chewing stability",
+    "treatments.t10_p3": "Natural smile restoration, quick relining & immediate repairs",
+    "treatments.t10_dur": "3–4 Visits",
 
     "treatments.t1_title": "General Dentistry",
     "treatments.t1_sub": "The foundation of a healthy smile",
@@ -151,7 +163,7 @@ const translations = {
     "treatments.t5_title": "Teeth Whitening",
     "treatments.t5_sub": "A brighter smile in one visit",
     "treatments.t5_desc": "Professional-grade whitening for dramatically whiter teeth, safely and quickly.",
-    "treatments.t6_title": "Root Canal",
+    "treatments.t6_title": "Endodontics Treatment / Root Canal",
     "treatments.t6_sub": "Gentle, pain-free treatment",
     "treatments.t6_desc": "Advanced rotary techniques to save your tooth comfortably and efficiently.",
     "treatments.t7_title": "Paediatric Dentistry",
@@ -160,6 +172,12 @@ const translations = {
     "treatments.t8_title": "Periodontics & Gum Care",
     "treatments.t8_sub": "Healthy gums for lifelong teeth",
     "treatments.t8_desc": "Specialised periodontal treatments for gum health, bleeding prevention, and laser care.",
+    "treatments.t9_title": "Geriatric Dental Care",
+    "treatments.t9_sub": "Compassionate care for seniors",
+    "treatments.t9_desc": "Dedicated gentle dental care for elderly patients, focusing on comfort, preservation, and overall wellness.",
+    "treatments.t10_title": "Prosthodontics & Dentures",
+    "treatments.t10_sub": "Restore your smile and bite",
+    "treatments.t10_desc": "Custom full & partial dentures, bridges, and implant-supported overdentures for effortless chewing and speaking.",
 
     // Specialities Section
     "spec.tag": "Clinical Scope",
@@ -167,13 +185,13 @@ const translations = {
     "spec.subtitle": "Key dental specialities offered at Prabhu Dental Clinic by our doctors and specialist support team.",
     "spec.ortho_title": "Orthodontics",
     "spec.ortho_desc": "Specialised field focused on teeth alignment, dental corrections, and dentofacial orthopaedics.",
-    "spec.ortho_lead": "Led by Dr. Ramya K.S. (M.D.S.)",
+    "spec.ortho_lead": "In-House Orthodontist: Dr. Ramya K.S. (M.D.S.)",
     "spec.perio_title": "Periodontistry",
     "spec.perio_desc": "Specialised care dedicated to the prevention, diagnosis, and treatment of periodontal (gum) conditions.",
-    "spec.perio_lead": "Led by Dr. Mahesh H.V. (M.D.S.)",
+    "spec.perio_lead": "In-House Periodontist: Dr. Mahesh H.V. (M.D.S.)",
     "spec.implant_title": "Implantology",
     "spec.implant_desc": "Specialised dental implant treatments for the restoration and replacement of teeth.",
-    "spec.implant_lead": "Led by Dr. Mahesh H.V. (M.D.S.)",
+    "spec.implant_lead": "In-House Implantologist: Dr. Mahesh H.V. (M.D.S.)",
     "spec.surg_title": "Oral Surgery",
     "spec.surg_desc": "Specialist oral surgical care provided by our experienced specialist support team.",
     "spec.prostho_title": "Prosthodontics",
@@ -195,7 +213,7 @@ const translations = {
     "team.prostho_sub": "Specialist tooth restoration and prosthetics.",
     "team.pedia_sub": "Specialist dental care for children.",
     "team.emergency_title": "Medical Emergency Handling",
-    "team.emergency_desc": '"Also associated with the clinic is a physician to handle emergencies, and the clinic is tied up with a nearby nursing home to handle medical emergencies."',
+    "team.emergency_desc": '"In case of any medical emergency, prompt medical assistance and support are readily provided through our tie-up with a nearby reputed nursing home, alongside an associated physician."',
 
     // Legacy Section
     "legacy.tag": "Historical Lineage",
@@ -265,6 +283,10 @@ const translations = {
     "app.ph_name": "Patient full name",
     "app.label_mobile": "Mobile Number",
     "app.ph_mobile": "Mobile number",
+    "app.label_mode": "Consultation Type",
+    "app.opt_mode_offline": "In-Clinic Visit (Offline)",
+    "app.opt_mode_online": "Online Video Consult (5:00 - 5:30 PM)",
+    "app.opt_time_online": "05:00 PM - 05:30 PM (Online Consult Session)",
     "app.label_date": "Preferred Date",
     "app.label_time": "Preferred Time",
     "app.opt_time_select": "Select preferred session...",
@@ -276,7 +298,6 @@ const translations = {
     "app.label_msg": "Message",
     "app.ph_msg": "Write any specific query or note...",
     "app.btn_submit": "REQUEST APPOINTMENT",
-    "app.form_note": "This is a frontend prototype. No real appointment booking or payment is processed.",
     "app.success_title": "Thank you. Your appointment request has been received.",
     "app.success_desc": "This is a prototype demonstration. Your requested details have been recorded for frontend presentation.",
     "app.btn_reset": "Submit Another Request",
@@ -284,6 +305,42 @@ const translations = {
     "app.modal_subtitle": "Thank you for contacting Prabhu Dental Clinic. Your visit request has been recorded for our presentation prototype.",
     "app.modal_note": "This is a frontend demonstration prototype. No actual booking or payment was processed.",
     "app.modal_btn_close": "Close",
+
+    
+    // FAQ Section
+    "faq.tag": "Frequently Asked Questions",
+    "faq.title": "Dental FAQs & Care Insights",
+    "faq.subtitle": "Answers to common queries regarding treatments, orthodontic aligners, implants, and routine dental wellness.",
+    "faq.q1": "How often should I visit the dentist for a routine dental checkup?",
+    "faq.a1": "It is recommended to have a professional dental checkup and routine cleaning every 6 months. Regular examinations allow early detection of tooth decay, gingival bleeding, or periodontal issues before they progress into complicated conditions.",
+    "faq.q2": "Are dental implant treatments painful and how long do they last?",
+    "faq.a2": "Dental implant procedures are performed under local anesthesia with minimal discomfort. With advanced 3D planning and gentle surgical techniques, recovery is fast. With proper daily oral hygiene and periodic checkups, dental implants are permanent solutions that last a lifetime.",
+    "faq.q3": "What is the difference between traditional braces and clear invisible aligners?",
+    "faq.a3": "Traditional braces use ceramic or metallic brackets and wires to gently shift teeth. Clear aligners are custom-made, transparent, and removable plastic trays that straighten teeth discreetly. Both are highly effective; Dr. Ramya K.S. (Orthodontist) will evaluate your smile and recommend the ideal option.",
+    "faq.q4": "Why do my gums bleed when I brush or floss, and what should I do?",
+    "faq.a4": "Bleeding gums are typically an early sign of gingivitis or accumulated plaque and tartar beneath the gumline. If ignored, it may develop into periodontitis. Professional scaling and periodontal evaluation by Dr. Mahesh H.V. (Periodontist) will restore healthy, firm gums.",
+    "faq.q5": "Is a Root Canal Treatment (RCT) painful, and can my natural tooth be saved?",
+    "faq.a5": "Modern root canal treatments are virtually pain-free thanks to effective local anesthesia and computerized rotary endodontics. An RCT removes infected pulp, thoroughly disinfects the root canals, and seals the tooth, allowing you to preserve your original natural tooth for decades under a protective crown.",
+    "faq.q6": "How can I book an appointment, and are Sunday visits available?",
+    "faq.a6": "You can request an appointment directly through our online appointment form or by messaging us on WhatsApp (+91 94489 84480). The clinic operates Monday through Saturday (10:30 AM–1:30 PM & 5:00 PM–9:00 PM), while Sundays are reserved exclusively for prior scheduled appointments.",
+
+    
+    // FAQ Section
+    "faq.tag": "Frequently Asked Questions",
+    "faq.title": "Dental FAQs & Care Insights",
+    "faq.subtitle": "Answers to common queries regarding treatments, orthodontic aligners, implants, and routine dental wellness.",
+    "faq.q1": "How often should I visit the dentist for a routine dental checkup?",
+    "faq.a1": "It is recommended to have a professional dental checkup and routine cleaning every 6 months. Regular examinations allow early detection of tooth decay, gingival bleeding, or periodontal issues before they progress into complicated conditions.",
+    "faq.q2": "Are dental implant treatments painful and how long do they last?",
+    "faq.a2": "Dental implant procedures are performed under local anesthesia with minimal discomfort. With advanced 3D planning and gentle surgical techniques, recovery is fast. With proper daily oral hygiene and periodic checkups, dental implants are permanent solutions that last a lifetime.",
+    "faq.q3": "What is the difference between traditional braces and clear invisible aligners?",
+    "faq.a3": "Traditional braces use ceramic or metallic brackets and wires to gently shift teeth. Clear aligners are custom-made, transparent, and removable plastic trays that straighten teeth discreetly. Both are highly effective; Dr. Ramya K.S. (Orthodontist) will evaluate your smile and recommend the ideal option.",
+    "faq.q4": "Why do my gums bleed when I brush or floss, and what should I do?",
+    "faq.a4": "Bleeding gums are typically an early sign of gingivitis or accumulated plaque and tartar beneath the gumline. If ignored, it may develop into periodontitis. Professional scaling and periodontal evaluation by Dr. Mahesh H.V. (Periodontist) will restore healthy, firm gums.",
+    "faq.q5": "Is a Root Canal Treatment (RCT) painful, and can my natural tooth be saved?",
+    "faq.a5": "Modern root canal treatments are virtually pain-free thanks to effective local anesthesia and computerized rotary endodontics. An RCT removes infected pulp, thoroughly disinfects the root canals, and seals the tooth, allowing you to preserve your original natural tooth for decades under a protective crown.",
+    "faq.q6": "How can I book an appointment, and are Sunday visits available?",
+    "faq.a6": "You can request an appointment directly through our online appointment form or by messaging us on WhatsApp (+91 94489 84480). The clinic operates Monday through Saturday (10:30 AM–1:30 PM & 5:00 PM–9:00 PM), while Sundays are reserved exclusively for prior scheduled appointments.",
 
     // Location & Contact Section
     "loc.tag": "Find Prabhu Dental Clinic",
@@ -346,6 +403,8 @@ const translations = {
     "nav.legacy": "ಕ್ಲಿನಿಕ್ ಇತಿಹಾಸ",
     "nav.gallery": "ಗ್ಯಾಲರಿ",
     "nav.appointment": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್",
+    "nav.faq": "ಪ್ರಶ್ನೋತ್ತರಗಳು",
+    "nav.faq": "ಪ್ರಶ್ನೋತ್ತರಗಳು",
     "nav.location": "ಸ್ಥಳ & ವಿಳಾಸ",
     "nav.contact": "ಸಂಪರ್ಕ",
     "nav.book_cta": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
@@ -356,6 +415,8 @@ const translations = {
 
     // Hero Section
     "hero.pill": "ಆರ್ಥೊಡಾಂಟಿಕ್ಸ್ ಮತ್ತು ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ರಿ ಕ್ಲಿನಿಕ್ &bull; ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು",
+    "hero.kpmea_badge": "ಕರ್ನಾಟಕ ಖಾಸಗಿ ವೈದ್ಯಕೀಯ ಸಂಸ್ಥೆಗಳ (KPMEA) ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಕ್ಲಿನಿಕ್",
+    "footer.kpmea": "ಕರ್ನಾಟಕ ಖಾಸಗಿ ವೈದ್ಯಕೀಯ ಸಂಸ್ಥೆಗಳ (KPMEA) ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಕ್ಲಿನಿಕ್",
     "hero.title": 'ಪ್ರಭು <span class="brand-red">ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್</span>',
     "hero.specialty": "ಆರ್ಥೊಡಾಂಟಿಕ್ಸ್ ಮತ್ತು ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ರಿ ಕ್ಲಿನಿಕ್",
     "hero.desc": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು. ದಂಪತಿಗಳಾದ ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. ಎಂ.ಡಿ.ಎಸ್. (ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಇಂಪ್ಲಾಂಟಾಲಜಿಸ್ಟ್) ಹಾಗೂ ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. ಎಂ.ಡಿ.ಎಸ್. (ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಡೆಂಟೊಫೇಶಿಯಲ್ ಆರ್ಥೋಪೀಡಿಸ್ಟ್) ಅವರ ಮಾಲೀಕತ್ವದಲ್ಲಿದೆ. 2012 ರಿಂದ ದಂತ ಆರೈಕೆಯ ವಿಶ್ವಾಸಾರ್ಹ ಸೇವೆಯನ್ನು ಮುಂದುವರಿಸಿಕೊಂಡು ಬರುತ್ತಿದೆ.",
@@ -382,8 +443,7 @@ const translations = {
     "about.title": "2012 ರಿಂದ ದಂತ ಆರೈಕೆಯ ಪರಂಪರೆಯನ್ನು ಮುಂದುವರಿಸಿಕೊಂಡು ಬರುತ್ತಿದ್ದೇವೆ",
     "about.subtitle": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರಿನಲ್ಲಿ ಸಮರ್ಪಿತ ರೋಗಿ ಆರೈಕೆ, ನೈತಿಕ ಸೇವೆ ಮತ್ತು ನಿರಂತರ ಸುಧಾರಣೆ.",
     "about.flow_title": "ಕ್ಲಿನಿಕ್ ಇತಿಹಾಸ ಮತ್ತು ವಿಕಾಸ ಪಥ",
-    "about.quote": '"ಈ ಕ್ಲಿನಿಕ್ ದಂಪತಿಗಳಾದ <strong>ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. ಎಂ.ಡಿ.ಎಸ್. (ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಇಂಪ್ಲಾಂಟಾಲಜಿಸ್ಟ್)</strong> ಹಾಗೂ <strong>ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. ಎಂ.ಡಿ.ಎಸ್. (ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಡೆಂಟೊಫೇಶಿಯಲ್ ಆರ್ಥೋಪೀಡಿಸ್ಟ್)</strong> ಅವರ ಮಾಲೀಕತ್ವದಲ್ಲಿದೆ. <strong>ಡಾ. ಎಂ.ಜಿ. ಪ್ರಭು</strong> ಅವರ ಆಶೀರ್ವಾದದೊಂದಿಗೆ, ಡಾ. ಮಹೇಶ್ ಮತ್ತು ಡಾ. ರಮ್ಯಾ ಅವರು <strong>2012</strong> ರಲ್ಲಿ ಅವರಿಂದ ಕ್ಲಿನಿಕ್ ಅನ್ನು ವಹಿಸಿಕೊಂಡಿದ್ದು, ಅದೇ ಉತ್ತಮ ಸೇವೆಯನ್ನು ಮುಂದುವರಿಸುತ್ತಾ ರೋಗಿಗಳ ಹಿತದೃಷ್ಟಿಯಿಂದ ಕ್ಲಿನಿಕ್‌ನ ಸರ್ವಾಂಗೀಣ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಸುಧಾರಣೆಗೆ ಶ್ರಮಿಸುತ್ತಿದ್ದಾರೆ."',
-    "about.pillar1_title": "ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. &amp; ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್.",
+    "about.quote": "\"ಈ ಕ್ಲಿನಿಕ್ ದಂಪತಿಗಳಾದ <strong>ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. ಎಂ.ಡಿ.ಎಸ್. (ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಇಂಪ್ಲಾಂಟಾಲಜಿಸ್ಟ್)</strong> ಹಾಗೂ <strong>ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. ಎಂ.ಡಿ.ಎಸ್. (ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಡೆಂಟೊಫೇಶಿಯಲ್ ಆರ್ಥೋಪೀಡಿಸ್ಟ್)</strong> ಅವರ ಮಾಲೀಕತ್ವದಲ್ಲಿದೆ. <strong>ಡಾ. ಎಂ.ಜಿ. ಪ್ರಭು</strong> ಅವರ ಆಶೀರ್ವಾದದೊಂದಿಗೆ, ಡಾ. ಮಹೇಶ್ ಮತ್ತು ಡಾ. ರಮ್ಯಾ ಅವರು <strong>2012</strong> ರಲ್ಲಿ ಅವರಿಂದ ಕ್ಲಿನಿಕ್ ಅನ್ನು ವಹಿಸಿಕೊಂಡಿದ್ದು, ಅದೇ ಉತ್ತಮ ಸೇವೆಯನ್ನು ಮುಂದುವರಿಸುತ್ತಾ ರೋಗಿಗಳ ಹಿತದೃಷ್ಟಿಯಿಂದ ಕ್ಲಿನಿಕ್‌ನ ಸರ್ವಾಂಗೀಣ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಸುಧಾರಣೆಗೆ ಶ್ರಮಿಸುತ್ತಿದ್ದಾರೆ.<br><br>ಮೈಸೂರಿನ ಸರಸ್ವತಿಪುರಂನಲ್ಲಿ ಈ ವಿಶ್ವಾಸಾರ್ಹ ಸೇವೆಯನ್ನು ಮುಂದುವರಿಸಿಕೊಂಡು ಹೋಗುತ್ತಾ, ಕ್ಲಿನಿಕ್ ಸುಧಾರಿತ ಚಿಕಿತ್ಸಾ ಪರಿಣತಿ ಮತ್ತು ಕಾಳಜಿಯುಕ್ತ ರೋಗಿ ಆರೈಕೆಯನ್ನು ಒದಗಿಸುತ್ತದೆ. ಪಿರಿಯೊಡಾಂಟಲ್ ಚಿಕಿತ್ಸೆಗಳು, ಡೆಂಟಲ್ ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಹಾಗೂ ಆಧುನಿಕ ಆರ್ಥೊಡಾಂಟಿಕ್ ಹಲ್ಲಿನ ಜೋಡಣೆ ಸೇರಿದಂತೆ ಸಮಗ್ರ ವಿಶೇಷ ದಂತ ಸೇವೆಗಳನ್ನು ಅತ್ಯಾಧುನಿಕ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ನೈತಿಕ ಮಾನದಂಡಗಳೊಂದಿಗೆ ಒದಗಿಸಲಾಗುತ್ತಿದೆ.\"<br><br><span class=\"about-kpmea-highlight\"><span class=\"about-kpmea-star\">*</span> <strong>ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್ ಕರ್ನಾಟಕ ಖಾಸಗಿ ವೈದ್ಯಕೀಯ ಸಂಸ್ಥೆಗಳ (KPMEA) ಕಾಯ್ದೆಯಡಿ ಅಧಿಕೃತವಾಗಿ ನೋಂದಾಯಿಸಲ್ಪಟ್ಟಿದೆ</strong> ಮತ್ತು ಮಾನ್ಯತೆ ಪಡೆದ ಕ್ಲಿನಿಕಲ್ ಮತ್ತು ನೈರ್ಮಲ್ಯ ಮಾನದಂಡಗಳಿಗೆ ಬದ್ಧವಾಗಿದೆ.</span>",
     "about.pillar1_desc": "ವಿಶೇಷ ಸ್ನಾತಕೋತ್ತರ ನೈಪುಣ್ಯತೆಯೊಂದಿಗೆ ಕ್ಲಿನಿಕ್ ಮುನ್ನಡೆಸುತ್ತಿರುವ ತಜ್ಞ ದಂಪತಿಗಳು.",
     "about.pillar2_title": "ಡಾ. ಎಂ.ಜಿ. ಪ್ರಭು ಅವರ ಆಶೀರ್ವಾದ",
     "about.pillar2_desc": "ಮೈಸೂರಿನಲ್ಲಿ ಡಾ. ಎಂ.ಜಿ. ಪ್ರಭು ಅವರು ಸ್ಥಾಪಿಸಿದ ವಿಶ್ವಾಸಾರ್ಹ ಪರಂಪರೆಯನ್ನು ಮುಂದುವರಿಸುವುದು.",
@@ -458,6 +518,14 @@ const translations = {
     "treatments.t8_p2": "ರಕ್ತಸ್ರಾವ ತಡೆಯಲು ಲೇಸರ್ ಪಿರಿಯೊಡಾಂಟಲ್ ಚಿಕಿತ್ಸೆ",
     "treatments.t8_p3": "ವಸಡು ಮರುಸ್ಥಾಪನೆ ಮತ್ತು ಹಲ್ಲುಗಳ ಬೇರು ಬಲಪಡಿಸುವ ವಿಧಾನ",
     "treatments.t8_dur": "1–2 ಭೇಟಿಗಳು",
+    "treatments.t9_p1": "ಹಿರಿಯ ನಾಗರಿಕರಿಗಾಗಿ ವಿಶೇಷ ಕಾಳಜಿ ಮತ್ತು ಪ್ರೀತಿಯ ತಪಾಸಣೆ",
+    "treatments.t9_p2": "ಒಣ ಬಾಯಿ (ಕ್ಸೆರೋಸ್ಟೊಮಿಯಾ), ಬೇರುಗಳ ಸೋಂಕು ಮತ್ತು ವಸಡು ಸಂವೇದನೆ ಆರೈಕೆ",
+    "treatments.t9_p3": "ವಯಸ್ಸಿಗೆ ಸಂಬಂಧಿಸಿದ ಆರೋಗ್ಯ ಪರಿಸ್ಥಿತಿಗಳಿಗೆ ಸೂಕ್ತವಾದ ದಂತ ಚಿಕಿತ್ಸೆ",
+    "treatments.t9_dur": "30–45 ನಿಮಿಷ",
+    "treatments.t10_p1": "ನಿಖರ ಅಳತೆಯ ಸಂಪೂರ್ಣ ಮತ್ತು ಭಾಗಶಃ ಕೃತಕ ಹಲ್ಲುಗಳ ಜೋಡಣೆ (ಡೆಂಚರ್ಸ್)",
+    "treatments.t10_p2": "ಆಹಾರ ಸೇವನೆ ಸುಲಭವಾಗಿಸಲು ಇಂಪ್ಲಾಂಟ್ ಆಧಾರಿತ ಓವರ್‌ಡೆಂಚರ್ಸ್",
+    "treatments.t10_p3": "ನೈಸರ್ಗಿಕ ನಗುವಿನ ಮರುಸ್ಥಾಪನೆ, ತ್ವರಿತ ಮರುಜೋಡಣೆ ಮತ್ತು ದುರಸ್ತಿ",
+    "treatments.t10_dur": "3–4 ಭೇಟಿಗಳು",
 
     "treatments.t1_title": "ಜನರಲ್ ಡೆಂಟಿಸ್ಟ್ರಿ",
     "treatments.t1_sub": "ಆರೋಗ್ಯಕರ ನಗುವಿನ ಅಡಿಪಾಯ",
@@ -474,7 +542,7 @@ const translations = {
     "treatments.t5_title": "ಹಲ್ಲುಗಳ ಬಿಳಿಮಾಡುವಿಕೆ",
     "treatments.t5_sub": "ಒಂದೇ ಭೇಟಿಯಲ್ಲಿ ಉಜ್ವಲ ನಗು",
     "treatments.t5_desc": "ಸುರಕ್ಷಿತ, ತ್ವರಿತ ಮತ್ತು ವೃತ್ತಿಪರ ಹಲ್ಲುಗಳ ಬಿಳಿಮಾಡುವಿಕೆ ಚಿಕಿತ್ಸೆ.",
-    "treatments.t6_title": "ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆ",
+    "treatments.t6_title": "ಎಂಡೊಡಾಂಟಿಕ್ಸ್ ಚಿಕಿತ್ಸೆ / ರೂಟ್ ಕೆನಾಲ್",
     "treatments.t6_sub": "ನೋವು ರಹಿತ ಮತ್ತು ಸೌಮ್ಯ ಚಿಕಿತ್ಸೆ",
     "treatments.t6_desc": "ಸುಧಾರಿತ ರೋಟರಿ ತಂತ್ರಜ್ಞಾನದೊಂದಿಗೆ ನಿಮ್ಮ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಸಂರಕ್ಷಿಸುವ ವಿಧಾನ.",
     "treatments.t7_title": "ಮಕ್ಕಳ ದಂತ ಚಿಕಿತ್ಸೆ",
@@ -483,6 +551,12 @@ const translations = {
     "treatments.t8_title": "ಪಿರಿಯೊಡಾಂಟಿಕ್ಸ್ & ವಸಡು ಆರೈಕೆ",
     "treatments.t8_sub": "ಆಜೀವ ಕಾಲ ಹಲ್ಲುಗಳಿಗೆ ಬಲವಾದ ಅಡಿಪಾಯ",
     "treatments.t8_desc": "ವಸಡು ಕಾಯಿಲೆಗಳ ಚಿಕಿತ್ಸೆ, ರಕ್ತಸ್ರಾವ ತಡೆಗಟ್ಟುವಿಕೆ ಮತ್ತು ಲೇಸರ್ ವಸಡು ಆರೈಕೆ.",
+    "treatments.t9_title": "ಹಿರಿಯ ನಾಗರಿಕರ ದಂತ ಆರೈಕೆ",
+    "treatments.t9_sub": "ಹಿರಿಯರಿಗಾಗಿ ವಿಶೇಷ ಮತ್ತು ಸೌಮ್ಯ ಆರೈಕೆ",
+    "treatments.t9_desc": "ಹಿರಿಯ ನಾಗರಿಕರಿಗೆ ಆರಾಮದಾಯಕ, ಸುರಕ್ಷಿತ ಮತ್ತು ಕರುಣಾಪೂರ್ಣ ವಿಶೇಷ ದಂತ ಚಿಕಿತ್ಸೆಗಳು.",
+    "treatments.t10_title": "ಪ್ರಾಸ್ಥೊಡಾಂಟಿಕ್ಸ್ & ಡೆಂಚರ್ಸ್",
+    "treatments.t10_sub": "ನಿಮ್ಮ ನಗು ಮತ್ತು ಅಗಿಯುವ ಶಕ್ತಿಯ ಮರುಸ್ಥಾಪನೆ",
+    "treatments.t10_desc": "ಸುಲಭವಾಗಿ ಮಾತನಾಡಲು ಮತ್ತು ಊಟ ಮಾಡಲು ಕಸ್ಟಮ್ ಕೃತಕ ಹಲ್ಲುಗಳು ಮತ್ತು ಫಿಕ್ಸೆಡ್ ಬ್ರಿಡ್ಜ್ ಚಿಕಿತ್ಸೆ.",
 
     // Specialities Section
     "spec.tag": "ಚಿಕಿತ್ಸಾ ವಿಭಾಗಗಳು",
@@ -490,13 +564,13 @@ const translations = {
     "spec.subtitle": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್‌ನಲ್ಲಿ ನಮ್ಮ ವೈದ್ಯರು ಮತ್ತು ಪರಿಣಿತ ತಂಡದಿಂದ ಒದಗಿಸಲಾಗುವ ಪ್ರಮುಖ ದಂತ ಚಿಕಿತ್ಸೆಗಳು.",
     "spec.ortho_title": "ಆರ್ಥೊಡಾಂಟಿಕ್ಸ್",
     "spec.ortho_desc": "ಹಲ್ಲುಗಳ ಜೋಡಣೆ, ದಂತ ತಿದ್ದುಪಡಿ ಮತ್ತು ಡೆಂಟೊಫೇಶಿಯಲ್ ಆರ್ಥೋಪೀಡಿಕ್ಸ್ ಚಿಕಿತ್ಸೆ.",
-    "spec.ortho_lead": "ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. (ಎಂ.ಡಿ.ಎಸ್.) ಅವರ ನೇತೃತ್ವದಲ್ಲಿ",
+    "spec.ortho_lead": "ಇನ್‌ಹೌಸ್ ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್: ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. (ಎಂ.ಡಿ.ಎಸ್.)",
     "spec.perio_title": "ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ರಿ",
     "spec.perio_desc": "ವಸಡುಗಳ ಆರೋಗ್ಯ ರಕ್ಷಣೆ, ರೋಗ ನಿರ್ಣಯ ಮತ್ತು ವಸಡು ಕಾಯಿಲೆಗಳ ಚಿಕಿತ್ಸೆ.",
-    "spec.perio_lead": "ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. (ಎಂ.ಡಿ.ಎಸ್.) ಅವರ ನೇತೃತ್ವದಲ್ಲಿ",
+    "spec.perio_lead": "ಇನ್‌ಹೌಸ್ ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್: ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. (ಎಂ.ಡಿ.ಎಸ್.)",
     "spec.implant_title": "ಇಂಪ್ಲಾಂಟಾಲಜಿ",
     "spec.implant_desc": "ಕಳೆದುಹೋದ ಹಲ್ಲುಗಳ ಬದಲಿಗಾಗಿ ಸುಧಾರಿತ ದಂತ ಇಂಪ್ಲಾಂಟ್ ಚಿಕಿತ್ಸೆಗಳು.",
-    "spec.implant_lead": "ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. (ಎಂ.ಡಿ.ಎಸ್.) ಅವರ ನೇತೃತ್ವದಲ್ಲಿ",
+    "spec.implant_lead": "ಇನ್‌ಹೌಸ್ ಇಂಪ್ಲಾಂಟಾಲಜಿಸ್ಟ್: ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. (ಎಂ.ಡಿ.ಎಸ್.)",
     "spec.surg_title": "ಓರಲ್ ಸರ್ಜರಿ",
     "spec.surg_desc": "ಅನುಭವಿ ತಜ್ಞರ ತಂಡದಿಂದ ಒದಗಿಸಲಾಗುವ ಬಾಯಿ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ಆರೈಕೆ.",
     "spec.prostho_title": "ಪ್ರಾಸ್ಥೊಡಾಂಟಿಕ್ಸ್",
@@ -520,7 +594,7 @@ const translations = {
     "team.prostho_sub": "ಹಲ್ಲುಗಳ ಪುನರ್ನಿರ್ಮಾಣ ಮತ್ತು ಪ್ರಾಸ್ಥೆಟಿಕ್ಸ್.",
     "team.pedia_sub": "ಮಕ್ಕಳ ವಿಶೇಷ ದಂತ ರಕ್ಷಣೆ.",
     "team.emergency_title": "ವೈದ್ಯಕೀಯ ತುರ್ತು ಸೇವೆ",
-    "team.emergency_desc": '"ತುರ್ತು ಸಂದರ್ಭಗಳನ್ನು ನಿಭಾಯಿಸಲು ಕ್ಲಿನಿಕ್‌ನೊಂದಿಗೆ ವೈದ್ಯರೊಬ್ಬರು ಸಂಪರ್ಕದಲ್ಲಿದ್ದಾರೆ, ಮತ್ತು ವೈದ್ಯಕೀಯ ತುರ್ತು ಪರಿಸ್ಥಿತಿಗಳನ್ನು ನಿಭಾಯಿಸಲು ಹತ್ತಿರದ ನರ್ಸಿಂಗ್ ಹೋಮ್‌ನೊಂದಿಗೆ ಒಪ್ಪಂದ ಮಾಡಿಕೊಳ್ಳಲಾಗಿದೆ."',
+    "team.emergency_desc": '"ಯಾವುದೇ ವೈದ್ಯಕೀಯ ತುರ್ತು ಪರಿಸ್ಥಿತಿಯ ಸಂದರ್ಭದಲ್ಲಿ, ಕ್ಲಿನಿಕ್‌ನೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವ ವೈದ್ಯರು ಹಾಗೂ ಸಮೀಪದ ಪ್ರತಿಷ್ಠಿತ ನರ್ಸಿಂಗ್ ಹೋಮ್ ಸಹಯೋಗದ ಮೂಲಕ ತಕ್ಷಣದ ವೈದ್ಯಕೀಯ ನೆರವು ಮತ್ತು ತುರ್ತು ಆರೈಕೆಯನ್ನು ಒದಗಿಸಲಾಗುತ್ತದೆ."',
 
     // Legacy Section
     "legacy.tag": "ಪರಂಪರೆ ಮತ್ತು ಇತಿಹಾಸ",
@@ -593,7 +667,6 @@ const translations = {
     "app.label_msg": "ಸಂದೇಶ",
     "app.ph_msg": "ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಮಾಹಿತಿ ಅಥವಾ ಟಿಪ್ಪಣಿ ಬರೆಯಿರಿ...",
     "app.btn_submit": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಕೋರಿಕೆ ಸಲ್ಲಿಸಿ",
-    "app.form_note": "ಇದು ಮುಂಗಡ ಪ್ರದರ್ಶನ ಮಾದರಿಯಾಗಿದೆ. ಯಾವುದೇ ಪಾವತಿ ಅಥವಾ ನೈಜ ಬುಕಿಂಗ್ ಪ್ರಕ್ರಿಯೆಯಲ್ಲ.",
     "app.success_title": "ಧನ್ಯವಾದಗಳು. ನಿಮ್ಮ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಕೋರಿಕೆ ಸ್ವೀಕರಿಸಲಾಗಿದೆ.",
     "app.success_desc": "ಇದು ಪ್ರದರ್ಶನ ಮಾದರಿಯಾಗಿದೆ. ನಿಮ್ಮ ವಿವರಗಳನ್ನು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ.",
     "app.btn_reset": "ಮತ್ತೊಂದು ಕೋರಿಕೆ ಸಲ್ಲಿಸಿ",
@@ -601,6 +674,42 @@ const translations = {
     "app.modal_subtitle": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್ ಅನ್ನು ಸಂಪರ್ಕಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು. ನಿಮ್ಮ ಭೇಟಿಯ ಕೋರಿಕೆಯನ್ನು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ.",
     "app.modal_note": "ಇದು ಮುಂಗಡ ಪ್ರದರ್ಶನ ಮಾದರಿಯಾಗಿದೆ. ಯಾವುದೇ ನೈಜ ಬುಕಿಂಗ್ ಅಥವಾ ಪಾವತಿ ಪ್ರಕ್ರಿಯೆಯಲ್ಲ.",
     "app.modal_btn_close": "ಮುಚ್ಚಿ",
+
+    
+    // FAQ Section
+    "faq.tag": "ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೋತ್ತರಗಳು",
+    "faq.title": "ದಂತ ಆರೋಗ್ಯದ ಬಗೆಗಿನ ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು",
+    "faq.subtitle": "ಚಿಕಿತ್ಸೆಗಳು, ಆರ್ಥೊಡಾಂಟಿಕ್ ಅಲೈನರ್‌ಗಳು, ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಮತ್ತು ದಂತ ಆರೈಕೆಯ ಕುರಿತು ನಿಮ್ಮ ಸಂದೇಹಗಳಿಗೆ ಉತ್ತರಗಳು.",
+    "faq.q1": "ನಿಯಮಿತ ತಪಾಸಣೆಗಾಗಿ ಎಷ್ಟು ಸಮಯಕ್ಕೊಮ್ಮೆ ದಂತವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಬೇಕು?",
+    "faq.a1": "ಪ್ರತಿ 6 ತಿಂಗಳಿಗೊಮ್ಮೆ ನಿಯಮಿತ ದಂತ ತಪಾಸಣೆ ಮತ್ತು ಹಲ್ಲುಗಳ ಸ್ವಚ್ಛತೆ (ಕ್ಲೀನಿಂಗ್) ಮಾಡಿಸಿಕೊಳ್ಳುವುದು ಉತ್ತಮ. ಇದರಿಂದ ಹಲ್ಲು ಹುಳುಕು, ಒಸಡಿನ ರಕ್ತಸ್ರಾವ ಮುಂತಾದ ಸಮಸ್ಯೆಗಳನ್ನು ಆರಂಭಿಕ ಹಂತದಲ್ಲೇ ತಡೆಗಟ್ಟಬಹುದು.",
+    "faq.q2": "ಡೆಂಟಲ್ ಇಂಪ್ಲಾಂಟ್ ಚಿಕಿತ್ಸೆ ನೋವುಂಟುಮಾಡುತ್ತದೆಯೇ? ಇದು ಎಷ್ಟು ಕಾಲ ಬಾಳಿಕೆ ಬರುತ್ತದೆ?",
+    "faq.a2": "ಇಂಪ್ಲಾಂಟ್ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಲೋಕಲ್ ಅನಸ್ತೇಶಿಯಾ ಅಡಿಯಲ್ಲಿ ಅತ್ಯಂತ ನಿಖರವಾಗಿ ಮತ್ತು ನೋವಿಲ್ಲದೆ ನಡೆಸಲಾಗುತ್ತದೆ. ಸರಿಯಾದ ಆರೈಕೆ ಮತ್ತು ನಿಗದಿತ ತಪಾಸಣೆಗಳೊಂದಿಗೆ, ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಜೀವಿತಾವಧಿಯವರೆಗೆ ಶಾಶ್ವತವಾಗಿ ಉಳಿಯುತ್ತವೆ.",
+    "faq.q3": "ಸಾಂಪ್ರದಾಯಿಕ ಬ್ರೇಸ್‌ಗಳು ಮತ್ತು ಅದೃಶ್ಯ ಅಲೈನರ್‌ಗಳ (Aligners) ನಡುವಿನ ವ್ಯತ್ಯಾಸವೇನು?",
+    "faq.a3": "ಸಾಂಪ್ರದಾಯಿಕ ಬ್ರೇಸ್‌ಗಳಲ್ಲಿ ತಂತಿಗಳು ಮತ್ತು ಬ್ರಾಕೆಟ್‌ಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ಕ್ಲಿಯರ್ ಅಲೈನರ್‌ಗಳು ಪಾರದರ್ಶಕವಾಗಿದ್ದು ಸುಲಭವಾಗಿ ತೆಗೆಯಬಹುದಾದ ಆಧುನಿಕ ಟ್ರೇಗಳಾಗಿವೆ. ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. (ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್) ನಿಮ್ಮ ಹಲ್ಲುಗಳ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಸೂಕ್ತ ಆಯ್ಕೆಯನ್ನು ಸೂಚಿಸುತ್ತಾರೆ.",
+    "faq.q4": "ಹಲ್ಲುಜ್ಜುವಾಗ ಒಸಡುಗಳಿಂದ ರಕ್ತ ಬರುವುದು ಏಕೆ? ಇದಕ್ಕೆ ಏನು ಪರಿಹಾರ?",
+    "faq.a4": "ಒಸಡುಗಳಿಂದ ರಕ್ತ ಬರುವುದು ಜಿಂಜೈವಿಟಿಸ್ ಅಥವಾ ಹಲ್ಲಿನ ಬುಡದಲ್ಲಿ ಪಾಚಿ/ಕಲ್ಮಶ ಸಂಗ್ರಹವಾಗಿರುವುದರ ಲಕ್ಷಣವಾಗಿದೆ. ತಜ್ಞ ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. ಅವರಿಂದ ಸ್ಕೇಲಿಂಗ್ ಮಾಡಿಸಿಕೊಳ್ಳುವುದರಿಂದ ಒಸಡುಗಳು ಪುನಃ ಆರೋಗ್ಯಕರವಾಗುತ್ತವೆ.",
+    "faq.q5": "ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆ ನೋವಿನಿಂದ ಕೂಡಿರುತ್ತದೆಯೇ? ಇದರಿಂದ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಉಳಿಸಬಹುದೇ?",
+    "faq.a5": "ಆಧುನಿಕ ರೋಟರಿ ತಂತ್ರಜ್ಞಾನದಿಂದ ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆಯು ಸಂಪೂರ್ಣವಾಗಿ ನೋವುರಹಿತವಾಗಿರುತ್ತದೆ. ಸೋಂಕಿತ ಭಾಗವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ಕ್ಯಾಪ್ (ಕ್ರೌನ್) ಅಳವಡಿಸುವುದರಿಂದ ನಿಮ್ಮ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಶಾಶ್ವತವಾಗಿ ಉಳಿಸಿಕೊಳ್ಳಬಹುದು.",
+    "faq.q6": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡುವುದು ಹೇಗೆ? ಭಾನುವಾರ ಕ್ಲಿನಿಕ್ ತೆರೆದಿರುತ್ತದೆಯೇ?",
+    "faq.a6": "ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಫಾರ್ಮ್ ಮೂಲಕ ಅಥವಾ ವಾಟ್ಸಾಪ್ (+91 94489 84480) ಮೂಲಕ ಸುಲಭವಾಗಿ ಭೇಟಿಯನ್ನು ನಿಗದಿಪಡಿಸಬಹುದು. ಸೋಮವಾರದಿಂದ ಶನಿವಾರದವರೆಗೆ ನಿಯಮಿತ ಸಮಯಗಳಲ್ಲಿ ಹಾಗೂ ಭಾನುವಾರದಂದು ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಪಡೆದವರಿಗೆ ಮಾತ್ರ ಚಿಕಿತ್ಸೆ ಲಭ್ಯವಿದೆ.",
+
+    
+    // FAQ Section
+    "faq.tag": "ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೋತ್ತರಗಳು",
+    "faq.title": "ದಂತ ಆರೋಗ್ಯದ ಬಗೆಗಿನ ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು",
+    "faq.subtitle": "ಚಿಕಿತ್ಸೆಗಳು, ಆರ್ಥೊಡಾಂಟಿಕ್ ಅಲೈನರ್‌ಗಳು, ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಮತ್ತು ದಂತ ಆರೈಕೆಯ ಕುರಿತು ನಿಮ್ಮ ಸಂದೇಹಗಳಿಗೆ ಉತ್ತರಗಳು.",
+    "faq.q1": "ನಿಯಮಿತ ತಪಾಸಣೆಗಾಗಿ ಎಷ್ಟು ಸಮಯಕ್ಕೊಮ್ಮೆ ದಂತವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಬೇಕು?",
+    "faq.a1": "ಪ್ರತಿ 6 ತಿಂಗಳಿಗೊಮ್ಮೆ ನಿಯಮಿತ ದಂತ ತಪಾಸಣೆ ಮತ್ತು ಹಲ್ಲುಗಳ ಸ್ವಚ್ಛತೆ (ಕ್ಲೀನಿಂಗ್) ಮಾಡಿಸಿಕೊಳ್ಳುವುದು ಉತ್ತಮ. ಇದರಿಂದ ಹಲ್ಲು ಹುಳುಕು, ಒಸಡಿನ ರಕ್ತಸ್ರಾವ ಮುಂತಾದ ಸಮಸ್ಯೆಗಳನ್ನು ಆರಂಭಿಕ ಹಂತದಲ್ಲೇ ತಡೆಗಟ್ಟಬಹುದು.",
+    "faq.q2": "ಡೆಂಟಲ್ ಇಂಪ್ಲಾಂಟ್ ಚಿಕಿತ್ಸೆ ನೋವುಂಟುಮಾಡುತ್ತದೆಯೇ? ಇದು ಎಷ್ಟು ಕಾಲ ಬಾಳಿಕೆ ಬರುತ್ತದೆ?",
+    "faq.a2": "ಇಂಪ್ಲಾಂಟ್ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಲೋಕಲ್ ಅನಸ್ತೇಶಿಯಾ ಅಡಿಯಲ್ಲಿ ಅತ್ಯಂತ ನಿಖರವಾಗಿ ಮತ್ತು ನೋವಿಲ್ಲದೆ ನಡೆಸಲಾಗುತ್ತದೆ. ಸರಿಯಾದ ಆರೈಕೆ ಮತ್ತು ನಿಗದಿತ ತಪಾಸಣೆಗಳೊಂದಿಗೆ, ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಜೀವಿತಾವಧಿಯವರೆಗೆ ಶಾಶ್ವತವಾಗಿ ಉಳಿಯುತ್ತವೆ.",
+    "faq.q3": "ಸಾಂಪ್ರದಾಯಿಕ ಬ್ರೇಸ್‌ಗಳು ಮತ್ತು ಅದೃಶ್ಯ ಅಲೈನರ್‌ಗಳ (Aligners) ನಡುವಿನ ವ್ಯತ್ಯಾಸವೇನು?",
+    "faq.a3": "ಸಾಂಪ್ರದಾಯಿಕ ಬ್ರೇಸ್‌ಗಳಲ್ಲಿ ತಂತಿಗಳು ಮತ್ತು ಬ್ರಾಕೆಟ್‌ಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ಕ್ಲಿಯರ್ ಅಲೈನರ್‌ಗಳು ಪಾರದರ್ಶಕವಾಗಿದ್ದು ಸುಲಭವಾಗಿ ತೆಗೆಯಬಹುದಾದ ಆಧುನಿಕ ಟ್ರೇಗಳಾಗಿವೆ. ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. (ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್) ನಿಮ್ಮ ಹಲ್ಲುಗಳ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಸೂಕ್ತ ಆಯ್ಕೆಯನ್ನು ಸೂಚಿಸುತ್ತಾರೆ.",
+    "faq.q4": "ಹಲ್ಲುಜ್ಜುವಾಗ ಒಸಡುಗಳಿಂದ ರಕ್ತ ಬರುವುದು ಏಕೆ? ಇದಕ್ಕೆ ಏನು ಪರಿಹಾರ?",
+    "faq.a4": "ಒಸಡುಗಳಿಂದ ರಕ್ತ ಬರುವುದು ಜಿಂಜೈವಿಟಿಸ್ ಅಥವಾ ಹಲ್ಲಿನ ಬುಡದಲ್ಲಿ ಪಾಚಿ/ಕಲ್ಮಶ ಸಂಗ್ರಹವಾಗಿರುವುದರ ಲಕ್ಷಣವಾಗಿದೆ. ತಜ್ಞ ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. ಅವರಿಂದ ಸ್ಕೇಲಿಂಗ್ ಮಾಡಿಸಿಕೊಳ್ಳುವುದರಿಂದ ಒಸಡುಗಳು ಪುನಃ ಆರೋಗ್ಯಕರವಾಗುತ್ತವೆ.",
+    "faq.q5": "ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆ ನೋವಿನಿಂದ ಕೂಡಿರುತ್ತದೆಯೇ? ಇದರಿಂದ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಉಳಿಸಬಹುದೇ?",
+    "faq.a5": "ಆಧುನಿಕ ರೋಟರಿ ತಂತ್ರಜ್ಞಾನದಿಂದ ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆಯು ಸಂಪೂರ್ಣವಾಗಿ ನೋವುರಹಿತವಾಗಿರುತ್ತದೆ. ಸೋಂಕಿತ ಭಾಗವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ಕ್ಯಾಪ್ (ಕ್ರೌನ್) ಅಳವಡಿಸುವುದರಿಂದ ನಿಮ್ಮ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಶಾಶ್ವತವಾಗಿ ಉಳಿಸಿಕೊಳ್ಳಬಹುದು.",
+    "faq.q6": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡುವುದು ಹೇಗೆ? ಭಾನುವಾರ ಕ್ಲಿನಿಕ್ ತೆರೆದಿರುತ್ತದೆಯೇ?",
+    "faq.a6": "ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಫಾರ್ಮ್ ಮೂಲಕ ಅಥವಾ ವಾಟ್ಸಾಪ್ (+91 94489 84480) ಮೂಲಕ ಸುಲಭವಾಗಿ ಭೇಟಿಯನ್ನು ನಿಗದಿಪಡಿಸಬಹುದು. ಸೋಮವಾರದಿಂದ ಶನಿವಾರದವರೆಗೆ ನಿಯಮಿತ ಸಮಯಗಳಲ್ಲಿ ಹಾಗೂ ಭಾನುವಾರದಂದು ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಪಡೆದವರಿಗೆ ಮಾತ್ರ ಚಿಕಿತ್ಸೆ ಲಭ್ಯವಿದೆ.",
 
     // Location & Contact Section
     "loc.tag": "ಕ್ಲಿನಿಕ್ ವಿಳಾಸ",
@@ -665,6 +774,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTreatmentsCarousel();
   initMouseParallax();
   initTimelineProgress();
+  initFaqAccordion();
+  initFaqAccordion();
 });
 
 /**
@@ -972,8 +1083,60 @@ function initAppointmentForm() {
   const form = document.getElementById('appointmentForm');
   const successBox = document.getElementById('appointmentSuccess');
   const resetBtn = document.getElementById('appointmentReset');
+  const modeSelect = form ? form.consultationMode : null;
+  const timeSelect = form ? form.preferredTime : null;
 
   if (!form || !successBox) return;
+
+  // Sync time slot options based on consultation mode
+  function syncTimeSlotsForMode(mode) {
+    if (!timeSelect) return;
+    const isOnline = mode && mode.toLowerCase().includes('online');
+    if (isOnline) {
+      // Find 5:00 - 5:30 PM online option
+      let onlineOpt = Array.from(timeSelect.options).find(o => o.value.includes('5:00') && o.value.includes('5:30'));
+      if (onlineOpt) {
+        timeSelect.value = onlineOpt.value;
+      }
+    }
+  }
+
+  if (modeSelect) {
+    modeSelect.addEventListener('change', function() {
+      syncTimeSlotsForMode(this.value);
+    });
+  }
+
+  // Wire up Doctor card consult buttons (Request Consult & Online Consult)
+  document.querySelectorAll('.js-consult-trigger').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const mode = this.getAttribute('data-mode'); // 'online' or 'offline'
+      const doctor = this.getAttribute('data-doctor');
+
+      if (modeSelect) {
+        if (mode === 'online') {
+          const onlineOpt = Array.from(modeSelect.options).find(o => o.value.toLowerCase().includes('online'));
+          if (onlineOpt) modeSelect.value = onlineOpt.value;
+          syncTimeSlotsForMode('online');
+        } else {
+          const offlineOpt = Array.from(modeSelect.options).find(o => o.value.toLowerCase().includes('offline') || o.value.toLowerCase().includes('clinic'));
+          if (offlineOpt) modeSelect.value = offlineOpt.value;
+          if (timeSelect && timeSelect.value.includes('5:30')) {
+            timeSelect.value = '';
+          }
+        }
+      }
+
+      if (doctor && form.patientMessage && !form.patientMessage.value) {
+        form.patientMessage.value = (mode === 'online' ? 'Online Consultation request for ' : 'Consultation request for ') + doctor + '.';
+      }
+
+      const apptSec = document.getElementById('appointment');
+      if (apptSec) {
+        apptSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 
   // Real-time restriction: Patient Name field only accepts letters, spaces and dots (rejects numbers and special characters)
   if (form.patientName) {
@@ -994,6 +1157,7 @@ function initAppointmentForm() {
 
     const name = form.patientName.value.trim();
     const phone = form.mobileNumber.value.trim();
+    const mode = form.consultationMode ? form.consultationMode.value : 'In-Clinic Visit (Offline)';
     const date = form.preferredDate.value;
     const timeSlot = form.preferredTime.value;
     const reason = form.reasonForVisit.value;
@@ -1037,6 +1201,24 @@ function initAppointmentForm() {
       return;
     }
 
+    // Collect optional message
+    const message = form.patientMessage ? form.patientMessage.value.trim() : '';
+
+    // Build WhatsApp message and open WhatsApp
+    const waLines = [
+      '🦷 *Appointment Request – Prabhu Dental Clinic*',
+      '',
+      '👤 *Patient Name:* ' + name,
+      '📞 *Mobile:* ' + phone,
+      '💻 *Consultation Mode:* ' + mode,
+      '📅 *Preferred Date:* ' + date,
+      '⏰ *Preferred Time:* ' + timeSlot,
+      '🏥 *Reason for Visit:* ' + reason
+    ];
+    if (message) waLines.push('📝 *Message:* ' + message);
+    waLines.push('', 'Kindly confirm the appointment at your earliest convenience.');
+    window.open('https://wa.me/919448984480?text=' + encodeURIComponent(waLines.join('\n')), '_blank');
+
     // Display confirmed state in inline box
     form.style.display = 'none';
     successBox.classList.add('is-visible');
@@ -1049,10 +1231,12 @@ function initAppointmentForm() {
     const summaryHtml = currentLang === 'kn'
       ? `<strong>ರೋಗಿಯ ಹೆಸರು:</strong> ${escapeHtml(name)}<br>
          <strong>ಮೊಬೈಲ್ ಸಂಖ್ಯೆ:</strong> ${escapeHtml(phone)}<br>
+         <strong>ಸಮಾಲೋಚನೆ ವಿಧಾನ:</strong> ${escapeHtml(mode)}<br>
          <strong>ದಿನಾಂಕ & ಸಮಯ:</strong> ${escapeHtml(date)} (${escapeHtml(timeSlot)})<br>
          <strong>ವಿಶೇಷತೆ/ಉದ್ದೇಶ:</strong> ${escapeHtml(reason)}`
       : `<strong>Patient:</strong> ${escapeHtml(name)}<br>
          <strong>Mobile:</strong> ${escapeHtml(phone)}<br>
+         <strong>Consultation Type:</strong> ${escapeHtml(mode)}<br>
          <strong>Requested Date & Slot:</strong> ${escapeHtml(date)} (${escapeHtml(timeSlot)})<br>
          <strong>Specialty/Reason:</strong> ${escapeHtml(reason)}`;
 
@@ -1871,7 +2055,7 @@ function initTreatmentsCarousel() {
 
   // Append clone cards at the end to make all 8 slides visible and loop seamlessly
   track.querySelectorAll('.is-clone').forEach(el => el.remove());
-  const cloneCount = 3;
+  const cloneCount = 4;
   for (let i = 0; i < cloneCount; i++) {
     const clone = originalCards[i].cloneNode(true);
     clone.classList.add('is-clone');
@@ -2193,4 +2377,84 @@ function initTreatmentsCarousel() {
   // Initial render
   updateCarousel(true);
   startAutoPlay();
+}
+
+/**
+ * FAQ Accordion Interactive Toggle
+ */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-accordion-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-accordion-trigger');
+    const content = item.querySelector('.faq-accordion-content');
+    if (!trigger || !content) return;
+
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Close other open items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherTrigger = otherItem.querySelector('.faq-accordion-trigger');
+          const otherContent = otherItem.querySelector('.faq-accordion-content');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+          if (otherContent) otherContent.style.maxHeight = null;
+        }
+      });
+
+      // Toggle clicked item
+      if (isExpanded) {
+        item.classList.remove('active');
+        trigger.setAttribute('aria-expanded', 'false');
+        content.style.maxHeight = null;
+      } else {
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+}
+
+/**
+ * FAQ Accordion Interactive Toggle
+ */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-accordion-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-accordion-trigger');
+    const content = item.querySelector('.faq-accordion-content');
+    if (!trigger || !content) return;
+
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Close other open items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherTrigger = otherItem.querySelector('.faq-accordion-trigger');
+          const otherContent = otherItem.querySelector('.faq-accordion-content');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+          if (otherContent) otherContent.style.maxHeight = null;
+        }
+      });
+
+      // Toggle clicked item
+      if (isExpanded) {
+        item.classList.remove('active');
+        trigger.setAttribute('aria-expanded', 'false');
+        content.style.maxHeight = null;
+      } else {
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
 }

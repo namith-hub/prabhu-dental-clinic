@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- WhatsApp Vibrant 3D Circular Background - Rose/Pink for female -->
+    <linearGradient id="wa-bg-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#BE185D"/>
+    </linearGradient>
+
+    <!-- Warm Indian Female Skin Tone Gradient with 3D Depth -->
+    <linearGradient id="wa-skin-f" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE0C8"/>
+      <stop offset="60%" stop-color="#F7CFAD"/>
+      <stop offset="100%" stop-color="#E8B48C"/>
+    </linearGradient>
+    <linearGradient id="wa-neck-f" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0A87A"/>
+      <stop offset="100%" stop-color="#CA9060"/>
+    </linearGradient>
+
+    <!-- Rich Dark Lustrous Hair -->
+    <linearGradient id="wa-hair-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0F0A"/>
+      <stop offset="50%" stop-color="#120A06"/>
+      <stop offset="100%" stop-color="#0A0503"/>
+    </linearGradient>
+
+    <!-- Teal Medical Scrub -->
+    <linearGradient id="wa-scrub-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+
+    <filter id="wa-shadow-soft-f" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#2D0A18" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- WhatsApp Avatar Disc Background -->
+  <circle cx="100" cy="100" r="100" fill="url(#wa-bg-f)"/>
+  <!-- Ambient highlight arc at top -->
+  <path d="M25 50 A 90 90 0 0 1 175 50" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Doctor Body / White Coat -->
+  <g filter="url(#wa-shadow-soft-f)">
+    <!-- White Doctor Coat -->
+    <path d="M30 200 C30 148 60 136 83 134 L117 134 C140 136 170 148 170 200 Z" fill="#FFFFFF"/>
+    <path d="M30 200 C30 148 60 136 83 134 L100 170 L117 134 C140 136 170 148 170 200 Z" fill="#E2E8F0" opacity="0.6"/>
+
+    <!-- Inner Teal Scrub V-neck -->
+    <path d="M83 134 L100 166 L117 134 L117 148 L100 172 L83 148 Z" fill="url(#wa-scrub-f)"/>
+
+    <!-- Coat Lapels -->
+    <path d="M70 136 L88 176 L76 184 L52 156 Z" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+    <path d="M130 136 L112 176 L124 184 L148 156 Z" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+
+    <!-- Stethoscope (teal coloured) -->
+    <path d="M79 136 C76 162 83 193 96 193 C103 193 107 180 107 170" fill="none" stroke="#0D9488" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M121 136 C124 160 119 180 112 186" fill="none" stroke="#0D9488" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Chestpiece -->
+    <circle cx="96" cy="193" r="7" fill="#64748B" stroke="#0F766E" stroke-width="2"/>
+    <circle cx="96" cy="193" r="3" fill="#E2E8F0"/>
+  </g>
+
+  <!-- Neck -->
+  <path d="M88 112 L88 140 C88 145 94 149 100 149 C106 149 112 145 112 140 L112 112 Z" fill="url(#wa-neck-f)"/>
+
+  <!-- Ears -->
+  <ellipse cx="62" cy="92" rx="8" ry="11" fill="url(#wa-skin-f)"/>
+  <ellipse cx="138" cy="92" rx="8" ry="11" fill="url(#wa-skin-f)"/>
+  <path d="M63 88 C61 92 61 96 64 98" fill="none" stroke="#DCA07A" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M137 88 C139 92 139 96 136 98" fill="none" stroke="#DCA07A" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Small Gold Earrings -->
+  <circle cx="62" cy="100" r="3.5" fill="#F59E0B" stroke="#D97706" stroke-width="1"/>
+  <circle cx="138" cy="100" r="3.5" fill="#F59E0B" stroke="#D97706" stroke-width="1"/>
+
+  <!-- Face Shape (3D Rounded, slightly narrower feminine jaw) -->
+  <g filter="url(#wa-shadow-soft-f)">
+    <path d="M67 76 C67 45 133 45 133 76 C133 112 120 128 100 128 C80 128 67 112 67 76 Z" fill="url(#wa-skin-f)"/>
+  </g>
+
+  <!-- Long Flowing Dark Hair with side part (feminine) -->
+  <!-- Main hair mass -->
+  <path d="M62 75 C60 46 74 24 100 24 C126 24 140 46 138 75 C134 52 120 38 100 40 C82 42 68 56 62 75 Z" fill="url(#wa-hair-f)"/>
+  <!-- Side parting / volume on left -->
+  <path d="M62 75 C62 55 66 40 74 34 C68 42 64 58 62 78 Z" fill="#0A0503"/>
+  <!-- Hair flowing down left side over ear -->
+  <path d="M63 80 C58 95 56 115 60 135 C62 142 66 148 70 150 L72 148 C66 140 62 128 62 114 C62 100 64 88 66 82 Z" fill="url(#wa-hair-f)"/>
+  <!-- Hair flowing down right side -->
+  <path d="M137 80 C142 95 144 115 140 135 C138 142 134 148 130 150 L128 148 C134 140 138 128 138 114 C138 100 136 88 134 82 Z" fill="url(#wa-hair-f)"/>
+  <!-- Top shine highlight -->
+  <path d="M82 28 C90 25 110 25 118 28 C112 30 88 30 82 28 Z" fill="#2D1610" opacity="0.7"/>
+
+  <!-- Bindi (red dot on forehead) -->
+  <circle cx="100" cy="62" r="3.5" fill="#DC2626" opacity="0.9"/>
+
+  <!-- Eyebrows (slender, arched feminine) -->
+  <path d="M74 72 Q84 67 92 71" fill="none" stroke="#1A0F0A" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M108 71 Q116 67 126 72" fill="none" stroke="#1A0F0A" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Eyelashes (upper lashes) -->
+  <path d="M75 79 Q76 76 78 79" fill="none" stroke="#1A0F0A" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M80 78 Q81 75 83 78" fill="none" stroke="#1A0F0A" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M85 78 Q86 75 88 78" fill="none" stroke="#1A0F0A" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M112 78 Q113 75 115 78" fill="none" stroke="#1A0F0A" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M117 78 Q118 75 120 78" fill="none" stroke="#1A0F0A" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M122 78 Q123 76 125 79" fill="none" stroke="#1A0F0A" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Eyes (Large, expressive, WhatsApp avatar style with gloss) -->
+  <!-- Left Eye -->
+  <ellipse cx="82" cy="84" rx="8" ry="6" fill="#FFFFFF"/>
+  <ellipse cx="82" cy="85" rx="5.5" ry="5" fill="#1E293B"/>
+  <ellipse cx="82" cy="85" rx="3.2" ry="3" fill="#3730A3"/>
+  <circle cx="84" cy="83" r="2" fill="#FFFFFF"/>
+  <circle cx="80" cy="87" r="1" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Right Eye -->
+  <ellipse cx="118" cy="84" rx="8" ry="6" fill="#FFFFFF"/>
+  <ellipse cx="118" cy="85" rx="5.5" ry="5" fill="#1E293B"/>
+  <ellipse cx="118" cy="85" rx="3.2" ry="3" fill="#3730A3"/>
+  <circle cx="120" cy="83" r="2" fill="#FFFFFF"/>
+  <circle cx="116" cy="87" r="1" fill="#FFFFFF" opacity="0.7"/>
+
+  <!-- Delicate Nose -->
+  <path d="M97 90 Q100 100 103 100 Q105 99 103 97" fill="none" stroke="#D09070" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Warm Gentle Smile with Teeth -->
+  <g filter="url(#wa-shadow-soft-f)">
+    <path d="M85 107 Q100 122 115 107 Z" fill="#9F1239"/>
+    <path d="M87 108 Q100 116 113 108 Q100 112 87 108 Z" fill="#FFFFFF"/>
+    <path d="M83 106 Q100 124 117 106" fill="none" stroke="#1A0F0A" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Rosy Cheeks -->
+  <ellipse cx="74" cy="99" rx="7" ry="4.5" fill="#F43F5E" opacity="0.3"/>
+  <ellipse cx="126" cy="99" rx="7" ry="4.5" fill="#F43F5E" opacity="0.3"/>
+
+  <!-- WhatsApp Verified Badge (Bottom Right) -->
+  <g filter="url(#wa-shadow-soft-f)">
+    <circle cx="162" cy="162" r="18" fill="#25D366" stroke="#FFFFFF" stroke-width="3"/>
+    <!-- Tooth icon inside badge -->
+    <path d="M157 159 C156 154 168 154 167 159 C166.5 162.5 165 165.5 162 168 C159 165.5 157.5 162.5 157 159 Z" fill="#FFFFFF"/>
+  </g>
+</svg>

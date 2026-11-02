@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF1F2"/>
+      <stop offset="100%" stop-color="#FFE4E6"/>
+    </linearGradient>
+    <linearGradient id="skin-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDDEC0"/>
+      <stop offset="100%" stop-color="#F7C89D"/>
+    </linearGradient>
+    <linearGradient id="hair-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#261810"/>
+      <stop offset="100%" stop-color="#140C07"/>
+    </linearGradient>
+    <linearGradient id="scrubs-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bg-grad-f)"/>
+
+  <!-- Subtle glow ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#FECDD3" stroke-width="3" opacity="0.8"/>
+
+  <!-- Back Hair (Tied neat doctor bun / shoulder length) -->
+  <circle cx="100" cy="40" r="16" fill="url(#hair-f)"/>
+  <path d="M50 85 C46 110 52 145 62 160 C66 142 66 110 66 85 Z" fill="url(#hair-f)"/>
+  <path d="M150 85 C154 110 148 145 138 160 C134 142 134 110 134 85 Z" fill="url(#hair-f)"/>
+
+  <!-- Body / Lab Coat -->
+  <path d="M44 200 C44 154 68 144 86 142 L114 142 C132 144 156 154 156 200 Z" fill="#FFFFFF"/>
+  <path d="M44 200 C44 154 68 144 86 142 L100 172 L114 142 C132 144 156 154 156 200 Z" fill="#F8FAFC" opacity="0.6"/>
+
+  <!-- Inner Scrub Top (Teal Green) -->
+  <path d="M86 142 L100 170 L114 142 L114 154 L100 176 L86 154 Z" fill="url(#scrubs-f)"/>
+
+  <!-- Doctor Coat Lapels -->
+  <path d="M74 144 L91 180 L80 186 L58 162 Z" fill="#E2E8F0"/>
+  <path d="M126 144 L109 180 L120 186 L142 162 Z" fill="#E2E8F0"/>
+
+  <!-- Stethoscope around neck -->
+  <path d="M79 144 C77 166 83 192 108 190 C116 190 120 180 120 170" fill="none" stroke="#0D9488" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M121 144 C123 160 120 176 115 182" fill="none" stroke="#0D9488" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Bell / Chestpiece -->
+  <circle cx="108" cy="190" r="7" fill="#64748B" stroke="#0D9488" stroke-width="2.5"/>
+  <circle cx="108" cy="190" r="3" fill="#94A3B8"/>
+
+  <!-- Neck -->
+  <path d="M89 122 L89 145 C89 149 94 153 100 153 C106 153 111 149 111 145 L111 122 Z" fill="#F7C89D"/>
+  <path d="M89 122 C93 131 107 131 111 122 Z" fill="#E8B084" opacity="0.6"/>
+
+  <!-- Ears & Tiny Pearl Earrings -->
+  <ellipse cx="64" cy="100" rx="6.5" ry="10" fill="url(#skin-f)"/>
+  <ellipse cx="136" cy="100" rx="6.5" ry="10" fill="url(#skin-f)"/>
+  <circle cx="63" cy="105" r="2.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8"/>
+  <circle cx="137" cy="105" r="2.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8"/>
+
+  <!-- Head / Face -->
+  <path d="M68 86 C68 56 132 56 132 86 C132 116 120 132 100 132 C80 132 68 116 68 86 Z" fill="url(#skin-f)"/>
+
+  <!-- Front Hair (Elegant professional female side sweep) -->
+  <path d="M64 82 C63 50 78 35 100 35 C122 35 137 50 136 82 C132 64 120 54 100 52 C84 50 72 62 64 82 Z" fill="url(#hair-f)"/>
+  <path d="M64 80 C68 60 88 50 114 54 C94 56 76 68 70 88 Z" fill="#3D2415"/>
+  <path d="M136 80 C132 62 118 52 104 53 C116 58 128 68 132 88 Z" fill="#3D2415"/>
+
+  <!-- Gentle Bindi / Forehead mark -->
+  <circle cx="100" cy="74" r="2" fill="#C82333"/>
+
+  <!-- Eyebrows (Arched, elegant) -->
+  <path d="M75 79 Q84 74 93 78" fill="none" stroke="#1A0D06" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M107 78 Q116 74 125 79" fill="none" stroke="#1A0D06" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- Large Expressive Eyes (Cartoon Anime / Professional style) -->
+  <!-- Left Eye -->
+  <ellipse cx="84" cy="90" rx="5" ry="6.5" fill="#1E293B"/>
+  <circle cx="86" cy="88" r="2.2" fill="#FFFFFF"/>
+  <circle cx="82.5" cy="92.5" r="1.1" fill="#FFFFFF"/>
+  <!-- Lashes -->
+  <path d="M78 86 Q84 81 90 85" fill="none" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M89 83 L92 81" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Right Eye -->
+  <ellipse cx="116" cy="90" rx="5" ry="6.5" fill="#1E293B"/>
+  <circle cx="118" cy="88" r="2.2" fill="#FFFFFF"/>
+  <circle cx="114.5" cy="92.5" r="1.1" fill="#FFFFFF"/>
+  <!-- Lashes -->
+  <path d="M110 85 Q116 81 122 86" fill="none" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M121 81 L124 83" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Cute Nose -->
+  <path d="M98 97 Q100 103 103 102" fill="none" stroke="#D99B6A" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Warm, Caring Smile with Dental Alignment Sparkle -->
+  <path d="M87 111 Q100 124 113 111 Z" fill="#991B1B"/>
+  <!-- Teeth -->
+  <path d="M89 112 Q100 118 111 112 Q100 115 89 112 Z" fill="#FFFFFF"/>
+  <!-- Smile line -->
+  <path d="M85 110 Q100 125 115 110" fill="none" stroke="#1A0D06" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Rosy Cheeks -->
+  <ellipse cx="74" cy="104" rx="6" ry="3.5" fill="#FB7185" opacity="0.45"/>
+  <ellipse cx="126" cy="104" rx="6" ry="3.5" fill="#FB7185" opacity="0.45"/>
+
+  <!-- Orthodontic Tooth Star Sparkle on Collar -->
+  <circle cx="132" cy="168" r="4" fill="#E11D48"/>
+  <path d="M130 168 L134 168 M132 166 L132 170" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
