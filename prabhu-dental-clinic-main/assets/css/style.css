@@ -7115,4 +7115,67 @@ textarea.form-control {
 }
 
 .doctor-avatar-circle img { object-fit: cover; object-position: center top; width: 100%; height: 100%; background: #ffffff; }
-\n/* Ensure hero timing badge cards are completely visible without clipping */\n.hero-section { overflow: visible !important; }\n.hero-visual { overflow: visible !important; }\n.hero-visual-stage { overflow: visible !important; }\n
+\n\n
+/* ==========================================================================
+   HERO TIMING BADGES ROW - IN-FLOW POSITIONING
+   ========================================================================== */
+.hero-timing-badges-row {
+  position: relative !important;
+  margin-top: 18px !important;
+  margin-bottom: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 14px !important;
+  width: 100% !important;
+  z-index: 10 !important;
+}
+
+.hero-timing-badges-row .floating-badge {
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  margin: 0 !important;
+  flex: 1 1 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: auto !important;
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #FEE2E2 !important;
+  box-shadow: 0 10px 24px rgba(200, 35, 51, 0.08) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 14px 18px !important;
+  animation: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.hero-timing-badges-row .floating-badge:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 28px rgba(200, 35, 51, 0.14) !important;
+  border-color: var(--primary) !important;
+}
+
+.hero-visual-stage {
+  padding-bottom: 0 !important;
+}
+
+.hero-section {
+  padding-bottom: 48px !important;
+}
+
+@media (max-width: 640px) {
+  .hero-timing-badges-row {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .hero-timing-badges-row .floating-badge {
+    width: 100% !important;
+  }
+}
