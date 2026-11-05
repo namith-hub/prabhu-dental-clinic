@@ -69,6 +69,7 @@
   --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-kannada: 'Noto Sans Kannada', 'Tunga', 'Segoe UI', sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Shadows */
   --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
@@ -596,6 +597,12 @@ ul, ol {
   font-weight: 700;
 }
 
+.lang-pill[data-lang="hi"] {
+  font-family: var(--font-devanagari), var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .lang-pill:hover:not(.active) {
   color: var(--primary);
   background-color: rgba(200, 35, 51, 0.08);
@@ -800,6 +807,31 @@ html[lang="kn"] .section-title {
 
 html[lang="kn"] .nav-link {
   font-family: var(--font-kannada), var(--font-sans);
+  font-size: 12.5px;
+}
+
+/* Hindi Language Typography Refinements */
+html[lang="hi"] body {
+  font-family: var(--font-devanagari), var(--font-sans);
+}
+
+html[lang="hi"] .brand-name {
+  font-family: var(--font-devanagari), var(--font-sans);
+  font-size: 1.15rem;
+  letter-spacing: normal;
+}
+
+html[lang="hi"] .hero-title {
+  font-family: var(--font-devanagari), var(--font-sans);
+}
+
+html[lang="hi"] .section-title {
+  font-family: var(--font-devanagari), var(--font-sans);
+  letter-spacing: normal;
+}
+
+html[lang="hi"] .nav-link {
+  font-family: var(--font-devanagari), var(--font-sans);
   font-size: 12.5px;
 }
 
