@@ -2082,6 +2082,65 @@ html[lang="hi"] .nav-link {
    GALLERY SECTION
    ========================================================================== */
 
+
+/* Gallery Category Tabs */
+.gallery-tabs-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.gallery-tabs {
+  display: inline-flex;
+  background-color: var(--neutral-100);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--neutral-300);
+  gap: 6px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-tab-btn {
+  border: none;
+  background: transparent;
+  padding: 10px 26px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--neutral-600);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1.2;
+}
+
+.gallery-tab-btn:hover:not(.active) {
+  color: var(--primary);
+  background-color: rgba(200, 35, 51, 0.08);
+}
+
+.gallery-tab-btn.active {
+  background: linear-gradient(135deg, var(--primary) 0%, #A81B28 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(200, 35, 51, 0.32);
+}
+
+html[lang="kn"] .gallery-tab-btn {
+  font-family: var(--font-kannada), var(--font-sans);
+}
+
+html[lang="hi"] .gallery-tab-btn {
+  font-family: var(--font-devanagari), var(--font-sans);
+}
+
+.gallery-grid-panel {
+  display: none;
+}
+
+.gallery-grid-panel.is-active {
+  display: grid;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));

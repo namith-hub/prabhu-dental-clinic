@@ -179,6 +179,7 @@
         <a href="#specialities" class="nav-link" data-i18n="nav.specialities">Specialities</a>
         <a href="#team" class="nav-link" data-i18n="nav.team">Our Team</a>
         <a href="#legacy" class="nav-link" data-i18n="nav.legacy">Clinic Legacy</a>
+        <a href="#gallery" class="nav-link" data-i18n="nav.gallery">Gallery</a>
         <a href="#appointment" class="nav-link nav-link-appointment" data-i18n="nav.appointment">Appointment</a>
         <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
         <a href="#location" class="nav-link" data-i18n="nav.location">Location</a>
@@ -1946,6 +1947,317 @@
     <!-- =======================================================================
          8. APPOINTMENT SECTION
          ======================================================================= -->
+    
+    <!-- =========================================================================
+         GALLERY SECTION
+         ========================================================================= -->
+    <section class="section-padding bg-white" id="gallery">
+      <!-- Watermark emblem -->
+      <div class="bg-watermark-emblem" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 8 C30 8 20 22 20 38 C20 54 26 68 32 82 C35 88 38 92 42 92 C46 92 47 84 50 78 C53 84 54 92 58 92 C62 92 65 88 68 82 C74 68 80 54 80 38 C80 22 70 8 50 8 Z"></path>
+        </svg>
+      </div>
+
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag" data-i18n="gallery.tag">Visual Tour</span>
+          <h2 class="section-title" data-i18n="gallery.title">Photo Gallery</h2>
+          <p class="section-subtitle" data-i18n="gallery.subtitle">
+            Explore our modern clinic facilities and patient care moments in Saraswathipuram, Mysore.
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="gallery-tabs-wrap" data-reveal="fade-up" data-reveal-delay="100">
+          <div class="gallery-tabs" role="tablist" aria-label="Gallery categories">
+            <button type="button" class="gallery-tab-btn active js-gallery-tab" data-gallery-tab="clinic" role="tab"
+              aria-selected="true" data-i18n="gallery.tab_clinic">Clinic Photos</button>
+            <button type="button" class="gallery-tab-btn js-gallery-tab" data-gallery-tab="patient" role="tab"
+              aria-selected="false" data-i18n="gallery.tab_patient">Patient Photos</button>
+          </div>
+        </div>
+
+        <!-- Category 1: Clinic Photos Grid -->
+        <div class="gallery-grid gallery-grid-panel is-active" id="galleryClinicGrid" data-gallery-cat="clinic" role="tabpanel"
+          aria-label="Clinic Photos">
+          
+          <!-- Clinic 1: Exterior -->
+          <article class="gallery-card" data-reveal="fade-up">
+            <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/clinic-exterior.jpg"
+              title="Click to preview">
+              <img src="assets/images/clinic-exterior.jpg" alt="Clinic Exterior" loading="lazy" />
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.item_exterior_tag">Exterior</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.item_exterior_title">Clinic Exterior &amp; Signboard</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.item_exterior_desc">Prabhu Dental Clinic main entrance at 388, 5th Cross, 14th Main, Saraswathipuram, Mysore.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/clinic-exterior.jpg" style="width: 100%; justify-content: center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span data-i18n="gallery.btn_view">View Full Size</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Clinic 2: Reception -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="100">
+            <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/gallery-reception.jpg"
+              title="Click to preview">
+              <img src="assets/images/gallery-reception.jpg" alt="Reception & Waiting Lounge" loading="lazy" />
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.item_reception_tag">Front Desk</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.item_reception_title">Reception &amp; Waiting Lounge</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.item_reception_desc">Welcoming reception and comfortable consultation waiting lounge.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/gallery-reception.jpg" style="width: 100%; justify-content: center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span data-i18n="gallery.btn_view">View Full Size</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Clinic 3: Interior -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="150">
+            <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/gallery-interior.jpg"
+              title="Click to preview">
+              <img src="assets/images/gallery-interior.jpg" alt="Clinic Interior & Walkways" loading="lazy" />
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.item_interior_tag">Infrastructure</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.item_interior_title">Clinic Interior &amp; Walkways</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.item_interior_desc">Hygienic, spotless corridors designed for patient comfort and accessibility.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/gallery-interior.jpg" style="width: 100%; justify-content: center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span data-i18n="gallery.btn_view">View Full Size</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Clinic 4: Treatment Operatory -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="200">
+            <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/gallery-treatment.jpg"
+              title="Click to preview">
+              <img src="assets/images/gallery-treatment.jpg" alt="Dental Treatment Room" loading="lazy" />
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.item_treatment_tag">Operatory</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.item_treatment_title">Dental Treatment Room</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.item_treatment_desc">Ergonomic dental chair unit equipped for orthodontic and periodontal clinical procedures.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/gallery-treatment.jpg" style="width: 100%; justify-content: center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span data-i18n="gallery.btn_view">View Full Size</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Clinic 5: Equipment & Autoclave -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="250">
+            <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/gallery-equipment.jpg"
+              title="Click to preview">
+              <img src="assets/images/gallery-equipment.jpg" alt="Advanced Equipment & Autoclave" loading="lazy" />
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.item_equipment_tag">Sterilization</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.item_equipment_title">Advanced Equipment &amp; Autoclave</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.item_equipment_desc">Medical-grade Class-B autoclave sterilization unit and low-radiation digital radiography.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/gallery-equipment.jpg" style="width: 100%; justify-content: center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span data-i18n="gallery.btn_view">View Full Size</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Clinic 6: Doctors Consultation -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="300">
+            <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/gallery-doctors.jpg"
+              title="Click to preview">
+              <img src="assets/images/gallery-doctors.jpg" alt="Doctors Consultation Room" loading="lazy" />
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.item_consultation_tag">Consultation</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.item_consultation_title">Doctors Consultation Room</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.item_consultation_desc">Doctor consultation desk and clinical discussion environment for patient evaluations.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/gallery-doctors.jpg" style="width: 100%; justify-content: center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span data-i18n="gallery.btn_view">View Full Size</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Category 2: Patient Photos Grid -->
+        <div class="gallery-grid gallery-grid-panel" id="galleryPatientGrid" data-gallery-cat="patient" role="tabpanel"
+          aria-label="Patient Photos" style="display: none;">
+          
+          <!-- Patient Consent Note Banner -->
+          <div style="grid-column: 1 / -1; background-color: var(--pink-50); border: 1px solid var(--pink-200); border-radius: var(--radius-lg); padding: 14px 20px; display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px; color: var(--primary); flex-shrink: 0;">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <p style="margin: 0; font-size: 13.5px; color: var(--neutral-700); line-height: 1.5;" data-i18n="gallery.patient_consent_note">
+              All patient photographs and treatment experiences are documented and published with prior informed patient consent adhering to clinical privacy ethics.
+            </p>
+          </div>
+
+          <!-- Patient 1: Clinical Team Care -->
+          <article class="gallery-card" data-reveal="fade-up">
+            <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/gallery-team.jpg"
+              title="Click to preview">
+              <img src="assets/images/gallery-team.jpg" alt="Dedicated Patient Care Team" loading="lazy" />
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.patient_item1_tag">Clinical Support</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.patient_item1_title">Dedicated Patient Care Team</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.patient_item1_desc">Cohesive dental surgeons and staff ensuring attentive, compassionate care at every visit.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/gallery-team.jpg" style="width: 100%; justify-content: center;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                  <span data-i18n="gallery.btn_view">View Full Size</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Patient 2: Smile Transformation Placeholder -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="100">
+            <div class="gallery-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+              <strong style="color: var(--neutral-800); font-size: 14px;" data-i18n="gallery.patient_item2_title">Smile Transformation Moments</strong>
+              <span class="gallery-placeholder-badge" data-i18n="gallery.placeholder_badge">Consent Verified</span>
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.patient_item2_tag">Smile Journey</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.patient_item2_title">Smile Transformation Moments</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.patient_item2_desc">Orthodontic and cosmetic smile alignment progress documenting confident patient milestones.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <span class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; opacity: 0.7; cursor: default;">
+                  <span data-i18n="gallery.placeholder_tag">Upcoming Photo</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Patient 3: Pediatric Gentle Visit Placeholder -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="150">
+            <div class="gallery-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"></path>
+                <path d="M19 11v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="22"></line>
+              </svg>
+              <strong style="color: var(--neutral-800); font-size: 14px;" data-i18n="gallery.patient_item3_title">Pediatric Patient Visits</strong>
+              <span class="gallery-placeholder-badge" data-i18n="gallery.placeholder_badge">Consent Verified</span>
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.patient_item3_tag">Young Smiles</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.patient_item3_title">Pediatric Patient Visits</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.patient_item3_desc">Gentle and cheerful dental visits creating positive early healthcare memories for children.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <span class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; opacity: 0.7; cursor: default;">
+                  <span data-i18n="gallery.placeholder_tag">Upcoming Photo</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Patient 4: Geriatric Comfort Care Placeholder -->
+          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="200">
+            <div class="gallery-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+              <strong style="color: var(--neutral-800); font-size: 14px;" data-i18n="gallery.patient_item4_title">Senior Citizen Care &amp; Smiles</strong>
+              <span class="gallery-placeholder-badge" data-i18n="gallery.placeholder_badge">Consent Verified</span>
+            </div>
+            <div class="gallery-content">
+              <div>
+                <div class="gallery-item-tag" data-i18n="gallery.patient_item4_tag">Senior Care</div>
+                <h3 class="gallery-item-title" data-i18n="gallery.patient_item4_title">Senior Citizen Care &amp; Smiles</h3>
+                <p class="gallery-item-desc" data-i18n="gallery.patient_item4_desc">Compassionate dental care restoring eating comfort and confidence for elderly patients.</p>
+              </div>
+              <div style="margin-top: 14px;">
+                <span class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; opacity: 0.7; cursor: default;">
+                  <span data-i18n="gallery.placeholder_tag">Upcoming Photo</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <section class="section-padding bg-sand" id="appointment">
       <!-- Elegant Dental Watermark Emblem (Matches Clinic Logo) -->
       <div class="section-watermark-wrap" aria-hidden="true">
@@ -2658,6 +2970,7 @@
             <a href="#specialities" data-i18n="nav.specialities">Specialities</a>
             <a href="#team" data-i18n="nav.team">Our Team</a>
             <a href="#legacy" data-i18n="nav.legacy">Clinic Legacy</a>
+            <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
             <a href="#appointment" data-i18n="nav.appointment">Appointment</a>
             <a href="#faq" data-i18n="nav.faq">FAQ</a>
             <a href="#location" data-i18n="nav.location">Location</a>

@@ -12,15 +12,12 @@ let currentLang = 'en';
 
 // Comprehensive Bilingual Translation Dictionary
 const translations = {
-  en: {
-    // Top Bar
+  "en": {
     "topbar.address": "388, 5th Cross, 14th Main, Near Bus Stop, Saraswathipuram, Mysore",
     "lang.choose": "Language:",
     "topbar.whatsapp": "WhatsApp: 9448984480",
     "topbar.hours": "Mon – Sat: 10:30 AM – 1:30 PM &bull; 5:00 PM – 9:00 PM | Sun: Prior Appointments Only",
     "hero.stat2_num": "2 MDS",
-
-    // Navigation
     "nav.home": "Home",
     "nav.about": "About",
     "nav.doctors": "Our Doctors",
@@ -31,20 +28,15 @@ const translations = {
     "nav.gallery": "Gallery",
     "nav.appointment": "Appointment",
     "nav.faq": "FAQ",
-    "nav.faq": "FAQ",
     "nav.location": "Location",
     "nav.contact": "Contact",
     "nav.book_cta": "Book Appointment",
-
-    // Brand
     "brand.clinic_name": "Prabhu Dental Clinic",
     "brand.clinic_name_caps": "PRABHU DENTAL CLINIC",
-
-    // Hero Section
     "hero.pill": "Orthodontics & Periodontistry Clinic &bull; Saraswathipuram, Mysore",
     "hero.kpmea_badge": "Registered under Karnataka Private Medical Establishments (KPMEA) Act",
     "footer.kpmea": "Registered under Karnataka Private Medical Establishments (KPMEA) Act",
-    "hero.title": 'PRABHU <span class="brand-red">DENTAL CLINIC</span>',
+    "hero.title": "PRABHU <span class=\"brand-red\">DENTAL CLINIC</span>",
     "hero.specialty": "Orthodontics &amp; Periodontistry Clinic",
     "hero.desc": "Saraswathipuram, Mysore. Owned by husband and wife duo Dr. Mahesh H.V. M.D.S. (Periodontist &amp; Implantologist) and Dr. Ramya K.S. M.D.S. (Orthodontist and Dentofacial Orthopaedist). Continuing a legacy of dedicated dental care since 2012.",
     "hero.btn_appointment": "BOOK AN APPOINTMENT",
@@ -63,8 +55,6 @@ const translations = {
     "hero.badge_sunday_title": "Sunday",
     "hero.badge_sunday_sub": "Prior Appointments Only",
     "hero.badge_sparkle": "Specialist Care Duo",
-
-    // About Section
     "about.tag": "About Prabhu Dental Clinic",
     "about.title": "Continuing a Legacy of Dental Care Since 2012",
     "about.subtitle": "Dedicated patient care, ethical practice, and continuous clinical betterment in Saraswathipuram, Mysore.",
@@ -77,8 +67,6 @@ const translations = {
     "about.pillar3_desc": "Continuing the same good work while actively steering the clinic towards continuous progress.",
     "about.pillar4_title": "Betterment, Upgradation &amp; Patient Benefit",
     "about.pillar4_desc": "Aiming for further betterment and upgradation of the clinic in all ways for the benefit of the patients.",
-
-    // Doctors Section
     "doctors.tag": "Specialist Clinicians",
     "doctors.title": "Our Doctors",
     "doctors.subtitle": "Husband and wife specialist team heading Prabhu Dental Clinic.",
@@ -90,15 +78,12 @@ const translations = {
     "doctors.consult_days": "Mon – Sat &amp; Sun (Prior Appt.)",
     "doctors.btn_consult": "Request Consult",
     "doctors.btn_online_consult": "Online Consult",
-
-    // Treatments Section
     "treatments.tag": "Clinical Treatments",
     "treatments.title": "Treatments",
     "treatments.subtitle": "Comprehensive restorative, cosmetic, and advanced dental procedures tailored to your smile.",
     "treatments.learn_more": "Learn more",
     "treatments.prev": "Previous",
     "treatments.next": "Next",
-    // Treatments Back-Face Translations
     "treatments.overview": "Procedure Details",
     "treatments.back": "Back",
     "treatments.book_btn": "Book Appointment",
@@ -147,7 +132,6 @@ const translations = {
     "treatments.t10_p2": "Implant-supported overdentures for maximum chewing stability",
     "treatments.t10_p3": "Natural smile restoration, quick relining & immediate repairs",
     "treatments.t10_dur": "3–4 Visits",
-
     "treatments.t1_title": "General Dentistry",
     "treatments.t1_sub": "The foundation of a healthy smile",
     "treatments.t1_desc": "Comprehensive preventive and restorative care for the whole family.",
@@ -178,8 +162,6 @@ const translations = {
     "treatments.t10_title": "Prosthodontics & Dentures",
     "treatments.t10_sub": "Restore your smile and bite",
     "treatments.t10_desc": "Custom full & partial dentures, bridges, and implant-supported overdentures for effortless chewing and speaking.",
-
-    // Specialities Section
     "spec.tag": "Clinical Scope",
     "spec.title": "Specialities",
     "spec.subtitle": "Key dental specialities offered at Prabhu Dental Clinic by our doctors and specialist support team.",
@@ -199,23 +181,19 @@ const translations = {
     "spec.pedia_title": "Pediatric Dentistry",
     "spec.pedia_desc": "Specialist dental care tailored specifically for children and young growing teeth.",
     "spec.specialist_support": "Specialist Support",
-
-    // Team Section
     "team.tag": "Clinical Team",
     "team.title": "Our Team",
     "team.subtitle": "Experienced specialist panel and medical emergency tie-ups.",
     "team.associate_role": "Associate Dental Surgeon",
     "team.associate_deg": "B.D.S. &bull; Associate Dental Surgeon",
-    "team.associate_bio": '"She has graduated in the year 2011 and is associated with us since 2013. She is a friendly and caring professional who regularly attends dental courses to keep abreast with latest developments in the field of dentistry."',
+    "team.associate_bio": "\"She has graduated in the year 2011 and is associated with us since 2013. She is a friendly and caring professional who regularly attends dental courses to keep abreast with latest developments in the field of dentistry.\"",
     "team.panel_title": "Specialist Care Panel",
     "team.panel_desc": "The clinic also has its own team of experienced specialists to fulfill the dental treatment needs of our patients:",
     "team.surg_sub": "Specialist surgical dental support.",
     "team.prostho_sub": "Specialist tooth restoration and prosthetics.",
     "team.pedia_sub": "Specialist dental care for children.",
     "team.emergency_title": "Medical Emergency Handling",
-    "team.emergency_desc": '"In case of any medical emergency, prompt medical assistance and support are readily provided through our tie-up with a nearby reputed nursing home, alongside an associated physician."',
-
-    // Legacy Section
+    "team.emergency_desc": "\"In case of any medical emergency, prompt medical assistance and support are readily provided through our tie-up with a nearby reputed nursing home, alongside an associated physician.\"",
     "legacy.tag": "Historical Lineage",
     "legacy.title": "Clinic Legacy",
     "legacy.subtitle": "A visual timeline of trusted dental care in Saraswathipuram, Mysore since 2007.",
@@ -239,11 +217,9 @@ const translations = {
     "legacy.step5_badge": "Present & Future",
     "legacy.step5_title": "Continuing and Upgrading the Clinic",
     "legacy.step5_desc": "Continuing the same good work aiming for further betterment and upgradation of the clinic in all ways for the benefit of the patients.",
-
-    // Gallery Section
-    "gallery.tag": "Visual Overview",
-    "gallery.title": "Gallery",
-    "gallery.subtitle": "Featuring the actual clinic exterior photograph and clearly designated placeholders for upcoming client-provided clinic images.",
+    "gallery.tag": "Visual Tour",
+    "gallery.title": "Photo Gallery",
+    "gallery.subtitle": "Explore our modern clinic facilities and patient care moments in Saraswathipuram, Mysore.",
     "gallery.btn_view": "View Full Size",
     "gallery.item1_tag": "Real Photo",
     "gallery.item1_title": "Clinic Exterior",
@@ -266,8 +242,6 @@ const translations = {
     "gallery.item7_tag": "Technology",
     "gallery.item7_title": "Equipment",
     "gallery.item7_desc": "Sterilized instrumentation and modern dental equipment supporting patient treatments.",
-
-    // Appointment Section
     "app.tag": "Consultation Request",
     "app.title": "Appointment",
     "app.subtitle": "Frontend appointment request prototype for Prabhu Dental Clinic, Saraswathipuram, Mysore.",
@@ -305,9 +279,6 @@ const translations = {
     "app.modal_subtitle": "Thank you for contacting Prabhu Dental Clinic. Your visit request has been recorded for our presentation prototype.",
     "app.modal_note": "This is a frontend demonstration prototype. No actual booking or payment was processed.",
     "app.modal_btn_close": "Close",
-
-    
-    // FAQ Section
     "faq.tag": "Frequently Asked Questions",
     "faq.title": "Dental FAQs & Care Insights",
     "faq.subtitle": "Answers to common queries regarding treatments, orthodontic aligners, implants, and routine dental wellness.",
@@ -323,26 +294,6 @@ const translations = {
     "faq.a5": "Modern root canal treatments are virtually pain-free thanks to effective local anesthesia and computerized rotary endodontics. An RCT removes infected pulp, thoroughly disinfects the root canals, and seals the tooth, allowing you to preserve your original natural tooth for decades under a protective crown.",
     "faq.q6": "How can I book an appointment, and are Sunday visits available?",
     "faq.a6": "You can request an appointment directly through our online appointment form or by messaging us on WhatsApp (+91 94489 84480). The clinic operates Monday through Saturday (10:30 AM–1:30 PM & 5:00 PM–9:00 PM), while Sundays are reserved exclusively for prior scheduled appointments.",
-
-    
-    // FAQ Section
-    "faq.tag": "Frequently Asked Questions",
-    "faq.title": "Dental FAQs & Care Insights",
-    "faq.subtitle": "Answers to common queries regarding treatments, orthodontic aligners, implants, and routine dental wellness.",
-    "faq.q1": "How often should I visit the dentist for a routine dental checkup?",
-    "faq.a1": "It is recommended to have a professional dental checkup and routine cleaning every 6 months. Regular examinations allow early detection of tooth decay, gingival bleeding, or periodontal issues before they progress into complicated conditions.",
-    "faq.q2": "Are dental implant treatments painful and how long do they last?",
-    "faq.a2": "Dental implant procedures are performed under local anesthesia with minimal discomfort. With advanced 3D planning and gentle surgical techniques, recovery is fast. With proper daily oral hygiene and periodic checkups, dental implants are permanent solutions that last a lifetime.",
-    "faq.q3": "What is the difference between traditional braces and clear invisible aligners?",
-    "faq.a3": "Traditional braces use ceramic or metallic brackets and wires to gently shift teeth. Clear aligners are custom-made, transparent, and removable plastic trays that straighten teeth discreetly. Both are highly effective; Dr. Ramya K.S. (Orthodontist) will evaluate your smile and recommend the ideal option.",
-    "faq.q4": "Why do my gums bleed when I brush or floss, and what should I do?",
-    "faq.a4": "Bleeding gums are typically an early sign of gingivitis or accumulated plaque and tartar beneath the gumline. If ignored, it may develop into periodontitis. Professional scaling and periodontal evaluation by Dr. Mahesh H.V. (Periodontist) will restore healthy, firm gums.",
-    "faq.q5": "Is a Root Canal Treatment (RCT) painful, and can my natural tooth be saved?",
-    "faq.a5": "Modern root canal treatments are virtually pain-free thanks to effective local anesthesia and computerized rotary endodontics. An RCT removes infected pulp, thoroughly disinfects the root canals, and seals the tooth, allowing you to preserve your original natural tooth for decades under a protective crown.",
-    "faq.q6": "How can I book an appointment, and are Sunday visits available?",
-    "faq.a6": "You can request an appointment directly through our online appointment form or by messaging us on WhatsApp (+91 94489 84480). The clinic operates Monday through Saturday (10:30 AM–1:30 PM & 5:00 PM–9:00 PM), while Sundays are reserved exclusively for prior scheduled appointments.",
-
-    // Location & Contact Section
     "loc.tag": "Find Prabhu Dental Clinic",
     "loc.title": "Location",
     "loc.subtitle": "Centrally situated in Saraswathipuram, Mysore.",
@@ -355,8 +306,6 @@ const translations = {
     "loc.sunday_hours": "Prior Appointments Only",
     "loc.landmark": "Near Bus Stop, Saraswathipuram, Mysore",
     "loc.btn_directions": "GET DIRECTIONS",
-
-    // Contact Section
     "contact.tag": "Direct Information",
     "contact.title": "Contact",
     "contact.subtitle": "Prabhu Dental Clinic, Saraswathipuram, Mysore.",
@@ -374,26 +323,53 @@ const translations = {
     "loc.hours_inline": "10:30 AM – 01:30 PM &bull; 05:00 PM – 09:00 PM",
     "loc.sunday_hours_inline": "Prior Appointments Only",
     "lightbox.title": "Prabhu Dental Clinic Exterior &amp; Signboard",
-
-    // Footer
     "footer.nav_title": "Navigation",
     "footer.address_timings": "Clinic Address, Timings &amp; Contact",
     "footer.rights": "All rights reserved.",
     "footer.draft": "Local Presentation Draft",
-
-    // Mobile Actions
     "mobile.book_visit": "Book Visit",
-    "mobile.directions": "Directions"
+    "mobile.directions": "Directions",
+    "gallery.tab_clinic": "Clinic Photos",
+    "gallery.tab_patient": "Patient Photos",
+    "gallery.patient_consent_note": "All patient photographs and treatment experiences are documented and published with prior informed patient consent adhering to clinical privacy ethics.",
+    "gallery.item_exterior_tag": "Exterior",
+    "gallery.item_exterior_title": "Clinic Exterior & Signboard",
+    "gallery.item_exterior_desc": "Prabhu Dental Clinic main entrance at 388, 5th Cross, 14th Main, Saraswathipuram, Mysore.",
+    "gallery.item_reception_tag": "Front Desk",
+    "gallery.item_reception_title": "Reception & Waiting Lounge",
+    "gallery.item_reception_desc": "Welcoming reception and comfortable consultation waiting lounge.",
+    "gallery.item_interior_tag": "Infrastructure",
+    "gallery.item_interior_title": "Clinic Interior & Walkways",
+    "gallery.item_interior_desc": "Hygienic, spotless corridors designed for patient comfort and accessibility.",
+    "gallery.item_treatment_tag": "Operatory",
+    "gallery.item_treatment_title": "Dental Treatment Room",
+    "gallery.item_treatment_desc": "Ergonomic dental chair unit equipped for orthodontic and periodontal clinical procedures.",
+    "gallery.item_equipment_tag": "Sterilization",
+    "gallery.item_equipment_title": "Advanced Equipment & Autoclave",
+    "gallery.item_equipment_desc": "Medical-grade Class-B autoclave sterilization unit and low-radiation digital radiography.",
+    "gallery.item_consultation_tag": "Consultation",
+    "gallery.item_consultation_title": "Doctors Consultation Room",
+    "gallery.item_consultation_desc": "Doctor consultation desk and clinical discussion environment for patient evaluations.",
+    "gallery.patient_item1_tag": "Clinical Support",
+    "gallery.patient_item1_title": "Dedicated Patient Care Team",
+    "gallery.patient_item1_desc": "Cohesive dental surgeons and staff ensuring attentive, compassionate care at every visit.",
+    "gallery.patient_item2_tag": "Smile Journey",
+    "gallery.patient_item2_title": "Smile Transformation Moments",
+    "gallery.patient_item2_desc": "Orthodontic and cosmetic smile alignment progress documenting confident patient milestones.",
+    "gallery.patient_item3_tag": "Young Smiles",
+    "gallery.patient_item3_title": "Pediatric Patient Visits",
+    "gallery.patient_item3_desc": "Gentle and cheerful dental visits creating positive early healthcare memories for children.",
+    "gallery.patient_item4_tag": "Senior Care",
+    "gallery.patient_item4_title": "Senior Citizen Care & Smiles",
+    "gallery.patient_item4_desc": "Compassionate dental care restoring eating comfort and confidence for elderly patients.",
+    "gallery.placeholder_tag": "Upcoming Photo",
+    "gallery.placeholder_badge": "Consent Verified"
   },
-
-  kn: {
-    // Top Bar
+  "kn": {
     "topbar.address": "388, 5ನೇ ಕ್ರಾಸ್, 14ನೇ ಮುಖ್ಯರಸ್ತೆ, ಬಸ್ ನಿಲ್ದಾಣದ ಹತ್ತಿರ, ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು",
     "lang.choose": "ಭಾಷೆ:",
     "topbar.whatsapp": "ವಾಟ್ಸಾಪ್: 9448984480",
     "topbar.hours": "ಸೋಮ – ಶನಿ: ಬೆಳಿಗ್ಗೆ 10:30 – 1:30 &bull; ಸಂಜೆ 5:00 – 9:00 | ಭಾನು: ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಮಾತ್ರ",
-
-    // Navigation
     "nav.home": "ಮುಖಪುಟ",
     "nav.about": "ನಮ್ಮ ಬಗ್ಗೆ",
     "nav.doctors": "ನಮ್ಮ ವೈದ್ಯರು",
@@ -404,20 +380,15 @@ const translations = {
     "nav.gallery": "ಗ್ಯಾಲರಿ",
     "nav.appointment": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್",
     "nav.faq": "ಪ್ರಶ್ನೋತ್ತರಗಳು",
-    "nav.faq": "ಪ್ರಶ್ನೋತ್ತರಗಳು",
     "nav.location": "ಸ್ಥಳ & ವಿಳಾಸ",
     "nav.contact": "ಸಂಪರ್ಕ",
     "nav.book_cta": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
-
-    // Brand
     "brand.clinic_name": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್",
     "brand.clinic_name_caps": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್",
-
-    // Hero Section
     "hero.pill": "ಆರ್ಥೊಡಾಂಟಿಕ್ಸ್ ಮತ್ತು ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ರಿ ಕ್ಲಿನಿಕ್ &bull; ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು",
     "hero.kpmea_badge": "ಕರ್ನಾಟಕ ಖಾಸಗಿ ವೈದ್ಯಕೀಯ ಸಂಸ್ಥೆಗಳ (KPMEA) ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಕ್ಲಿನಿಕ್",
     "footer.kpmea": "ಕರ್ನಾಟಕ ಖಾಸಗಿ ವೈದ್ಯಕೀಯ ಸಂಸ್ಥೆಗಳ (KPMEA) ಕಾಯ್ದೆಯಡಿ ನೋಂದಾಯಿತ ಕ್ಲಿನಿಕ್",
-    "hero.title": 'ಪ್ರಭು <span class="brand-red">ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್</span>',
+    "hero.title": "ಪ್ರಭು <span class=\"brand-red\">ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್</span>",
     "hero.specialty": "ಆರ್ಥೊಡಾಂಟಿಕ್ಸ್ ಮತ್ತು ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ರಿ ಕ್ಲಿನಿಕ್",
     "hero.desc": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು. ದಂಪತಿಗಳಾದ ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. ಎಂ.ಡಿ.ಎಸ್. (ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಇಂಪ್ಲಾಂಟಾಲಜಿಸ್ಟ್) ಹಾಗೂ ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. ಎಂ.ಡಿ.ಎಸ್. (ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್ ಮತ್ತು ಡೆಂಟೊಫೇಶಿಯಲ್ ಆರ್ಥೋಪೀಡಿಸ್ಟ್) ಅವರ ಮಾಲೀಕತ್ವದಲ್ಲಿದೆ. 2012 ರಿಂದ ದಂತ ಆರೈಕೆಯ ವಿಶ್ವಾಸಾರ್ಹ ಸೇವೆಯನ್ನು ಮುಂದುವರಿಸಿಕೊಂಡು ಬರುತ್ತಿದೆ.",
     "hero.stat2_num": "೨ ಎಂ.ಡಿ.ಎಸ್.",
@@ -437,8 +408,6 @@ const translations = {
     "hero.badge_sunday_title": "ಭಾನುವಾರ",
     "hero.badge_sunday_sub": "ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಮಾತ್ರ",
     "hero.badge_sparkle": "ತಜ್ಞ ವೈದ್ಯ ದಂಪತಿ",
-
-    // About Section
     "about.tag": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್ ಬಗ್ಗೆ",
     "about.title": "2012 ರಿಂದ ದಂತ ಆರೈಕೆಯ ಪರಂಪರೆಯನ್ನು ಮುಂದುವರಿಸಿಕೊಂಡು ಬರುತ್ತಿದ್ದೇವೆ",
     "about.subtitle": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರಿನಲ್ಲಿ ಸಮರ್ಪಿತ ರೋಗಿ ಆರೈಕೆ, ನೈತಿಕ ಸೇವೆ ಮತ್ತು ನಿರಂತರ ಸುಧಾರಣೆ.",
@@ -451,8 +420,6 @@ const translations = {
     "about.pillar3_desc": "ಉತ್ತಮ ಸೇವೆಯನ್ನು ಮುಂದುವರಿಸುತ್ತಾ ಕ್ಲಿನಿಕ್ ಅನ್ನು ನಿರಂತರ ಪ್ರಗತಿಯತ್ತ ಕೊಂಡೊಯ್ಯುವುದು.",
     "about.pillar4_title": "ಸುಧಾರಣೆ, ಉನ್ನತೀಕರಣ ಮತ್ತು ರೋಗಿಗಳ ಹಿತ",
     "about.pillar4_desc": "ರೋಗಿಗಳ ಗರಿಷ್ಠ ಪ್ರಯೋಜನಕ್ಕಾಗಿ ಕ್ಲಿನಿಕ್‌ನ ಎಲ್ಲಾ ವಿಭಾಗಗಳ ಆಧುನೀಕರಣ ಮತ್ತು ಗುಣಮಟ್ಟ ಹೆಚ್ಚಳ.",
-
-    // Doctors Section
     "doctors.tag": "ತಜ್ಞ ವೈದ್ಯರು",
     "doctors.title": "ನಮ್ಮ ವೈದ್ಯರು",
     "doctors.subtitle": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್ ಅನ್ನು ಮುನ್ನಡೆಸುತ್ತಿರುವ ತಜ್ಞ ದಂಪತಿಗಳ ತಂಡ.",
@@ -469,15 +436,12 @@ const translations = {
     "legacy.prabhu_name": "ಡಾ. ಎಂ.ಜಿ. ಪ್ರಭು",
     "legacy.doctors_name": "ಡಾ. ಮಹೇಶ್ &amp; ಡಾ. ರಮ್ಯಾ",
     "legacy.timeline_doctors": "ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. &amp; ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್.",
-
-    // Treatments Section
     "treatments.tag": "ದಂತ ಚಿಕಿತ್ಸಾ ವಿಭಾಗಗಳು",
     "treatments.title": "ಚಿಕಿತ್ಸೆಗಳು",
     "treatments.subtitle": "ನಿಮ್ಮ ಸುಂದರ ನಗು ಮತ್ತು ದಂತ ಆರೋಗ್ಯಕ್ಕಾಗಿ ಸುಧಾರಿತ ಚಿಕಿತ್ಸಾ ವಿಧಾನಗಳು.",
     "treatments.learn_more": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ",
     "treatments.prev": "ಹಿಂದಿನದು",
     "treatments.next": "ಮುಂದಿನದು",
-    // Treatments Back-Face Kannada
     "treatments.overview": "ಚಿಕಿತ್ಸಾ ವಿವರಗಳು",
     "treatments.back": "ಹಿಂದಕ್ಕೆ",
     "treatments.book_btn": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
@@ -526,7 +490,6 @@ const translations = {
     "treatments.t10_p2": "ಆಹಾರ ಸೇವನೆ ಸುಲಭವಾಗಿಸಲು ಇಂಪ್ಲಾಂಟ್ ಆಧಾರಿತ ಓವರ್‌ಡೆಂಚರ್ಸ್",
     "treatments.t10_p3": "ನೈಸರ್ಗಿಕ ನಗುವಿನ ಮರುಸ್ಥಾಪನೆ, ತ್ವರಿತ ಮರುಜೋಡಣೆ ಮತ್ತು ದುರಸ್ತಿ",
     "treatments.t10_dur": "3–4 ಭೇಟಿಗಳು",
-
     "treatments.t1_title": "ಜನರಲ್ ಡೆಂಟಿಸ್ಟ್ರಿ",
     "treatments.t1_sub": "ಆರೋಗ್ಯಕರ ನಗುವಿನ ಅಡಿಪಾಯ",
     "treatments.t1_desc": "ಇಡೀ ಕುಟುಂಬಕ್ಕೆ ಸಮಗ್ರ ರೋಗನಿರೋಧಕ ಮತ್ತು ಪುನಶ್ಚೇತನ ದಂತ ಆರೈಕೆ.",
@@ -557,8 +520,6 @@ const translations = {
     "treatments.t10_title": "ಪ್ರಾಸ್ಥೊಡಾಂಟಿಕ್ಸ್ & ಡೆಂಚರ್ಸ್",
     "treatments.t10_sub": "ನಿಮ್ಮ ನಗು ಮತ್ತು ಅಗಿಯುವ ಶಕ್ತಿಯ ಮರುಸ್ಥಾಪನೆ",
     "treatments.t10_desc": "ಸುಲಭವಾಗಿ ಮಾತನಾಡಲು ಮತ್ತು ಊಟ ಮಾಡಲು ಕಸ್ಟಮ್ ಕೃತಕ ಹಲ್ಲುಗಳು ಮತ್ತು ಫಿಕ್ಸೆಡ್ ಬ್ರಿಡ್ಜ್ ಚಿಕಿತ್ಸೆ.",
-
-    // Specialities Section
     "spec.tag": "ಚಿಕಿತ್ಸಾ ವಿಭಾಗಗಳು",
     "spec.title": "ವಿಶೇಷ ಚಿಕಿತ್ಸೆಗಳು",
     "spec.subtitle": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್‌ನಲ್ಲಿ ನಮ್ಮ ವೈದ್ಯರು ಮತ್ತು ಪರಿಣಿತ ತಂಡದಿಂದ ಒದಗಿಸಲಾಗುವ ಪ್ರಮುಖ ದಂತ ಚಿಕಿತ್ಸೆಗಳು.",
@@ -580,23 +541,19 @@ const translations = {
     "spec.specialist_support": "ತಜ್ಞರ ಸಹಯೋಗ",
     "spec.orbit_hub_sub": "ವಿಶೇಷ ಚಿಕಿತ್ಸಾ ವಲಯ",
     "spec.orbit_status": "ನಿರಂತರ ಪರಿಭ್ರಮಣೆ (ಗಮನಿಸಲು ಕಾರ್ಡ್ ಮೇಲೆ ಕರ್ಸರ್ ಇರಿಸಿ ಅಥವಾ ಕ್ಲಿಕ್ ಮಾಡಿ)",
-
-    // Team Section
     "team.tag": "ಚಿಕಿತ್ಸಾ ತಂಡ",
     "team.title": "ನಮ್ಮ ತಂಡ",
     "team.subtitle": "ಅನುಭವಿ ತಜ್ಞರ ಸಮಿತಿ ಮತ್ತು ವೈದ್ಯಕೀಯ ತುರ್ತು ಸೌಲಭ್ಯ.",
     "team.associate_role": "ಸಹಾಯಕ ದಂತ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕಿ",
     "team.associate_deg": "ಬಿ.ಡಿ.ಎಸ್. &bull; ಸಹಾಯಕ ದಂತ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕಿ",
-    "team.associate_bio": '"ಅವರು 2011 ರಲ್ಲಿ ಪದವಿ ಪಡೆದಿದ್ದು, 2013 ರಿಂದ ನಮ್ಮೊಂದಿಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದ್ದಾರೆ. ರೋಗಿ ಸ್ನೇಹಿ ವೃತ್ತಿಪರರಾಗಿದ್ದು, ದಂತವೈದ್ಯಕೀಯ ಕ್ಷೇತ್ರದ ಇತ್ತೀಚಿನ ಬೆಳವಣಿಗೆಗಳ ಬಗ್ಗೆ ನಿರಂತರವಾಗಿ ತರಬೇತಿ ಪಡೆಯುತ್ತಿದ್ದಾರೆ."',
+    "team.associate_bio": "\"ಅವರು 2011 ರಲ್ಲಿ ಪದವಿ ಪಡೆದಿದ್ದು, 2013 ರಿಂದ ನಮ್ಮೊಂದಿಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿದ್ದಾರೆ. ರೋಗಿ ಸ್ನೇಹಿ ವೃತ್ತಿಪರರಾಗಿದ್ದು, ದಂತವೈದ್ಯಕೀಯ ಕ್ಷೇತ್ರದ ಇತ್ತೀಚಿನ ಬೆಳವಣಿಗೆಗಳ ಬಗ್ಗೆ ನಿರಂತರವಾಗಿ ತರಬೇತಿ ಪಡೆಯುತ್ತಿದ್ದಾರೆ.\"",
     "team.panel_title": "ತಜ್ಞರ ಸಮಿತಿ",
     "team.panel_desc": "ನಮ್ಮ ರೋಗಿಗಳ ಎಲ್ಲಾ ದಂತ ಚಿಕಿತ್ಸಾ ಅಗತ್ಯಗಳನ್ನು ಪೂರೈಸಲು ಕ್ಲಿನಿಕ್ ತನ್ನದೇ ಆದ ಅನುಭವಿ ತಜ್ಞರ ತಂಡವನ್ನು ಹೊಂದಿದೆ:",
     "team.surg_sub": "ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ದಂತ ಆರೈಕೆ.",
     "team.prostho_sub": "ಹಲ್ಲುಗಳ ಪುನರ್ನಿರ್ಮಾಣ ಮತ್ತು ಪ್ರಾಸ್ಥೆಟಿಕ್ಸ್.",
     "team.pedia_sub": "ಮಕ್ಕಳ ವಿಶೇಷ ದಂತ ರಕ್ಷಣೆ.",
     "team.emergency_title": "ವೈದ್ಯಕೀಯ ತುರ್ತು ಸೇವೆ",
-    "team.emergency_desc": '"ಯಾವುದೇ ವೈದ್ಯಕೀಯ ತುರ್ತು ಪರಿಸ್ಥಿತಿಯ ಸಂದರ್ಭದಲ್ಲಿ, ಕ್ಲಿನಿಕ್‌ನೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವ ವೈದ್ಯರು ಹಾಗೂ ಸಮೀಪದ ಪ್ರತಿಷ್ಠಿತ ನರ್ಸಿಂಗ್ ಹೋಮ್ ಸಹಯೋಗದ ಮೂಲಕ ತಕ್ಷಣದ ವೈದ್ಯಕೀಯ ನೆರವು ಮತ್ತು ತುರ್ತು ಆರೈಕೆಯನ್ನು ಒದಗಿಸಲಾಗುತ್ತದೆ."',
-
-    // Legacy Section
+    "team.emergency_desc": "\"ಯಾವುದೇ ವೈದ್ಯಕೀಯ ತುರ್ತು ಪರಿಸ್ಥಿತಿಯ ಸಂದರ್ಭದಲ್ಲಿ, ಕ್ಲಿನಿಕ್‌ನೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವ ವೈದ್ಯರು ಹಾಗೂ ಸಮೀಪದ ಪ್ರತಿಷ್ಠಿತ ನರ್ಸಿಂಗ್ ಹೋಮ್ ಸಹಯೋಗದ ಮೂಲಕ ತಕ್ಷಣದ ವೈದ್ಯಕೀಯ ನೆರವು ಮತ್ತು ತುರ್ತು ಆರೈಕೆಯನ್ನು ಒದಗಿಸಲಾಗುತ್ತದೆ.\"",
     "legacy.tag": "ಪರಂಪರೆ ಮತ್ತು ಇತಿಹಾಸ",
     "legacy.title": "ಕ್ಲಿನಿಕ್ ಪರಂಪರೆ",
     "legacy.subtitle": "2007 ರಿಂದ ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರಿನಲ್ಲಿ ವಿಶ್ವಾಸಾರ್ಹ ದಂತ ಸೇವೆಯ ಸುವರ್ಣ ಹೆಜ್ಜೆಗಳು.",
@@ -612,12 +569,10 @@ const translations = {
     "legacy.step5_badge": "ಪ್ರಸ್ತುತ ಮತ್ತು ಭವಿಷ್ಯ",
     "legacy.step5_title": "ಕ್ಲಿನಿಕ್‌ನ ನಿರಂತರ ಉನ್ನತೀಕರಣ",
     "legacy.step5_desc": "ಅದೇ ಉತ್ತಮ ಸೇವೆಯನ್ನು ಮುಂದುವರಿಸುತ್ತಾ ರೋಗಿಗಳ ಅನುಕೂಲಕ್ಕಾಗಿ ಕ್ಲಿನಿಕ್‌ನ ನಿರಂತರ ಸುಧಾರಣೆ ಮತ್ತು ಉನ್ನತೀಕರಣ.",
-
-    // Gallery Section
-    "gallery.tag": "ಕ್ಲಿನಿಕ್ ಚಿತ್ರಣ",
-    "gallery.title": "ಗ್ಯಾಲರಿ",
-    "gallery.subtitle": "ಕ್ಲಿನಿಕ್‌ನ ನೈಜ ಮುಂಭಾಗದ ಛಾಯಾಚಿತ್ರ ಮತ್ತು ಒಳಾಂಗಣ ಸೌಲಭ್ಯಗಳ ನೋಟ.",
-    "gallery.btn_view": "ದೊಡ್ಡದಾಗಿ ನೋಡಿ",
+    "gallery.tag": "ಕ್ಲಿನಿಕ್ ಝಲಕ್",
+    "gallery.title": "ಫೋಟೋ ಗ್ಯಾಲರಿ",
+    "gallery.subtitle": "ನಮ್ಮ ಆಧುನಿಕ ಕ್ಲಿನಿಕ್ ಸೌಲಭ್ಯಗಳು ಮತ್ತು ರೋಗಿಗಳ ಸುಂದರ ಕ್ಷಣಗಳನ್ನು ವೀಕ್ಷಿಸಿ.",
+    "gallery.btn_view": "ದೊಡ್ಡದಾಗಿ ವೀಕ್ಷಿಸಿ",
     "gallery.item1_tag": "ನೈಜ ಚಿತ್ರ",
     "gallery.item1_title": "ಕ್ಲಿನಿಕ್ ಮುಂಭಾಗ",
     "gallery.item1_desc": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರಿನ 388, 5ನೇ ಕ್ರಾಸ್, 14ನೇ ಮುಖ್ಯರಸ್ತೆಯಲ್ಲಿರುವ ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್‌ನ ನೈಜ ನೋಟ ಮತ್ತು ಬೋರ್ಡ್.",
@@ -639,8 +594,6 @@ const translations = {
     "gallery.item7_tag": "ತಂತ್ರಜ್ಞಾನ",
     "gallery.item7_title": "ವೈದ್ಯಕೀಯ ಉಪಕರಣಗಳು",
     "gallery.item7_desc": "ಕ್ರಿಮಿನಾಶಕ ಉಪಕರಣಗಳು ಮತ್ತು ರೋಗಿಗಳ ಚಿಕಿತ್ಸೆಗೆ ಪೂರಕವಾದ ಸುಧಾರಿತ ಯಂತ್ರೋಪಕರಣಗಳು.",
-
-    // Appointment Section
     "app.tag": "ಸಮಾಲೋಚನೆ ವಿನಂತಿ",
     "app.title": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್",
     "app.subtitle": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್, ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು - ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಕಾಯ್ದಿರಿಸುವಿಕೆ.",
@@ -674,9 +627,6 @@ const translations = {
     "app.modal_subtitle": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್ ಅನ್ನು ಸಂಪರ್ಕಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು. ನಿಮ್ಮ ಭೇಟಿಯ ಕೋರಿಕೆಯನ್ನು ಪ್ರದರ್ಶನಕ್ಕಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ.",
     "app.modal_note": "ಇದು ಮುಂಗಡ ಪ್ರದರ್ಶನ ಮಾದರಿಯಾಗಿದೆ. ಯಾವುದೇ ನೈಜ ಬುಕಿಂಗ್ ಅಥವಾ ಪಾವತಿ ಪ್ರಕ್ರಿಯೆಯಲ್ಲ.",
     "app.modal_btn_close": "ಮುಚ್ಚಿ",
-
-    
-    // FAQ Section
     "faq.tag": "ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೋತ್ತರಗಳು",
     "faq.title": "ದಂತ ಆರೋಗ್ಯದ ಬಗೆಗಿನ ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು",
     "faq.subtitle": "ಚಿಕಿತ್ಸೆಗಳು, ಆರ್ಥೊಡಾಂಟಿಕ್ ಅಲೈನರ್‌ಗಳು, ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಮತ್ತು ದಂತ ಆರೈಕೆಯ ಕುರಿತು ನಿಮ್ಮ ಸಂದೇಹಗಳಿಗೆ ಉತ್ತರಗಳು.",
@@ -692,26 +642,6 @@ const translations = {
     "faq.a5": "ಆಧುನಿಕ ರೋಟರಿ ತಂತ್ರಜ್ಞಾನದಿಂದ ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆಯು ಸಂಪೂರ್ಣವಾಗಿ ನೋವುರಹಿತವಾಗಿರುತ್ತದೆ. ಸೋಂಕಿತ ಭಾಗವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ಕ್ಯಾಪ್ (ಕ್ರೌನ್) ಅಳವಡಿಸುವುದರಿಂದ ನಿಮ್ಮ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಶಾಶ್ವತವಾಗಿ ಉಳಿಸಿಕೊಳ್ಳಬಹುದು.",
     "faq.q6": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡುವುದು ಹೇಗೆ? ಭಾನುವಾರ ಕ್ಲಿನಿಕ್ ತೆರೆದಿರುತ್ತದೆಯೇ?",
     "faq.a6": "ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಫಾರ್ಮ್ ಮೂಲಕ ಅಥವಾ ವಾಟ್ಸಾಪ್ (+91 94489 84480) ಮೂಲಕ ಸುಲಭವಾಗಿ ಭೇಟಿಯನ್ನು ನಿಗದಿಪಡಿಸಬಹುದು. ಸೋಮವಾರದಿಂದ ಶನಿವಾರದವರೆಗೆ ನಿಯಮಿತ ಸಮಯಗಳಲ್ಲಿ ಹಾಗೂ ಭಾನುವಾರದಂದು ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಪಡೆದವರಿಗೆ ಮಾತ್ರ ಚಿಕಿತ್ಸೆ ಲಭ್ಯವಿದೆ.",
-
-    
-    // FAQ Section
-    "faq.tag": "ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೋತ್ತರಗಳು",
-    "faq.title": "ದಂತ ಆರೋಗ್ಯದ ಬಗೆಗಿನ ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು",
-    "faq.subtitle": "ಚಿಕಿತ್ಸೆಗಳು, ಆರ್ಥೊಡಾಂಟಿಕ್ ಅಲೈನರ್‌ಗಳು, ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಮತ್ತು ದಂತ ಆರೈಕೆಯ ಕುರಿತು ನಿಮ್ಮ ಸಂದೇಹಗಳಿಗೆ ಉತ್ತರಗಳು.",
-    "faq.q1": "ನಿಯಮಿತ ತಪಾಸಣೆಗಾಗಿ ಎಷ್ಟು ಸಮಯಕ್ಕೊಮ್ಮೆ ದಂತವೈದ್ಯರನ್ನು ಭೇಟಿ ಮಾಡಬೇಕು?",
-    "faq.a1": "ಪ್ರತಿ 6 ತಿಂಗಳಿಗೊಮ್ಮೆ ನಿಯಮಿತ ದಂತ ತಪಾಸಣೆ ಮತ್ತು ಹಲ್ಲುಗಳ ಸ್ವಚ್ಛತೆ (ಕ್ಲೀನಿಂಗ್) ಮಾಡಿಸಿಕೊಳ್ಳುವುದು ಉತ್ತಮ. ಇದರಿಂದ ಹಲ್ಲು ಹುಳುಕು, ಒಸಡಿನ ರಕ್ತಸ್ರಾವ ಮುಂತಾದ ಸಮಸ್ಯೆಗಳನ್ನು ಆರಂಭಿಕ ಹಂತದಲ್ಲೇ ತಡೆಗಟ್ಟಬಹುದು.",
-    "faq.q2": "ಡೆಂಟಲ್ ಇಂಪ್ಲಾಂಟ್ ಚಿಕಿತ್ಸೆ ನೋವುಂಟುಮಾಡುತ್ತದೆಯೇ? ಇದು ಎಷ್ಟು ಕಾಲ ಬಾಳಿಕೆ ಬರುತ್ತದೆ?",
-    "faq.a2": "ಇಂಪ್ಲಾಂಟ್ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಲೋಕಲ್ ಅನಸ್ತೇಶಿಯಾ ಅಡಿಯಲ್ಲಿ ಅತ್ಯಂತ ನಿಖರವಾಗಿ ಮತ್ತು ನೋವಿಲ್ಲದೆ ನಡೆಸಲಾಗುತ್ತದೆ. ಸರಿಯಾದ ಆರೈಕೆ ಮತ್ತು ನಿಗದಿತ ತಪಾಸಣೆಗಳೊಂದಿಗೆ, ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಜೀವಿತಾವಧಿಯವರೆಗೆ ಶಾಶ್ವತವಾಗಿ ಉಳಿಯುತ್ತವೆ.",
-    "faq.q3": "ಸಾಂಪ್ರದಾಯಿಕ ಬ್ರೇಸ್‌ಗಳು ಮತ್ತು ಅದೃಶ್ಯ ಅಲೈನರ್‌ಗಳ (Aligners) ನಡುವಿನ ವ್ಯತ್ಯಾಸವೇನು?",
-    "faq.a3": "ಸಾಂಪ್ರದಾಯಿಕ ಬ್ರೇಸ್‌ಗಳಲ್ಲಿ ತಂತಿಗಳು ಮತ್ತು ಬ್ರಾಕೆಟ್‌ಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ಕ್ಲಿಯರ್ ಅಲೈನರ್‌ಗಳು ಪಾರದರ್ಶಕವಾಗಿದ್ದು ಸುಲಭವಾಗಿ ತೆಗೆಯಬಹುದಾದ ಆಧುನಿಕ ಟ್ರೇಗಳಾಗಿವೆ. ಡಾ. ರಮ್ಯಾ ಕೆ.ಎಸ್. (ಆರ್ಥೊಡಾಂಟಿಸ್ಟ್) ನಿಮ್ಮ ಹಲ್ಲುಗಳ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಸೂಕ್ತ ಆಯ್ಕೆಯನ್ನು ಸೂಚಿಸುತ್ತಾರೆ.",
-    "faq.q4": "ಹಲ್ಲುಜ್ಜುವಾಗ ಒಸಡುಗಳಿಂದ ರಕ್ತ ಬರುವುದು ಏಕೆ? ಇದಕ್ಕೆ ಏನು ಪರಿಹಾರ?",
-    "faq.a4": "ಒಸಡುಗಳಿಂದ ರಕ್ತ ಬರುವುದು ಜಿಂಜೈವಿಟಿಸ್ ಅಥವಾ ಹಲ್ಲಿನ ಬುಡದಲ್ಲಿ ಪಾಚಿ/ಕಲ್ಮಶ ಸಂಗ್ರಹವಾಗಿರುವುದರ ಲಕ್ಷಣವಾಗಿದೆ. ತಜ್ಞ ಪಿರಿಯೊಡಾಂಟಿಸ್ಟ್ ಡಾ. ಮಹೇಶ್ ಹೆಚ್.ವಿ. ಅವರಿಂದ ಸ್ಕೇಲಿಂಗ್ ಮಾಡಿಸಿಕೊಳ್ಳುವುದರಿಂದ ಒಸಡುಗಳು ಪುನಃ ಆರೋಗ್ಯಕರವಾಗುತ್ತವೆ.",
-    "faq.q5": "ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆ ನೋವಿನಿಂದ ಕೂಡಿರುತ್ತದೆಯೇ? ಇದರಿಂದ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಉಳಿಸಬಹುದೇ?",
-    "faq.a5": "ಆಧುನಿಕ ರೋಟರಿ ತಂತ್ರಜ್ಞಾನದಿಂದ ರೂಟ್ ಕೆನಾಲ್ ಚಿಕಿತ್ಸೆಯು ಸಂಪೂರ್ಣವಾಗಿ ನೋವುರಹಿತವಾಗಿರುತ್ತದೆ. ಸೋಂಕಿತ ಭಾಗವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ಕ್ಯಾಪ್ (ಕ್ರೌನ್) ಅಳವಡಿಸುವುದರಿಂದ ನಿಮ್ಮ ನೈಸರ್ಗಿಕ ಹಲ್ಲನ್ನು ಶಾಶ್ವತವಾಗಿ ಉಳಿಸಿಕೊಳ್ಳಬಹುದು.",
-    "faq.q6": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡುವುದು ಹೇಗೆ? ಭಾನುವಾರ ಕ್ಲಿನಿಕ್ ತೆರೆದಿರುತ್ತದೆಯೇ?",
-    "faq.a6": "ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಫಾರ್ಮ್ ಮೂಲಕ ಅಥವಾ ವಾಟ್ಸಾಪ್ (+91 94489 84480) ಮೂಲಕ ಸುಲಭವಾಗಿ ಭೇಟಿಯನ್ನು ನಿಗದಿಪಡಿಸಬಹುದು. ಸೋಮವಾರದಿಂದ ಶನಿವಾರದವರೆಗೆ ನಿಯಮಿತ ಸಮಯಗಳಲ್ಲಿ ಹಾಗೂ ಭಾನುವಾರದಂದು ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಪಡೆದವರಿಗೆ ಮಾತ್ರ ಚಿಕಿತ್ಸೆ ಲಭ್ಯವಿದೆ.",
-
-    // Location & Contact Section
     "loc.tag": "ಕ್ಲಿನಿಕ್ ವಿಳಾಸ",
     "loc.title": "ಸ್ಥಳ &amp; ವಿಳಾಸ",
     "loc.subtitle": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರಿನ ಕೇಂದ್ರ ಸ್ಥಳದಲ್ಲಿದೆ.",
@@ -724,8 +654,6 @@ const translations = {
     "loc.sunday_hours": "ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಮಾತ್ರ",
     "loc.landmark": "ಬಸ್ ನಿಲ್ದಾಣದ ಹತ್ತಿರ, ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು",
     "loc.btn_directions": "ದಾರಿ ನಕ್ಷೆ ನೋಡಿ",
-
-    // Contact Section
     "contact.tag": "ಸಂಪರ್ಕ ಮಾಹಿತಿ",
     "contact.title": "ಸಂಪರ್ಕ",
     "contact.subtitle": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್, ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರು.",
@@ -743,18 +671,49 @@ const translations = {
     "loc.hours_inline": "ಬೆಳಿಗ್ಗೆ 10:30 – ಮಧ್ಯಾಹ್ನ 01:30 &bull; ಸಂಜೆ 05:00 – ರಾತ್ರಿ 09:00",
     "loc.sunday_hours_inline": "ಮುಂಚಿತ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಮಾತ್ರ",
     "lightbox.title": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್ ಮುಂಭಾಗ &amp; ನಾಮಫಲಕ",
-
-    // Footer
     "footer.nav_title": "ಪುಟಗಳು",
     "footer.address_timings": "ಕ್ಲಿನಿಕ್ ವಿಳಾಸ, ಸಮಯ &amp; ಸಂಪರ್ಕ",
     "footer.rights": "ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.",
     "footer.draft": "ಸ್ಥಳೀಯ ಪ್ರಸ್ತುತಿ ಮಾದರಿ",
-
-    // Mobile Actions
     "mobile.book_visit": "ಬುಕ್ ಮಾಡಿ",
-    "mobile.directions": "ದಾರಿ ನಕ್ಷೆ"
+    "mobile.directions": "ದಾರಿ ನಕ್ಷೆ",
+    "gallery.tab_clinic": "ಕ್ಲಿನಿಕ್ ಫೋಟೋಗಳು",
+    "gallery.tab_patient": "ರೋಗಿಗಳ ಫೋಟೋಗಳು",
+    "gallery.patient_consent_note": "ಎಲ್ಲಾ ರೋಗಿಗಳ ಛಾಯಾಚಿತ್ರಗಳು ಮತ್ತು ಚಿಕಿತ್ಸೆಯ ಅನುಭವಗಳನ್ನು ಅವರ ಪೂರ್ವ ಸಮ್ಮತಿಯೊಂದಿಗೆ ಗೌಪ್ಯತೆಯ ನಿಯಮಗಳ ಪ್ರಕಾರ ಪ್ರಕಟಿಸಲಾಗಿದೆ.",
+    "gallery.item_exterior_tag": "ಹೊರಾಂಗಣ",
+    "gallery.item_exterior_title": "ಕ್ಲಿನಿಕ್ ಹೊರಭಾಗ ಮತ್ತು ಸೈನ್‌ಬೋರ್ಡ್",
+    "gallery.item_exterior_desc": "388, 5ನೇ ಕ್ರಾಸ್, 14ನೇ ಮೇನ್, ಸರಸ್ವತಿಪುರಂನಲ್ಲಿರುವ ಕ್ಲಿನಿಕ್ ಪ್ರವೇಶ ದ್ವಾರ.",
+    "gallery.item_reception_tag": "ಸ್ವಾಗತ ಕೌಂಟರ್",
+    "gallery.item_reception_title": "ರಿಸೆಪ್ಷನ್ & ವಿಶ್ರಾಂತಿ ಕೊಠಡಿ",
+    "gallery.item_reception_desc": "ಸ್ವಾಗತಿಸುವ ರಿಸೆಪ್ಷನ್ ಮತ್ತು ರೋಗಿಗಳಿಗೆ ಆರಾಮದಾಯಕ ವಿಶ್ರಾಂತಿ ಕೊಠಡಿ.",
+    "gallery.item_interior_tag": "ಒಳಾಂಗಣ",
+    "gallery.item_interior_title": "ಕ್ಲಿನಿಕ್ ಒಳಾಂಗಣ",
+    "gallery.item_interior_desc": "ಸ್ವಚ್ಛ ಮತ್ತು ಆರಾಮದಾಯಕವಾದ ಕ್ಲಿನಿಕ್‌ನ ಸುಸಜ್ಜಿತ ಒಳಾಂಗಣ.",
+    "gallery.item_treatment_tag": "ಚಿಕಿತ್ಸಾ ಕೊಠಡಿ",
+    "gallery.item_treatment_title": "ಅತ್ಯಾಧುನಿಕ ದಂತ ಚಿಕಿತ್ಸಾ ಘಟಕ",
+    "gallery.item_treatment_desc": "ಆಧುನಿಕ ದಂತ ಚಿಕಿತ್ಸಾ ಕುರ್ಚಿ ಮತ್ತು ಸುಧಾರಿತ ಸಲಕರಣೆಗಳುಳ್ಳ ಕೊಠಡಿ.",
+    "gallery.item_equipment_tag": "ಕ್ರಿಮಿಮುಕ್ತ ಘಟಕ",
+    "gallery.item_equipment_title": "ಸುಧಾರಿತ ಉಪಕರಣಗಳು ಮತ್ತು ಆಟೋಕ್ಲೇವ್",
+    "gallery.item_equipment_desc": "ಕ್ಲಾಸ್-ಬಿ ಆಟೋಕ್ಲೇವ್ ಕ್ರಿಮಿನಾಶಕ ಘಟಕ ಮತ್ತು ಡಿಜಿಟಲ್ ಎಕ್ಸ್-ರೇ ತಂತ್ರಜ್ಞಾನ.",
+    "gallery.item_consultation_tag": "ಸಮಾಲೋಚನೆ",
+    "gallery.item_consultation_title": "ವೈದ್ಯರ ಸಮಾಲೋಚನಾ ಕೊಠಡಿ",
+    "gallery.item_consultation_desc": "ರೋಗಿಗಳೊಂದಿಗೆ ಚಿಕಿತ್ಸೆಯ ಬಗ್ಗೆ ಚರ್ಚಿಸಲು ಪ್ರತ್ಯೇಕ ಸಮಾಲೋಚನಾ ಕೊಠಡಿ.",
+    "gallery.patient_item1_tag": "ಆರೈಕೆ ತಂಡ",
+    "gallery.patient_item1_title": "ಸಮರ್ಪಿತ ರೋಗಿ ಆರೈಕೆ ತಂಡ",
+    "gallery.patient_item1_desc": "ಪ್ರತಿ ಹಂತದಲ್ಲೂ ರೋಗಿಗಳಿಗೆ ಪ್ರೀತಿಯಿಂದ ಸೇವೆ ನೀಡುವ ವೈದ್ಯರು ಮತ್ತು ಸಿಬ್ಬಂದಿ.",
+    "gallery.patient_item2_tag": "ಹಲ್ಲುಗಳ ಸೌಂದರ್ಯ",
+    "gallery.patient_item2_title": "ಸುಂದರ ನಗೆಯ ಕ್ಷಣಗಳು",
+    "gallery.patient_item2_desc": "ಆರ್ಥೋಡಾಂಟಿಕ್ ಮತ್ತು ಕಾಸ್ಮೆಟಿಕ್ ಚಿಕಿತ್ಸೆಯ ಮೂಲಕ ಸುಂದರ ನಗೆ ಪಡೆದ ಕ್ಷಣಗಳು.",
+    "gallery.patient_item3_tag": "ಮಕ್ಕಳ ನಗೆ",
+    "gallery.patient_item3_title": "ಮಕ್ಕಳ ದಂತ ಚಿಕಿತ್ಸಾ ಭೇಟಿ",
+    "gallery.patient_item3_desc": "ಮಕ್ಕಳಿಗೆ ಭಯವಿಲ್ಲದ, ಪ್ರೀತಿಪೂರ್ವಕ ಮತ್ತು ಆಟವಾಡುತ್ತಾ ನೀಡುವ ದಂತ ಚಿಕಿತ್ಸೆ.",
+    "gallery.patient_item4_tag": "ಹಿರಿಯರ ಆರೈಕೆ",
+    "gallery.patient_item4_title": "ಹಿರಿಯ ನಾಗರಿಕರ ದಂತ ಸೇವೆ",
+    "gallery.patient_item4_desc": "ಹಿರಿಯರಿಗೆ ಸುಲಭವಾಗಿ ಆಹಾರ ಸೇವಿಸಲು ನೆರವಾಗುವ ಕಸ್ಟಮ್ ಡೆಂಚರ್ ಚಿಕಿತ್ಸೆ.",
+    "gallery.placeholder_tag": "ಮುಂದಿನ ಫೋಟೋ",
+    "gallery.placeholder_badge": "ಸಮ್ಮತಿ ದೃಢೀಕರಿಸಲಾಗಿದೆ"
   },
-  hi: {
+  "hi": {
     "topbar.address": "388, 5वीं क्रॉस, 14वीं मेन, बस स्टॉप के पास, सरस्वतीपुरम, मैसूर",
     "lang.choose": "भाषा:",
     "topbar.whatsapp": "व्हाट्सएप: 9448984480",
@@ -1002,8 +961,8 @@ const translations = {
     "legacy.step5_desc": "मरीजों के लाभ के लिए सभी तरीकों से क्लिनिक के निरंतर सुधार और आधुनिकीकरण के उद्देश्य से उसी उत्कृष्ट सेवा को जारी रखना।",
     "legacy.timeline_doctors": "विशेषज्ञ क्लिनिशियन जोड़ी",
     "gallery.tag": "क्लिनिक भ्रमण",
-    "gallery.title": "क्लिनिक गैलरी",
-    "gallery.subtitle": "हमारे आधुनिक, स्वच्छ और आरामदायक क्लिनिक वातावरण पर एक नज़र डालें।",
+    "gallery.title": "फ़ोटो गैलरी",
+    "gallery.subtitle": "सरस्वतीपुरम, मैसूर में हमारे आधुनिक क्लिनिक और रोगी देखभाल के पलों की झलकियां देखें।",
     "gallery.btn_view": "बड़ा करके देखें",
     "gallery.item1_tag": "बाहरी दृश्य",
     "gallery.item1_title": "क्लिनिक का मुख्य भवन",
@@ -1161,8 +1120,43 @@ const translations = {
     "footer.draft": "प्रभु डेंटल क्लिनिक - आधिकारिक वेबसाइट",
     "footer.kpmea_full": "कर्नाटक निजी चिकित्सा प्रतिष्ठान (KPMEA) अधिनियम के तहत पंजीकृत",
     "footer.nav_title": "नेविगेशन",
-    "footer.address_timings": "क्लिनिक का पता, समय और संपर्क"
-}
+    "footer.address_timings": "क्लिनिक का पता, समय और संपर्क",
+    "gallery.tab_clinic": "क्लिनिक फ़ोटो",
+    "gallery.tab_patient": "मरीजों की फ़ोटो",
+    "gallery.patient_consent_note": "सभी रोगी तस्वीरें और उपचार अनुभव क्लिनिकल गोपनीयता व नैतिक नियमों के तहत पूर्व सूचित सहमति के साथ प्रकाशित किए गए हैं।",
+    "gallery.item_exterior_tag": "बाहरी दृश्य",
+    "gallery.item_exterior_title": "क्लिनिक बाहरी दृश्य एवं साइनबोर्ड",
+    "gallery.item_exterior_desc": "388, 5वीं क्रॉस, 14वीं मेन, सरस्वतीपुरम, मैसूर में क्लिनिक का मुख्य प्रवेश द्वार।",
+    "gallery.item_reception_tag": "स्वागत कक्ष",
+    "gallery.item_reception_title": "रिसेप्शन एवं प्रतीक्षालय",
+    "gallery.item_reception_desc": "सुव्यवस्थित रिसेप्शन और मरीजों के लिए आरामदायक प्रतीक्षालय।",
+    "gallery.item_interior_tag": "आंतरिक दृश्य",
+    "gallery.item_interior_title": "क्लिनिक आंतरिक गलियारा",
+    "gallery.item_interior_desc": "मरीजों की सुविधा और स्वच्छता के अनुरूप आधुनिक आंतरिक गलियारा।",
+    "gallery.item_treatment_tag": "उपचार कक्ष",
+    "gallery.item_treatment_title": "डेंटल ट्रीटमेंट रूम",
+    "gallery.item_treatment_desc": "एर्गोनोमिक डेंटल चेयर और अत्याधुनिक ऑर्थोडॉन्टिक व पेरियोडोंटल उपकरणों से सुसज्जित कक्ष।",
+    "gallery.item_equipment_tag": "स्टरलाइजेशन",
+    "gallery.item_equipment_title": "उन्नत उपकरण और ऑटोक्लेव",
+    "gallery.item_equipment_desc": "क्लास-बी ऑटोक्लेव नसबंदी प्रणाली और कम रेडिएशन वाली डिजिटल रेडियोलॉजी तकनीक।",
+    "gallery.item_consultation_tag": "परामर्श कक्ष",
+    "gallery.item_consultation_title": "डॉक्टर्स कंसल्टेशन रूम",
+    "gallery.item_consultation_desc": "विस्तृत रोगी मूल्यांकन और स्माइल प्लानिंग के लिए समर्पित कंसल्टेशन डेस्क।",
+    "gallery.patient_item1_tag": "देखभाल टीम",
+    "gallery.patient_item1_title": "समर्पित रोगी देखभाल टीम",
+    "gallery.patient_item1_desc": "हर विज़िट पर सौम्य, संवेदनशील और विशेषज्ञ देखभाल सुनिश्चित करने वाली टीम।",
+    "gallery.patient_item2_tag": "स्माइल यात्रा",
+    "gallery.patient_item2_title": "स्माइल ट्रांसफ़ॉर्मेशन मोमेंट्स",
+    "gallery.patient_item2_desc": "दांतों के संरेखण और कॉस्मेटिक स्माइल सुधार के सफल परिणाम।",
+    "gallery.patient_item3_tag": "बाल दंत चिकित्सा",
+    "gallery.patient_item3_title": "बच्चों की दंत चिकित्सा विज़िट",
+    "gallery.patient_item3_desc": "बच्चों के लिए तनाव-मुक्त, सौम्य और खुशनुमा माहौल में दंत देखभाल।",
+    "gallery.patient_item4_tag": "वरिष्ठ नागरिक देखभाल",
+    "gallery.patient_item4_title": "बुजुर्गों की दंत देखभाल व डेंचर्स",
+    "gallery.patient_item4_desc": "वरिष्ठ नागरिकों के लिए आरामदायक कस्टम डेंचर्स और आत्मविश्वास भरी मुस्कान।",
+    "gallery.placeholder_tag": "आगामी तस्वीर",
+    "gallery.placeholder_badge": "सहमति सत्यापित"
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -1173,6 +1167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveClinicStatus();
   initAppointmentForm();
   initLightbox();
+  initGalleryTabs();
   initDateConstraints();
   initScrollReveal();
   initAboutCardsSlide();
@@ -1715,6 +1710,37 @@ function initAppointmentForm() {
 /**
  * 7. Lightbox Modal for Clinic Exterior Image
  */
+
+/**
+ * Gallery Category Tab Switcher (Clinic Photos <-> Patient Photos)
+ */
+function initGalleryTabs() {
+  const tabs = document.querySelectorAll('.js-gallery-tab');
+  const grids = document.querySelectorAll('.gallery-grid-panel');
+  if (!tabs.length || !grids.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetCat = tab.getAttribute('data-gallery-tab');
+      tabs.forEach(t => {
+        const isActive = t === tab;
+        t.classList.toggle('active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      grids.forEach(grid => {
+        const isMatch = grid.getAttribute('data-gallery-cat') === targetCat;
+        grid.classList.toggle('is-active', isMatch);
+        if (isMatch) {
+          grid.style.display = 'grid';
+        } else {
+          grid.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
 function initLightbox() {
   const modal = document.getElementById('galleryModal');
   const trigger = document.querySelectorAll('.js-open-lightbox');
