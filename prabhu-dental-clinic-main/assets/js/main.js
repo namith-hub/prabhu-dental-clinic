@@ -30,6 +30,15 @@ const translations = {
     "nav.faq": "FAQ",
     "nav.location": "Location",
     "nav.contact": "Contact",
+    "nav.location_contact": "Location & Contact",
+    "loc_contact.tag": "Visit & Connect",
+    "loc_contact.title": "Location & Contact",
+    "loc_contact.subtitle": "Centrally situated in Saraswathipuram, Mysore. Visit our modern clinic or connect with our care team directly.",
+    "contact.btn_call": "Call Now",
+    "app.label_email": "Email Address",
+    "app.ph_email": "patient@example.com",
+    "app.label_treatment": "Select Treatment",
+    "app.btn_submit": "Submit Appointment",
     "nav.book_cta": "Book Appointment",
     "brand.clinic_name": "Prabhu Dental Clinic",
     "brand.clinic_name_caps": "PRABHU DENTAL CLINIC",
@@ -350,40 +359,24 @@ const translations = {
     "gallery.item_consultation_tag": "Consultation",
     "gallery.item_consultation_title": "Doctors Consultation Room",
     "gallery.item_consultation_desc": "Doctor consultation desk and clinical discussion environment for patient evaluations.",
-    "gallery.patient_item1_tag": "उपचार व देखभाल",
-    "gallery.patient_item1_title": "दंत चिकित्सा एवं रोगी देखभाल",
-    "gallery.patient_item1_desc": "मरीजों के आराम और स्वस्थ मुस्कान को सुनिश्चित करने वाले आधुनिक दंत उपचार।",
-    "gallery.patient_item2_tag": "डिजिटल डायग्नोस्टिक्स",
-    "gallery.patient_item2_title": "डिजिटल एक्स-रे परामर्श एवं स्माइल प्लानिंग",
-    "gallery.patient_item2_desc": "प्रत्येक रोगी की मौखिक स्थिति के अनुसार डिजिटल इमेजिंग और उपचार परामर्श।",
-    "gallery.patient_item3_tag": "वरिष्ठ नागरिक देखभाल",
-    "gallery.patient_item3_title": "वरिष्ठ नागरिक दंत देखभाल व मुस्कान",
-    "gallery.patient_item3_desc": "वरिष्ठ नागरिकों के लिए खान-पान की सुविधा और मुस्कान का आत्मविश्वास लौटाने वाली करुणामयी देखभाल।",
-    "gallery.patient_item4_tag": "स्माइल जर्नी",
-    "gallery.patient_item4_title": "स्माइल ट्रांसफॉर्मेशन मोमेंट्स",
-    "gallery.patient_item4_desc": "ऑर्थोडॉन्टिक और कॉस्मेटिक स्माइल अलाइनमेंट की खूबसूरत यादें।",
-    "gallery.patient_item5_tag": "बाल दंत चिकित्सा",
-    "gallery.patient_item5_title": "बच्चों की सौम्य दंत देखभाल",
-    "gallery.patient_item5_desc": "बच्चों के लिए तनाव-मुक्त, सौम्य और खुशनुमा माहौल में दंत देखभाल।",
-    "gallery.patient_item6_tag": "मरीजों का अनुभव",
-    "gallery.patient_item6_title": "सफल उपचार व मुस्कान की कहानियां",
-    "gallery.patient_item6_desc": "उपचार पूर्ण होने के बाद मरीजों का आत्मविश्वास और संतुष्ट मुस्कान की खूबसूरत यादें।",
-    "gallery.btn_view_more": "और देखें",
-    "gallery.btn_view_less": "कम देखें",
-    "gallery.patient_item5_tag": "ಮಕ್ಕಳ ಮುಗುಳುನಗೆ",
-    "gallery.patient_item5_title": "ಮಕ್ಕಳ ದಂತ ಚಿಕಿತ್ಸಾ ಭೇಟಿ",
-    "gallery.patient_item5_desc": "ಮಕ್ಕಳಿಗೆ ಹಿತಕರ ಮತ್ತು ಭಯಮುಕ್ತ ವಾತಾವರಣದಲ್ಲಿ ನೀಡಲಾಗುವ ದಂತ ಆರೈಕೆ.",
-    "gallery.patient_item6_tag": "ರೋಗಿಗಳ ಅನುಭವ",
-    "gallery.patient_item6_title": "ಚಿಕಿತ್ಸೆಯ ನಂತರದ ಮುಗುಳುನಗೆ",
-    "gallery.patient_item6_desc": "ಯಶಸ್ವಿ ಚಿಕಿತ್ಸೆಗಳ ನಂತರ ರೋಗಿಗಳ ಆತ್ಮವಿಶ್ವಾಸದ ಸುಂದರ ಮುಗುಳುನಗೆ.",
-    "gallery.btn_view_more": "ಇನ್ನಷ್ಟು ವೀಕ್ಷಿಸಿ",
-    "gallery.btn_view_less": "ಕಡಿಮೆ ತೋರಿಸಿ",
-    "gallery.patient_item5_tag": "Young Smiles",
-    "gallery.patient_item5_title": "Pediatric Gentle Visits",
-    "gallery.patient_item5_desc": "Gentle and cheerful dental visits creating positive early healthcare memories for children.",
-    "gallery.patient_item6_tag": "Patient Journey",
-    "gallery.patient_item6_title": "Post-Treatment Smile Stories",
-    "gallery.patient_item6_desc": "Heartfelt patient experiences and successful treatment completions celebrated with healthy smiles.",
+    "gallery.patient_item1_tag": "Treatment Care",
+    "gallery.patient_item1_title": "Patient Dental Care & Treatment",
+    "gallery.patient_item1_desc": "Modern gentle dental treatments and clinical procedures ensuring comfort and healthy smiles.",
+    "gallery.patient_item2_tag": "Digital Diagnostics",
+    "gallery.patient_item2_title": "Digital OPG Consultation & Smile Planning",
+    "gallery.patient_item2_desc": "Clear, in-depth digital imaging and treatment discussion tailored to each patient's dental health.",
+    "gallery.patient_item3_tag": "Senior Care",
+    "gallery.patient_item3_title": "Senior Citizen Care & Smiles",
+    "gallery.patient_item3_desc": "Dedicated, compassionate dental care restoring eating comfort and smile confidence for senior patients.",
+    "gallery.patient_item4_tag": "Oral Examination",
+    "gallery.patient_item4_title": "Clinical Consultation & Checkup",
+    "gallery.patient_item4_desc": "Thorough dental evaluation and customized oral healthcare consultation in a gentle environment.",
+    "gallery.patient_item5_tag": "Precision Care",
+    "gallery.patient_item5_title": "Advanced Precision Dental Treatment",
+    "gallery.patient_item5_desc": "Specialized dental procedure performed with magnification loupes and expert clinical assistance.",
+    "gallery.patient_item6_tag": "Pediatric Care",
+    "gallery.patient_item6_title": "Pediatric Gentle Visits & Care",
+    "gallery.patient_item6_desc": "Gentle, friendly healthcare visits creating positive and cheerful clinic memories for young children.",
     "gallery.btn_view_more": "View More",
     "gallery.btn_view_less": "View Less",
     "gallery.placeholder_tag": "Upcoming Photo",
@@ -406,6 +399,15 @@ const translations = {
     "nav.faq": "ಪ್ರಶ್ನೋತ್ತರಗಳು",
     "nav.location": "ಸ್ಥಳ & ವಿಳಾಸ",
     "nav.contact": "ಸಂಪರ್ಕ",
+    "nav.location_contact": "ಸ್ಥಳ ಮತ್ತು ಸಂಪರ್ಕ",
+    "loc_contact.tag": "ಭೇಟಿ & ಸಂಪರ್ಕ",
+    "loc_contact.title": "ಸ್ಥಳ ಮತ್ತು ಸಂಪರ್ಕ",
+    "loc_contact.subtitle": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರಿನಲ್ಲಿರುವ ನಮ್ಮ ಕ್ಲಿನಿಕ್‌ಗೆ ಭೇಟಿ ನೀಡಿ ಅಥವಾ ನಮ್ಮ ವೈದ್ಯಕೀಯ ತಂಡದೊಂದಿಗೆ ನೇರವಾಗಿ ಸಂಪರ್ಕ ಸಾಧಿಸಿ.",
+    "contact.btn_call": "ಈಗ ಕರೆ ಮಾಡಿ",
+    "app.label_email": "ಇಮೇಲ್ ವಿಳಾಸ",
+    "app.ph_email": "patient@example.com",
+    "app.label_treatment": "ಚಿಕಿತ್ಸೆ ಆಯ್ಕೆಮಾಡಿ",
+    "app.btn_submit": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಸಲ್ಲಿಸಿ",
     "nav.book_cta": "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ",
     "brand.clinic_name": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್",
     "brand.clinic_name_caps": "ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್",
@@ -722,18 +724,26 @@ const translations = {
     "gallery.item_consultation_tag": "ಸಮಾಲೋಚನೆ",
     "gallery.item_consultation_title": "ವೈದ್ಯರ ಸಮಾಲೋಚನಾ ಕೊಠಡಿ",
     "gallery.item_consultation_desc": "ರೋಗಿಗಳೊಂದಿಗೆ ಚಿಕಿತ್ಸೆಯ ಬಗ್ಗೆ ಚರ್ಚಿಸಲು ಪ್ರತ್ಯೇಕ ಸಮಾಲೋಚನಾ ಕೊಠಡಿ.",
-    "gallery.patient_item1_tag": "ಆರೈಕೆ ತಂಡ",
-    "gallery.patient_item1_title": "ಸಮರ್ಪಿತ ರೋಗಿ ಆರೈಕೆ ತಂಡ",
-    "gallery.patient_item1_desc": "ಪ್ರತಿ ಹಂತದಲ್ಲೂ ರೋಗಿಗಳಿಗೆ ಪ್ರೀತಿಯಿಂದ ಸೇವೆ ನೀಡುವ ವೈದ್ಯರು ಮತ್ತು ಸಿಬ್ಬಂದಿ.",
-    "gallery.patient_item2_tag": "ಹಲ್ಲುಗಳ ಸೌಂದರ್ಯ",
-    "gallery.patient_item2_title": "ಸುಂದರ ನಗೆಯ ಕ್ಷಣಗಳು",
-    "gallery.patient_item2_desc": "ಆರ್ಥೋಡಾಂಟಿಕ್ ಮತ್ತು ಕಾಸ್ಮೆಟಿಕ್ ಚಿಕಿತ್ಸೆಯ ಮೂಲಕ ಸುಂದರ ನಗೆ ಪಡೆದ ಕ್ಷಣಗಳು.",
-    "gallery.patient_item3_tag": "ಮಕ್ಕಳ ನಗೆ",
-    "gallery.patient_item3_title": "ಮಕ್ಕಳ ದಂತ ಚಿಕಿತ್ಸಾ ಭೇಟಿ",
-    "gallery.patient_item3_desc": "ಮಕ್ಕಳಿಗೆ ಭಯವಿಲ್ಲದ, ಪ್ರೀತಿಪೂರ್ವಕ ಮತ್ತು ಆಟವಾಡುತ್ತಾ ನೀಡುವ ದಂತ ಚಿಕಿತ್ಸೆ.",
-    "gallery.patient_item4_tag": "ಹಿರಿಯರ ಆರೈಕೆ",
-    "gallery.patient_item4_title": "ಹಿರಿಯ ನಾಗರಿಕರ ದಂತ ಸೇವೆ",
-    "gallery.patient_item4_desc": "ಹಿರಿಯರಿಗೆ ಸುಲಭವಾಗಿ ಆಹಾರ ಸೇವಿಸಲು ನೆರವಾಗುವ ಕಸ್ಟಮ್ ಡೆಂಚರ್ ಚಿಕಿತ್ಸೆ.",
+    "gallery.patient_item1_tag": "ಚಿಕಿತ್ಸಾ ಆರೈಕೆ",
+    "gallery.patient_item1_title": "ರೋಗಿಗಳ ದಂತ ಚಿಕಿತ್ಸೆ ಮತ್ತು ಆರೈಕೆ",
+    "gallery.patient_item1_desc": "ಆರಾಮದಾಯಕ ಮತ್ತು ಆರೋಗ್ಯಕರ ಮುಗುಳುನಗೆಯನ್ನು ಖಚಿತಪಡಿಸುವ ಆಧುನಿಕ ದಂತ ಚಿಕಿತ್ಸೆಗಳು.",
+    "gallery.patient_item2_tag": "ಡಿಜಿಟಲ್ ಪರೀಕ್ಷೆ",
+    "gallery.patient_item2_title": "ಡಿಜಿಟಲ್ ಎಕ್ಸ್-ರೇ ಸಮಾಲೋಚನೆ ಮತ್ತು ಯೋಜನೆ",
+    "gallery.patient_item2_desc": "ಪ್ರತಿಯೊಬ್ಬ ರೋಗಿಯ ದಂತ ಆರೋಗ್ಯಕ್ಕೆ ತಕ್ಕಂತೆ ವಿವರವಾದ ಡಿಜಿಟಲ್ ಇಮೇಜಿಂಗ್ ಮತ್ತು ಸಮಾಲೋಚನೆ.",
+    "gallery.patient_item3_tag": "ಹಿರಿಯರ ಆರೈಕೆ",
+    "gallery.patient_item3_title": "ಹಿರಿಯ ನಾಗರಿಕರ ದಂತ ಆರೈಕೆ",
+    "gallery.patient_item3_desc": "ಹಿರಿಯ ನಾಗರಿಕರಿಗೆ ಜಗಿಯುವ ಸೌಕರ್ಯ ಮತ್ತು ನಗುವಿನ ಆತ್ಮವಿಶ್ವಾಸವನ್ನು ಮರಳಿ ತರುವ ಪ್ರೀತಿಯ ಆರೈಕೆ.",
+    "gallery.patient_item4_tag": "ದಂತ ಪರೀಕ್ಷೆ",
+    "gallery.patient_item4_title": "ದಂತ ಸಮಾಲೋಚನೆ ಮತ್ತು ತಪಾಸಣೆ",
+    "gallery.patient_item4_desc": "ಆರಾಮದಾಯಕ ವಾತಾವರಣದಲ್ಲಿ ವಿವರವಾದ ದಂತ ತಪಾಸಣೆ ಮತ್ತು ವೈಯಕ್ತಿಕ ಚಿಕಿತ್ಸಾ ಸಮಾಲೋಚನೆ.",
+    "gallery.patient_item5_tag": "ನಿಖರ ಚಿಕಿತ್ಸೆ",
+    "gallery.patient_item5_title": "ಸುಧಾರಿತ ನಿಖರ ದಂತ ಚಿಕಿತ್ಸೆ",
+    "gallery.patient_item5_desc": "ಆಧುನಿಕ ಮ್ಯಾಗ್ನಿಫಿಕೇಶನ್ ಮತ್ತು ತಜ್ಞ ಸಿಬ್ಬಂದಿ ಸಹಯೋಗದೊಂದಿಗೆ ನಡೆಸಲಾಗುವ ಕ್ಲಿನಿಕಲ್ ಚಿಕಿತ್ಸೆ.",
+    "gallery.patient_item6_tag": "ಮಕ್ಕಳ ಆರೈಕೆ",
+    "gallery.patient_item6_title": "ಮಕ್ಕಳ ಪ್ರೀತಿಯ ದಂತ ಭೇಟಿ & ಆರೈಕೆ",
+    "gallery.patient_item6_desc": "ಮಕ್ಕಳಿಗೆ ಭಯವಿಲ್ಲದ, ಪ್ರೀತಿಪೂರ್ವಕ ಮತ್ತು ಸೌಮ್ಯ ವಾತಾವರಣದಲ್ಲಿ ನೀಡಲಾಗುವ ಆರೋಗ್ಯ ಆರೈಕೆ.",
+    "gallery.btn_view_more": "ಇನ್ನಷ್ಟು ವೀಕ್ಷಿಸಿ",
+    "gallery.btn_view_less": "ಕಡಿಮೆ ತೋರಿಸಿ",
     "gallery.placeholder_tag": "ಮುಂದಿನ ಫೋಟೋ",
     "gallery.placeholder_badge": "ಸಮ್ಮತಿ ದೃಢೀಕರಿಸಲಾಗಿದೆ"
   },
@@ -755,6 +765,15 @@ const translations = {
     "nav.faq": "अक्सर पूछे जाने वाले सवाल",
     "nav.location": "स्थान",
     "nav.contact": "संपर्क",
+    "nav.location_contact": "स्थान एवं संपर्क",
+    "loc_contact.tag": "मुलाकात एवं संपर्क",
+    "loc_contact.title": "स्थान एवं संपर्क",
+    "loc_contact.subtitle": "सरस्वतीपुरम, मैसूर स्थित हमारे आधुनिक क्लिनिक में पधारें या हमारी देखभाल टीम से सीधे संपर्क करें।",
+    "contact.btn_call": "अभी कॉल करें",
+    "app.label_email": "ईमेल पता",
+    "app.ph_email": "patient@example.com",
+    "app.label_treatment": "उपचार चुनें",
+    "app.btn_submit": "अपॉइंटमेंट सबमिट करें",
     "nav.book_cta": "अपॉइंटमेंट बुक करें",
     "brand.clinic_name": "प्रभु डेंटल क्लिनिक",
     "brand.clinic_name_caps": "प्रभु डेंटल क्लिनिक",
@@ -1166,18 +1185,26 @@ const translations = {
     "gallery.item_consultation_tag": "परामर्श कक्ष",
     "gallery.item_consultation_title": "डॉक्टर्स कंसल्टेशन रूम",
     "gallery.item_consultation_desc": "विस्तृत रोगी मूल्यांकन और स्माइल प्लानिंग के लिए समर्पित कंसल्टेशन डेस्क।",
-    "gallery.patient_item1_tag": "देखभाल टीम",
-    "gallery.patient_item1_title": "समर्पित रोगी देखभाल टीम",
-    "gallery.patient_item1_desc": "हर विज़िट पर सौम्य, संवेदनशील और विशेषज्ञ देखभाल सुनिश्चित करने वाली टीम।",
-    "gallery.patient_item2_tag": "स्माइल यात्रा",
-    "gallery.patient_item2_title": "स्माइल ट्रांसफ़ॉर्मेशन मोमेंट्स",
-    "gallery.patient_item2_desc": "दांतों के संरेखण और कॉस्मेटिक स्माइल सुधार के सफल परिणाम।",
-    "gallery.patient_item3_tag": "बाल दंत चिकित्सा",
-    "gallery.patient_item3_title": "बच्चों की दंत चिकित्सा विज़िट",
-    "gallery.patient_item3_desc": "बच्चों के लिए तनाव-मुक्त, सौम्य और खुशनुमा माहौल में दंत देखभाल।",
-    "gallery.patient_item4_tag": "वरिष्ठ नागरिक देखभाल",
-    "gallery.patient_item4_title": "बुजुर्गों की दंत देखभाल व डेंचर्स",
-    "gallery.patient_item4_desc": "वरिष्ठ नागरिकों के लिए आरामदायक कस्टम डेंचर्स और आत्मविश्वास भरी मुस्कान।",
+    "gallery.patient_item1_tag": "उपचार व देखभाल",
+    "gallery.patient_item1_title": "दंत चिकित्सा एवं रोगी देखभाल",
+    "gallery.patient_item1_desc": "मरीजों के आराम और स्वस्थ मुस्कान को सुनिश्चित करने वाले आधुनिक दंत उपचार।",
+    "gallery.patient_item2_tag": "डिजिटल डायग्नोस्टिक्स",
+    "gallery.patient_item2_title": "डिजिटल एक्स-रे परामर्श एवं स्माइल प्लानिंग",
+    "gallery.patient_item2_desc": "प्रत्येक रोगी की मौखिक स्थिति के अनुसार डिजिटल इमेजिंग और उपचार परामर्श।",
+    "gallery.patient_item3_tag": "वरिष्ठ नागरिक देखभाल",
+    "gallery.patient_item3_title": "वरिष्ठ नागरिक दंत देखभाल व मुस्कान",
+    "gallery.patient_item3_desc": "वरिष्ठ नागरिकों के लिए खान-पान की सुविधा और मुस्कान का आत्मविश्वास लौटाने वाली करुणामयी देखभाल।",
+    "gallery.patient_item4_tag": "मौखिक जांच",
+    "gallery.patient_item4_title": "क्लिनिकल परामर्श एवं दंत परीक्षण",
+    "gallery.patient_item4_desc": "शांत और सहज वातावरण में संपूर्ण मौखिक परीक्षण एवं व्यक्तिगत उपचार परामर्श।",
+    "gallery.patient_item5_tag": "सटीक उपचार",
+    "gallery.patient_item5_title": "उन्नत सटीक दंत चिकित्सा",
+    "gallery.patient_item5_desc": "आधुनिक मैग्निफिकेशन लूप्स और विशेषज्ञ क्लिनिकल टीम के साथ किया जाने वाला दंत उपचार।",
+    "gallery.patient_item6_tag": "बाल चिकित्सा",
+    "gallery.patient_item6_title": "बच्चों की सौम्य विज़िट एवं देखभाल",
+    "gallery.patient_item6_desc": "बच्चों के लिए तनाव-मुक्त, संवेदनशील और खुशनुमा माहौल में की जाने वाली स्वास्थ्य देखभाल।",
+    "gallery.btn_view_more": "और देखें",
+    "gallery.btn_view_less": "कम देखें",
     "gallery.placeholder_tag": "आगामी तस्वीर",
     "gallery.placeholder_badge": "सहमति सत्यापित"
   }
@@ -1192,6 +1219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAppointmentForm();
   initLightbox();
   initGalleryTabs();
+  initGalleryLoadMore();
   initDateConstraints();
   initScrollReveal();
   initAboutCardsSlide();
@@ -1202,7 +1230,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTreatmentsCarousel();
   initMouseParallax();
   initTimelineProgress();
-  initFaqAccordion();
   initFaqAccordion();
 });
 
@@ -1623,6 +1650,7 @@ function initAppointmentForm() {
       return;
     }
 
+    const email = form.patientEmail ? form.patientEmail.value.trim() : '';
     const phoneClean = phone.replace(/\D/g, '');
     if (phoneClean.length !== 10) {
       const phoneMsg = currentLang === 'kn'
@@ -1657,6 +1685,7 @@ function initAppointmentForm() {
       '',
       '👤 *Patient Name:* ' + name,
       '📞 *Mobile:* ' + phone,
+      ...(email ? ['✉️ *Email:* ' + email] : []),
       '💻 *Consultation Mode:* ' + mode,
       '📅 *Preferred Date:* ' + date,
       '⏰ *Preferred Time:* ' + timeSlot,
@@ -1677,18 +1706,18 @@ function initAppointmentForm() {
 
     const summaryHtml = currentLang === 'kn'
       ? `<strong>ರೋಗಿಯ ಹೆಸರು:</strong> ${escapeHtml(name)}<br>
-         <strong>ಮೊಬೈಲ್ ಸಂಖ್ಯೆ:</strong> ${escapeHtml(phone)}<br>
+         <strong>ಮೊಬೈಲ್ ಸಂಖ್ಯೆ:</strong> ${escapeHtml(phone)}<br>${email ? '<strong>ಇಮೇಲ್:</strong> ' + escapeHtml(email) + '<br>' : ''}
          <strong>ಸಮಾಲೋಚನೆ ವಿಧಾನ:</strong> ${escapeHtml(mode)}<br>
          <strong>ದಿನಾಂಕ & ಸಮಯ:</strong> ${escapeHtml(date)} (${escapeHtml(timeSlot)})<br>
          <strong>ವಿಶೇಷತೆ/ಉದ್ದೇಶ:</strong> ${escapeHtml(reason)}`
       : currentLang === 'hi'
       ? `<strong>रोगी का नाम:</strong> ${escapeHtml(name)}<br>
-         <strong>मोबाइल नंबर:</strong> ${escapeHtml(phone)}<br>
+         <strong>मोबाइल नंबर:</strong> ${escapeHtml(phone)}<br>${email ? '<strong>ईमेल:</strong> ' + escapeHtml(email) + '<br>' : ''}
          <strong>परामर्श का प्रकार:</strong> ${escapeHtml(mode)}<br>
          <strong>अनुरोधित तिथि व समय:</strong> ${escapeHtml(date)} (${escapeHtml(timeSlot)})<br>
          <strong>विशेषज्ञता/कारण:</strong> ${escapeHtml(reason)}`
       : `<strong>Patient:</strong> ${escapeHtml(name)}<br>
-         <strong>Mobile:</strong> ${escapeHtml(phone)}<br>
+         <strong>Mobile:</strong> ${escapeHtml(phone)}<br>${email ? '<strong>Email:</strong> ' + escapeHtml(email) + '<br>' : ''}
          <strong>Consultation Type:</strong> ${escapeHtml(mode)}<br>
          <strong>Requested Date & Slot:</strong> ${escapeHtml(date)} (${escapeHtml(timeSlot)})<br>
          <strong>Specialty/Reason:</strong> ${escapeHtml(reason)}`;
@@ -1740,8 +1769,8 @@ function initAppointmentForm() {
  */
 function initGalleryTabs() {
   const tabs = document.querySelectorAll('.js-gallery-tab');
-  const grids = document.querySelectorAll('.gallery-grid-panel');
-  if (!tabs.length || !grids.length) return;
+  const panels = document.querySelectorAll('.js-gallery-panel');
+  if (!tabs.length || !panels.length) return;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
@@ -1752,15 +1781,71 @@ function initGalleryTabs() {
         t.classList.toggle('active', isActive);
         t.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
-      grids.forEach(grid => {
-        const isMatch = grid.getAttribute('data-gallery-cat') === targetCat;
-        grid.classList.toggle('is-active', isMatch);
+      panels.forEach(panel => {
+        const isMatch = panel.getAttribute('data-gallery-cat') === targetCat;
+        panel.classList.toggle('is-active', isMatch);
+        panel.style.display = isMatch ? 'block' : 'none';
+
         if (isMatch) {
-          grid.style.display = 'grid';
-        } else {
-          grid.style.display = 'none';
+          panel.querySelectorAll('.gallery-card:not(.gallery-card--hidden)').forEach(card => {
+            card.classList.add('is-revealed');
+          });
         }
       });
+    });
+  });
+}
+
+function initGalleryLoadMore() {
+  const toggleButtons = document.querySelectorAll('.js-gallery-toggle-btn');
+  if (!toggleButtons.length) return;
+
+  toggleButtons.forEach(btn => {
+    const category = btn.getAttribute('data-target');
+    const panel = btn.closest('.js-gallery-panel') || document.querySelector(`.js-gallery-panel[data-gallery-cat="${category}"]`);
+    if (!panel) return;
+
+    const hiddenCards = panel.querySelectorAll('.js-gallery-hidden');
+    const wrap = btn.closest('.gallery-more-wrap');
+
+    if (!hiddenCards.length && wrap) {
+      wrap.style.display = 'none';
+      return;
+    }
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isExpanded = btn.classList.contains('is-expanded');
+      const textEl = btn.querySelector('.js-gallery-more-text');
+
+      if (!isExpanded) {
+        hiddenCards.forEach(card => {
+          card.classList.remove('gallery-card--hidden');
+          card.classList.add('gallery-card--revealed');
+          card.classList.add('is-revealed');
+        });
+        btn.classList.add('is-expanded');
+        btn.setAttribute('aria-expanded', 'true');
+        if (textEl) {
+          textEl.setAttribute('data-i18n', 'gallery.btn_view_less');
+          textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_less']) || 'View Less';
+        }
+      } else {
+        hiddenCards.forEach(card => {
+          card.classList.add('gallery-card--hidden');
+          card.classList.remove('gallery-card--revealed');
+        });
+        btn.classList.remove('is-expanded');
+        btn.setAttribute('aria-expanded', 'false');
+        if (textEl) {
+          textEl.setAttribute('data-i18n', 'gallery.btn_view_more');
+          textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_more']) || 'View More';
+        }
+        const gallerySection = document.getElementById('gallery');
+        if (gallerySection) {
+          gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     });
   });
 }

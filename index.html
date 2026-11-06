@@ -30,7 +30,7 @@
     rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=25.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=26.0">
 
   <!-- Structured Data / JSON-LD for Local Medical Clinic -->
   <script type="application/ld+json">
@@ -199,10 +199,9 @@
         <a href="#team" class="nav-link" data-i18n="nav.team">Our Team</a>
         <a href="#legacy" class="nav-link" data-i18n="nav.legacy">Clinic Legacy</a>
         <a href="#gallery" class="nav-link" data-i18n="nav.gallery">Gallery</a>
-        <a href="#appointment" class="nav-link nav-link-appointment" data-i18n="nav.appointment">Appointment</a>
         <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
-        <a href="#location" class="nav-link" data-i18n="nav.location">Location</a>
-        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="#appointment" class="nav-link nav-link-appointment" data-i18n="nav.appointment">Appointment</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.location_contact">Location & Contact</a>
 
         <div class="mobile-only-cta">
           <a href="#appointment" class="btn btn-primary" style="width: 100%;" data-i18n="nav.book_cta">Book
@@ -995,7 +994,7 @@
                   <!-- Front Face with Treatment Image & Floating Icon -->
                   <div class="treatment-card-front">
                     <div class="treatment-card-thumb-wrap">
-                      <img src="assets/images/treatments/t5-teeth-whitening.jpg" alt="Professional LED Teeth Whitening"
+                      <img src="assets/images/treatments/t5-teeth-whitening.jpg?v=2" alt="Professional LED Teeth Whitening"
                         class="treatment-card-thumb" loading="lazy" />
                       <div class="treatment-thumb-icon-badge" title="Teeth Whitening">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -2095,79 +2094,80 @@
               </div>
             </article>
 
-            <!-- Patient 4: Smile Transformation Moments Placeholder -->
+            <!-- Patient 4: Clinical Consultation & Checkup -->
             <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="200">
-              <div class="gallery-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                </svg>
-                <strong style="color: var(--neutral-800); font-size: 14px;" data-i18n="gallery.patient_item4_title">Smile Transformation Moments</strong>
-                <span class="gallery-placeholder-badge" data-i18n="gallery.placeholder_badge">Consent Verified</span>
+              <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/patient-clinical-checkup.jpg"
+                title="Click to preview">
+                <img src="assets/images/patient-clinical-checkup.jpg" alt="Clinical Consultation &amp; Checkup" loading="lazy" />
               </div>
               <div class="gallery-content">
                 <div>
-                  <div class="gallery-item-tag" data-i18n="gallery.patient_item4_tag">Smile Journey</div>
-                  <h3 class="gallery-item-title" data-i18n="gallery.patient_item4_title">Smile Transformation Moments</h3>
-                  <p class="gallery-item-desc" data-i18n="gallery.patient_item4_desc">Orthodontic and cosmetic smile alignment progress documenting confident patient milestones.</p>
+                  <div class="gallery-item-tag" data-i18n="gallery.patient_item4_tag">Oral Examination</div>
+                  <h3 class="gallery-item-title" data-i18n="gallery.patient_item4_title">Clinical Consultation &amp; Checkup</h3>
+                  <p class="gallery-item-desc" data-i18n="gallery.patient_item4_desc">Thorough dental evaluation and customized oral healthcare consultation in a gentle environment.</p>
                 </div>
                 <div style="margin-top: 14px;">
-                  <span class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; opacity: 0.7; cursor: default;">
-                    <span data-i18n="gallery.placeholder_tag">Upcoming Photo</span>
-                  </span>
+                  <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/patient-clinical-checkup.jpg" style="width: 100%; justify-content: center;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span data-i18n="gallery.btn_view">View Full Size</span>
+                  </button>
                 </div>
               </div>
             </article>
 
-            <!-- Patient 5: Pediatric Gentle Visits Placeholder (Hidden initially) -->
+            <!-- Patient 5: Advanced Precision Dental Treatment (Hidden initially) -->
             <article class="gallery-card gallery-card--hidden js-gallery-hidden" data-reveal="fade-up" data-reveal-delay="250">
-              <div class="gallery-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"></path>
-                  <path d="M19 11v2a7 7 0 0 1-14 0v-2"></path>
-                  <line x1="12" y1="19" x2="12" y2="22"></line>
-                </svg>
-                <strong style="color: var(--neutral-800); font-size: 14px;" data-i18n="gallery.patient_item5_title">Pediatric Gentle Visits</strong>
-                <span class="gallery-placeholder-badge" data-i18n="gallery.placeholder_badge">Consent Verified</span>
+              <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/patient-precision-treatment.jpg"
+                title="Click to preview">
+                <img src="assets/images/patient-precision-treatment.jpg" alt="Advanced Precision Dental Treatment" loading="lazy" />
               </div>
               <div class="gallery-content">
                 <div>
-                  <div class="gallery-item-tag" data-i18n="gallery.patient_item5_tag">Young Smiles</div>
-                  <h3 class="gallery-item-title" data-i18n="gallery.patient_item5_title">Pediatric Gentle Visits</h3>
-                  <p class="gallery-item-desc" data-i18n="gallery.patient_item5_desc">Gentle and cheerful dental visits creating positive early healthcare memories for children.</p>
+                  <div class="gallery-item-tag" data-i18n="gallery.patient_item5_tag">Precision Care</div>
+                  <h3 class="gallery-item-title" data-i18n="gallery.patient_item5_title">Advanced Precision Dental Treatment</h3>
+                  <p class="gallery-item-desc" data-i18n="gallery.patient_item5_desc">Specialized dental procedure performed with magnification loupes and expert clinical assistance.</p>
                 </div>
                 <div style="margin-top: 14px;">
-                  <span class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; opacity: 0.7; cursor: default;">
-                    <span data-i18n="gallery.placeholder_tag">Upcoming Photo</span>
-                  </span>
+                  <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/patient-precision-treatment.jpg" style="width: 100%; justify-content: center;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span data-i18n="gallery.btn_view">View Full Size</span>
+                  </button>
                 </div>
               </div>
             </article>
 
-            <!-- Patient 6: Post-Treatment Smile Stories Placeholder (Hidden initially) -->
+            <!-- Patient 6: Pediatric Gentle Visits & Care (Hidden initially) -->
             <article class="gallery-card gallery-card--hidden js-gallery-hidden" data-reveal="fade-up" data-reveal-delay="300">
-              <div class="gallery-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                </svg>
-                <strong style="color: var(--neutral-800); font-size: 14px;" data-i18n="gallery.patient_item6_title">Post-Treatment Smile Stories</strong>
-                <span class="gallery-placeholder-badge" data-i18n="gallery.placeholder_badge">Consent Verified</span>
+              <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/patient-pediatric-care.jpg"
+                title="Click to preview">
+                <img src="assets/images/patient-pediatric-care.jpg" alt="Pediatric Gentle Visits &amp; Care" loading="lazy" />
               </div>
               <div class="gallery-content">
                 <div>
-                  <div class="gallery-item-tag" data-i18n="gallery.patient_item6_tag">Patient Journey</div>
-                  <h3 class="gallery-item-title" data-i18n="gallery.patient_item6_title">Post-Treatment Smile Stories</h3>
-                  <p class="gallery-item-desc" data-i18n="gallery.patient_item6_desc">Heartfelt patient experiences and successful treatment completions celebrated with healthy smiles.</p>
+                  <div class="gallery-item-tag" data-i18n="gallery.patient_item6_tag">Pediatric Care</div>
+                  <h3 class="gallery-item-title" data-i18n="gallery.patient_item6_title">Pediatric Gentle Visits &amp; Care</h3>
+                  <p class="gallery-item-desc" data-i18n="gallery.patient_item6_desc">Gentle, friendly healthcare visits creating positive and cheerful clinic memories for young children.</p>
                 </div>
                 <div style="margin-top: 14px;">
-                  <span class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; opacity: 0.7; cursor: default;">
-                    <span data-i18n="gallery.placeholder_tag">Upcoming Photo</span>
-                  </span>
+                  <button type="button" class="btn btn-secondary btn-sm js-open-lightbox" data-img="assets/images/patient-pediatric-care.jpg" style="width: 100%; justify-content: center;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px; margin-right: 6px;">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span data-i18n="gallery.btn_view">View Full Size</span>
+                  </button>
                 </div>
               </div>
             </article>
@@ -2186,202 +2186,8 @@
       </div>
     </section>
 
-    <section class="section-padding bg-sand" id="appointment">
-      <!-- Elegant Dental Watermark Emblem (Matches Clinic Logo) -->
-      <div class="section-watermark-wrap" aria-hidden="true">
-        <svg class="section-watermark-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M100 35 C82 16 50 20 40 46 C28 76 50 110 65 130 C78 148 92 165 100 176 C108 165 122 148 135 130 C150 110 172 76 160 46 C150 20 118 16 100 35 Z"
-            stroke="#C82333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <circle cx="100" cy="82" r="26" stroke="#C82333" stroke-width="1.5" stroke-dasharray="3 4" />
-          <path d="M100 68 V96 M86 82 H114" stroke="#C82333" stroke-width="2" stroke-linecap="round" />
-          <path d="M100 22 L102.5 28 L108 29 L104 33 L105 38.5 L100 36 L95 38.5 L96 33 L92 29 L97.5 28 Z"
-            fill="#C82333" />
-        </svg>
-      </div>
-      <div class="container">
-        <div class="section-header" data-reveal="fade-up">
-          <span class="section-tag" data-i18n="app.tag">Consultation Request</span>
-          <h2 class="section-title" data-i18n="app.title">Appointment</h2>
-          <p class="section-subtitle" data-i18n="app.subtitle">
-            Frontend appointment request prototype for Prabhu Dental Clinic, Saraswathipuram, Mysore.
-          </p>
-        </div>
-
-        <div class="appointment-wrapper">
-          <div class="appointment-grid">
-            <!-- Left Info Column -->
-            <div class="appointment-info-col" data-reveal="fade-right">
-              <h3 data-i18n="app.plan_title">Plan Your Clinic Visit</h3>
-              <p data-i18n="app.plan_desc">
-                Fill out the request form with your preferred consultation date and dental concern.
-              </p>
-
-              <div class="appointment-benefit-list">
-                <div class="appointment-benefit-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span data-i18n="app.benefit1">Consultations with Dr. Mahesh H.V. (MDS) or Dr. Ramya K.S. (MDS)</span>
-                </div>
-                <div class="appointment-benefit-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span data-i18n="app.benefit2">Morning Session (10:30 AM – 01:30 PM)</span>
-                </div>
-                <div class="appointment-benefit-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span data-i18n="app.benefit3">Evening Session (05:00 PM – 09:00 PM)</span>
-                </div>
-                <div class="appointment-benefit-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span data-i18n="app.benefit4">Convenient location near Bus Stop, Saraswathipuram, Mysore</span>
-                </div>
-              </div>
-
-              <!-- Timings Notice Card -->
-              <div
-                style="margin-top: 36px; padding: 20px 24px; background-color: var(--primary-light); border-radius: var(--radius-md); border: 1px solid var(--primary-soft);">
-                <strong style="color: var(--primary-dark); font-size: 14px; display: block; margin-bottom: 6px;"
-                  data-i18n="app.timings_heading">Clinic Timings</strong>
-                <span style="font-size: 13.5px; color: var(--neutral-800); font-weight: 600;"
-                  data-i18n="app.timings_schedule">
-                  Monday – Saturday:<br>
-                  10:30 AM – 01:30 PM<br>
-                  05:00 PM – 09:00 PM<br><br>
-                  Sunday:<br>
-                  Prior Appointments Only
-                </span>
-              </div>
-            </div>
-
-            <!-- Right Form Column -->
-            <div class="appointment-form-col" data-reveal="fade-left">
-              <form class="appointment-form" id="appointmentForm">
-                <div class="form-row-2">
-                  <div class="form-group">
-                    <label for="patientName"><span data-i18n="app.label_name">Patient Name</span> <span
-                        class="required">*</span></label>
-                    <input type="text" id="patientName" name="patientName" class="form-control"
-                      placeholder="Patient full name" data-i18n-placeholder="app.ph_name"
-                      pattern="^[A-Za-z\u0C80-\u0CFF\s\.]+$"
-                      title="Please enter letters and spaces only (no numbers or special characters)" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="mobileNumber"><span data-i18n="app.label_mobile">Mobile Number</span> <span
-                        class="required">*</span></label>
-                    <input type="tel" id="mobileNumber" name="mobileNumber" class="form-control"
-                      placeholder="Mobile number" data-i18n-placeholder="app.ph_mobile" inputmode="numeric"
-                      pattern="[0-9]{10}" maxlength="10" title="Please enter a 10-digit mobile number" required>
-                  </div>
-                </div>
-
-                <div class="form-row-2">
-                  <div class="form-group">
-                    <label for="consultationMode"><span data-i18n="app.label_mode">Consultation Type</span> <span
-                        class="required">*</span></label>
-                    <select id="consultationMode" name="consultationMode" class="form-control" required>
-                      <option value="In-Clinic Visit (Offline)" data-i18n="app.opt_mode_offline">In-Clinic Visit (Offline)</option>
-                      <option value="Online Video Consult (5:00 - 5:30 PM)" data-i18n="app.opt_mode_online">Online Video Consult (5:00 - 5:30 PM)</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="preferredDate"><span data-i18n="app.label_date">Preferred Date</span> <span
-                        class="required">*</span></label>
-                    <input type="date" id="preferredDate" name="preferredDate" class="form-control" required>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="preferredTime"><span data-i18n="app.label_time">Preferred Time</span> <span
-                      class="required">*</span></label>
-                  <select id="preferredTime" name="preferredTime" class="form-control" required>
-                    <option value="" data-i18n="app.opt_time_select">Select preferred session...</option>
-                    <option value="10:30 AM - 01:30 PM (Morning Session)" data-i18n="app.opt_time_morning">10:30 AM -
-                      01:30 PM (Morning Session)</option>
-                    <option value="05:00 PM - 09:00 PM (Evening Session)" data-i18n="app.opt_time_evening">05:00 PM -
-                      09:00 PM (Evening Session)</option>
-                    <option value="05:00 PM - 05:30 PM (Online Consult Session)" data-i18n="app.opt_time_online">05:00 PM -
-                      05:30 PM (Online Consult Session)</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="reasonForVisit"><span data-i18n="app.label_reason">Reason for Visit</span> <span
-                      class="required">*</span></label>
-                  <select id="reasonForVisit" name="reasonForVisit" class="form-control" required>
-                    <option value="" data-i18n="app.opt_reason_select">Select specialty or reason...</option>
-                    <option value="General Dentistry" data-i18n="treatments.t1_title">General Dentistry</option>
-                    <option value="Cosmetic Dentistry" data-i18n="treatments.t2_title">Cosmetic Dentistry</option>
-                    <option value="Orthodontics & Aligners" data-i18n="treatments.t3_title">Orthodontics & Aligners
-                    </option>
-                    <option value="Dental Implants" data-i18n="treatments.t4_title">Dental Implants</option>
-                    <option value="Teeth Whitening" data-i18n="treatments.t5_title">Teeth Whitening</option>
-                    <option value="Endodontics Treatment / Root Canal" data-i18n="treatments.t6_title">Endodontics Treatment / Root Canal</option>
-                    <option value="Paediatric Dentistry" data-i18n="treatments.t7_title">Paediatric Dentistry</option>
-                    <option value="Periodontics & Gum Care" data-i18n="treatments.t8_title">Periodontics & Gum Care
-                    </option>
-                    <option value="General Dental Consultation" data-i18n="app.opt_general">General Dental Consultation
-                    </option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="patientMessage" data-i18n="app.label_msg">Message</label>
-                  <textarea id="patientMessage" name="patientMessage" class="form-control"
-                    placeholder="Write any specific query or note..." data-i18n-placeholder="app.ph_msg"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-shimmer" style="width: 100%; padding: 16px;">
-                  <span data-i18n="app.btn_submit">REQUEST APPOINTMENT</span>
-                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </button>
-              </form>
-
-              <!-- Confirmed State Box -->
-              <div class="appointment-success-box" id="appointmentSuccess">
-                <div class="success-icon-wrap">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <h4 data-i18n="app.success_title">Thank you. Your appointment request has been received.</h4>
-                <p data-i18n="app.success_desc">
-                  This is a prototype demonstration. Your requested details have been recorded for frontend
-                  presentation.
-                </p>
-
-                <div id="confirmationSummary"
-                  style="background-color: #FFFFFF; border: 1px solid #D1FAE5; border-radius: var(--radius-md); padding: 16px; margin: 16px auto; max-width: 440px; font-size: 13.5px; color: #065F46; text-align: left; line-height: 1.6;">
-                </div>
-
-                <button type="button" class="btn btn-secondary btn-sm" id="appointmentReset" style="margin-top: 10px;">
-                  <span data-i18n="app.btn_reset">Submit Another Request</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
     <!-- =======================================================================
-         8B. DENTAL FAQ SECTION
+         9. DENTAL FAQ SECTION (IMMEDIATELY AFTER GALLERY)
          ======================================================================= -->
     <section class="section-padding bg-sand" id="faq">
       <!-- Watermark emblem -->
@@ -2512,10 +2318,10 @@
       </div>
     </section>
 
-<!-- =======================================================================
-         9. LOCATION & TIMINGS SECTION
+    <!-- =======================================================================
+         10. APPOINTMENT SECTION (IMMEDIATELY AFTER FAQ)
          ======================================================================= -->
-    <section class="section-padding bg-white" id="location">
+    <section class="section-padding bg-white" id="appointment">
       <!-- Elegant Dental Watermark Emblem (Matches Clinic Logo) -->
       <div class="section-watermark-wrap" aria-hidden="true">
         <svg class="section-watermark-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2528,148 +2334,194 @@
             fill="#C82333" />
         </svg>
       </div>
-
-
-      <!-- Location Simple Navigational Radar & Coordinate Grid Background Engine -->
-      <div class="location-simple-bg" aria-hidden="true">
-        <svg class="location-grid-svg" viewBox="0 0 1440 600" preserveAspectRatio="none">
-          <defs>
-            <pattern id="locCoordGrid" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(200, 35, 51, 0.06)" stroke-width="1" />
-              <circle cx="60" cy="60" r="1.5" fill="rgba(200, 35, 51, 0.14)" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#locCoordGrid)" />
-
-          <!-- Concentric Navigational Radar Sonar Rings centered around Mysore clinic coordinate marker -->
-          <circle class="loc-radar-ring ring-1" cx="300" cy="300" r="90" fill="none" stroke="rgba(200, 35, 51, 0.20)"
-            stroke-width="1.5" stroke-dasharray="4 4" />
-          <circle class="loc-radar-ring ring-2" cx="300" cy="300" r="170" fill="none" stroke="rgba(200, 35, 51, 0.15)"
-            stroke-width="1.5" />
-          <circle class="loc-radar-ring ring-3" cx="300" cy="300" r="250" fill="none" stroke="rgba(248, 113, 113, 0.12)"
-            stroke-width="1" stroke-dasharray="8 6" />
-          <circle class="loc-radar-ring ring-4" cx="300" cy="300" r="330" fill="none" stroke="rgba(200, 35, 51, 0.08)"
-            stroke-width="1" />
-
-          <!-- Navigational Crosshairs intersecting at clinic coordinates -->
-          <line x1="80" y1="300" x2="520" y2="300" stroke="rgba(200, 35, 51, 0.16)" stroke-width="1"
-            stroke-dasharray="6 4" />
-          <line x1="300" y1="80" x2="300" y2="520" stroke="rgba(200, 35, 51, 0.16)" stroke-width="1"
-            stroke-dasharray="6 4" />
-
-          <!-- Coordinate watermark text -->
-          <text x="315" y="290" fill="rgba(200, 35, 51, 0.28)" font-size="11" font-family="monospace"
-            letter-spacing="1.5">12.3025° N, 76.6280° E</text>
-        </svg>
-
-        <div class="loc-sonar-pulse pulse-1"></div>
-        <div class="loc-sonar-pulse pulse-2"></div>
-      </div>
       <div class="container">
         <div class="section-header" data-reveal="fade-up">
-          <span class="section-tag" data-i18n="loc.tag">Find Prabhu Dental Clinic</span>
-          <h2 class="section-title" data-i18n="loc.title">Location</h2>
-          <p class="section-subtitle" data-i18n="loc.subtitle">
-            Centrally situated in Saraswathipuram, Mysore.
+          <span class="section-tag" data-i18n="app.tag">Consultation Request</span>
+          <h2 class="section-title" data-i18n="app.title">Appointment</h2>
+          <p class="section-subtitle" data-i18n="app.subtitle">
+            Frontend appointment request prototype for Prabhu Dental Clinic, Saraswathipuram, Mysore.
           </p>
         </div>
 
-        <div class="map-layout-grid">
-          <!-- Location Details Pane -->
-          <div class="map-details-pane" data-reveal="fade-right">
-            <h3 data-i18n="brand.clinic_name">Prabhu Dental Clinic</h3>
+        <div class="appointment-wrapper">
+          <div class="appointment-grid">
+            <!-- Left Info Column -->
+            <div class="appointment-info-col" data-reveal="fade-right">
+              <h3 data-i18n="app.plan_title">Plan Your Clinic Visit</h3>
+              <p data-i18n="app.plan_desc">
+                Fill out the request form with your preferred consultation date and dental concern.
+              </p>
 
-            <div class="location-address-box">
-              <div class="location-address-line">
-                <strong data-i18n="loc.label_address">Address:</strong><br>
-                <span data-i18n="loc.full_address">388, 5th Cross, 14th Main,<br>Near Bus Stop,<br>Saraswathipuram,
-                  Saraswatipuram.,<br>Mysore</span>
-              </div>
-            </div>
-
-            <!-- Timings Card Component with Animated Clock -->
-            <div
-              style="background-color: var(--primary-light); border: 1px solid var(--primary-soft); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px;">
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                <svg class="timings-clock-spinning" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                  style="width: 18px; height: 18px; color: var(--primary);">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                <strong
-                  style="color: var(--primary-dark); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; display: block;"
-                  data-i18n="loc.timings_title">
-                  Clinic Timings
-                </strong>
-              </div>
-              <div style="font-size: 14.5px; color: var(--neutral-900); font-weight: 700;" data-i18n="loc.days">
-                MONDAY – SATURDAY
-              </div>
-              <div style="font-size: 14px; color: var(--neutral-700); margin-top: 2px;" data-i18n="loc.hours">
-                10:30 AM – 01:30 PM<br>
-                05:00 PM – 09:00 PM
-              </div>
-              <div style="font-size: 14.5px; color: var(--neutral-900); font-weight: 700; margin-top: 8px;"
-                data-i18n="loc.sunday_label">
-                SUNDAY
-              </div>
-              <div style="font-size: 14px; color: var(--neutral-700); margin-top: 2px;" data-i18n="loc.sunday_hours">
-                Prior Appointments Only
-              </div>
-            </div>
-
-            <div class="location-points">
-              <div class="location-point-row">
-                <span class="location-radar-pin">
-                  <span class="radar-sonar-ring"></span>
-                  <span class="radar-sonar-ring radar-sonar-ring-2"></span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" style="position: relative; z-index: 2;">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
+              <div class="appointment-benefit-list">
+                <div class="appointment-benefit-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                </span>
-                <span data-i18n="loc.landmark">Near Bus Stop, Saraswathipuram, Mysore</span>
+                  <span data-i18n="app.benefit1">Consultations with Dr. Mahesh H.V. (MDS) or Dr. Ramya K.S. (MDS)</span>
+                </div>
+                <div class="appointment-benefit-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span data-i18n="app.benefit2">Morning Session (10:30 AM – 01:30 PM)</span>
+                </div>
+                <div class="appointment-benefit-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span data-i18n="app.benefit3">Evening Session (05:00 PM – 09:00 PM)</span>
+                </div>
+                <div class="appointment-benefit-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span data-i18n="app.benefit4">Convenient location near Bus Stop, Saraswathipuram, Mysore</span>
+                </div>
               </div>
-              <div class="location-point-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                  </path>
-                </svg>
-                <span data-i18n="loc.coordinates">Coordinates: 12.302484, 76.627998</span>
+
+              <!-- Timings Notice Card -->
+              <div
+                style="margin-top: 36px; padding: 20px 24px; background-color: var(--primary-light); border-radius: var(--radius-md); border: 1px solid var(--primary-soft);">
+                <strong style="color: var(--primary-dark); font-size: 14px; display: block; margin-bottom: 6px;"
+                  data-i18n="app.timings_heading">Clinic Timings</strong>
+                <span style="font-size: 13.5px; color: var(--neutral-800); font-weight: 600;"
+                  data-i18n="app.timings_schedule">
+                  Monday – Saturday:<br>
+                  10:30 AM – 01:30 PM<br>
+                  05:00 PM – 09:00 PM<br><br>
+                  Sunday:<br>
+                  Prior Appointments Only
+                </span>
               </div>
             </div>
 
-            <a href="https://www.google.com/maps/dir//12.302484,76.627998" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                stroke-linejoin="round" style="width: 18px; height: 18px;">
-                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-              </svg>
-              <span data-i18n="loc.btn_directions">GET DIRECTIONS</span>
-            </a>
-          </div>
+            <!-- Right Form Column -->
+            <div class="appointment-form-col" data-reveal="fade-left">
+              <form class="appointment-form" id="appointmentForm">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="patientName"><span data-i18n="app.label_name">Patient Name</span> <span
+                        class="required">*</span></label>
+                    <input type="text" id="patientName" name="patientName" class="form-control"
+                      placeholder="Patient full name" data-i18n-placeholder="app.ph_name"
+                      pattern="^[A-Za-z\u0C80-\u0CFF\s\.]+$"
+                      title="Please enter letters and spaces only (no numbers or special characters)" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="mobileNumber"><span data-i18n="app.label_mobile">Mobile Number</span> <span
+                        class="required">*</span></label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" class="form-control"
+                      placeholder="Mobile number" data-i18n-placeholder="app.ph_mobile" inputmode="numeric"
+                      pattern="[0-9]{10}" maxlength="10" title="Please enter a 10-digit mobile number" required>
+                  </div>
+                </div>
 
-          <!-- Embedded Map Pane -->
-          <div class="map-frame-pane" data-reveal="fade-left">
-            <iframe title="Prabhu Dental Clinic Saraswathipuram Mysore Map Location"
-              src="https://maps.google.com/maps?q=12.302484,76.627998&amp;hl=en&amp;z=17&amp;output=embed"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="consultationMode"><span data-i18n="app.label_mode">Consultation Type</span> <span
+                        class="required">*</span></label>
+                    <select id="consultationMode" name="consultationMode" class="form-control" required>
+                      <option value="In-Clinic Visit (Offline)" data-i18n="app.opt_mode_offline">In-Clinic Visit (Offline)</option>
+                      <option value="Online Video Consult (5:00 - 5:30 PM)" data-i18n="app.opt_mode_online">Online Video Consult (5:00 - 5:30 PM)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="preferredDate"><span data-i18n="app.label_date">Preferred Date</span> <span
+                        class="required">*</span></label>
+                    <input type="date" id="preferredDate" name="preferredDate" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="preferredTime"><span data-i18n="app.label_time">Preferred Time</span> <span
+                      class="required">*</span></label>
+                  <select id="preferredTime" name="preferredTime" class="form-control" required>
+                    <option value="" data-i18n="app.opt_time_select">Select preferred session...</option>
+                    <option value="10:30 AM - 01:30 PM (Morning Session)" data-i18n="app.opt_time_morning">10:30 AM -
+                      01:30 PM (Morning Session)</option>
+                    <option value="05:00 PM - 09:00 PM (Evening Session)" data-i18n="app.opt_time_evening">05:00 PM -
+                      09:00 PM (Evening Session)</option>
+                    <option value="05:00 PM - 05:30 PM (Online Consult Session)" data-i18n="app.opt_time_online">05:00 PM -
+                      05:30 PM (Online Consult Session)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="reasonForVisit"><span data-i18n="app.label_treatment">Select Treatment</span> <span
+                      class="required">*</span></label>
+                  <select id="reasonForVisit" name="reasonForVisit" class="form-control" required>
+                    <option value="" data-i18n="app.opt_reason_select">Select specialty or reason...</option>
+                    <option value="General Dentistry" data-i18n="treatments.t1_title">General Dentistry</option>
+                    <option value="Cosmetic Dentistry" data-i18n="treatments.t2_title">Cosmetic Dentistry</option>
+                    <option value="Orthodontics & Aligners" data-i18n="treatments.t3_title">Orthodontics & Aligners
+                    </option>
+                    <option value="Dental Implants" data-i18n="treatments.t4_title">Dental Implants</option>
+                    <option value="Teeth Whitening" data-i18n="treatments.t5_title">Teeth Whitening</option>
+                    <option value="Endodontics Treatment / Root Canal" data-i18n="treatments.t6_title">Endodontics Treatment / Root Canal</option>
+                    <option value="Paediatric Dentistry" data-i18n="treatments.t7_title">Paediatric Dentistry</option>
+                    <option value="Periodontics & Gum Care" data-i18n="treatments.t8_title">Periodontics & Gum Care
+                    </option>
+                    <option value="General Dental Consultation" data-i18n="app.opt_general">General Dental Consultation
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="patientMessage" data-i18n="app.label_msg">Message</label>
+                  <textarea id="patientMessage" name="patientMessage" class="form-control"
+                    placeholder="Write any specific query or note..." data-i18n-placeholder="app.ph_msg"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-shimmer" style="width: 100%; padding: 16px;">
+                  <span data-i18n="app.btn_submit">REQUEST APPOINTMENT</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+
+              <!-- Confirmed State Box -->
+              <div class="appointment-success-box" id="appointmentSuccess">
+                <div class="success-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <h4 data-i18n="app.success_title">Thank you. Your appointment request has been received.</h4>
+                <p data-i18n="app.success_desc">
+                  This is a prototype demonstration. Your requested details have been recorded for frontend
+                  presentation.
+                </p>
+
+                <div id="confirmationSummary"
+                  style="background-color: #FFFFFF; border: 1px solid #D1FAE5; border-radius: var(--radius-md); padding: 16px; margin: 16px auto; max-width: 440px; font-size: 13.5px; color: #065F46; text-align: left; line-height: 1.6;">
+                </div>
+
+                <button type="button" class="btn btn-secondary btn-sm" id="appointmentReset" style="margin-top: 10px;">
+                  <span data-i18n="app.btn_reset">Submit Another Request</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =======================================================================
-         10. CONTACT SECTION
+         10. LOCATION & CONTACT (COMBINED SECTION)
          ======================================================================= -->
     <section class="section-padding bg-sand" id="contact">
-      <!-- Elegant Dental Watermark Emblem (Matches Clinic Logo) -->
+      <!-- Hidden anchor for #location links -->
+      <div id="location" style="position: absolute; top: -80px; left: 0; visibility: hidden; pointer-events: none;" aria-hidden="true"></div>
+
+      <!-- Watermark emblem -->
       <div class="section-watermark-wrap" aria-hidden="true">
         <svg class="section-watermark-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -2682,8 +2534,7 @@
         </svg>
       </div>
 
-
-      <!-- Contact Simple Communication Ripple & Wave Background Engine -->
+      <!-- Contact Waves Background Engine -->
       <div class="contact-simple-bg" aria-hidden="true">
         <svg class="contact-waves-svg" viewBox="0 0 1440 600" preserveAspectRatio="none">
           <defs>
@@ -2692,35 +2543,31 @@
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#contactDotGrid)" />
-
-          <!-- Communication Waves expanding behind contact cards -->
           <circle class="contact-comm-ring c-ring-1" cx="240" cy="320" r="110" fill="none"
             stroke="rgba(200, 35, 51, 0.18)" stroke-width="1.5" stroke-dasharray="6 4" />
           <circle class="contact-comm-ring c-ring-2" cx="720" cy="320" r="150" fill="none"
             stroke="rgba(248, 113, 113, 0.15)" stroke-width="1.5" />
           <circle class="contact-comm-ring c-ring-3" cx="1200" cy="320" r="110" fill="none"
             stroke="rgba(200, 35, 51, 0.18)" stroke-width="1.5" stroke-dasharray="6 4" />
-
-          <!-- Gentle Connecting Wave Arc uniting the contact cards -->
           <path class="contact-wave-arc" d="M240,320 Q480,220 720,320 T1200,320" fill="none"
             stroke="rgba(200, 35, 51, 0.14)" stroke-width="2" stroke-dasharray="6 6" />
         </svg>
-
         <div class="contact-ambient-glow glow-left"></div>
         <div class="contact-ambient-glow glow-center"></div>
         <div class="contact-ambient-glow glow-right"></div>
       </div>
+
       <div class="container">
         <div class="section-header" data-reveal="fade-up">
-          <span class="section-tag" data-i18n="contact.tag">Direct Information</span>
-          <h2 class="section-title" data-i18n="contact.title">Contact</h2>
-          <p class="section-subtitle" data-i18n="contact.subtitle">
-            Prabhu Dental Clinic, Saraswathipuram, Mysore.
+          <span class="section-tag" data-i18n="loc_contact.tag">Visit &amp; Connect</span>
+          <h2 class="section-title" data-i18n="loc_contact.title">Location &amp; Contact</h2>
+          <p class="section-subtitle" data-i18n="loc_contact.subtitle">
+            Centrally situated in Saraswathipuram, Mysore. Visit our modern clinic or connect with our care team directly.
           </p>
         </div>
 
         <div class="contact-cards-grid">
-          <!-- Card 1: Address -->
+          <!-- Card 1: Address & Location -->
           <div class="contact-card-box" role="button" tabindex="0" aria-pressed="false" title="Click to highlight card"
             data-reveal="fade-up" data-reveal-delay="100">
             <div class="contact-card-icon">
@@ -2737,13 +2584,20 @@
               Saraswathipuram, Saraswatipuram.,<br>
               Mysore
             </p>
+            <div style="font-size: 13px; color: var(--neutral-600); margin-bottom: 12px;">
+              <span data-i18n="loc.landmark">Near Bus Stop, Saraswathipuram, Mysore</span><br>
+              <span data-i18n="loc.coordinates" style="font-size: 12px; opacity: 0.85;">Coordinates: 12.302484, 76.627998</span>
+            </div>
             <a href="https://www.google.com/maps/dir//12.302484,76.627998" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-primary btn-sm" style="align-self: flex-start;">
+              class="btn btn-outline-primary btn-sm" style="align-self: flex-start; margin-top: auto;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px; margin-right: 6px;">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+              </svg>
               <span data-i18n="loc.btn_directions">GET DIRECTIONS</span>
             </a>
           </div>
 
-          <!-- Card 2: Timings -->
+          <!-- Card 2: Timings / Working Hours -->
           <div class="contact-card-box" role="button" tabindex="0" aria-pressed="false" title="Click to highlight card"
             data-reveal="fade-up" data-reveal-delay="200">
             <div class="contact-card-icon">
@@ -2753,18 +2607,19 @@
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
             </div>
-            <h4 data-i18n="loc.timings_title">Timings</h4>
+            <h4 data-i18n="loc.timings_title">Clinic Timings</h4>
             <p>
               <strong data-i18n="loc.days">Monday – Saturday:</strong><br>
               <span data-i18n="loc.hours">10:30 AM – 01:30 PM<br>05:00 PM – 09:00 PM</span><br>
-              <strong style="display: inline-block; margin-top: 6px;" data-i18n="loc.sunday_label">Sunday:</strong><br>
+              <strong style="display: inline-block; margin-top: 10px;" data-i18n="loc.sunday_label">Sunday:</strong><br>
               <span data-i18n="loc.sunday_hours">Prior Appointments Only</span>
             </p>
-            <span class="contact-placeholder-pill" data-i18n="hero.specialty">Orthodontics &amp; Periodontistry
-              Clinic</span>
+            <div style="margin-top: auto; padding-top: 12px;">
+              <span class="contact-placeholder-pill" data-i18n="hero.specialty">Orthodontics &amp; Periodontistry Clinic</span>
+            </div>
           </div>
 
-          <!-- Card 3: Contact Channels & Direct Connect -->
+          <!-- Card 3: Contact Details & Direct Connect -->
           <div class="contact-card-box" role="button" tabindex="0" aria-pressed="false" title="Click to highlight card"
             data-reveal="fade-up" data-reveal-delay="300">
             <div class="contact-card-icon">
@@ -2795,7 +2650,6 @@
                     style="color: var(--primary); text-decoration: none; font-weight: 600;">9900804697</a>
                 </div>
               </div>
-
 
               <!-- WhatsApp with Official WhatsApp Icon -->
               <div class="contact-channel-row">
@@ -2835,9 +2689,14 @@
                 </div>
               </div>
             </div>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <a href="#appointment" class="btn btn-primary btn-sm">
-                <span data-i18n="nav.book_cta">BOOK AN APPOINTMENT</span>
+
+            <!-- Action Buttons: Call Now, WhatsApp, Book Appointment -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto;">
+              <a href="tel:08212541701" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px;">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span data-i18n="contact.btn_call">Call Now</span>
               </a>
               <a href="https://wa.me/919448984480" target="_blank" rel="noopener noreferrer" class="btn btn-sm"
                 style="background-color: #25D366; color: #FFFFFF; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
@@ -2849,9 +2708,13 @@
                 </svg>
                 <span data-i18n="contact.whatsapp_btn">WhatsApp</span>
               </a>
+              <a href="#appointment" class="btn btn-outline-primary btn-sm">
+                <span data-i18n="nav.book_cta">Book Appointment</span>
+              </a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -2899,10 +2762,9 @@
             <a href="#team" data-i18n="nav.team">Our Team</a>
             <a href="#legacy" data-i18n="nav.legacy">Clinic Legacy</a>
             <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
-            <a href="#appointment" data-i18n="nav.appointment">Appointment</a>
             <a href="#faq" data-i18n="nav.faq">FAQ</a>
-            <a href="#location" data-i18n="nav.location">Location</a>
-            <a href="#contact" data-i18n="nav.contact">Contact</a>
+            <a href="#appointment" data-i18n="nav.appointment">Appointment</a>
+            <a href="#contact" data-i18n="nav.location_contact">Location & Contact</a>
           </div>
         </div>
 
@@ -3108,7 +2970,7 @@
   </div>
 
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js?v=26.0"></script>
+  <script src="assets/js/main.js?v=33.0"></script>
   <script>
     // Update copyright year
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
