@@ -30,7 +30,7 @@
     rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=26.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=27.0">
 
   <!-- Structured Data / JSON-LD for Local Medical Clinic -->
   <script type="application/ld+json">
@@ -157,7 +157,7 @@
       <div class="top-bar-item">
         <div class="status-badge open js-live-status">
           <span class="status-dot"></span>
-          <span data-i18n="topbar.hours">Mon – Sat: 10:30 AM – 1:30 PM &bull; 5:00 PM – 9:00 PM | Sun: Prior Appointments Only</span>
+          <span data-i18n="topbar.hours">Mon – Sat: 10:30 AM – 1:30 PM &bull; 5:00 PM – 9:00 PM | Sun: Prior Appointments | Video Consult: 5:00 PM – 5:30 PM</span>
         </div>
       </div>
     </div>
@@ -411,6 +411,20 @@
               <div class="floating-badge-content">
                 <h4 data-i18n="hero.badge_sunday_title">Sunday</h4>
                 <p data-i18n="hero.badge_sunday_sub">Prior Appointments Only</p>
+              </div>
+            </div>
+
+            <div class="floating-badge floating-badge-timing-video">
+              <div class="floating-badge-icon" style="color: #0284C7; background: rgba(2, 132, 199, 0.1);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+              </div>
+              <div class="floating-badge-content">
+                <h4 data-i18n="hero.badge_video_title">Online Video Consultation</h4>
+                <p data-i18n="hero.badge_video_sub">5:00 PM – 5:30 PM</p>
               </div>
             </div>
             </div>
@@ -2310,7 +2324,7 @@
             </button>
             <div class="faq-accordion-content">
               <div class="faq-answer-inner" data-i18n="faq.a6">
-                You can request an appointment directly through our online appointment form or by messaging us on WhatsApp (+91 94489 84480). The clinic operates Monday through Saturday (10:30 AM–1:30 PM &amp; 5:00 PM–9:00 PM), while Sundays are reserved exclusively for prior scheduled appointments.
+                You can request an appointment directly through our online appointment form or by messaging us on WhatsApp (+91 94489 84480). The clinic operates Monday through Saturday (10:30 AM–1:30 PM &amp; 5:00 PM–9:00 PM), with Online Video Consultation available from 5:00 PM to 5:30 PM. Sundays are reserved exclusively for prior scheduled appointments.
               </div>
             </div>
           </div>
@@ -2379,6 +2393,13 @@
                     stroke-linejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
+                  <span data-i18n="app.benefit_video">Online Video Consultation (5:00 PM – 5:30 PM)</span>
+                </div>
+                <div class="appointment-benefit-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span data-i18n="app.benefit4">Convenient location near Bus Stop, Saraswathipuram, Mysore</span>
                 </div>
               </div>
@@ -2394,7 +2415,9 @@
                   10:30 AM – 01:30 PM<br>
                   05:00 PM – 09:00 PM<br><br>
                   Sunday:<br>
-                  Prior Appointments Only
+                  Prior Appointments Only<br><br>
+                  Online Video Consultation:<br>
+                  5:00 PM – 5:30 PM
                 </span>
               </div>
             </div>
@@ -2612,7 +2635,9 @@
               <strong data-i18n="loc.days">Monday – Saturday:</strong><br>
               <span data-i18n="loc.hours">10:30 AM – 01:30 PM<br>05:00 PM – 09:00 PM</span><br>
               <strong style="display: inline-block; margin-top: 10px;" data-i18n="loc.sunday_label">Sunday:</strong><br>
-              <span data-i18n="loc.sunday_hours">Prior Appointments Only</span>
+              <span data-i18n="loc.sunday_hours">Prior Appointments Only</span><br>
+              <strong style="display: inline-block; margin-top: 10px;" data-i18n="loc.video_label">Online Video Consultation</strong><br>
+              <span data-i18n="loc.video_hours">5:00 PM – 5:30 PM</span>
             </p>
             <div style="margin-top: auto; padding-top: 12px;">
               <span class="contact-placeholder-pill" data-i18n="hero.specialty">Orthodontics &amp; Periodontistry Clinic</span>
@@ -2803,7 +2828,8 @@
                 <div>
                   <span data-i18n="loc.days">MONDAY – SATURDAY</span>: <span data-i18n="loc.hours_inline">10:30 AM –
                     01:30 PM &bull; 05:00 PM – 09:00 PM</span><br>
-                  <span data-i18n="loc.sunday_label">SUNDAY</span>: <span data-i18n="loc.sunday_hours_inline">Prior Appointments Only</span>
+                  <span data-i18n="loc.sunday_label">SUNDAY</span>: <span data-i18n="loc.sunday_hours_inline">Prior Appointments Only</span><br>
+                  <span data-i18n="loc.video_label">ONLINE VIDEO CONSULTATION</span>: <span data-i18n="loc.video_hours_inline">5:00 PM – 5:30 PM</span>
                 </div>
               </div>
             </div>
@@ -2970,7 +2996,7 @@
   </div>
 
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js?v=33.0"></script>
+  <script src="assets/js/main.js?v=34.0"></script>
   <script>
     // Update copyright year
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
