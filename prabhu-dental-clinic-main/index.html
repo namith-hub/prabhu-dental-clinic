@@ -2081,7 +2081,7 @@
           </article>
 
           <!-- Clinic 5: Equipment & Autoclave -->
-          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="250">
+          <article class="gallery-card gallery-card--hidden js-gallery-hidden" data-reveal="fade-up" data-reveal-delay="250">
             <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/clinic-sterilization-facility.jpg"
               title="Click to preview">
               <img src="assets/images/clinic-sterilization-facility.jpg" alt="Advanced Equipment & Autoclave" loading="lazy" />
@@ -2107,7 +2107,7 @@
           </article>
 
           <!-- Clinic 6: Doctors Consultation -->
-          <article class="gallery-card" data-reveal="fade-up" data-reveal-delay="300">
+          <article class="gallery-card gallery-card--hidden js-gallery-hidden" data-reveal="fade-up" data-reveal-delay="300">
             <div class="gallery-image-box js-open-lightbox" style="cursor: pointer;" data-img="assets/images/clinic-consultation-office.jpg"
               title="Click to preview">
               <img src="assets/images/clinic-consultation-office.jpg" alt="Doctors Consultation Room" loading="lazy" />
@@ -2247,6 +2247,16 @@
             </div>
           </article>
 
+        </div>
+
+        <!-- View More / View Less Button -->
+        <div class="gallery-more-wrap" id="galleryMoreWrap">
+          <button type="button" class="btn-gallery-more js-gallery-toggle-more" id="galleryToggleMoreBtn" aria-expanded="false">
+            <span class="js-gallery-more-text" data-i18n="gallery.btn_view_more">View More Photos</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
     </section>

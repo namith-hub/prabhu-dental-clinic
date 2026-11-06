@@ -221,6 +221,8 @@ const translations = {
     "gallery.title": "Photo Gallery",
     "gallery.subtitle": "Explore our modern clinic facilities and patient care moments in Saraswathipuram, Mysore.",
     "gallery.btn_view": "View Full Size",
+    "gallery.btn_view_more": "View More Photos",
+    "gallery.btn_view_less": "View Less",
     "gallery.item1_tag": "Real Photo",
     "gallery.item1_title": "Clinic Exterior",
     "gallery.item1_desc": "Actual exterior view of Prabhu Dental Clinic premises and signboard at 388, 5th Cross, 14th Main, Saraswathipuram, Mysore.",
@@ -573,6 +575,8 @@ const translations = {
     "gallery.title": "ಫೋಟೋ ಗ್ಯಾಲರಿ",
     "gallery.subtitle": "ನಮ್ಮ ಆಧುನಿಕ ಕ್ಲಿನಿಕ್ ಸೌಲಭ್ಯಗಳು ಮತ್ತು ರೋಗಿಗಳ ಸುಂದರ ಕ್ಷಣಗಳನ್ನು ವೀಕ್ಷಿಸಿ.",
     "gallery.btn_view": "ದೊಡ್ಡದಾಗಿ ವೀಕ್ಷಿಸಿ",
+    "gallery.btn_view_more": "ಇನ್ನಷ್ಟು ಫೋಟೋಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
+    "gallery.btn_view_less": "ಕಡಿಮೆ ತೋರಿಸಿ",
     "gallery.item1_tag": "ನೈಜ ಚಿತ್ರ",
     "gallery.item1_title": "ಕ್ಲಿನಿಕ್ ಮುಂಭಾಗ",
     "gallery.item1_desc": "ಸರಸ್ವತಿಪುರಂ, ಮೈಸೂರಿನ 388, 5ನೇ ಕ್ರಾಸ್, 14ನೇ ಮುಖ್ಯರಸ್ತೆಯಲ್ಲಿರುವ ಪ್ರಭು ಡೆಂಟಲ್ ಕ್ಲಿನಿಕ್‌ನ ನೈಜ ನೋಟ ಮತ್ತು ಬೋರ್ಡ್.",
@@ -964,6 +968,8 @@ const translations = {
     "gallery.title": "फ़ोटो गैलरी",
     "gallery.subtitle": "सरस्वतीपुरम, मैसूर में हमारे आधुनिक क्लिनिक और रोगी देखभाल के पलों की झलकियां देखें।",
     "gallery.btn_view": "बड़ा करके देखें",
+    "gallery.btn_view_more": "और फोटो देखें",
+    "gallery.btn_view_less": "कम देखें",
     "gallery.item1_tag": "बाहरी दृश्य",
     "gallery.item1_title": "क्लिनिक का मुख्य भवन",
     "gallery.item1_desc": "388, 5वीं क्रॉस, 14वीं मेन, सरस्वतीपुरम, मैसूर में स्थित क्लिनिक।",
@@ -1168,6 +1174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAppointmentForm();
   initLightbox();
   initGalleryTabs();
+  initGalleryLoadMore();
   initDateConstraints();
   initScrollReveal();
   initAboutCardsSlide();
@@ -1714,6 +1721,69 @@ function initAppointmentForm() {
 /**
  * Gallery Category Tab Switcher (Clinic Photos <-> Patient Photos)
  */
+
+let updateGalleryMoreButtonState = null;
+
+function initGalleryLoadMore() {
+  const moreWrap = document.getElementById('galleryMoreWrap');
+  const toggleBtn = document.getElementById('galleryToggleMoreBtn');
+  if (!moreWrap || !toggleBtn) return;
+
+  updateGalleryMoreButtonState = function() {
+    const activeGrid = document.querySelector('.gallery-grid-panel.is-active');
+    if (!activeGrid) {
+      moreWrap.style.display = 'none';
+      return;
+    }
+    const hiddenCards = activeGrid.querySelectorAll('.js-gallery-hidden');
+    if (hiddenCards.length === 0) {
+      moreWrap.style.display = 'none';
+    } else {
+      moreWrap.style.display = 'flex';
+    }
+  };
+
+  updateGalleryMoreButtonState();
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const activeGrid = document.querySelector('.gallery-grid-panel.is-active');
+    if (!activeGrid) return;
+
+    const hiddenCards = activeGrid.querySelectorAll('.js-gallery-hidden');
+    const isExpanded = toggleBtn.classList.contains('is-expanded');
+    const textEl = toggleBtn.querySelector('.js-gallery-more-text');
+
+    if (!isExpanded) {
+      hiddenCards.forEach(card => {
+        card.classList.remove('gallery-card--hidden');
+        card.classList.add('gallery-card--revealed');
+      });
+      toggleBtn.classList.add('is-expanded');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      if (textEl) {
+        textEl.setAttribute('data-i18n', 'gallery.btn_view_less');
+        textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_less']) || 'View Less';
+      }
+    } else {
+      hiddenCards.forEach(card => {
+        card.classList.add('gallery-card--hidden');
+        card.classList.remove('gallery-card--revealed');
+      });
+      toggleBtn.classList.remove('is-expanded');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      if (textEl) {
+        textEl.setAttribute('data-i18n', 'gallery.btn_view_more');
+        textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_more']) || 'View More Photos';
+      }
+      const gallerySection = document.getElementById('gallery');
+      if (gallerySection) {
+        gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  });
+}
+
 function initGalleryTabs() {
   const tabs = document.querySelectorAll('.js-gallery-tab');
   const grids = document.querySelectorAll('.gallery-grid-panel');
@@ -1737,6 +1807,7 @@ function initGalleryTabs() {
           grid.style.display = 'none';
         }
       });
+      if (typeof updateGalleryMoreButtonState === 'function') updateGalleryMoreButtonState();
     });
   });
 }
