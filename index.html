@@ -103,6 +103,25 @@
       </div>
     </div>
   </div>
+  <!-- Fail-safe preloader auto-dismissal: guarantees homepage always displays cleanly -->
+  <script id="preloader-failsafe">
+    (function() {
+      function dismissPreloader() {
+        var p = document.getElementById('site-preloader');
+        if (p && !p.classList.contains('is-loaded')) {
+          p.classList.add('is-loaded');
+          setTimeout(function() { p.style.display = 'none'; }, 600);
+        }
+      }
+      if (document.readyState === 'complete') {
+        setTimeout(dismissPreloader, 300);
+      } else {
+        window.addEventListener('load', function() { setTimeout(dismissPreloader, 300); });
+        // Hard timeout guarantee: preloader will never remain stuck under any circumstances
+        setTimeout(dismissPreloader, 1200);
+      }
+    })();
+  </script>
 
   <!-- =========================================================================
        TOP CLINIC ANNOUNCEMENT & STATUS BAR
@@ -3085,7 +3104,7 @@
   </div>
 
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js?v=22.0"></script>
+  <script src="assets/js/main.js?v=24.0"></script>
   <script>
     // Update copyright year
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
