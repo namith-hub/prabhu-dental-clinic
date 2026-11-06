@@ -364,6 +364,12 @@ const translations = {
     "gallery.patient_item4_tag": "Senior Care",
     "gallery.patient_item4_title": "Senior Citizen Care & Smiles",
     "gallery.patient_item4_desc": "Compassionate dental care restoring eating comfort and confidence for elderly patients.",
+    "gallery.patient_item5_tag": "Wellness",
+    "gallery.patient_item5_title": "Preventative Dental Wellness",
+    "gallery.patient_item5_desc": "Regular oral examinations and professional prophylaxis ensuring long-term oral hygiene.",
+    "gallery.patient_item6_tag": "Patient Journey",
+    "gallery.patient_item6_title": "Post-Treatment Smile Stories",
+    "gallery.patient_item6_desc": "Heartfelt patient experiences and successful treatment completions celebrated with healthy smiles.",
     "gallery.placeholder_tag": "Upcoming Photo",
     "gallery.placeholder_badge": "Consent Verified"
   },
@@ -1722,72 +1728,10 @@ function initAppointmentForm() {
  * Gallery Category Tab Switcher (Clinic Photos <-> Patient Photos)
  */
 
-let updateGalleryMoreButtonState = null;
-
-function initGalleryLoadMore() {
-  const moreWrap = document.getElementById('galleryMoreWrap');
-  const toggleBtn = document.getElementById('galleryToggleMoreBtn');
-  if (!moreWrap || !toggleBtn) return;
-
-  updateGalleryMoreButtonState = function() {
-    const activeGrid = document.querySelector('.gallery-grid-panel.is-active');
-    if (!activeGrid) {
-      moreWrap.style.display = 'none';
-      return;
-    }
-    const hiddenCards = activeGrid.querySelectorAll('.js-gallery-hidden');
-    if (hiddenCards.length === 0) {
-      moreWrap.style.display = 'none';
-    } else {
-      moreWrap.style.display = 'flex';
-    }
-  };
-
-  updateGalleryMoreButtonState();
-
-  toggleBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const activeGrid = document.querySelector('.gallery-grid-panel.is-active');
-    if (!activeGrid) return;
-
-    const hiddenCards = activeGrid.querySelectorAll('.js-gallery-hidden');
-    const isExpanded = toggleBtn.classList.contains('is-expanded');
-    const textEl = toggleBtn.querySelector('.js-gallery-more-text');
-
-    if (!isExpanded) {
-      hiddenCards.forEach(card => {
-        card.classList.remove('gallery-card--hidden');
-        card.classList.add('gallery-card--revealed');
-      });
-      toggleBtn.classList.add('is-expanded');
-      toggleBtn.setAttribute('aria-expanded', 'true');
-      if (textEl) {
-        textEl.setAttribute('data-i18n', 'gallery.btn_view_less');
-        textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_less']) || 'View Less';
-      }
-    } else {
-      hiddenCards.forEach(card => {
-        card.classList.add('gallery-card--hidden');
-        card.classList.remove('gallery-card--revealed');
-      });
-      toggleBtn.classList.remove('is-expanded');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      if (textEl) {
-        textEl.setAttribute('data-i18n', 'gallery.btn_view_more');
-        textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_more']) || 'View More Photos';
-      }
-      const gallerySection = document.getElementById('gallery');
-      if (gallerySection) {
-        gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  });
-}
-
 function initGalleryTabs() {
   const tabs = document.querySelectorAll('.js-gallery-tab');
-  const grids = document.querySelectorAll('.gallery-grid-panel');
-  if (!tabs.length || !grids.length) return;
+  const panels = document.querySelectorAll('.js-gallery-panel');
+  if (!tabs.length || !panels.length) return;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', (e) => {
@@ -1798,99 +1742,66 @@ function initGalleryTabs() {
         t.classList.toggle('active', isActive);
         t.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
-      grids.forEach(grid => {
-        const isMatch = grid.getAttribute('data-gallery-cat') === targetCat;
-        grid.classList.toggle('is-active', isMatch);
-        if (isMatch) {
-          grid.style.display = 'grid';
-        } else {
-          grid.style.display = 'none';
-        }
+      panels.forEach(panel => {
+        const isMatch = panel.getAttribute('data-gallery-cat') === targetCat;
+        panel.classList.toggle('is-active', isMatch);
+        panel.style.display = isMatch ? 'block' : 'none';
       });
-      if (typeof updateGalleryMoreButtonState === 'function') updateGalleryMoreButtonState();
     });
   });
 }
 
-function initLightbox() {
-  const modal = document.getElementById('galleryModal');
-  const trigger = document.querySelectorAll('.js-open-lightbox');
-  const closeBtn = document.querySelector('.js-close-lightbox');
-  const modalImg = modal?.querySelector('.lightbox-image-wrap img');
-  const modalTitle = modal?.querySelector('.lightbox-modal-caption strong');
-  const modalDesc = modal?.querySelector('.lightbox-modal-caption p');
+function initGalleryLoadMore() {
+  const toggleButtons = document.querySelectorAll('.js-gallery-toggle-btn');
+  if (!toggleButtons.length) return;
 
-  if (!modal) return;
+  toggleButtons.forEach(btn => {
+    const category = btn.getAttribute('data-target');
+    const panel = btn.closest('.js-gallery-panel');
+    if (!panel) return;
 
-  trigger.forEach(item => {
-    item.addEventListener('click', (e) => {
+    const hiddenCards = panel.querySelectorAll('.js-gallery-hidden');
+    const wrap = btn.closest('.gallery-more-wrap');
+
+    if (!hiddenCards.length && wrap) {
+      wrap.style.display = 'none';
+      return;
+    }
+
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const card = item.closest('.gallery-card');
-      const imgSrc = item.getAttribute('data-img') || card?.querySelector('img')?.getAttribute('src');
-      const title = item.getAttribute('data-title') || card?.querySelector('.gallery-item-title')?.textContent;
-      const desc = item.getAttribute('data-desc') || card?.querySelector('.gallery-item-desc')?.textContent;
+      const isExpanded = btn.classList.contains('is-expanded');
+      const textEl = btn.querySelector('.js-gallery-more-text');
 
-      if (modalImg && imgSrc) modalImg.src = imgSrc;
-      if (modalTitle && title) modalTitle.textContent = title;
-      if (modalDesc && desc) modalDesc.textContent = desc;
-
-      modal.classList.add('is-active');
-      document.body.style.overflow = 'hidden';
+      if (!isExpanded) {
+        hiddenCards.forEach(card => {
+          card.classList.remove('gallery-card--hidden');
+          card.classList.add('gallery-card--revealed');
+        });
+        btn.classList.add('is-expanded');
+        btn.setAttribute('aria-expanded', 'true');
+        if (textEl) {
+          textEl.setAttribute('data-i18n', 'gallery.btn_view_less');
+          textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_less']) || 'View Less';
+        }
+      } else {
+        hiddenCards.forEach(card => {
+          card.classList.add('gallery-card--hidden');
+          card.classList.remove('gallery-card--revealed');
+        });
+        btn.classList.remove('is-expanded');
+        btn.setAttribute('aria-expanded', 'false');
+        if (textEl) {
+          textEl.setAttribute('data-i18n', 'gallery.btn_view_more');
+          textEl.textContent = (translations[currentLang] && translations[currentLang]['gallery.btn_view_more']) || 'View More';
+        }
+        const gallerySection = document.getElementById('gallery');
+        if (gallerySection) {
+          gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     });
   });
-
-  function closeModal() {
-    modal.classList.remove('is-active');
-    document.body.style.overflow = '';
-  }
-
-  closeBtn?.addEventListener('click', closeModal);
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('is-active')) {
-      closeModal();
-    }
-  });
-}
-
-function escapeHtml(text) {
-  const map = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#039;'
-  };
-  return text.replace(/[&<>"']/g, m => map[m]);
-}
-
-/**
- * 8. Professional Preloader Dismissal
- */
-function initPreloader() {
-  const preloader = document.getElementById('site-preloader');
-  if (!preloader) return;
-
-  function dismiss() {
-    preloader.classList.add('is-loaded');
-    setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 600);
-  }
-
-  // Dismiss swiftly on page load or fallback after 850ms
-  if (document.readyState === 'complete') {
-    setTimeout(dismiss, 350);
-  } else {
-    window.addEventListener('load', () => setTimeout(dismiss, 350));
-    setTimeout(dismiss, 1200);
-  }
 }
 
 /**

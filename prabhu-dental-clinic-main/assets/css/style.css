@@ -2133,6 +2133,16 @@ html[lang="hi"] .gallery-tab-btn {
   font-family: var(--font-devanagari), var(--font-sans);
 }
 
+
+/* Gallery Panels */
+.gallery-panel {
+  display: none;
+}
+
+.gallery-panel.is-active {
+  display: block;
+}
+
 .gallery-grid-panel {
   display: none;
 }
