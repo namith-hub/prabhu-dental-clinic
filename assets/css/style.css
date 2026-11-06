@@ -1102,14 +1102,14 @@ html[lang="hi"] .nav-link {
 }
 
 .hero-timing-badges-row {
-  position: absolute;
-  bottom: -42px;
-  left: 24px;
-  right: 24px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 0;
   display: flex;
-  align-items: center;
-  gap: 14px;
-  z-index: 3;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  z-index: 10;
 }
 
 .hero-timing-badges-row .floating-badge {
@@ -7289,13 +7289,13 @@ textarea.form-control {
 }
 
 .doctor-avatar-circle img { object-fit: cover; object-position: center top; width: 100%; height: 100%; background: #ffffff; }
-\n\n
+
 /* ==========================================================================
-   HERO TIMING BADGES ROW - IN-FLOW POSITIONING & SIDE-BY-SIDE SUBROW
+   HERO TIMING BADGES: FULL-WIDTH MONDAY-SATURDAY + SIDE-BY-SIDE SUNDAY/ONLINE
    ========================================================================== */
 .hero-timing-badges-row {
   position: relative !important;
-  margin-top: 18px !important;
+  margin-top: 20px !important;
   margin-bottom: 0 !important;
   bottom: auto !important;
   left: auto !important;
@@ -7306,6 +7306,7 @@ textarea.form-control {
   gap: 12px !important;
   width: 100% !important;
   z-index: 12 !important;
+  box-sizing: border-box !important;
 }
 
 /* Primary Monday – Saturday Card (Full Width) */
@@ -7365,7 +7366,7 @@ textarea.form-control {
   align-items: center !important;
   gap: 10px !important;
   border-radius: var(--radius-lg) !important;
-  padding: 10px 14px !important;
+  padding: 12px 14px !important;
   animation: none !important;
   opacity: 1 !important;
   visibility: visible !important;
@@ -7400,9 +7401,9 @@ textarea.form-control {
 
 /* Icon Alignment inside Subrow */
 .hero-timing-subrow .floating-badge-icon {
-  width: 36px !important;
-  height: 36px !important;
-  min-width: 36px !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
@@ -7422,31 +7423,44 @@ textarea.form-control {
 }
 
 .hero-timing-subrow .floating-badge-content h4 {
-  font-size: 13px !important;
+  font-size: 13.5px !important;
   font-weight: 700 !important;
   color: #0F172A !important;
-  margin: 0 0 2px 0 !important;
+  margin: 0 0 3px 0 !important;
   line-height: 1.25 !important;
-  white-space: normal !important;
-  word-break: break-word !important;
 }
 
 .hero-timing-subrow .floating-badge-content p {
-  font-size: 11.5px !important;
+  font-size: 12px !important;
   font-weight: 500 !important;
   color: #64748B !important;
   margin: 0 !important;
   line-height: 1.25 !important;
-  white-space: normal !important;
-  word-break: break-word !important;
+}
+
+@media (min-width: 768px) {
+  .hero-timing-subrow .floating-badge-content h4,
+  .hero-timing-subrow .floating-badge-content p {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-timing-subrow .floating-badge-content h4,
+  .hero-timing-subrow .floating-badge-content p {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
 }
 
 .hero-visual-stage {
   padding-bottom: 0 !important;
+  overflow: visible !important;
 }
 
 .hero-section {
-  padding-bottom: 48px !important;
+  padding-bottom: 56px !important;
+  overflow: visible !important;
 }
 
 /* Mobile Stacking when insufficient width */
