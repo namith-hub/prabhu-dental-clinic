@@ -1192,7 +1192,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMouseParallax();
   initTimelineProgress();
   initFaqAccordion();
-  initFaqAccordion();
 });
 
 /**
@@ -1721,8 +1720,89 @@ function initAppointmentForm() {
 }
 
 /**
- * 7. Lightbox Modal for Clinic Exterior Image
+ * 7. Lightbox Modal for Gallery Images
  */
+function initLightbox() {
+  const modal = document.getElementById('galleryModal');
+  const trigger = document.querySelectorAll('.js-open-lightbox');
+  const closeBtn = document.querySelector('.js-close-lightbox');
+  const modalImg = modal?.querySelector('.lightbox-image-wrap img');
+  const modalTitle = modal?.querySelector('.lightbox-modal-caption strong');
+  const modalDesc = modal?.querySelector('.lightbox-modal-caption p');
+
+  if (!modal) return;
+
+  trigger.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = item.closest('.gallery-card');
+      const imgSrc = item.getAttribute('data-img') || card?.querySelector('img')?.getAttribute('src');
+      const title = item.getAttribute('data-title') || card?.querySelector('.gallery-item-title')?.textContent;
+      const desc = item.getAttribute('data-desc') || card?.querySelector('.gallery-item-desc')?.textContent;
+
+      if (modalImg && imgSrc) modalImg.src = imgSrc;
+      if (modalTitle && title) modalTitle.textContent = title;
+      if (modalDesc && desc) modalDesc.textContent = desc;
+
+      modal.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove('is-active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn?.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+      closeModal();
+    }
+  });
+}
+
+function escapeHtml(text) {
+  const map = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return text.replace(/[&<>"']/g, m => map[m]);
+}
+
+/**
+ * 8. Professional Preloader Dismissal
+ */
+function initPreloader() {
+  const preloader = document.getElementById('site-preloader');
+  if (!preloader) return;
+
+  function dismiss() {
+    preloader.classList.add('is-loaded');
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 600);
+  }
+
+  // Dismiss swiftly on page load or fallback after 850ms
+  if (document.readyState === 'complete') {
+    setTimeout(dismiss, 350);
+  } else {
+    window.addEventListener('load', () => setTimeout(dismiss, 350));
+    setTimeout(dismiss, 1200);
+  }
+}
+
 
 /**
  * Gallery Category Tab Switcher (Clinic Photos <-> Patient Photos)
