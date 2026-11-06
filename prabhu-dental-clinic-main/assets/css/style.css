@@ -7291,7 +7291,7 @@ textarea.form-control {
 .doctor-avatar-circle img { object-fit: cover; object-position: center top; width: 100%; height: 100%; background: #ffffff; }
 \n\n
 /* ==========================================================================
-   HERO TIMING BADGES ROW - IN-FLOW POSITIONING
+   HERO TIMING BADGES ROW - IN-FLOW POSITIONING & SIDE-BY-SIDE SUBROW
    ========================================================================== */
 .hero-timing-badges-row {
   position: relative !important;
@@ -7302,45 +7302,143 @@ textarea.form-control {
   right: auto !important;
   top: auto !important;
   display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: stretch !important;
+  flex-direction: column !important;
   gap: 12px !important;
   width: 100% !important;
-  z-index: 10 !important;
+  z-index: 12 !important;
 }
 
-.hero-timing-badges-row .floating-badge {
+/* Primary Monday – Saturday Card (Full Width) */
+.hero-timing-badges-row > .floating-badge-timing {
   position: relative !important;
   bottom: auto !important;
   left: auto !important;
   right: auto !important;
   top: auto !important;
   margin: 0 !important;
-  flex: 1 1 calc(50% - 6px) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
-  width: auto !important;
   background-color: #FFFFFF !important;
   border: 1.5px solid #FEE2E2 !important;
   box-shadow: 0 10px 24px rgba(200, 35, 51, 0.08) !important;
   border-radius: var(--radius-lg) !important;
-  padding: 12px 16px !important;
+  padding: 12px 18px !important;
   animation: none !important;
   opacity: 1 !important;
   visibility: visible !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
 
-.hero-timing-badges-row .floating-badge.floating-badge-timing-video {
-  flex: 1 1 100% !important;
-  border-color: rgba(2, 132, 199, 0.25) !important;
-  background: linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 100%) !important;
-}
-
-.hero-timing-badges-row .floating-badge:hover {
+.hero-timing-badges-row > .floating-badge-timing:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 14px 28px rgba(200, 35, 51, 0.14) !important;
   border-color: var(--primary) !important;
+}
+
+/* Secondary Row: Sunday & Online Video Consultation Strictly Side-By-Side */
+.hero-timing-subrow {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Both Cards: Equal Width, Consistent Height */
+.hero-timing-subrow .floating-badge {
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  margin: 0 !important;
+  flex: 1 1 0 !important;
+  width: calc(50% - 6px) !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 10px 14px !important;
+  animation: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+/* Sunday Card Styling */
+.hero-timing-subrow .floating-badge-timing-sunday {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid #FEE2E2 !important;
+  box-shadow: 0 10px 24px rgba(200, 35, 51, 0.08) !important;
+}
+
+.hero-timing-subrow .floating-badge-timing-sunday:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 14px 28px rgba(200, 35, 51, 0.14) !important;
+}
+
+/* Online Video Consultation Card Styling */
+.hero-timing-subrow .floating-badge-timing-video {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 100%) !important;
+  border: 1.5px solid rgba(2, 132, 199, 0.25) !important;
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.08) !important;
+}
+
+.hero-timing-subrow .floating-badge-timing-video:hover {
+  transform: translateY(-2px) !important;
+  border-color: #0284C7 !important;
+  box-shadow: 0 14px 28px rgba(2, 132, 199, 0.16) !important;
+}
+
+/* Icon Alignment inside Subrow */
+.hero-timing-subrow .floating-badge-icon {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.hero-timing-subrow .floating-badge-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Typography inside Subrow */
+.hero-timing-subrow .floating-badge-content {
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+.hero-timing-subrow .floating-badge-content h4 {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #0F172A !important;
+  margin: 0 0 2px 0 !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+.hero-timing-subrow .floating-badge-content p {
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  color: #64748B !important;
+  margin: 0 !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
 }
 
 .hero-visual-stage {
@@ -7351,84 +7449,17 @@ textarea.form-control {
   padding-bottom: 48px !important;
 }
 
+/* Mobile Stacking when insufficient width */
 @media (max-width: 640px) {
   .hero-timing-badges-row {
+    gap: 10px !important;
+  }
+  .hero-timing-subrow {
     flex-direction: column !important;
     gap: 10px !important;
   }
-  .hero-timing-badges-row .floating-badge {
+  .hero-timing-subrow .floating-badge {
     width: 100% !important;
+    flex: 1 1 100% !important;
   }
-}
-
-/* ==========================================================================
-   HERO BADGES MAXIMUM VISIBILITY GUARANTEE & EXPANDED PAGE HEIGHT
-   ========================================================================== */
-.hero-section {
-  padding-top: 56px !important;
-  padding-bottom: 96px !important;
-  overflow: visible !important;
-}
-
-.hero-visual-stage {
-  padding-top: 36px !important;
-  padding-bottom: 24px !important;
-  overflow: visible !important;
-}
-
-.hero-decor-badge-sparkle {
-  top: 10px !important;
-  left: -8px !important;
-  z-index: 12 !important;
-  box-shadow: 0 8px 20px rgba(200, 35, 51, 0.15) !important;
-}
-
-.floating-badge-location {
-  top: 6px !important;
-  right: -8px !important;
-  z-index: 12 !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
-}
-
-.hero-timing-badges-row {
-  position: relative !important;
-  margin-top: 20px !important;
-  margin-bottom: 0 !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  top: auto !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: stretch !important;
-  gap: 12px !important;
-  width: 100% !important;
-  z-index: 12 !important;
-}
-
-.hero-timing-badges-row .floating-badge {
-  position: relative !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  top: auto !important;
-  margin: 0 !important;
-  flex: 1 1 calc(50% - 6px) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  background-color: #FFFFFF !important;
-  border: 1.5px solid #FEE2E2 !important;
-  box-shadow: 0 10px 24px rgba(200, 35, 51, 0.1) !important;
-  border-radius: var(--radius-lg) !important;
-  padding: 12px 16px !important;
-  animation: none !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.hero-timing-badges-row .floating-badge.floating-badge-timing-video {
-  flex: 1 1 100% !important;
-  border-color: rgba(2, 132, 199, 0.25) !important;
-  background: linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 100%) !important;
 }
