@@ -3270,10 +3270,28 @@
   </div>
 
   <!-- Main JavaScript Logic -->
-  <script src="assets/js/main.js?v=25.0"></script>
+  <script src="assets/js/main.js?v=26.0"></script>
   <script>
     // Update copyright year
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Safe fallback: ensures website content is never stuck at opacity 0 -->
+  <script id="reveal-failsafe">
+    (function() {
+      function forceReveal() {
+        var els = document.querySelectorAll('[data-reveal]:not(.is-revealed)');
+        for (var i = 0; i < els.length; i++) {
+          els[i].classList.add('is-revealed');
+        }
+      }
+      if (document.readyState === 'complete') {
+        setTimeout(forceReveal, 200);
+      } else {
+        window.addEventListener('load', function() { setTimeout(forceReveal, 200); });
+        setTimeout(forceReveal, 700);
+      }
+    })();
   </script>
 </body>
 
